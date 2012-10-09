@@ -53,7 +53,9 @@ opponent_id,
  and g.opponent_score is not NULL
  and g.team_score >= 0
  and g.opponent_score >= 0
--- and not((g.team_score,g.opponent_score)=(0,0))
+ and not(
+ (g.team_score,g.opponent_score)=(0,0) and not(g.game_length like '%OT%')
+ )
  and g.school_id is not NULL
  and g.opponent_id is not NULL
  and not(g.game_date is null)
@@ -94,7 +96,13 @@ school_id,
  and g.opponent_score is not NULL
  and g.team_score >= 0
  and g.opponent_score >= 0
+
 -- and not((g.team_score,g.opponent_score)=(0,0))
+
+ and not(
+ (g.team_score,g.opponent_score)=(0,0) and not(g.game_length like '%OT%')
+ )
+
  and g.school_id is not NULL
  and g.opponent_id is not NULL
  and not(g.game_date is null)
