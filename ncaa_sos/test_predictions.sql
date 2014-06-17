@@ -49,9 +49,9 @@ count(*)
 count(*)
 from ncaa.results r
 join ncaa._schedule_factors t
-  on (t.year,t.school_id)=(r.year,r.school_id)
+  on (t.year,t.team_id)=(r.year,r.team_id)
 join ncaa._schedule_factors o
-  on (o.year,o.school_id)=(r.year,r.opponent_id)
+  on (o.year,o.team_id)=(r.year,r.opponent_id)
 join ncaa._factors f
   on (f.parameter,f.level)=('field',r.field)
 where
@@ -60,7 +60,7 @@ TRUE
 
 -- each game once
 
-and r.school_id > r.opponent_id
+and r.team_id > r.opponent_id
 
 -- test November and December
 
@@ -68,7 +68,7 @@ and extract(month from r.game_date) in (11,12)
 
 -- D1
 
---and r.school_div_id=1
+--and r.team_div_id=1
 --and r.opponent_div_id=1
 
 group by r.year
@@ -123,9 +123,9 @@ count(*)
 count(*)
 from ncaa.results r
 join ncaa._schedule_factors t
-  on (t.year,t.school_id)=(r.year,r.school_id)
+  on (t.year,t.team_id)=(r.year,r.team_id)
 join ncaa._schedule_factors o
-  on (o.year,o.school_id)=(r.year,r.opponent_id)
+  on (o.year,o.team_id)=(r.year,r.opponent_id)
 join ncaa._factors f
   on (f.parameter,f.level)=('field',r.field)
 where
@@ -134,7 +134,7 @@ TRUE
 
 -- each game once
 
-and r.school_id > r.opponent_id
+and r.team_id > r.opponent_id
 
 -- test November and December
 
@@ -142,6 +142,6 @@ and extract(month from r.game_date) in (11,12)
 
 -- D1
 
---and r.school_div_id=1
+--and r.team_div_id=1
 --and r.opponent_div_id=1
 ;
