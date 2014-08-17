@@ -1,4 +1,4 @@
-#!/usr/bin/ruby1.9.3
+#!/usr/bin/env ruby
 
 require 'csv'
 require 'mechanize'
@@ -17,8 +17,8 @@ agent.get(url)
 
 teams = CSV.read("ncaa_teams.csv")
 
-first_year = 2013
-last_year = 2013
+first_year = 2014
+last_year = 2014
 
 (first_year..last_year).each do |year|
   stats = CSV.open("ncaa_players_#{year}.csv","w")

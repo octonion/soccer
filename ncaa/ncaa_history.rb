@@ -1,4 +1,4 @@
-#!/usr/bin/ruby1.9.3
+#!/usr/bin/env ruby
 
 require 'csv'
 require 'mechanize'
@@ -24,7 +24,7 @@ history = CSV.open("ncaa_history.csv","w")
 team_count = 0
 season_count = 0
 
-year = 2012
+year = 2014
 
 teams.each do |team|
   team_id = team[0]

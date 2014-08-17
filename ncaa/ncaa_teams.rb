@@ -1,4 +1,4 @@
-#!/usr/bin/ruby1.9.3
+#!/usr/bin/env ruby
 
 require 'csv'
 require 'mechanize'
