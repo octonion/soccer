@@ -3,7 +3,7 @@ begin;
 create temporary table r (
        rk	 serial,
        team 	 text,
-       team_id integer,
+       school_id integer,
        div_id	 integer,
        year	 integer,
        str	 numeric(5,3),
@@ -15,11 +15,11 @@ create temporary table r (
 );
 
 insert into r
-(team,team_id,div_id,year,str,ofs,dfs,sos)
+(team,school_id,div_id,year,str,ofs,dfs,sos)
 (
 select
-coalesce(sd.team_name,sf.team_id::text),
-sf.team_id,
+coalesce(sd.school_name,sf.school_id::text),
+sf.school_id,
 sd.div_id as div_id,
 sf.year,
 (sf.strength*o.exp_factor/d.exp_factor)::numeric(5,3) as str,
@@ -30,10 +30,10 @@ sf.year,
 schedule_strength::numeric(5,3) as sos
 from ncaa._schedule_factors sf
 --join ncaa.teams s
---  on (s.team_id)=(sf.team_id)
-join ncaa.teams_divisions sd
---  on (sd.team_id)=(sf.team_id)
-  on (sd.team_id,sd.year)=(sf.team_id,sf.year)
+--  on (s.school_id)=(sf.school_id)
+join ncaa.schools_divisions sd
+--  on (sd.school_id)=(sf.school_id)
+  on (sd.school_id,sd.year)=(sf.school_id,sf.year)
 join ncaa._factors o
   on (o.parameter,o.level::integer)=('o_div',sd.div_id)
 join ncaa._factors d

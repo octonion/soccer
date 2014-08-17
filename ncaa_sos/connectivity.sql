@@ -9,10 +9,10 @@ sum(case when r.team_score<r.opponent_score then 1 else 0 end) as lost,
 sum(case when r.team_score=r.opponent_score then 1 else 0 end) as tied,
 count(*)
 from ncaa.results r
-left join ncaa.teams_divisions t
-  on (t.team_id,t.year)=(r.team_id,r.year)
-left join ncaa.teams_divisions o
-  on (o.team_id,o.year)=(r.opponent_id,r.year)
+left join ncaa.schools_divisions t
+  on (t.school_id,t.year)=(r.school_id,r.year)
+left join ncaa.schools_divisions o
+  on (o.school_id,o.year)=(r.opponent_id,r.year)
 where
     t.div_id<=o.div_id
 and r.year between 2012 and 2014

@@ -25,7 +25,7 @@ create table ncaa._factors (
        raw_factor		float,
        exp_factor		float,
        factor			float
---       primary key (team_name,type,method,year,first_year,last_year)
+--       primary key (school_name,type,method,year,first_year,last_year)
 );
 
 -- this can/should be rewritten agnostically

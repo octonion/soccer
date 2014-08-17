@@ -1,7 +1,7 @@
 begin;
 
 create temporary table r (
-       team_id	 integer,
+       school_id	 integer,
        div	 	 integer,
        year	 	 integer,
        str	 	 numeric(5,3),
@@ -11,10 +11,10 @@ create temporary table r (
 );
 
 insert into r
-(team_id,div,year,str,ofs,dfs,sos)
+(school_id,div,year,str,ofs,dfs,sos)
 (
 select
-t.team_id,
+t.school_id,
 t.div_id as div,
 sf.year,
 (sf.strength*o.exp_factor/d.exp_factor)::numeric(5,3) as str,
@@ -22,8 +22,8 @@ sf.year,
 (defensive*d.exp_factor)::numeric(5,3) as dfs,
 schedule_strength::numeric(5,3) as sos
 from ncaa._schedule_factors sf
-left outer join ncaa.teams_divisions t
-  on (t.team_id,t.year)=(sf.team_id,sf.year)
+left outer join ncaa.schools_divisions t
+  on (t.school_id,t.year)=(sf.school_id,sf.year)
 left outer join ncaa._factors o
   on (o.parameter,o.level)=('o_div',t.div_id::text)
 left outer join ncaa._factors d
@@ -31,7 +31,7 @@ left outer join ncaa._factors d
 --where sf.year in (2014)
 where
 TRUE
-and t.team_id is not null
+and t.school_id is not null
 order by str desc);
 
 select

@@ -6,27 +6,27 @@ select
 
 g.year,
 g.game_date::date as date,
-hd.team_name as team,
-hd.team_id,
+hd.school_name as team,
+hd.school_id,
 hd.div_id as h_div,
 --'home' as site,
-vd.team_name as opp,
-vd.team_id,
+vd.school_name as opp,
+vd.school_id,
 vd.div_id as v_div,
 
 g.team_score as t_score,
 g.opponent_score as o_score
 
 from ncaa.results g
-join ncaa.teams_divisions hd
-  on (hd.year,hd.team_id)=(g.year,g.team_id)
-join ncaa.teams_divisions vd
-  on (vd.year,vd.team_id)=(g.year,g.opponent_id)
+join ncaa.schools_divisions hd
+  on (hd.year,hd.school_id)=(g.year,g.school_id)
+join ncaa.schools_divisions vd
+  on (vd.year,vd.school_id)=(g.year,g.opponent_id)
 
 where
 TRUE
 and g.year = 2011
---and g.team_id < g.opponent_id
+--and g.school_id < g.opponent_id
 --and hd.div_id=1
 --and g.field='offense_home'
 
@@ -41,22 +41,22 @@ union
 select
 g.year,
 g.game_date::date as date,
-hd.team_name as team,
-g.team_id,
+hd.school_name as team,
+g.school_id,
 hd.div_id as h_div,
 --'neutral' as site,
-vd.team_name as opp,
-vd.team_id,
+vd.school_name as opp,
+vd.school_id,
 vd.div_id as v_div,
 
 g.team_score as t_score,
 g.opponent_score as o_score
 
 from ncaa.results g
-join ncaa.teams_divisions hd
-  on (hd.year,hd.team_id)=(g.year,g.team_id)
-join ncaa.teams_divisions vd
-  on (vd.year,vd.team_id)=(g.year,g.opponent_id)
+join ncaa.schools_divisions hd
+  on (hd.year,hd.school_id)=(g.year,g.school_id)
+join ncaa.schools_divisions vd
+  on (vd.year,vd.school_id)=(g.year,g.opponent_id)
 
 where
 TRUE
@@ -66,7 +66,7 @@ and g.field='none'
 --and g.team_score>0
 --and g.opponent_score>0
 
---and g.team_id < g.opponent_id
+--and g.school_id < g.opponent_id
 --and hd.div_id=1
 
 and hd.div_id < vd.div_id

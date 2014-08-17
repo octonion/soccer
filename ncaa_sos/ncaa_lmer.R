@@ -16,7 +16,7 @@ distinct
 r.game_id,
 r.year,
 r.field as field,
-r.team_id as team,
+r.school_id as team,
 r.team_div_id as o_div,
 r.opponent_id as opponent,
 r.opponent_div_id as d_div,
