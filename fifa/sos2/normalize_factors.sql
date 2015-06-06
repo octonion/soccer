@@ -28,7 +28,7 @@ select
 npl.parameter as parameter,
 npl.level as level,
 npl.type as type,
-'log_regression' as method,
+'ln_regression' as method,
 estimate as raw_factor,
 null as exp_factor
 --exp(estimate) as exp_factor
@@ -49,7 +49,7 @@ select
 npl.parameter as parameter,
 npl.level as level,
 npl.type as type,
-'log_regression' as method,
+'ln_regression' as method,
 estimate as raw_factor,
 null as exp_factor
 --exp(estimate) as exp_factor
@@ -72,7 +72,7 @@ select
 npl.parameter as parameter,
 npl.level as level,
 npl.type as type,
-'log_regression' as method,
+'ln_regression' as method,
 coalesce(estimate,0.0) as raw_factor,
 null as exp_factor
 --coalesce(exp(estimate),1.0) as exp_factor
@@ -94,7 +94,7 @@ select
 npl.parameter as parameter,
 npl.level as level,
 npl.type as type,
-'log_regression' as method,
+'ln_regression' as method,
 coalesce(estimate,0.0) as raw_factor,
 null as exp_factor
 --coalesce(exp(estimate),1.0) as exp_factor
@@ -114,6 +114,6 @@ set exp_factor=exp(raw_factor);
 insert into fifa._factors
 (parameter,level,type,method,raw_factor,exp_factor)
 values
-('field','neutral','fixed','log_regression',0.0,1.0);
+('field','neutral','fixed','ln_regression',0.0,1.0);
 
 commit;

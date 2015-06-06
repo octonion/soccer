@@ -88,11 +88,11 @@ insert into rs
 (
 select
 team_id,
-exp(avg(log(offensive))),
-exp(avg(log(defensive))),
-exp(avg(log(strength))),
-exp(avg(log(offensive/field))),
-exp(avg(log(defensive*field)))
+exp(avg(ln(offensive))),
+exp(avg(ln(defensive))),
+exp(avg(ln(strength))),
+exp(avg(ln(offensive/field))),
+exp(avg(ln(defensive*field)))
 from r
 group by team_id
 );
