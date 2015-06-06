@@ -52,6 +52,8 @@ and g.cup_name not like '%U-20%'
 and g.cup_name not like '%Beach%'
 and g.cup_name not like '%Youth%'
 and g.cup_name not like '%Futsal%'
+
+and g.gender_id='women'
 );
 
 insert into fifa.results
@@ -89,6 +91,8 @@ and g.cup_name not like '%U-20%'
 and g.cup_name not like '%Beach%'
 and g.cup_name not like '%Youth%'
 and g.cup_name not like '%Futsal%'
+
+and g.gender_id='women'
 );
 
 update fifa.results
@@ -96,6 +100,12 @@ set team_id=t.team_id
 from fifa.teams t
 where (results.team_name)=(t.team_name)
 and length(results.team_id)>3;
+
+update fifa.results
+set opponent_id=t.team_id
+from fifa.teams t
+where (results.opponent_name)=(t.team_name)
+and length(results.opponent_id)>3;
 
 update fifa.results
 set team_id='eng'
