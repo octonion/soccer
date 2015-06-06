@@ -27,9 +27,9 @@ years = JSON.parse(File.read(year_file))
 years.each do |year_row|
 
   year = year_row[0]
-  if (year.to_i < 1992)
-    next
-  end
+#  if (year.to_i < 1992)
+#    next
+#  end
 
   results = CSV.open("csv/results_#{gender_id}_#{year}.csv","w")
 
@@ -99,6 +99,7 @@ comp_months.each do |comp_month|
         venue = m.xpath('div[@class="m-venue"]').first.text.scrub.strip rescue nil
 
         row = [gender_id, year, month, cup_name, idcupseason,
+               title, st1,
                match_date, comp_group, data_id, data_matchdate,
                home_id, home_name, home_url,
                away_id, away_name, away_url,
