@@ -27,6 +27,9 @@ years = JSON.parse(File.read(year_file))
 years.each do |year_row|
 
   year = year_row[0]
+  if (year.to_i < 1992)
+    next
+  end
 
   results = CSV.open("csv/results_#{gender_id}_#{year}.csv","w")
 
@@ -79,7 +82,7 @@ comp_months.each do |comp_month|
           home_name = th.text.scrub.strip rescue nil
           a = th.xpath("a").first
           home_url = a.attributes["href"].to_s.scrub.strip rescue nil
-          home_id = home_url.split("=")[1].split("/")[0]
+          home_id = home_url.split("=")[1].split("/")[0] rescue nil
         end
 
         away_name = nil
@@ -89,7 +92,7 @@ comp_months.each do |comp_month|
           away_name = ta.text.scrub.strip rescue nil
           a = ta.xpath("a").first
           away_url = a.attributes["href"].to_s.scrub.strip rescue nil
-          away_id = away_url.split("=")[1].split("/")[0]
+          away_id = away_url.split("=")[1].split("/")[0] rescue nil
         end
                
         score = m.xpath('div[@class="s"]').first.text.scrub.strip rescue nil
