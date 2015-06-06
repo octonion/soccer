@@ -54,6 +54,7 @@ and g.cup_name not like '%Youth%'
 and g.cup_name not like '%Futsal%'
 
 and g.gender_id='women'
+and g.year >= 2008
 );
 
 insert into fifa.results
@@ -93,6 +94,7 @@ and g.cup_name not like '%Youth%'
 and g.cup_name not like '%Futsal%'
 
 and g.gender_id='women'
+and g.year >= 2008
 );
 
 update fifa.results
