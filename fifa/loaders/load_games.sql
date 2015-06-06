@@ -8,6 +8,8 @@ create table fifa.games (
 	month		      integer,
 	cup_name	      text,
 	cupseason_id	      text,
+	match_title	      text,
+	match_subtitle	      text,
 	match_date	      text,
 	comp_group	      text,
 	data_id		      integer,
