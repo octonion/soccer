@@ -111,4 +111,8 @@ update fifa.results
 set team_id='eng'
 where team_name='Great Britain';
 
+update fifa.results
+set opponent_id='eng'
+where opponent_name='Great Britain';
+
 commit;

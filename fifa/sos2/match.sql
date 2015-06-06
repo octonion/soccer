@@ -16,11 +16,33 @@ insert into m
 
 update m
 set intercept=estimate
-from fifa._factors
+from fifa._basic_factors
 where factor='(Intercept)';
 
 update m
-set team=estimate
-from fifa.factors
-where factor='(Intercept)';
+set team_o=estimate
+from fifa._factors f
+where f.factor='offense'
+and f.level=m.team_id';
 
+update m
+set team_d=estimate
+from fifa._factors f
+where f.factor='defense'
+and f.level=m.team_id';
+
+update m
+set opponent_o=estimate
+from fifa._factors f
+where f.factor='offense'
+and f.level=m.opponent_id';
+
+update m
+set opponent_d=estimate
+from fifa._factors f
+where f.factor='defense'
+and f.level=m.opponent_id';
+
+select * from m;
+
+commit;
