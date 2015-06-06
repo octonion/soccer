@@ -28,11 +28,11 @@ join fifa.teams t2
 and s1.team_id in
   ('can', 'chn', 'kor', 'jpn', 'tha', 'sui', 'eng', 'nor', 'ger', 'esp',
    'fra', 'bra', 'col', 'cmr', 'crc', 'civ', 'mex', 'nzl', 'ned', 'ecu',
-   'usa',' swe', 'aus', 'nga')
+   'usa','swe', 'aus', 'nga')
 and s2.team_id in
   ('can', 'chn', 'kor', 'jpn', 'tha', 'sui', 'eng', 'nor', 'ger', 'esp',
    'fra', 'bra', 'col', 'cmr', 'crc', 'civ', 'mex', 'nzl', 'ned', 'ecu',
-   'usa',' swe', 'aus', 'nga')
+   'usa','swe', 'aus', 'nga')
 );
 
 update m
