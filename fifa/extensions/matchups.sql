@@ -65,6 +65,22 @@ where f.parameter='defense'
 and f.level=m.opponent_id;
 
 update m
+set team_o = team_o+0.101532950536216
+where team_id='can';
+
+update m
+set team_d = team_d-0.133909716359734
+where team_id='can';
+
+update m
+set opponent_o = opponent_o+0.101532950536216
+where opponent_id='can';
+
+update m
+set opponent_d = opponent_d-0.133909716359734
+where opponent_id='can';
+
+update m
 set team_mu = exp(intercept+team_o+opponent_d);
 
 update m
