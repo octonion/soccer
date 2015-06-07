@@ -11,7 +11,7 @@ con <- dbConnect(drv,host="localhost",port="5432",dbname="soccer")
 
 query <- dbSendQuery(con, "
 select
-distinct
+--distinct
 r.game_id,
 r.year,
 r.field as field,
@@ -38,6 +38,8 @@ attach(games)
 pll <- list()
 
 # Fixed parameters
+
+year <- as.factor(year)
 
 field <- as.factor(field)
 field <- relevel(field, ref = "neutral")
@@ -96,9 +98,13 @@ fit0 <- glmer(model0, data=g, verbose=TRUE, family=poisson(link=log), weights=w)
 model <- gs ~ field+game_length+(1|offense)+(1|defense)+(1|game_id)
 fit <- glmer(model, data=g, verbose=TRUE, family=poisson(link=log), weights=w)
 
+#model2 <- gs ~ year+field+game_length+(1|offense)+(1|defense)+(1|game_id)
+#fit2 <- glmer(model2, data=g, verbose=TRUE, family=poisson(link=log), weights=w)
+
 fit
 summary(fit)
 anova(fit0,fit)
+#anova(fit,fit2)
 
 # List of data frames
 
