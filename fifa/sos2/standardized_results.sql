@@ -6,6 +6,7 @@ create table fifa.results (
 	game_id		      integer,
 	gender_id	      text,
 	year		      integer,
+	game_date	      date,
 	team_name	      text,
 	team_id		      text,
 	opponent_name	      text,
@@ -19,6 +20,7 @@ create table fifa.results (
 
 insert into fifa.results
 (game_id,gender_id,year,
+ game_date,
  team_name,team_id,
  opponent_name,opponent_id,
  location_name,field,
@@ -28,6 +30,7 @@ select
 g.game_id,
 g.gender_id,
 g.year,
+g.data_matchdate::date,
 g.home_name,
 g.home_id,
 g.away_name,
@@ -59,6 +62,7 @@ and g.year >= 2008
 
 insert into fifa.results
 (game_id,gender_id,year,
+ game_date,
  team_name,team_id,
  opponent_name,opponent_id,
  location_name,field,
@@ -68,6 +72,7 @@ select
 g.game_id,
 g.gender_id,
 g.year,
+g.data_matchdate::date,
 g.away_name,
 g.away_id,
 g.home_name,
@@ -101,13 +106,13 @@ update fifa.results
 set team_id=t.team_id
 from fifa.teams t
 where (results.team_name)=(t.team_name)
-and length(results.team_id)>3;
+and (results.team_id is NULL or length(results.team_id)>3);
 
 update fifa.results
 set opponent_id=t.team_id
 from fifa.teams t
 where (results.opponent_name)=(t.team_name)
-and length(results.opponent_id)>3;
+and (results.opponent_id is NULL or length(results.opponent_id)>3);
 
 update fifa.results
 set team_id='eng'
