@@ -47,8 +47,8 @@ where
     g.home_score is not NULL
 and g.away_score is not NULL
 
-and g.home_id is not NULL
-and g.away_id is not NULL
+--and g.home_id is not NULL
+--and g.away_id is not NULL
 
 and g.cup_name not like '%U-17%'
 and g.cup_name not like '%U-20%'
@@ -89,8 +89,8 @@ where
     g.home_score is not NULL
 and g.away_score is not NULL
 
-and g.home_id is not NULL
-and g.away_id is not NULL
+--and g.home_id is not NULL
+--and g.away_id is not NULL
 
 and g.cup_name not like '%U-17%'
 and g.cup_name not like '%U-20%'
