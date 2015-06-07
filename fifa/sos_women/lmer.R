@@ -1,4 +1,4 @@
-sink("diagnostics/lmer.txt")
+sink("diagnostics/women_lmer.txt")
 
 library("lme4")
 #library("nortest")
@@ -90,11 +90,15 @@ detach(games)
 
 dim(g)
 
+model0 <- gs ~ field+game_length+(1|offense)+(1|defense)
+fit0 <- glmer(model0, data=g, REML=TRUE, verbose=TRUE, family=poisson(link=log), weights=w)
+
 model <- gs ~ field+game_length+(1|offense)+(1|defense)+(1|game_id)
 fit <- glmer(model, data=g, REML=TRUE, verbose=TRUE, family=poisson(link=log), weights=w)
 
 fit
 summary(fit)
+anova(fit0,fit)
 
 # List of data frames
 
