@@ -20,7 +20,7 @@ ln(sf.strength) as str,
 ln(sf.offensive) as ofs,
 ln(sf.defensive) as dfs,
 ln(sf.schedule_strength) as sos
-from fifa._schedule_factors sf
+from fifa.men_schedule_factors sf
 left join fifa.teams t
   on (t.gender_id,t.team_id)=('men',sf.team_id)
 order by str desc);

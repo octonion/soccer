@@ -1,8 +1,8 @@
 begin;
 
-drop table if exists fifa.results;
+drop table if exists fifa.men_results;
 
-create table fifa.results (
+create table fifa.men_results (
 	game_id		      integer,
 	gender_id	      text,
 	year		      integer,
@@ -18,7 +18,7 @@ create table fifa.results (
 	game_length	      text
 );
 
-insert into fifa.results
+insert into fifa.men_results
 (game_id,gender_id,year,
  game_date,
  team_name,team_id,
@@ -60,7 +60,7 @@ and g.gender_id='men'
 and g.year >= 2008
 );
 
-insert into fifa.results
+insert into fifa.men_results
 (game_id,gender_id,year,
  game_date,
  team_name,team_id,
@@ -102,23 +102,23 @@ and g.gender_id='men'
 and g.year >= 2008
 );
 
-update fifa.results
+update fifa.men_results
 set team_id=t.team_id
 from fifa.teams t
-where (results.team_name)=(t.team_name)
-and (results.team_id is NULL or length(results.team_id)>3);
+where (men_results.team_name)=(t.team_name)
+and (men_results.team_id is NULL or length(men_results.team_id)>3);
 
-update fifa.results
+update fifa.men_results
 set opponent_id=t.team_id
 from fifa.teams t
-where (results.opponent_name)=(t.team_name)
-and (results.opponent_id is NULL or length(results.opponent_id)>3);
+where (men_results.opponent_name)=(t.team_name)
+and (men_results.opponent_id is NULL or length(men_results.opponent_id)>3);
 
-update fifa.results
+update fifa.men_results
 set team_id='eng'
 where team_name='Great Britain';
 
-update fifa.results
+update fifa.men_results
 set opponent_id='eng'
 where opponent_name='Great Britain';
 

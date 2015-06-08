@@ -20,7 +20,7 @@ r.opponent_id as opponent,
 r.game_length as game_length,
 team_score::float as gs,
 (year-2007)^2 as w
-from fifa.results r
+from fifa.women_results r
 
 where
     r.year between 2008 and 2015
@@ -82,7 +82,7 @@ for (n in rpn) {
 # Model parameters
 
 parameter_levels <- as.data.frame(do.call("rbind",pll))
-dbWriteTable(con,c("fifa","_parameter_levels"),parameter_levels,row.names=TRUE)
+dbWriteTable(con,c("fifa","women_parameter_levels"),parameter_levels,row.names=TRUE)
 
 g <- cbind(fp,rp)
 g$gs <- gs
@@ -148,6 +148,6 @@ for (n in rn) {
 
 combined <- as.data.frame(do.call("rbind",results))
 
-dbWriteTable(con,c("fifa","_basic_factors"),as.data.frame(combined),row.names=TRUE)
+dbWriteTable(con,c("fifa","women_basic_factors"),as.data.frame(combined),row.names=TRUE)
 
 quit("no")
