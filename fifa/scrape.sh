@@ -1,7 +1,5 @@
 #!/bin/bash
 
-scrapers/ncaa_schools.rb
+scrapers/results.rb women 2015
+scrapers/results.rb men 2015
 
-scrapers/ncaa_divisions.rb
-
-scrapers/ncaa_games.rb
