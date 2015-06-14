@@ -1,0 +1,1577 @@
+package mx.core {
+
+    public namespace mx_internal = "http://www.adobe.com/2006/flex/mx/internal";
+}//package mx.core 
+﻿package mx.core {
+    import flash.display.*;
+    import mx.utils.*;
+
+    public class FlexBitmap extends Bitmap {
+
+        mx_internal static const VERSION:String = "4.1.0.21490";
+
+        public function FlexBitmap(_arg1:BitmapData=null, _arg2:String="auto", _arg3:Boolean=false){
+            var bitmapData = _arg1;
+            var pixelSnapping:String = _arg2;
+            var smoothing:Boolean = _arg3;
+            super(bitmapData, pixelSnapping, smoothing);
+            try {
+                name = NameUtil.createUniqueName(this);
+            } catch(e:Error) {
+            };
+        }
+        override public function toString():String{
+            return (NameUtil.displayObjectToString(this));
+        }
+
+    }
+}//package mx.core 
+﻿package mx.core {
+
+    public class MovieClipAsset extends FlexMovieClip implements IFlexAsset, IFlexDisplayObject, IBorder {
+
+        mx_internal static const VERSION:String = "4.1.0.21490";
+
+        private var _measuredHeight:Number;
+        private var _measuredWidth:Number;
+
+        public function MovieClipAsset(){
+            this._measuredWidth = width;
+            this._measuredHeight = height;
+        }
+        public function get measuredHeight():Number{
+            return (this._measuredHeight);
+        }
+        public function get measuredWidth():Number{
+            return (this._measuredWidth);
+        }
+        public function get borderMetrics():EdgeMetrics{
+            if (scale9Grid == null){
+                return (EdgeMetrics.EMPTY);
+            };
+            return (new EdgeMetrics(scale9Grid.left, scale9Grid.top, Math.ceil((this.measuredWidth - scale9Grid.right)), Math.ceil((this.measuredHeight - scale9Grid.bottom))));
+        }
+        public function move(_arg1:Number, _arg2:Number):void{
+            this.x = _arg1;
+            this.y = _arg2;
+        }
+        public function setActualSize(_arg1:Number, _arg2:Number):void{
+            width = _arg1;
+            height = _arg2;
+        }
+
+    }
+}//package mx.core 
+﻿package mx.core {
+    import flash.geom.*;
+
+    public interface IAssetLayoutFeatures {
+
+        function set layoutX(_arg1:Number):void;
+        function get layoutX():Number;
+        function set layoutY(_arg1:Number):void;
+        function get layoutY():Number;
+        function set layoutZ(_arg1:Number):void;
+        function get layoutZ():Number;
+        function get layoutWidth():Number;
+        function set layoutWidth(_arg1:Number):void;
+        function set transformX(_arg1:Number):void;
+        function get transformX():Number;
+        function set transformY(_arg1:Number):void;
+        function get transformY():Number;
+        function set transformZ(_arg1:Number):void;
+        function get transformZ():Number;
+        function set layoutRotationX(_arg1:Number):void;
+        function get layoutRotationX():Number;
+        function set layoutRotationY(_arg1:Number):void;
+        function get layoutRotationY():Number;
+        function set layoutRotationZ(_arg1:Number):void;
+        function get layoutRotationZ():Number;
+        function set layoutScaleX(_arg1:Number):void;
+        function get layoutScaleX():Number;
+        function set layoutScaleY(_arg1:Number):void;
+        function get layoutScaleY():Number;
+        function set layoutScaleZ(_arg1:Number):void;
+        function get layoutScaleZ():Number;
+        function set layoutMatrix(_arg1:Matrix):void;
+        function get layoutMatrix():Matrix;
+        function set layoutMatrix3D(_arg1:Matrix3D):void;
+        function get layoutMatrix3D():Matrix3D;
+        function get is3D():Boolean;
+        function get layoutIs3D():Boolean;
+        function get mirror():Boolean;
+        function set mirror(_arg1:Boolean):void;
+        function get stretchX():Number;
+        function set stretchX(_arg1:Number):void;
+        function get stretchY():Number;
+        function set stretchY(_arg1:Number):void;
+        function get computedMatrix():Matrix;
+        function get computedMatrix3D():Matrix3D;
+
+    }
+}//package mx.core 
+﻿package mx.core {
+
+    public class EdgeMetrics {
+
+        mx_internal static const VERSION:String = "4.1.0.21490";
+        public static const EMPTY:EdgeMetrics = new EdgeMetrics(0, 0, 0, 0);
+;
+
+        public var bottom:Number;
+        public var left:Number;
+        public var right:Number;
+        public var top:Number;
+
+        public function EdgeMetrics(_arg1:Number=0, _arg2:Number=0, _arg3:Number=0, _arg4:Number=0){
+            this.left = _arg1;
+            this.top = _arg2;
+            this.right = _arg3;
+            this.bottom = _arg4;
+        }
+        public function clone():EdgeMetrics{
+            return (new EdgeMetrics(this.left, this.top, this.right, this.bottom));
+        }
+
+    }
+}//package mx.core 
+﻿package mx.core {
+
+    public interface ILayoutDirectionElement {
+
+        function get layoutDirection():String;
+        function set layoutDirection(_arg1:String):void;
+        function invalidateLayoutDirection():void;
+
+    }
+}//package mx.core 
+﻿package mx.core {
+
+    public interface IFlexAsset {
+
+    }
+}//package mx.core 
+﻿package mx.core {
+    import flash.events.*;
+    import flash.display.*;
+    import flash.geom.*;
+    import flash.system.*;
+
+    public class BitmapAsset extends FlexBitmap implements IFlexAsset, IFlexDisplayObject, ILayoutDirectionElement {
+
+        mx_internal static const VERSION:String = "4.1.0.21490";
+
+        private static var FlexVersionClass:Class;
+        private static var MatrixUtilClass:Class;
+
+        private var layoutFeaturesClass:Class;
+        private var layoutFeatures:IAssetLayoutFeatures;
+        private var _height:Number;
+        private var _layoutDirection:String = "ltr";
+
+        public function BitmapAsset(_arg1:BitmapData=null, _arg2:String="auto", _arg3:Boolean=false){
+            var _local4:ApplicationDomain;
+            super(_arg1, _arg2, _arg3);
+            if (FlexVersionClass == null){
+                _local4 = ApplicationDomain.currentDomain;
+                if (_local4.hasDefinition("mx.core::FlexVersion")){
+                    FlexVersionClass = Class(_local4.getDefinition("mx.core::FlexVersion"));
+                };
+            };
+            if (((FlexVersionClass) && ((FlexVersionClass["compatibilityVersion"] >= FlexVersionClass["VERSION_4_0"])))){
+                this.addEventListener(Event.ADDED, this.addedHandler);
+            };
+        }
+        override public function get x():Number{
+            return (((this.layoutFeatures)==null) ? super.x : this.layoutFeatures.layoutX);
+        }
+        override public function set x(_arg1:Number):void{
+            if (this.x == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.x = _arg1;
+            } else {
+                this.layoutFeatures.layoutX = _arg1;
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get y():Number{
+            return (((this.layoutFeatures)==null) ? super.y : this.layoutFeatures.layoutY);
+        }
+        override public function set y(_arg1:Number):void{
+            if (this.y == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.y = _arg1;
+            } else {
+                this.layoutFeatures.layoutY = _arg1;
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get z():Number{
+            return (((this.layoutFeatures)==null) ? super.z : this.layoutFeatures.layoutZ);
+        }
+        override public function set z(_arg1:Number):void{
+            if (this.z == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.z = _arg1;
+            } else {
+                this.layoutFeatures.layoutZ = _arg1;
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get width():Number{
+            var _local1:Point;
+            if (this.layoutFeatures == null){
+                return (super.width);
+            };
+            if (MatrixUtilClass != null){
+                _local1 = MatrixUtilClass["transformSize"](this.layoutFeatures.layoutWidth, this._height, transform.matrix);
+            };
+            return (((_local1) ? _local1.x : super.width));
+        }
+        override public function set width(_arg1:Number):void{
+            if (this.width == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.width = _arg1;
+            } else {
+                this.layoutFeatures.layoutWidth = _arg1;
+                this.layoutFeatures.layoutScaleX = ((this.measuredWidth)!=0) ? (_arg1 / this.measuredWidth) : 0;
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get height():Number{
+            var _local1:Point;
+            if (this.layoutFeatures == null){
+                return (super.height);
+            };
+            if (MatrixUtilClass != null){
+                _local1 = MatrixUtilClass["transformSize"](this.layoutFeatures.layoutWidth, this._height, transform.matrix);
+            };
+            return (((_local1) ? _local1.y : super.height));
+        }
+        override public function set height(_arg1:Number):void{
+            if (this.height == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.height = _arg1;
+            } else {
+                this._height = _arg1;
+                this.layoutFeatures.layoutScaleY = ((this.measuredHeight)!=0) ? (_arg1 / this.measuredHeight) : 0;
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get rotationX():Number{
+            return (((this.layoutFeatures)==null) ? super.rotationX : this.layoutFeatures.layoutRotationX);
+        }
+        override public function set rotationX(_arg1:Number):void{
+            if (this.rotationX == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.rotationX = _arg1;
+            } else {
+                this.layoutFeatures.layoutRotationX = _arg1;
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get rotationY():Number{
+            return (((this.layoutFeatures)==null) ? super.rotationY : this.layoutFeatures.layoutRotationY);
+        }
+        override public function set rotationY(_arg1:Number):void{
+            if (this.rotationY == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.rotationY = _arg1;
+            } else {
+                this.layoutFeatures.layoutRotationY = _arg1;
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get rotationZ():Number{
+            return (((this.layoutFeatures)==null) ? super.rotationZ : this.layoutFeatures.layoutRotationZ);
+        }
+        override public function set rotationZ(_arg1:Number):void{
+            if (this.rotationZ == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.rotationZ = _arg1;
+            } else {
+                this.layoutFeatures.layoutRotationZ = _arg1;
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get rotation():Number{
+            return (((this.layoutFeatures)==null) ? super.rotation : this.layoutFeatures.layoutRotationZ);
+        }
+        override public function set rotation(_arg1:Number):void{
+            if (this.rotation == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.rotation = _arg1;
+            } else {
+                this.layoutFeatures.layoutRotationZ = _arg1;
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get scaleX():Number{
+            return (((this.layoutFeatures)==null) ? super.scaleX : this.layoutFeatures.layoutScaleX);
+        }
+        override public function set scaleX(_arg1:Number):void{
+            if (this.scaleX == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.scaleX = _arg1;
+            } else {
+                this.layoutFeatures.layoutScaleX = _arg1;
+                this.layoutFeatures.layoutWidth = (Math.abs(_arg1) * this.measuredWidth);
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get scaleY():Number{
+            return (((this.layoutFeatures)==null) ? super.scaleY : this.layoutFeatures.layoutScaleY);
+        }
+        override public function set scaleY(_arg1:Number):void{
+            if (this.scaleY == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.scaleY = _arg1;
+            } else {
+                this.layoutFeatures.layoutScaleY = _arg1;
+                this._height = (Math.abs(_arg1) * this.measuredHeight);
+                this.validateTransformMatrix();
+            };
+        }
+        override public function get scaleZ():Number{
+            return (((this.layoutFeatures)==null) ? super.scaleZ : this.layoutFeatures.layoutScaleZ);
+        }
+        override public function set scaleZ(_arg1:Number):void{
+            if (this.scaleZ == _arg1){
+                return;
+            };
+            if (this.layoutFeatures == null){
+                super.scaleZ = _arg1;
+            } else {
+                this.layoutFeatures.layoutScaleZ = _arg1;
+                this.validateTransformMatrix();
+            };
+        }
+        public function get layoutDirection():String{
+            return (this._layoutDirection);
+        }
+        public function set layoutDirection(_arg1:String):void{
+            if (_arg1 == this._layoutDirection){
+                return;
+            };
+            this._layoutDirection = _arg1;
+            this.invalidateLayoutDirection();
+        }
+        public function get measuredHeight():Number{
+            if (bitmapData){
+                return (bitmapData.height);
+            };
+            return (0);
+        }
+        public function get measuredWidth():Number{
+            if (bitmapData){
+                return (bitmapData.width);
+            };
+            return (0);
+        }
+        public function invalidateLayoutDirection():void{
+            var _local2:Boolean;
+            var _local1:DisplayObjectContainer = parent;
+            while (_local1) {
+                if ((_local1 is ILayoutDirectionElement)){
+                    _local2 = ((!((this._layoutDirection == null))) && (!((this._layoutDirection == ILayoutDirectionElement(_local1).layoutDirection))));
+                    if (((_local2) && ((this.layoutFeatures == null)))){
+                        this.initAdvancedLayoutFeatures();
+                        if (this.layoutFeatures != null){
+                            this.layoutFeatures.mirror = _local2;
+                            this.validateTransformMatrix();
+                        };
+                    } else {
+                        if (((!(_local2)) && (this.layoutFeatures))){
+                            this.layoutFeatures.mirror = _local2;
+                            this.validateTransformMatrix();
+                            this.layoutFeatures = null;
+                        };
+                    };
+                    break;
+                };
+                _local1 = _local1.parent;
+            };
+        }
+        public function move(_arg1:Number, _arg2:Number):void{
+            this.x = _arg1;
+            this.y = _arg2;
+        }
+        public function setActualSize(_arg1:Number, _arg2:Number):void{
+            this.width = _arg1;
+            this.height = _arg2;
+        }
+        private function addedHandler(_arg1:Event):void{
+            this.invalidateLayoutDirection();
+        }
+        private function initAdvancedLayoutFeatures():void{
+            var _local1:ApplicationDomain;
+            var _local2:IAssetLayoutFeatures;
+            if (this.layoutFeaturesClass == null){
+                _local1 = ApplicationDomain.currentDomain;
+                if (_local1.hasDefinition("mx.core::AdvancedLayoutFeatures")){
+                    this.layoutFeaturesClass = Class(_local1.getDefinition("mx.core::AdvancedLayoutFeatures"));
+                };
+                if (MatrixUtilClass == null){
+                    if (_local1.hasDefinition("mx.utils::MatrixUtil")){
+                        MatrixUtilClass = Class(_local1.getDefinition("mx.utils::MatrixUtil"));
+                    };
+                };
+            };
+            if (this.layoutFeaturesClass != null){
+                _local2 = new this.layoutFeaturesClass();
+                _local2.layoutScaleX = this.scaleX;
+                _local2.layoutScaleY = this.scaleY;
+                _local2.layoutScaleZ = this.scaleZ;
+                _local2.layoutRotationX = this.rotationX;
+                _local2.layoutRotationY = this.rotationY;
+                _local2.layoutRotationZ = this.rotation;
+                _local2.layoutX = this.x;
+                _local2.layoutY = this.y;
+                _local2.layoutZ = this.z;
+                _local2.layoutWidth = this.width;
+                this._height = this.height;
+                this.layoutFeatures = _local2;
+            };
+        }
+        private function validateTransformMatrix():void{
+            if (this.layoutFeatures != null){
+                if (this.layoutFeatures.is3D){
+                    super.transform.matrix3D = this.layoutFeatures.computedMatrix3D;
+                } else {
+                    super.transform.matrix = this.layoutFeatures.computedMatrix;
+                };
+            };
+        }
+
+    }
+}//package mx.core 
+﻿package mx.core {
+    import flash.utils.*;
+
+    public class ByteArrayAsset extends ByteArray implements IFlexAsset {
+
+        mx_internal static const VERSION:String = "4.1.0.21490";
+
+    }
+}//package mx.core 
+﻿package mx.core {
+    import flash.events.*;
+    import flash.display.*;
+    import flash.utils.*;
+    import flash.system.*;
+
+    public class MovieClipLoaderAsset extends MovieClipAsset implements IFlexAsset, IFlexDisplayObject {
+
+        mx_internal static const VERSION:String = "4.1.0.21490";
+
+        private var loader:Loader = null;
+        private var initialized:Boolean = false;
+        private var requestedWidth:Number;
+        private var requestedHeight:Number;
+        protected var initialWidth:Number = 0;
+        protected var initialHeight:Number = 0;
+
+        public function MovieClipLoaderAsset(){
+            var _local1:LoaderContext = new LoaderContext();
+            _local1.applicationDomain = new ApplicationDomain(ApplicationDomain.currentDomain);
+            if (("allowLoadBytesCodeExecution" in _local1)){
+                _local1["allowLoadBytesCodeExecution"] = true;
+            };
+            this.loader = new Loader();
+            this.loader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.completeHandler);
+            this.loader.loadBytes(this.movieClipData, _local1);
+            addChild(this.loader);
+        }
+        override public function get height():Number{
+            if (!this.initialized){
+                return (this.initialHeight);
+            };
+            return (super.height);
+        }
+        override public function set height(_arg1:Number):void{
+            if (!this.initialized){
+                this.requestedHeight = _arg1;
+            } else {
+                this.loader.height = _arg1;
+            };
+        }
+        override public function get measuredHeight():Number{
+            return (this.initialHeight);
+        }
+        override public function get measuredWidth():Number{
+            return (this.initialWidth);
+        }
+        override public function get width():Number{
+            if (!this.initialized){
+                return (this.initialWidth);
+            };
+            return (super.width);
+        }
+        override public function set width(_arg1:Number):void{
+            if (!this.initialized){
+                this.requestedWidth = _arg1;
+            } else {
+                this.loader.width = _arg1;
+            };
+        }
+        public function get movieClipData():ByteArray{
+            return (null);
+        }
+        private function completeHandler(_arg1:Event):void{
+            this.initialized = true;
+            this.initialWidth = this.loader.contentLoaderInfo.width;
+            this.initialHeight = this.loader.contentLoaderInfo.height;
+            if (!isNaN(this.requestedWidth)){
+                this.loader.width = this.requestedWidth;
+            };
+            if (!isNaN(this.requestedHeight)){
+                this.loader.height = this.requestedHeight;
+            };
+            dispatchEvent(_arg1);
+        }
+
+    }
+}//package mx.core 
+﻿package mx.core {
+    import flash.events.*;
+    import flash.display.*;
+    import flash.geom.*;
+    import flash.accessibility.*;
+
+    public interface IFlexDisplayObject extends IBitmapDrawable, IEventDispatcher {
+
+        function get root():DisplayObject;
+        function get stage():Stage;
+        function get name():String;
+        function set name(_arg1:String):void;
+        function get parent():DisplayObjectContainer;
+        function get mask():DisplayObject;
+        function set mask(_arg1:DisplayObject):void;
+        function get visible():Boolean;
+        function set visible(_arg1:Boolean):void;
+        function get x():Number;
+        function set x(_arg1:Number):void;
+        function get y():Number;
+        function set y(_arg1:Number):void;
+        function get scaleX():Number;
+        function set scaleX(_arg1:Number):void;
+        function get scaleY():Number;
+        function set scaleY(_arg1:Number):void;
+        function get mouseX():Number;
+        function get mouseY():Number;
+        function get rotation():Number;
+        function set rotation(_arg1:Number):void;
+        function get alpha():Number;
+        function set alpha(_arg1:Number):void;
+        function get width():Number;
+        function set width(_arg1:Number):void;
+        function get height():Number;
+        function set height(_arg1:Number):void;
+        function get cacheAsBitmap():Boolean;
+        function set cacheAsBitmap(_arg1:Boolean):void;
+        function get opaqueBackground():Object;
+        function set opaqueBackground(_arg1:Object):void;
+        function get scrollRect():Rectangle;
+        function set scrollRect(_arg1:Rectangle):void;
+        function get filters():Array;
+        function set filters(_arg1:Array):void;
+        function get blendMode():String;
+        function set blendMode(_arg1:String):void;
+        function get transform():Transform;
+        function set transform(_arg1:Transform):void;
+        function get scale9Grid():Rectangle;
+        function set scale9Grid(_arg1:Rectangle):void;
+        function globalToLocal(_arg1:Point):Point;
+        function localToGlobal(_arg1:Point):Point;
+        function getBounds(_arg1:DisplayObject):Rectangle;
+        function getRect(_arg1:DisplayObject):Rectangle;
+        function get loaderInfo():LoaderInfo;
+        function hitTestObject(_arg1:DisplayObject):Boolean;
+        function hitTestPoint(_arg1:Number, _arg2:Number, _arg3:Boolean=false):Boolean;
+        function get accessibilityProperties():AccessibilityProperties;
+        function set accessibilityProperties(_arg1:AccessibilityProperties):void;
+        function get measuredHeight():Number;
+        function get measuredWidth():Number;
+        function move(_arg1:Number, _arg2:Number):void;
+        function setActualSize(_arg1:Number, _arg2:Number):void;
+
+    }
+}//package mx.core 
+﻿package mx.core {
+
+    public interface IBorder {
+
+        function get borderMetrics():EdgeMetrics;
+
+    }
+}//package mx.core 
+﻿package mx.core {
+
+    public interface IRepeaterClient {
+
+        function get instanceIndices():Array;
+        function set instanceIndices(_arg1:Array):void;
+        function get isDocument():Boolean;
+        function get repeaterIndices():Array;
+        function set repeaterIndices(_arg1:Array):void;
+        function get repeaters():Array;
+        function set repeaters(_arg1:Array):void;
+        function initializeRepeaterArrays(_arg1:IRepeaterClient):void;
+
+    }
+}//package mx.core 
+﻿package mx.core {
+    import flash.display.*;
+    import mx.utils.*;
+
+    public class FlexMovieClip extends MovieClip {
+
+        mx_internal static const VERSION:String = "4.1.0.21490";
+
+        public function FlexMovieClip(){
+            super();
+            try {
+                name = NameUtil.createUniqueName(this);
+            } catch(e:Error) {
+            };
+        }
+        override public function toString():String{
+            return (NameUtil.displayObjectToString(this));
+        }
+
+    }
+}//package mx.core 
+﻿package mx.utils {
+    import flash.display.*;
+    import flash.utils.*;
+    import mx.core.*;
+
+    public class NameUtil {
+
+        mx_internal static const VERSION:String = "4.1.0.21490";
+
+        private static var counter:int = 0;
+
+        public static function createUniqueName(_arg1:Object):String{
+            if (!_arg1){
+                return (null);
+            };
+            var _local2:String = getQualifiedClassName(_arg1);
+            var _local3:int = _local2.indexOf("::");
+            if (_local3 != -1){
+                _local2 = _local2.substr((_local3 + 2));
+            };
+            var _local4:int = _local2.charCodeAt((_local2.length - 1));
+            if ((((_local4 >= 48)) && ((_local4 <= 57)))){
+                _local2 = (_local2 + "_");
+            };
+            return ((_local2 + counter++));
+        }
+        public static function displayObjectToString(_arg1:DisplayObject):String{
+            var result:* = null;
+            var o:* = null;
+            var s:* = null;
+            var indices:* = null;
+            var displayObject:* = _arg1;
+            try {
+                o = displayObject;
+                while (o != null) {
+                    if (((((o.parent) && (o.stage))) && ((o.parent == o.stage)))){
+                        break;
+                    };
+                    s = ((((("id" in o)) && (o["id"]))) ? o["id"] : o.name);
+                    if ((o is IRepeaterClient)){
+                        indices = IRepeaterClient(o).instanceIndices;
+                        if (indices){
+                            s = (s + (("[" + indices.join("][")) + "]"));
+                        };
+                    };
+                    result = (((result == null)) ? s : ((s + ".") + result));
+                    o = o.parent;
+                };
+            } catch(e:SecurityError) {
+            };
+            return (result);
+        }
+        public static function getUnqualifiedClassName(_arg1:Object):String{
+            var _local2:String;
+            if ((_arg1 is String)){
+                _local2 = (_arg1 as String);
+            } else {
+                _local2 = getQualifiedClassName(_arg1);
+            };
+            var _local3:int = _local2.indexOf("::");
+            if (_local3 != -1){
+                _local2 = _local2.substr((_local3 + 2));
+            };
+            return (_local2);
+        }
+
+    }
+}//package mx.utils 
+﻿package {
+    import flash.events.*;
+    import flash.display.*;
+    import com.performgroup.performframework.event.*;
+    import net.hires.debug.*;
+    import com.performgroup.performframework.*;
+    import flash.system.*;
+    import com.performgroup.unified.events.*;
+    import com.performgroup.eplayer.views.*;
+    import com.performgroup.performframework.util.*;
+    import com.performgroup.utils.*;
+    import com.performgroup.eplayer.main.*;
+    import com.performgroup.eplayer.preloader.*;
+    import flash.ui.*;
+    import com.performgroup.eplayer.utils.*;
+
+    public class Eplayer extends Sprite {
+
+        public static const BUILD_NUMBER:String = "2202200415";
+        public static const VERSION_INFO:String = ("ePlayer 2.1 build " + BUILD_NUMBER);
+
+        private static var _instance:Eplayer = null;
+
+        private var _mainContext:MainContext = null;
+        private var _application:Application;
+        private var _eplayerView:EPlayerView;
+        private var preloader:Preloader;
+        private var _infoItem:ContextMenuItem;
+
+        public function Eplayer(){
+            this._application = new Application();
+            this._eplayerView = new EPlayerView();
+            this.preloader = new Preloader();
+            this._infoItem = new ContextMenuItem("Copy system info to clipboard", false, true, true);
+            super();
+            _instance = this;
+            LogSystem.initFromFlashVars(loaderInfo.parameters);
+            LogSystem.addLogEvent(new ApplicationEvent(ApplicationEvent.APPLICATION_EPLAYER_CONSTRUCTOR));
+            addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+        }
+        public static function setEplayerSize():void{
+            _instance._eplayerView.width = _instance.stage.stageWidth;
+            _instance._eplayerView.height = _instance.stage.stageHeight;
+            _instance._application.width = _instance.stage.stageWidth;
+            _instance._application.height = _instance.stage.stageHeight;
+            if (_instance.stage.displayState == StageDisplayState.NORMAL){
+                _instance._eplayerView.createEplayerViewMask();
+            };
+        }
+
+        private function onAddedToStage(_arg1:Event):void{
+            LogSystem.addLogEvent(new ApplicationEvent(ApplicationEvent.APPLICATION_ADDED_TO_STAGE));
+            if (loaderInfo.uncaughtErrorEvents){
+                loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, this.uncaughtErrorHandler);
+            };
+            this.addStageListeners();
+            this._application.stage = stage;
+            this._application.loaderInfo = loaderInfo;
+            this._application.visible = true;
+            this._application.firstChild = this._eplayerView;
+            this._application.stage.scaleMode = StageScaleMode.NO_SCALE;
+            this._application.scaleX = 1;
+            this._application.scaleY = 1;
+            ApplicationBase.application = this._application;
+            ApplicationBase.application.factory = new ApplicationFactory(stage);
+            this._eplayerView.visible = true;
+            setEplayerSize();
+            this._mainContext = new MainContext(this);
+            addChild(this._application);
+            addChild(this._eplayerView);
+            addChild(this.preloader);
+            this.createCustomMenu();
+        }
+        private function addStageListeners():void{
+            stage.addEventListener(Event.RESIZE, this.onStageResized);
+        }
+        private function onStageResized(_arg1:Event):void{
+            setEplayerSize();
+        }
+        private function uncaughtErrorHandler(_arg1:UncaughtErrorEvent):void{
+            _arg1.preventDefault();
+            var _local2:UnhandledErrorEvent = new UnhandledErrorEvent(UnhandledErrorEvent.ERROR_HAPPENED, _arg1);
+            dispatchEvent(_local2);
+        }
+        private function createCustomMenu(_arg1:Object=null):void{
+            var _local5:ContextMenuItem;
+            var _local2:ContextMenuItem = new ContextMenuItem(VERSION_INFO, false, true, true);
+            var _local3:ContextMenu = new ContextMenu();
+            _local5 = new ContextMenuItem("Toggle performance monitor", true, true, true);
+            _local5.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, this.onPerfItemSelect);
+            _local3.hideBuiltInItems();
+            var _local4:Boolean;
+            _local3.customItems = [_local2, _local5, this._infoItem];
+            _local4 = true;
+            if (!_local4){
+                _local3.customItems = [_local2, this._infoItem];
+            };
+            this._infoItem.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, this.onInfoItemSelect);
+            this._eplayerView.contextMenu = _local3;
+            this._eplayerView.videoView.contextMenu = _local3;
+            this.preloader.contextMenu = _local3;
+        }
+        private function onPerfItemSelect(_arg1:ContextMenuEvent):void{
+            Stats.instance.visible = !(Stats.instance.visible);
+            if (Stats.instance.visible){
+                this._eplayerView.addChild(Stats.instance);
+            } else {
+                this._eplayerView.removeChild(Stats.instance);
+            };
+            Stats.instance.invalidate();
+        }
+        private function onInfoItemSelect(_arg1:ContextMenuEvent):void{
+            this.copyInfoToClipboard();
+        }
+        private function copyInfoToClipboard():void{
+            if (TraceHelper.importantMessages.length > 0){
+                System.setClipboard(((((new SystemInfo().toString() + "\n\n\n") + TraceHelper.importantMessages) + "\n\n\n") + TraceHelper.eventMessages));
+            } else {
+                System.setClipboard(new SystemInfo().toString());
+            };
+        }
+
+    }
+}//package 
+﻿package org.swiftsuspenders {
+    import flash.utils.*;
+    import org.swiftsuspenders.*;
+
+    function getConstructor(_arg1:Object):Class{
+        var _local2:String;
+        if ((((((((_arg1 is Proxy)) || ((_arg1 is Number)))) || ((_arg1 is XML)))) || ((_arg1 is XMLList)))){
+            _local2 = getQualifiedClassName(_arg1);
+            return (Class(getDefinitionByName(_local2)));
+        };
+        return (_arg1.constructor);
+    }
+}//package org.swiftsuspenders 
+﻿package org.swiftsuspenders {
+    import org.swiftsuspenders.injectionresults.*;
+
+    public class InjectionConfig {
+
+        public var request:Class;
+        public var injectionName:String;
+        private var m_injector:Injector;
+        private var m_result:InjectionResult;
+
+        public function InjectionConfig(_arg1:Class, _arg2:String){
+            this.request = _arg1;
+            this.injectionName = _arg2;
+        }
+        public function getResponse(_arg1:Injector):Object{
+            if (this.m_result){
+                return (this.m_result.getResponse(((this.m_injector) || (_arg1))));
+            };
+            var _local2:InjectionConfig = ((this.m_injector) || (_arg1)).getAncestorMapping(this.request, this.injectionName);
+            if (_local2){
+                return (_local2.getResponse(_arg1));
+            };
+            return (null);
+        }
+        public function hasResponse(_arg1:Injector):Boolean{
+            if (this.m_result){
+                return (true);
+            };
+            var _local2:InjectionConfig = ((this.m_injector) || (_arg1)).getAncestorMapping(this.request, this.injectionName);
+            return (!((_local2 == null)));
+        }
+        public function hasOwnResponse():Boolean{
+            return (!((this.m_result == null)));
+        }
+        public function setResult(_arg1:InjectionResult):void{
+            this.m_result = _arg1;
+        }
+        public function setInjector(_arg1:Injector):void{
+            this.m_injector = _arg1;
+        }
+
+    }
+}//package org.swiftsuspenders 
+﻿package org.swiftsuspenders.injectionpoints {
+    import org.swiftsuspenders.*;
+
+    public class PropertyInjectionPoint extends InjectionPoint {
+
+        private var propertyName:String;
+        private var propertyType:String;
+        private var m_injectionConfig:InjectionConfig;
+
+        public function PropertyInjectionPoint(_arg1:XML, _arg2:Injector){
+            super(_arg1, _arg2);
+        }
+        override public function applyInjection(_arg1:Object, _arg2:Injector):Object{
+            var _local3:Object = this.m_injectionConfig.getResponse(_arg2);
+            if (_local3 == null){
+                throw (new InjectorError(((("Injector is missing a rule to handle injection into target " + _arg1) + ". Target dependency: ") + this.propertyType)));
+            };
+            _arg1[this.propertyName] = _local3;
+            return (_arg1);
+        }
+        override protected function initializeInjection(_arg1:XML, _arg2:Injector):void{
+            this.propertyType = _arg1.parent().@type.toString();
+            this.propertyName = _arg1.parent().@name.toString();
+            this.m_injectionConfig = _arg2.getMapping(Class(_arg2.getApplicationDomain().getDefinition(this.propertyType)), _arg1.arg.attribute("value").toString());
+        }
+
+    }
+}//package org.swiftsuspenders.injectionpoints 
+﻿package org.swiftsuspenders.injectionpoints {
+    import org.swiftsuspenders.*;
+
+    public class InjectionPoint {
+
+        public function InjectionPoint(_arg1:XML, _arg2:Injector){
+            this.initializeInjection(_arg1, _arg2);
+        }
+        public function applyInjection(_arg1:Object, _arg2:Injector):Object{
+            return (_arg1);
+        }
+        protected function initializeInjection(_arg1:XML, _arg2:Injector):void{
+        }
+
+    }
+}//package org.swiftsuspenders.injectionpoints 
+﻿package org.swiftsuspenders.injectionpoints {
+    import org.swiftsuspenders.*;
+
+    public class PostConstructInjectionPoint extends InjectionPoint {
+
+        protected var methodName:String;
+        protected var orderValue:int;
+
+        public function PostConstructInjectionPoint(_arg1:XML, _arg2:Injector){
+            super(_arg1, _arg2);
+        }
+        public function get order():int{
+            return (this.orderValue);
+        }
+        override public function applyInjection(_arg1:Object, _arg2:Injector):Object{
+            var _local3 = _arg1;
+            _local3[this.methodName]();
+            return (_arg1);
+        }
+        override protected function initializeInjection(_arg1:XML, _arg2:Injector):void{
+            var orderArg:* = null;
+            var methodNode:* = null;
+            var node:* = _arg1;
+            var injector:* = _arg2;
+            orderArg = node.arg.(@key == "order");
+            methodNode = node.parent();
+            this.orderValue = int(orderArg.@value);
+            this.methodName = methodNode.@name.toString();
+        }
+
+    }
+}//package org.swiftsuspenders.injectionpoints 
+﻿package org.swiftsuspenders.injectionpoints {
+    import flash.utils.*;
+    import org.swiftsuspenders.*;
+
+    public class ConstructorInjectionPoint extends MethodInjectionPoint {
+
+        public function ConstructorInjectionPoint(_arg1:XML, _arg2:Class, _arg3:Injector){
+            var node:* = _arg1;
+            var clazz:* = _arg2;
+            var injector:* = _arg3;
+            if (node.parameter.(@type == "*").length() == node.parameter.@type.length()){
+                this.createDummyInstance(node, clazz);
+            };
+            super(node, injector);
+        }
+        override public function applyInjection(_arg1:Object, _arg2:Injector):Object{
+            var _local3:Array = gatherParameterValues(_arg1, _arg2);
+            switch (_local3.length){
+                case 0:
+                    return (new (_arg1)());
+                case 1:
+                    return (new _arg1(_local3[0]));
+                case 2:
+                    return (new _arg1(_local3[0], _local3[1]));
+                case 3:
+                    return (new _arg1(_local3[0], _local3[1], _local3[2]));
+                case 4:
+                    return (new _arg1(_local3[0], _local3[1], _local3[2], _local3[3]));
+                case 5:
+                    return (new _arg1(_local3[0], _local3[1], _local3[2], _local3[3], _local3[4]));
+                case 6:
+                    return (new _arg1(_local3[0], _local3[1], _local3[2], _local3[3], _local3[4], _local3[5]));
+                case 7:
+                    return (new _arg1(_local3[0], _local3[1], _local3[2], _local3[3], _local3[4], _local3[5], _local3[6]));
+                case 8:
+                    return (new _arg1(_local3[0], _local3[1], _local3[2], _local3[3], _local3[4], _local3[5], _local3[6], _local3[7]));
+                case 9:
+                    return (new _arg1(_local3[0], _local3[1], _local3[2], _local3[3], _local3[4], _local3[5], _local3[6], _local3[7], _local3[8]));
+                case 10:
+                    return (new _arg1(_local3[0], _local3[1], _local3[2], _local3[3], _local3[4], _local3[5], _local3[6], _local3[7], _local3[8], _local3[9]));
+            };
+            return (null);
+        }
+        override protected function initializeInjection(_arg1:XML, _arg2:Injector):void{
+            var nameArgs:* = null;
+            var node:* = _arg1;
+            var injector:* = _arg2;
+            nameArgs = node.parent().metadata.(@name == "Inject").arg.(@key == "name");
+            methodName = "constructor";
+            gatherParameters(node, nameArgs, injector);
+        }
+        private function createDummyInstance(_arg1:XML, _arg2:Class):void{
+            var constructorNode:* = _arg1;
+            var clazz:* = _arg2;
+            try {
+                switch (constructorNode.children().length()){
+                    case 0:
+                        new (clazz)();
+                        break;
+                    case 1:
+                        new clazz(null);
+                        break;
+                    case 2:
+                        new clazz(null, null);
+                        break;
+                    case 3:
+                        new clazz(null, null, null);
+                        break;
+                    case 4:
+                        new clazz(null, null, null, null);
+                        break;
+                    case 5:
+                        new clazz(null, null, null, null, null);
+                        break;
+                    case 6:
+                        new clazz(null, null, null, null, null, null);
+                        break;
+                    case 7:
+                        new clazz(null, null, null, null, null, null, null);
+                        break;
+                    case 8:
+                        new clazz(null, null, null, null, null, null, null, null);
+                        break;
+                    case 9:
+                        new clazz(null, null, null, null, null, null, null, null, null);
+                        break;
+                    case 10:
+                        new clazz(null, null, null, null, null, null, null, null, null, null);
+                        break;
+                };
+            } catch(error:Error) {
+                trace(error);
+            };
+            constructorNode.setChildren(describeType(clazz).factory.constructor[0].children());
+        }
+
+    }
+}//package org.swiftsuspenders.injectionpoints 
+﻿package org.swiftsuspenders.injectionpoints {
+    import org.swiftsuspenders.*;
+
+    public class NoParamsConstructorInjectionPoint extends InjectionPoint {
+
+        public function NoParamsConstructorInjectionPoint(){
+            super(null, null);
+        }
+        override public function applyInjection(_arg1:Object, _arg2:Injector):Object{
+            return (new (_arg1)());
+        }
+
+    }
+}//package org.swiftsuspenders.injectionpoints 
+﻿package org.swiftsuspenders.injectionpoints {
+    import flash.utils.*;
+    import org.swiftsuspenders.*;
+
+    public class MethodInjectionPoint extends InjectionPoint {
+
+        protected var methodName:String;
+        protected var m_injectionConfigs:Array;
+        protected var requiredParameters:int = 0;
+
+        public function MethodInjectionPoint(_arg1:XML, _arg2:Injector){
+            super(_arg1, _arg2);
+        }
+        override public function applyInjection(_arg1:Object, _arg2:Injector):Object{
+            var _local3:Array = this.gatherParameterValues(_arg1, _arg2);
+            var _local4:Function = _arg1[this.methodName];
+            _local4.apply(_arg1, _local3);
+            return (_arg1);
+        }
+        override protected function initializeInjection(_arg1:XML, _arg2:Injector):void{
+            var nameArgs:* = null;
+            var methodNode:* = null;
+            var node:* = _arg1;
+            var injector:* = _arg2;
+            nameArgs = node.arg.(@key == "name");
+            methodNode = node.parent();
+            this.methodName = methodNode.@name.toString();
+            this.gatherParameters(methodNode, nameArgs, injector);
+        }
+        protected function gatherParameters(_arg1:XML, _arg2:XMLList, _arg3:Injector):void{
+            var _local5:XML;
+            var _local6:String;
+            var _local7:String;
+            var _local8:Class;
+            this.m_injectionConfigs = [];
+            var _local4:int;
+            for each (_local5 in _arg1.parameter) {
+                _local6 = "";
+                if (_arg2[_local4]){
+                    _local6 = _arg2[_local4].@value.toString();
+                };
+                _local7 = _local5.@type.toString();
+                if (_local7 == "*"){
+                    if (_local5.@optional.toString() == "false"){
+                        throw (new Error(("Error in method definition of injectee. Required " + "parameters can't have type \"*\".")));
+                    };
+                    _local7 = null;
+                } else {
+                    _local8 = Class(_arg3.getApplicationDomain().getDefinition(_local7));
+                };
+                this.m_injectionConfigs.push(_arg3.getMapping(_local8, _local6));
+                if (_local5.@optional.toString() == "false"){
+                    this.requiredParameters++;
+                };
+                _local4++;
+            };
+        }
+        protected function gatherParameterValues(_arg1:Object, _arg2:Injector):Array{
+            var _local6:InjectionConfig;
+            var _local7:Object;
+            var _local3:Array = [];
+            var _local4:int = this.m_injectionConfigs.length;
+            var _local5:int;
+            while (_local5 < _local4) {
+                _local6 = this.m_injectionConfigs[_local5];
+                _local7 = _local6.getResponse(_arg2);
+                if (_local7 == null){
+                    if (_local5 >= this.requiredParameters){
+                        break;
+                    };
+                    throw (new InjectorError(((((((("Injector is missing a rule to handle injection into target " + _arg1) + ". Target dependency: ") + getQualifiedClassName(_local6.request)) + ", method: ") + this.methodName) + ", parameter: ") + (_local5 + 1))));
+                };
+                _local3[_local5] = _local7;
+                _local5++;
+            };
+            return (_local3);
+        }
+
+    }
+}//package org.swiftsuspenders.injectionpoints 
+﻿package org.swiftsuspenders {
+
+    public class InjectorError extends Error {
+
+        public function InjectorError(_arg1="", _arg2=0){
+            super(_arg1, _arg2);
+        }
+    }
+}//package org.swiftsuspenders 
+﻿package org.swiftsuspenders {
+    import flash.utils.*;
+    import flash.system.*;
+
+    public class Reflector {
+
+        public function classExtendsOrImplements(_arg1:Object, _arg2:Class, _arg3:ApplicationDomain=null):Boolean{
+            var actualClass:* = null;
+            var classOrClassName:* = _arg1;
+            var superclass:* = _arg2;
+            var application = _arg3;
+            if ((classOrClassName is Class)){
+                actualClass = Class(classOrClassName);
+            } else {
+                if ((classOrClassName is String)){
+                    try {
+                        actualClass = Class(getDefinitionByName((classOrClassName as String)));
+                    } catch(e:Error) {
+                        throw (new Error(((((("The class name " + classOrClassName) + " is not valid because of ") + e) + "\n") + e.getStackTrace())));
+                    };
+                };
+            };
+            if (!actualClass){
+                throw (new Error(("The parameter classOrClassName must be a valid Class " + "instance or fully qualified class name.")));
+            };
+            if (actualClass == superclass){
+                return (true);
+            };
+            var factoryDescription:* = describeType(actualClass).factory[0];
+            return ((factoryDescription.children().(((name() == "implementsInterface")) || ((name() == "extendsClass"))).(attribute("type") == getQualifiedClassName(superclass)).length() > 0));
+        }
+        public function getClass(_arg1, _arg2:ApplicationDomain=null):Class{
+            if ((_arg1 is Class)){
+                return (_arg1);
+            };
+            return (getConstructor(_arg1));
+        }
+        public function getFQCN(_arg1, _arg2:Boolean=false):String{
+            var _local3:String;
+            var _local4:int;
+            if ((_arg1 is String)){
+                _local3 = _arg1;
+                if (((!(_arg2)) && ((_local3.indexOf("::") == -1)))){
+                    _local4 = _local3.lastIndexOf(".");
+                    if (_local4 == -1){
+                        return (_local3);
+                    };
+                    return (((_local3.substring(0, _local4) + "::") + _local3.substring((_local4 + 1))));
+                };
+            } else {
+                _local3 = getQualifiedClassName(_arg1);
+            };
+            return (((_arg2) ? _local3.replace("::", ".") : _local3));
+        }
+
+    }
+}//package org.swiftsuspenders 
+﻿package org.swiftsuspenders {
+    import flash.utils.*;
+    import flash.system.*;
+    import org.swiftsuspenders.injectionresults.*;
+    import org.swiftsuspenders.injectionpoints.*;
+
+    public class Injector {
+
+        private var m_parentInjector:Injector;
+        private var m_applicationDomain:ApplicationDomain;
+        private var m_mappings:Dictionary;
+        private var m_injectionPointLists:Dictionary;
+        private var m_constructorInjectionPoints:Dictionary;
+        private var m_attendedToInjectees:Dictionary;
+        private var m_xmlMetadata:XML;
+
+        public function Injector(_arg1:XML=null){
+            this.m_mappings = new Dictionary();
+            this.m_injectionPointLists = new Dictionary();
+            this.m_constructorInjectionPoints = new Dictionary();
+            this.m_attendedToInjectees = new Dictionary(true);
+            this.m_xmlMetadata = _arg1;
+        }
+        public function mapValue(_arg1:Class, _arg2:Object, _arg3:String=""){
+            var _local4:InjectionConfig = this.getMapping(_arg1, _arg3);
+            _local4.setResult(new InjectValueResult(_arg2));
+            return (_local4);
+        }
+        public function mapClass(_arg1:Class, _arg2:Class, _arg3:String=""){
+            var _local4:InjectionConfig = this.getMapping(_arg1, _arg3);
+            _local4.setResult(new InjectClassResult(_arg2));
+            return (_local4);
+        }
+        public function mapSingleton(_arg1:Class, _arg2:String=""){
+            return (this.mapSingletonOf(_arg1, _arg1, _arg2));
+        }
+        public function mapSingletonOf(_arg1:Class, _arg2:Class, _arg3:String=""){
+            var _local4:InjectionConfig = this.getMapping(_arg1, _arg3);
+            _local4.setResult(new InjectSingletonResult(_arg2));
+            return (_local4);
+        }
+        public function mapRule(_arg1:Class, _arg2, _arg3:String=""){
+            var _local4:InjectionConfig = this.getMapping(_arg1, _arg3);
+            _local4.setResult(new InjectOtherRuleResult(_arg2));
+            return (_arg2);
+        }
+        public function getMapping(_arg1:Class, _arg2:String=""):InjectionConfig{
+            var _local3:String = getQualifiedClassName(_arg1);
+            var _local4:InjectionConfig = this.m_mappings[((_local3 + "#") + _arg2)];
+            if (!_local4){
+                _local4 = (this.m_mappings[((_local3 + "#") + _arg2)] = new InjectionConfig(_arg1, _arg2));
+            };
+            return (_local4);
+        }
+        public function injectInto(_arg1:Object):void{
+            var _local2:Array;
+            var _local6:InjectionPoint;
+            if (this.m_attendedToInjectees[_arg1]){
+                return;
+            };
+            this.m_attendedToInjectees[_arg1] = true;
+            var _local3:Class = getConstructor(_arg1);
+            _local2 = ((this.m_injectionPointLists[_local3]) || (this.getInjectionPoints(_local3)));
+            var _local4:int = _local2.length;
+            var _local5:int;
+            while (_local5 < _local4) {
+                _local6 = _local2[_local5];
+                _local6.applyInjection(_arg1, this);
+                _local5++;
+            };
+        }
+        public function instantiate(_arg1:Class){
+            var _local2:InjectionPoint = this.m_constructorInjectionPoints[_arg1];
+            if (!_local2){
+                this.getInjectionPoints(_arg1);
+                _local2 = this.m_constructorInjectionPoints[_arg1];
+            };
+            var _local3:* = _local2.applyInjection(_arg1, this);
+            this.injectInto(_local3);
+            return (_local3);
+        }
+        public function unmap(_arg1:Class, _arg2:String=""):void{
+            var _local3:InjectionConfig = this.getConfigurationForRequest(_arg1, _arg2);
+            if (!_local3){
+                throw (new InjectorError(((((("Error while removing an injector mapping: " + "No mapping defined for class ") + getQualifiedClassName(_arg1)) + ", named \"") + _arg2) + "\"")));
+            };
+            _local3.setResult(null);
+        }
+        public function hasMapping(_arg1:Class, _arg2:String=""):Boolean{
+            var _local3:InjectionConfig = this.getConfigurationForRequest(_arg1, _arg2);
+            if (!_local3){
+                return (false);
+            };
+            return (_local3.hasResponse(this));
+        }
+        public function getInstance(_arg1:Class, _arg2:String=""){
+            var _local3:InjectionConfig = this.getConfigurationForRequest(_arg1, _arg2);
+            if (((!(_local3)) || (!(_local3.hasResponse(this))))){
+                throw (new InjectorError(((((("Error while getting mapping response: " + "No mapping defined for class ") + getQualifiedClassName(_arg1)) + ", named \"") + _arg2) + "\"")));
+            };
+            return (_local3.getResponse(this));
+        }
+        public function createChildInjector(_arg1:ApplicationDomain=null):Injector{
+            var _local2:Injector = new Injector();
+            _local2.setApplicationDomain(_arg1);
+            _local2.setParentInjector(this);
+            return (_local2);
+        }
+        public function setApplicationDomain(_arg1:ApplicationDomain):void{
+            this.m_applicationDomain = _arg1;
+        }
+        public function getApplicationDomain():ApplicationDomain{
+            return (((this.m_applicationDomain) ? this.m_applicationDomain : ApplicationDomain.currentDomain));
+        }
+        public function setParentInjector(_arg1:Injector):void{
+            if (((this.m_parentInjector) && (!(_arg1)))){
+                this.m_attendedToInjectees = new Dictionary(true);
+            };
+            this.m_parentInjector = _arg1;
+            if (_arg1){
+                this.m_attendedToInjectees = _arg1.attendedToInjectees;
+            };
+        }
+        public function getParentInjector():Injector{
+            return (this.m_parentInjector);
+        }
+        function getAncestorMapping(_arg1:Class, _arg2:String=null):InjectionConfig{
+            var _local4:InjectionConfig;
+            var _local3:Injector = this.m_parentInjector;
+            while (_local3) {
+                _local4 = _local3.getConfigurationForRequest(_arg1, _arg2, false);
+                if (((_local4) && (_local4.hasOwnResponse()))){
+                    return (_local4);
+                };
+                _local3 = _local3.getParentInjector();
+            };
+            return (null);
+        }
+        function get attendedToInjectees():Dictionary{
+            return (this.m_attendedToInjectees);
+        }
+        private function getInjectionPoints(_arg1:Class):Array{
+            var node:* = null;
+            var injectionPoint:* = null;
+            var postConstructMethodPoints:* = null;
+            var clazz:* = _arg1;
+            var description:* = describeType(clazz);
+            var injectionPoints:* = [];
+            this.m_injectionPointLists[clazz] = injectionPoints;
+            this.m_injectionPointLists[description.@name.toString()] = injectionPoints;
+            if (this.m_xmlMetadata){
+                this.createInjectionPointsFromConfigXML(description);
+                this.addParentInjectionPoints(description, injectionPoints);
+            };
+            node = description.factory.constructor[0];
+            if (node){
+                this.m_constructorInjectionPoints[clazz] = new ConstructorInjectionPoint(node, clazz, this);
+            } else {
+                this.m_constructorInjectionPoints[clazz] = new NoParamsConstructorInjectionPoint();
+            };
+            for each (node in description.factory.*.(((name() == "variable")) || ((name() == "accessor"))).metadata.(@name == "Inject")) {
+                injectionPoint = new PropertyInjectionPoint(node, this);
+                injectionPoints.push(injectionPoint);
+            };
+            for each (node in description.factory.method.metadata.(@name == "Inject")) {
+                injectionPoint = new MethodInjectionPoint(node, this);
+                injectionPoints.push(injectionPoint);
+            };
+            postConstructMethodPoints = [];
+            for each (node in description.factory.method.metadata.(@name == "PostConstruct")) {
+                injectionPoint = new PostConstructInjectionPoint(node, this);
+                postConstructMethodPoints.push(injectionPoint);
+            };
+            if (postConstructMethodPoints.length > 0){
+                postConstructMethodPoints.sortOn("order", Array.NUMERIC);
+                injectionPoints.push.apply(injectionPoints, postConstructMethodPoints);
+            };
+            return (injectionPoints);
+        }
+        private function getConfigurationForRequest(_arg1:Class, _arg2:String, _arg3:Boolean=true):InjectionConfig{
+            var _local4:String = getQualifiedClassName(_arg1);
+            var _local5:InjectionConfig = this.m_mappings[((_local4 + "#") + _arg2)];
+            if (((((((!(_local5)) && (_arg3))) && (this.m_parentInjector))) && (this.m_parentInjector.hasMapping(_arg1, _arg2)))){
+                _local5 = this.getAncestorMapping(_arg1, _arg2);
+            };
+            return (_local5);
+        }
+        private function createInjectionPointsFromConfigXML(_arg1:XML):void{
+            var node:* = null;
+            var className:* = null;
+            var metaNode:* = null;
+            var typeNode:* = null;
+            var arg:* = null;
+            var description:* = _arg1;
+            for each (node in description..metadata.(((@name == "Inject")) || ((@name == "PostConstruct")))) {
+                delete node.parent().metadata.(((@name == "Inject")) || ((@name == "PostConstruct")))[0];
+            };
+            className = description.factory.@type;
+            for each (node in this.m_xmlMetadata.type.(@name == className).children()) {
+                metaNode = <metadata/>
+                ;
+                if (node.name() == "postconstruct"){
+                    metaNode.@name = "PostConstruct";
+                    if (node.@order.length()){
+                        metaNode.appendChild(new XML((("<arg key='order' value=\"" + node.@order) + "\"/>")));
+                    };
+                } else {
+                    metaNode.@name = "Inject";
+                    if (node.@injectionname.length()){
+                        metaNode.appendChild(new XML((("<arg key='name' value=\"" + node.@injectionname) + "\"/>")));
+                    };
+                    for each (arg in node.arg) {
+                        metaNode.appendChild(new XML((("<arg key='name' value=\"" + arg.@injectionname) + "\"/>")));
+                    };
+                };
+                if (node.name() == "constructor"){
+                    typeNode = description.factory[0];
+                } else {
+                    typeNode = description.factory.*.(attribute("name") == node.@name)[0];
+                    if (!typeNode){
+                        throw (new InjectorError((((("Error in XML configuration: Class \"" + className) + "\" doesn't contain the instance member \"") + node.@name) + "\"")));
+                    };
+                };
+                typeNode.appendChild(metaNode);
+            };
+        }
+        private function addParentInjectionPoints(_arg1:XML, _arg2:Array):void{
+            var _local3:String = _arg1.factory.extendsClass.@type[0];
+            if (!_local3){
+                return;
+            };
+            var _local4:Array = ((this.m_injectionPointLists[_local3]) || (this.getInjectionPoints(Class(getDefinitionByName(_local3)))));
+            _arg2.push.apply(_arg2, _local4);
+        }
+
+    }
+}//package org.swiftsuspenders 
+﻿package org.swiftsuspenders.injectionresults {
+    import org.swiftsuspenders.*;
+
+    public class InjectSingletonResult extends InjectionResult {
+
+        private var m_responseType:Class;
+        private var m_response:Object;
+
+        public function InjectSingletonResult(_arg1:Class){
+            this.m_responseType = _arg1;
+        }
+        override public function getResponse(_arg1:Injector):Object{
+            return ((this.m_response = ((this.m_response) || (this.createResponse(_arg1)))));
+        }
+        private function createResponse(_arg1:Injector):Object{
+            return (_arg1.instantiate(this.m_responseType));
+        }
+
+    }
+}//package org.swiftsuspenders.injectionresults 
+﻿package org.swiftsuspenders.injectionresults {
+    import org.swiftsuspenders.*;
+
+    public class InjectClassResult extends InjectionResult {
+
+        private var m_responseType:Class;
+
+        public function InjectClassResult(_arg1:Class){
+            this.m_responseType = _arg1;
+        }
+        override public function getResponse(_arg1:Injector):Object{
+            return (_arg1.instantiate(this.m_responseType));
+        }
+
+    }
+}//package org.swiftsuspenders.injectionresults 
+﻿package org.swiftsuspenders.injectionresults {
+    import org.swiftsuspenders.*;
+
+    public class InjectionResult {
+
+        public function getResponse(_arg1:Injector):Object{
+            return (null);
+        }
+
+    }
+}//package org.swiftsuspenders.injectionresults 
+﻿package org.swiftsuspenders.injectionresults {
+    import org.swiftsuspenders.*;
+
+    public class InjectValueResult extends InjectionResult {
+
+        private var m_value:Object;
+
+        public function InjectValueResult(_arg1:Object){
+            this.m_value = _arg1;
+        }
+        override public function getResponse(_arg1:Injector):Object{
+            return (this.m_value);
+        }
+
+    }
+}//package org.swiftsuspenders.injectionresults 
+﻿package org.swiftsuspenders.injectionresults {
+    import org.swiftsuspenders.*;
+
+    public class InjectOtherRuleResult extends InjectionResult {
+
+        private var m_rule:InjectionConfig;
+
+        public function InjectOtherRuleResult(_arg1:InjectionConfig){
+            this.m_rule = _arg1;
+        }
+        override public function getResponse(_arg1:Injector):Object{
+            return (this.m_rule.getResponse(_arg1));
+        }
+
+    }
+}//package org.swiftsuspenders.injectionresults 
+﻿package org.osmf.traits {
+    import org.osmf.events.*;
+
+    public class SeekTrait extends MediaTraitBase {
+
+        private var _timeTrait:TimeTrait;
+        private var _seeking:Boolean;
+
+        public function SeekTrait(_arg1:TimeTrait){
+            super(MediaTraitType.SEEK);
+            this._timeTrait = _arg1;
+        }
+        final public function get seeking():Boolean{
+         
