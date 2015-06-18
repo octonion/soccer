@@ -2,7 +2,15 @@
 
 #cp rounds_2015.csv /tmp/rounds.csv
 cp rounds_updated.csv /tmp/rounds.csv
-psql soccer -f load_rounds.sql
+
+# Generic 33.3% for overtime
+
+#psql soccer -f load_rounds.sql
+
+# Model estimate (~36.8%) for overtime
+
+psql soccer -f load_rounds_eot.sql
+
 rm /tmp/rounds.csv
 
 psql soccer -f update_round.sql
