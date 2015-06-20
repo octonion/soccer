@@ -119,11 +119,11 @@ copy
 select
 team_name,
 team_mu::numeric(4,1) as eg_reg,
-(f.exp_factor*team_mu)::numeric(4,1) as eg_ot,
+--(f.exp_factor*team_mu)::numeric(4,1) as eg_ot,
 
 opponent_name,
 opponent_mu::numeric(4,1) as eg_reg,
-(f.exp_factor*opponent_mu)::numeric(4,1) as eg_ot,
+--(f.exp_factor*opponent_mu)::numeric(4,1) as eg_ot,
 
 (
 skellam(team_mu,opponent_mu,'win')
