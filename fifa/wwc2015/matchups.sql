@@ -41,8 +41,8 @@ where
 s1.team_id in
   ('can')
 and s2.team_id in
-  ('chn', 'kor', 'jpn', 'sui', 'eng', 'nor', 'ger',
-   'fra', 'bra', 'col', 'cmr', 'ned', 'usa', 'swe', 'aus')
+  ('chn', 'jpn', 'eng', 'nor', 'ger',
+   'fra', 'col', 'ned', 'usa', 'aus')
 );
 
 insert into m
@@ -75,8 +75,8 @@ join fifa.women_basic_factors bf
 where
 
 s1.team_id in
-  ('chn', 'kor', 'jpn', 'sui', 'eng', 'nor', 'ger',
-   'fra', 'bra', 'col', 'cmr', 'ned', 'usa', 'swe', 'aus')
+  ('chn', 'jpn', 'eng', 'nor', 'ger',
+   'fra', 'col', 'ned', 'usa', 'aus')
 and s2.team_id in
   ('can')
 );
@@ -107,11 +107,11 @@ join fifa.women_basic_factors bf
 where
 
 s1.team_id in
-  ('chn', 'kor', 'jpn', 'sui', 'eng', 'nor', 'ger',
-   'fra', 'bra', 'col', 'cmr', 'ned', 'usa', 'swe', 'aus')
+  ('chn', 'jpn', 'eng', 'nor', 'ger',
+   'fra', 'col', 'ned', 'usa', 'aus')
 and s2.team_id in
-  ('chn', 'kor', 'jpn', 'sui', 'eng', 'nor', 'ger',
-   'fra', 'bra', 'col', 'cmr', 'ned', 'usa', 'swe', 'aus')
+  ('chn', 'jpn', 'eng', 'nor', 'ger',
+   'fra', 'col', 'ned', 'usa', 'aus')
 );
 
 copy
@@ -174,6 +174,5 @@ join fifa.women_factors f
   on (f.parameter,f.level) = ('game_length','1 OT')
 order by team_name,opponent_name
 ) to '/tmp/matchups.csv' csv header;
-
 
 commit;
