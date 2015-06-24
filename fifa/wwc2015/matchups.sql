@@ -42,7 +42,7 @@ s1.team_id in
   ('can')
 and s2.team_id in
   ('chn', 'jpn', 'eng', 'ger',
-   'fra', 'ned', 'usa', 'aus')
+   'fra', 'usa', 'aus')
 );
 
 insert into m
@@ -76,7 +76,7 @@ where
 
 s1.team_id in
   ('chn', 'jpn', 'eng', 'ger',
-   'fra', 'ned', 'usa', 'aus')
+   'fra', 'usa', 'aus')
 and s2.team_id in
   ('can')
 );
@@ -108,10 +108,10 @@ where
 
 s1.team_id in
   ('chn', 'jpn', 'eng', 'ger',
-   'fra', 'ned', 'usa', 'aus')
+   'fra', 'usa', 'aus')
 and s2.team_id in
   ('chn', 'jpn', 'eng', 'ger',
-   'fra', 'ned', 'usa', 'aus')
+   'fra', 'usa', 'aus')
 );
 
 copy
