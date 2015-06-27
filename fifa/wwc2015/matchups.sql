@@ -41,8 +41,8 @@ where
 s1.team_id in
   ('can')
 and s2.team_id in
-  ('chn', 'jpn', 'eng', 'ger',
-   'fra', 'usa', 'aus')
+  ('jpn', 'eng', 'ger',
+   'usa', 'aus')
 );
 
 insert into m
@@ -75,8 +75,8 @@ join fifa.women_basic_factors bf
 where
 
 s1.team_id in
-  ('chn', 'jpn', 'eng', 'ger',
-   'fra', 'usa', 'aus')
+  ('jpn', 'eng', 'ger',
+   'usa', 'aus')
 and s2.team_id in
   ('can')
 );
@@ -107,11 +107,11 @@ join fifa.women_basic_factors bf
 where
 
 s1.team_id in
-  ('chn', 'jpn', 'eng', 'ger',
-   'fra', 'usa', 'aus')
+  ('jpn', 'eng', 'ger',
+   'usa', 'aus')
 and s2.team_id in
-  ('chn', 'jpn', 'eng', 'ger',
-   'fra', 'usa', 'aus')
+  ('jpn', 'eng', 'ger',
+   'usa', 'aus')
 );
 
 copy
