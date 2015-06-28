@@ -143,7 +143,7 @@ skellam(team_mu*(f.exp_factor-1),opponent_mu*(f.exp_factor-1),'tie')*0.5
 
 skellam(team_mu,opponent_mu,'win')::numeric(4,3) as win_reg,
 skellam(team_mu,opponent_mu,'lose')::numeric(4,3) as lose_reg,
-skellam(team_mu,opponent_mu,'tie')::numeric(4,3) as tie_reg,
+skellam(team_mu,opponent_mu,'tie')::numeric(4,3) as draw_reg,
 
 (
 skellam(team_mu,opponent_mu,'tie')*
