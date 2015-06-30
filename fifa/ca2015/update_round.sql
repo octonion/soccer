@@ -31,10 +31,12 @@ left join fifa.men_matrix_p mp
 where
     r1.year=2015
 and r1.round_id=1
-and mp.rules=(
-  case when r1.round_id in (1) then 'no extra time'
-       when r1.round_id in (2) then 'extra time'
-  end)
+and (mp.rules is null or
+     mp.rules=(
+       case when r1.round_id in (1) then 'no extra time'
+            when r1.round_id in (2) then 'extra time'
+       end)
+    )
 group by r1.year,round,r1.team_id,r1.team_name,r1.bracket
 );
 
