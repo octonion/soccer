@@ -41,7 +41,7 @@ where
 s1.team_id in
   ('')
 and s2.team_id in
-  ('jpn', 'eng', 'ger', 'usa')
+  ('jpn', 'eng', 'usa')
 );
 
 insert into m
@@ -74,7 +74,7 @@ join fifa.women_basic_factors bf
 where
 
 s1.team_id in
-  ('jpn', 'eng', 'ger', 'usa')
+  ('jpn', 'eng', 'usa')
 and s2.team_id in
   ('')
 );
@@ -105,9 +105,9 @@ join fifa.women_basic_factors bf
 where
 
 s1.team_id in
-  ('jpn', 'eng', 'ger', 'usa')
+  ('jpn', 'eng', 'usa')
 and s2.team_id in
-  ('jpn', 'eng', 'ger', 'usa')
+  ('jpn', 'eng', 'usa')
 );
 
 copy
