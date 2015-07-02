@@ -1,12 +1,9 @@
 BEGIN
- rd |  name   |   p   
-----+---------+-------
-  4 | Japan   | 0.611
-  4 | England | 0.389
-  5 | USA     | 0.716
-  5 | Japan   | 0.198
-  5 | England | 0.086
-(5 rows)
+ rd | name  |   p   
+----+-------+-------
+  5 | USA   | 0.675
+  5 | Japan | 0.325
+(2 rows)
 
-COPY 5
+COPY 2
 COMMIT
