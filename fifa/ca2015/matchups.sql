@@ -41,7 +41,7 @@ where
 s1.team_id in
   ('chi')
 and s2.team_id in
-  ('arg')
+  ('arg','per','par')
 );
 
 insert into m
@@ -74,7 +74,7 @@ join fifa.men_basic_factors bf
 where
 
 s1.team_id in
-  ('arg')
+  ('arg','per','par')
 and s2.team_id in
   ('chi')
 );
@@ -105,9 +105,9 @@ join fifa.men_basic_factors bf
 where
 
 s1.team_id in
-  ('arg')
+  ('arg','per','par')
 and s2.team_id in
-  ('arg')
+  ('arg','per','par')
 );
 
 copy
