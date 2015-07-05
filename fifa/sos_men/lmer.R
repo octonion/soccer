@@ -1,4 +1,4 @@
-sink("diagnostics/lmer.txt")
+sink("diagnostics/men_lmer.txt")
 
 library("lme4")
 #library("nortest")
