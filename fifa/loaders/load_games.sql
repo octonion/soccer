@@ -51,4 +51,18 @@ set home_score = split_part(split_part(score,' ',1),'-',1)::integer,
     aggregate = (case when score like '% Aggregate%' then TRUE
                  else FALSE end);
 
+update fifa.games
+set home_name = E'Cote d\'Ivoire'
+where
+    year=2008
+and gender_id='men'
+and home_id = '1889739';
+
+update fifa.games
+set away_name = E'Cote d\'Ivoire'
+where
+    year=2008
+and gender_id='men'
+and away_id = '1889739';
+
 commit;
