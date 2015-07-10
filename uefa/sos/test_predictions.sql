@@ -63,13 +63,7 @@ TRUE
 and r.team_id > r.opponent_id
 
 -- test November and December
-
-and extract(month from r.game_date) in (11,12)
-
--- D1
-
---and r.team_div_id=1
---and r.opponent_div_id=1
+--and extract(month from r.game_date) in (11,12)
 
 group by r.year
 order by r.year;
@@ -137,11 +131,5 @@ TRUE
 and r.team_id > r.opponent_id
 
 -- test November and December
-
-and extract(month from r.game_date) in (11,12)
-
--- D1
-
---and r.team_div_id=1
---and r.opponent_div_id=1
+--and extract(month from r.game_date) in (11,12)
 ;
