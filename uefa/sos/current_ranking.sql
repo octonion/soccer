@@ -31,4 +31,11 @@ rk,team,str,ofs,dfs,sos
 from r
 order by rk asc;
 
+copy (
+select
+rk,team,str,ofs,dfs,sos
+from r
+order by rk asc
+) to '/tmp/current_ranking.csv' csv header;
+
 commit;
