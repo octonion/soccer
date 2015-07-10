@@ -4,7 +4,6 @@ create temporary table r (
        rk	 serial,
        team 	 text,
        team_id	 text,
-       year	 integer,
        str	 float,
        ofs	 float,
        dfs	 float,
@@ -12,20 +11,18 @@ create temporary table r (
 );
 
 insert into r
-(team,team_id,year,str,ofs,dfs,sos)
+(team,team_id,str,ofs,dfs,sos)
 (
 select
+coalesce(t.team_name,sf.team_id),
 sf.team_id,
-sf.team_id,
-sf.year,
-sf.strength as str,
-sf.offensive as ofs,
-sf.defensive as dfs,
-sf.schedule_strength as sos
+ln(sf.strength) as str,
+ln(sf.offensive) as ofs,
+ln(sf.defensive) as dfs,
+ln(sf.schedule_strength) as sos
 from fifa._schedule_factors sf
---join fifa.teams s
---  on (s.team_id)=(sf.team_id)
-where sf.year in (2014)
+left join fifa.teams t
+  on (t.gender_id,t.team_id)=('men',sf.team_id)
 order by str desc);
 
 select

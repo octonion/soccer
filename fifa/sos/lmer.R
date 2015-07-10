@@ -1,8 +1,7 @@
 sink("diagnostics/lmer.txt")
 
-library("lme4")
-#library("nortest")
-library("RPostgreSQL")
+library(lme4)
+library(RPostgreSQL)
 
 #library("sp")
 
@@ -18,12 +17,17 @@ r.field as field,
 r.team_id as team,
 r.opponent_id as opponent,
 r.game_length as game_length,
-team_score::float as gs
+team_score::float as gs,
+(year-2011)^2 as w
 from fifa.results r
 
 where
-    r.year between 2008 and 2015
-and r.gender_id='women'
+    r.year between 2012 and 2015
+and r.gender_id='men'
+and r.team_id is not NULL
+and r.opponent_id is not NULL
+and length(r.team_id)=3
+and length(r.opponent_id)=3
 ;")
 
 games <- fetch(query,n=-1)
@@ -36,14 +40,12 @@ pll <- list()
 
 # Fixed parameters
 
-year <- as.factor(year)
-
 field <- as.factor(field)
 field <- relevel(field, ref = "neutral")
 
 game_length <- as.factor(game_length)
 
-fp <- data.frame(year,field,game_length)
+fp <- data.frame(field,game_length)
 fpn <- names(fp)
 
 # Random parameters
@@ -51,10 +53,10 @@ fpn <- names(fp)
 game_id <- as.factor(game_id)
 #contrasts(game_id) <- 'contr.sum'
 
-offense <- as.factor(paste(year,"/",team,sep=""))
+offense <- as.factor(team)
 #contrasts(offense) <- 'contr.sum'
 
-defense <- as.factor(paste(year,"/",opponent,sep=""))
+defense <- as.factor(opponent)
 #contrasts(defense) <- 'contr.sum'
 
 rp <- data.frame(offense,defense)
@@ -83,13 +85,14 @@ dbWriteTable(con,c("fifa","_parameter_levels"),parameter_levels,row.names=TRUE)
 
 g <- cbind(fp,rp)
 g$gs <- gs
+g$w <- w
 
 detach(games)
 
 dim(g)
 
-model <- gs ~ year+field+game_length+(1|offense)+(1|defense)+(1|game_id)
-fit <- glmer(model,data=g,REML=TRUE,verbose=TRUE,family=poisson(link=log))
+model <- gs ~ field+game_length+(1|offense)+(1|defense)+(1|game_id)
+fit <- glmer(model, data=g, REML=TRUE, verbose=TRUE, family=poisson(link=log), weights=w)
 
 fit
 summary(fit)

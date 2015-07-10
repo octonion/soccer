@@ -4,7 +4,6 @@ drop table if exists fifa._schedule_factors;
 
 create table fifa._schedule_factors (
 	team_id			text,
-	year			integer,
         offensive               float,
         defensive		float,
         strength                float,
@@ -13,7 +12,7 @@ create table fifa._schedule_factors (
         schedule_strength       float,
         schedule_offensive_all	float,
         schedule_defensive_all	float,
-        primary key (team_id,year)
+        primary key (team_id)
 );
 
 -- defensive
@@ -24,12 +23,12 @@ create table fifa._schedule_factors (
 -- schedule_strength 
 
 insert into fifa._schedule_factors
-(team_id,year,offensive,defensive)
+(team_id,offensive,defensive)
 (
-select o.level,o.year,o.exp_factor,d.exp_factor
+select o.level,o.exp_factor,d.exp_factor
 from fifa._factors o
 left outer join fifa._factors d
-  on (d.level,d.year,d.parameter)=(o.level,o.year,'defense')
+  on (d.level,d.parameter)=(o.level,'defense')
 where o.parameter='offense'
 );
 
@@ -41,7 +40,6 @@ set strength=offensive/defensive;
 create temporary table r (
          team_id		text,
          opponent_id		text,
-         year                   integer,
 	 field_id		text,
          offensive              float,
          defensive		float,
@@ -50,15 +48,14 @@ create temporary table r (
 );
 
 insert into r
-(team_id,opponent_id,year,field_id)
+(team_id,opponent_id,field_id)
 (
 select
 r.team_id,
 r.opponent_id,
-r.year,
 r.field
 from fifa.results r
-where r.year between 2008 and 2015
+where r.year between 2012 and 2015
 );
 
 update r
@@ -67,7 +64,7 @@ offensive=o.offensive,
 defensive=o.defensive,
 strength=o.strength
 from fifa._schedule_factors o
-where (r.opponent_id,r.year)=(o.team_id,o.year);
+where (r.opponent_id)=(o.team_id);
 
 -- field
 
@@ -78,7 +75,6 @@ where (f.parameter,f.level)=('field',r.field_id);
 
 create temporary table rs (
          team_id		text,
-         year                   integer,
          offensive              float,
          defensive              float,
          strength               float,
@@ -87,19 +83,18 @@ create temporary table rs (
 );
 
 insert into rs
-(team_id,year,
+(team_id,
  offensive,defensive,strength,offensive_all,defensive_all)
 (
 select
 team_id,
-year,
-exp(avg(log(offensive))),
-exp(avg(log(defensive))),
-exp(avg(log(strength))),
-exp(avg(log(offensive/field))),
-exp(avg(log(defensive*field)))
+exp(avg(ln(offensive))),
+exp(avg(ln(defensive))),
+exp(avg(ln(strength))),
+exp(avg(ln(offensive/field))),
+exp(avg(ln(defensive*field)))
 from r
-group by team_id,year
+group by team_id
 );
 
 update fifa._schedule_factors
@@ -111,7 +106,6 @@ set
   schedule_defensive_all=rs.defensive_all
 from rs
 where
-  (_schedule_factors.team_id,_schedule_factors.year)=
-  (rs.team_id,rs.year);
+  (_schedule_factors.team_id)=(rs.team_id);
 
 commit;
