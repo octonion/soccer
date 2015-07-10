@@ -23,7 +23,7 @@ team_score::float as gs
 from uefa.results r
 
 where
-    r.year between 2013 and 2015
+    r.year between 2008 and 2015
 and extract(month from r.game_date) not in (3,4,5)
 ;")
 

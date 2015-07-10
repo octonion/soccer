@@ -1,5 +1,23 @@
 begin;
 
+-- EPL 2012
+
+--Div,Date,HomeTeam,AwayTeam,
+--FTHG,FTAG,FTR,HTHG,HTAG,HTR,
+--Referee,
+--HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR,
+--B365H,B365D,B365A,
+--BWH,BWD,BWA,
+--GBH,GBD,GBA,
+--IWH,IWD,IWA,LBH,LBD,LBA,SBH,SBD,SBA,WHH,WHD,WHA,
+--SJH,SJD,SJA,VCH,VCD,VCA,
+--BSH,BSD,BSA,
+--Bb1X2,BbMxH,BbAvH,BbMxD,BbAvD,BbMxA,BbAvA,BbOU,
+--BbMx>2.5,BbAv>2.5,BbMx<2.5,BbAv<2.5,
+--BbAH,BbAHh,BbMxAHH,BbAvAHH,BbMxAHA,BbAvAHA
+
+-- EPL 2013
+
 --Div,Date,HomeTeam,AwayTeam,
 --FTHG,FTAG,FTR,HTHG,HTAG,HTR,
 --HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR,
@@ -13,6 +31,8 @@ begin;
 --BbMx>2.5,BbAv>2.5,BbMx<2.5,BbAv<2.5,
 --BbAH,BbAHh,BbMxAHH,BbAvAHH,BbMxAHA,BbAvAHA
 
+-- EPL 2014-2015
+
 --Div,Date,HomeTeam,AwayTeam,
 --FTHG,FTAG,FTR,HTHG,HTAG,HTR,
 --Referee,
@@ -25,7 +45,6 @@ begin;
 --BbMx>2.5,BbAv>2.5,BbMx<2.5,BbAv<2.5,
 --BbAH,BbAHh,BbMxAHH,BbAvAHH,BbMxAHA,BbAvAHA
 
-/*
 drop table if exists uefa.games;
 
 create table uefa.games (
@@ -84,26 +103,25 @@ create table uefa.games (
 	bsh		      float, --
 	bsd		      float, --
 	bsa		      float, --
-	bb1x2		      integer,
+	bb1x2		      float,
 	bbmxh		      float,
 	bbavh		      float,
 	bbmxd		      float,
 	bbavd		      float,
 	bbmxa		      float,
 	bbava		      float,
-	bbou		      integer,
+	bbou		      float,
 	bbmx_gt_25	      float,
 	bbav_gt_25	      float,
 	bbmx_lt_25	      float,
 	bbav_lt_25	      float,
-	bbah		      integer,
+	bbah		      float,
 	bbahh		      float,
 	bbmxahh		      float,
 	bbavahh		      float,
 	bbmxaha		      float,
 	bbavaha		      float
 );
-*/
 
 create temporary table g (
 	division_id	      text,
@@ -116,7 +134,7 @@ create temporary table g (
 	hthg		      integer,
 	htag		      integer,
 	htr		      text,
---	referee_name	      text,
+	referee_name	      text,
 	home_shots	      integer,
 	away_shots	      integer,
 	hst		      integer,
@@ -159,19 +177,19 @@ create temporary table g (
 	bsh		      float, --
 	bsd		      float, --
 	bsa		      float, --
-	bb1x2		      integer,
+	bb1x2		      float,
 	bbmxh		      float,
 	bbavh		      float,
 	bbmxd		      float,
 	bbavd		      float,
 	bbmxa		      float,
 	bbava		      float,
-	bbou		      integer,
+	bbou		      float,
 	bbmx_gt_25	      float,
 	bbav_gt_25	      float,
 	bbmx_lt_25	      float,
 	bbav_lt_25	      float,
-	bbah		      integer,
+	bbah		      float,
 	bbahh		      float,
 	bbmxahh		      float,
 	bbavahh		      float,
@@ -191,7 +209,7 @@ game_date,
 home_name,away_name,
 fthg,ftag,ftr,
 hthg,htag,htr,
---referee_name, --
+referee_name, --
 home_shots,away_shots,hst,
 ast,hf,af,hc,ac,hy,ay,hr,ar,
 b365h,b365d,b365a,
@@ -223,7 +241,7 @@ game_date,
 home_name,away_name,
 fthg,ftag,ftr,
 hthg,htag,htr,
---referee_name, --
+referee_name, --
 home_shots,away_shots,hst,
 ast,hf,af,hc,ac,hy,ay,hr,ar,
 b365h,b365d,b365a,

@@ -52,7 +52,7 @@ and g.ftag >= 0
 and g.home_name is not null
 and g.away_name is not null
 and g.game_date is not null
---and year between 2013 and 2015
+--and year between 2008 and 2015
 );
 
 insert into uefa.results
@@ -88,7 +88,7 @@ and g.ftag >= 0
 and g.home_name is not null
 and g.away_name is not null
 and g.game_date is not null
---and g.year between 2013 and 2015
+--and g.year between 2008 and 2015
 );
 
 commit;
