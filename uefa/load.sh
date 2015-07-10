@@ -11,8 +11,12 @@ fi
 
 psql soccer -f schema/create_schema.sql
 
+tail -q -n+2 csv/england/2013_E0.csv >> /tmp/games.csv
+psql soccer -f loaders/load_games_2013.sql
+rm /tmp/games.csv
+
 tail -q -n+2 csv/england/201[45]_E0.csv >> /tmp/games.csv
-psql soccer -f loaders/load_games.sql
+psql soccer -f loaders/load_games_2014-2015.sql
 rm /tmp/games.csv
 
 #psql soccer -f schema/create_teams.sql

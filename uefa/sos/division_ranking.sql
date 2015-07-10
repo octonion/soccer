@@ -1,7 +1,7 @@
 begin;
 
 create temporary table r (
-       school_id	 integer,
+       team_id	 integer,
        div	 	 integer,
        year	 	 integer,
        str	 	 numeric(5,3),
@@ -11,10 +11,10 @@ create temporary table r (
 );
 
 insert into r
-(school_id,div,year,str,ofs,dfs,sos)
+(team_id,div,year,str,ofs,dfs,sos)
 (
 select
-t.school_id,
+t.team_id,
 t.div_id as div,
 sf.year,
 (sf.strength*o.exp_factor/d.exp_factor)::numeric(5,3) as str,
@@ -22,16 +22,16 @@ sf.year,
 (defensive*d.exp_factor)::numeric(5,3) as dfs,
 schedule_strength::numeric(5,3) as sos
 from uefa._schedule_factors sf
-left outer join uefa.schools_divisions t
-  on (t.school_id,t.year)=(sf.school_id,sf.year)
+left outer join uefa.teams_divisions t
+  on (t.team_id,t.year)=(sf.team_id,sf.year)
 left outer join uefa._factors o
   on (o.parameter,o.level)=('o_div',t.div_id::text)
 left outer join uefa._factors d
   on (d.parameter,d.level)=('d_div',t.div_id::text)
---where sf.year in (2014)
+--where sf.year in (2013)
 where
 TRUE
-and t.school_id is not null
+and t.team_id is not null
 order by str desc);
 
 select
@@ -64,6 +64,6 @@ order by year asc,str desc;
 
 select * from r
 where div is null;
---and year=2014;
+--and year=2013;
 
 commit;

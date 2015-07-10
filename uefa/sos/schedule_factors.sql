@@ -62,7 +62,7 @@ r.game_date,
 r.year,
 r.field
 from uefa.results r
-where r.year between 2014 and 2015
+where r.year between 2013 and 2015
 );
 
 update public.r

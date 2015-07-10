@@ -16,6 +16,7 @@ create table uefa.results (
 	team_score	      integer,
 	opponent_score	      integer,
 	game_length	      text
+--	referee_name	      text
 );
 
 insert into uefa.results
@@ -23,15 +24,14 @@ insert into uefa.results
  team_name,team_id,
  opponent_name,opponent_id,
  location_name,location_id,field,
- team_score,opponent_score,game_length)
+ team_score,opponent_score,
+ game_length)
+-- referee_name)
 (
 select
-game_id,
-game_date,
-(case when extract(month from g.game_date) between 7 and 12 then
-           extract(year from g.game_date)+1
-      else extract(year from g.game_date)
- end) as year,
+g.game_id,
+g.game_date,
+g.year,
 g.home_name,
 g.home_name,
 g.away_name,
@@ -39,9 +39,10 @@ g.away_name,
 g.home_name as location_name,
 g.home_name as location_id,
 'offense_home' as field,
-fthg as team_score,
-ftag as opponent_score,
+g.fthg as team_score,
+g.ftag as opponent_score,
 '0 OT' as game_length
+--g.referee_name
 from uefa.games g
 where
     g.fthg is not null
@@ -51,7 +52,7 @@ and g.ftag >= 0
 and g.home_name is not null
 and g.away_name is not null
 and g.game_date is not null
---and year between 2014 and 2015
+--and year between 2013 and 2015
 );
 
 insert into uefa.results
@@ -59,15 +60,14 @@ insert into uefa.results
  team_name,team_id,
  opponent_name,opponent_id,
  location_name,location_id,field,
- team_score,opponent_score,game_length)
+ team_score,opponent_score,
+ game_length)
+-- referee_name)
 (
 select
-game_id,
-game_date,
-(case when extract(month from g.game_date) between 7 and 12 then
-           extract(year from g.game_date)+1
-      else extract(year from g.game_date)
- end) as year,
+g.game_id,
+g.game_date,
+g.year,
 g.away_name,
 g.away_name,
 g.home_name,
@@ -75,9 +75,10 @@ g.home_name,
 g.home_name as location_name,
 g.home_name as location_id,
 'defense_home' as field,
-ftag as team_score,
-fthg as opponent_score,
+g.ftag as team_score,
+g.fthg as opponent_score,
 '0 OT' as game_length
+--g.referee_name
 from uefa.games g
 where
     g.fthg is not null
@@ -87,7 +88,7 @@ and g.ftag >= 0
 and g.home_name is not null
 and g.away_name is not null
 and g.game_date is not null
---and g.year between 2014 and 2015
+--and g.year between 2013 and 2015
 );
 
 commit;

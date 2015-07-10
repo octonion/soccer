@@ -18,11 +18,12 @@ r.team_id as team,
 r.opponent_id as opponent,
 --r.opponent_div_id as d_div,
 r.game_length as game_length,
+--r.referee_name as referee,
 team_score::float as gs
 from uefa.results r
 
 where
-    r.year between 2014 and 2015
+    r.year between 2013 and 2015
 ;")
 
 games <- fetch(query,n=-1)
@@ -36,12 +37,9 @@ pll <- list()
 # Fixed parameters
 
 year <- as.factor(year)
-#contrasts(year)<-'contr.sum'
-
 field <- as.factor(field)
-#field <- relevel(field, ref = "none")
-
 game_length <- as.factor(game_length)
+#referee <- as.factor(referee)
 
 fp <- data.frame(year,field)
 fpn <- names(fp)
@@ -82,7 +80,7 @@ dim(g)
 
 model <- gs ~ year+field+(1|offense)+(1|defense)+(1|game_id)
 
-fit <- glmer(model, data=g, REML=TRUE, verbose=TRUE, family=poisson(link=log))
+fit <- glmer(model, data=g, verbose=TRUE, family=poisson(link=log))
 
 fit
 summary(fit)
