@@ -14,7 +14,6 @@ count(*))::numeric(4,3) as model,
 sum(
 case when r.team_score>r.opponent_score and r.field='offense_home' then 1
      when r.team_score<r.opponent_score and r.field='defense_home' then 1
-     when r.field='none' then 0.5
      else 0 end)::float/
 --sum(
 count(*)
@@ -38,7 +37,6 @@ count(*)
 sum(
 case when r.team_score>r.opponent_score and r.field='offense_home' then 1
      when r.team_score<r.opponent_score and r.field='defense_home' then 1
-     when r.field='none' then 0.5
      else 0 end)::float/
 --sum(
 --case when r.field in ('offense_home','defense_home') then 1
@@ -61,9 +59,10 @@ TRUE
 -- each game once
 
 and r.team_id > r.opponent_id
+--and not(r.team_score=r.opponent_score)
 
--- test November and December
---and extract(month from r.game_date) in (11,12)
+-- test (3,4,5)
+and extract(month from r.game_date) in (3,4,5)
 
 group by r.year
 order by r.year;
@@ -82,7 +81,6 @@ count(*))::numeric(4,3) as model,
 sum(
 case when r.team_score>r.opponent_score and r.field='offense_home' then 1
      when r.team_score<r.opponent_score and r.field='defense_home' then 1
-     when r.field='none' then 0.5
      else 0 end)::float/
 --sum(
 count(*)
@@ -106,7 +104,6 @@ count(*)
 sum(
 case when r.team_score>r.opponent_score and r.field='offense_home' then 1
      when r.team_score<r.opponent_score and r.field='defense_home' then 1
-     when r.field='none' then 0.5
      else 0 end)::float/
 --sum(
 --case when r.field in ('offense_home','defense_home') then 1
@@ -129,7 +126,8 @@ TRUE
 -- each game once
 
 and r.team_id > r.opponent_id
+--and not(r.team_score=r.opponent_score)
 
--- test November and December
---and extract(month from r.game_date) in (11,12)
+-- test (3,4,5)
+and extract(month from r.game_date) in (3,4,5)
 ;

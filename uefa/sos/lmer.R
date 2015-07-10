@@ -24,6 +24,7 @@ from uefa.results r
 
 where
     r.year between 2013 and 2015
+and extract(month from r.game_date) not in (3,4,5)
 ;")
 
 games <- fetch(query,n=-1)
