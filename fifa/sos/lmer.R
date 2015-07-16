@@ -18,11 +18,11 @@ r.team_id as team,
 r.opponent_id as opponent,
 r.game_length as game_length,
 team_score::float as gs,
-(year-2011)^2 as w
+(year-2007)^2 as w
 from fifa.results r
 
 where
-    r.year between 2012 and 2015
+    r.year between 2008 and 2015
 and r.gender_id='men'
 and r.team_id is not NULL
 and r.opponent_id is not NULL

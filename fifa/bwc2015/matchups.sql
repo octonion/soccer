@@ -43,7 +43,7 @@ where
 s1.team_id in
   ('por')
 and s2.team_id in
-  ('ita','jpn','tah','irn','sui','bra','rus')
+  ('ita','tah','rus')
 );
 
 insert into m
@@ -76,7 +76,7 @@ join fifa._basic_factors bf
 where
 
 s1.team_id in
-  ('ita','jpn','tah','irn','sui','bra','rus')
+  ('ita','tah','rus')
 and s2.team_id in
   ('por')
 );
@@ -107,9 +107,9 @@ join fifa._basic_factors bf
 where
 
 s1.team_id in
-  ('ita','jpn','tah','irn','sui','bra','rus')
+  ('ita','tah','rus')
 and s2.team_id in
-  ('ita','jpn','tah','irn','sui','bra','rus')
+  ('ita','tah','rus')
 );
 
 copy
