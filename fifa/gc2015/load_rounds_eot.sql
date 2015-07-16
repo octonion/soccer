@@ -411,7 +411,7 @@ r2.team_id,
 from fifa.men_rounds r1
 join fifa.men_rounds r2
   on (r2.year=r1.year and not(r2.team_id=r1.team_id))
-join (select generate_series(1, 5) round_id) gs
+join (select generate_series(1, 3) round_id) gs
   on TRUE
 where
   r1.year=2015
