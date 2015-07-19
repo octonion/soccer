@@ -248,14 +248,14 @@ where
   r1.year=2015
 );
 
--- Canada
+-- Portugal
 
 update fifa.matrix_field
 set field='home'
-where (year,team_id)=(2015,'can');
+where (year,team_id)=(2015,'por');
 
 update fifa.matrix_field
 set field='away'
-where (year,opponent_id)=(2015,'can');
+where (year,opponent_id)=(2015,'por');
 
 commit;
