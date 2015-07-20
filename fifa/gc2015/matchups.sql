@@ -41,7 +41,7 @@ where
 s1.team_id in
   ('usa')
 and s2.team_id in
-  ('pan', 'crc', 'mex', 'tri', 'cub')
+  ('pan', 'jam', 'mex')
 );
 
 insert into m
@@ -74,7 +74,7 @@ join fifa.men_basic_factors bf
 where
 
 s1.team_id in
-  ('pan', 'crc', 'mex', 'tri', 'cub')
+  ('pan', 'jam', 'mex')
 and s2.team_id in
   ('usa')
 );
@@ -105,9 +105,9 @@ join fifa.men_basic_factors bf
 where
 
 s1.team_id in
-  ('pan', 'crc', 'mex', 'tri', 'cub')
+  ('pan', 'jam', 'mex')
 and s2.team_id in
-  ('pan', 'crc', 'mex', 'tri', 'cub')
+  ('pan', 'jam', 'mex')
 );
 
 copy

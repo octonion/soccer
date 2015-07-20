@@ -1,23 +1,15 @@
 BEGIN
- rd |        name         |   p   
-----+---------------------+-------
-  2 | Panama              | 0.693
-  2 | Mexico              | 0.648
-  2 | Costa Rica          | 0.352
-  2 | Trinidad and Tobago | 0.307
-  3 | USA                 | 0.839
-  3 | Mexico              | 0.477
-  3 | Panama              | 0.253
-  3 | Costa Rica          | 0.211
-  3 | Jamaica             | 0.161
-  3 | Trinidad and Tobago | 0.059
-  4 | USA                 | 0.567
-  4 | Mexico              | 0.230
-  4 | Panama              | 0.073
-  4 | Costa Rica          | 0.069
-  4 | Jamaica             | 0.053
-  4 | Trinidad and Tobago | 0.008
-(16 rows)
+ rd |  name   |   p   
+----+---------+-------
+  3 | USA     | 0.837
+  3 | Mexico  | 0.691
+  3 | Panama  | 0.309
+  3 | Jamaica | 0.163
+  4 | USA     | 0.528
+  4 | Mexico  | 0.336
+  4 | Panama  | 0.088
+  4 | Jamaica | 0.048
+(8 rows)
 
-COPY 16
+COPY 8
 COMMIT
