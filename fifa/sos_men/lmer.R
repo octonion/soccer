@@ -23,7 +23,7 @@ team_score::float as gs,
 from fifa.men_results r
 
 where
-    r.year between 2008 and 2015
+    r.year between 2008 and 2016
 and r.gender_id='men'
 and r.team_id is not NULL
 and r.opponent_id is not NULL
@@ -91,7 +91,14 @@ detach(games)
 dim(g)
 
 model <- gs ~ field+game_length+(1|offense)+(1|defense)+(1|game_id)
-fit <- glmer(model, data=g, REML=TRUE, verbose=TRUE, family=poisson(link=log), weights=w)
+fit <- glmer(model,
+             data=g,
+	     verbose=TRUE,
+	     family=poisson(link=log),
+	     weights=w
+	     #nAGQ=0,
+	     #control=glmerControl(optimizer="nloptwrap")
+	     )
 
 fit
 summary(fit)
