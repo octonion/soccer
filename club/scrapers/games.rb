@@ -44,7 +44,8 @@ last_year = ARGV[2]
                    {:col_sep => "\t"})
 
   #http://www.espnfc.us/club/arsenal/359/fixtures?leagueId=0&season=2015
-
+  #&seasonType=1
+  
   # Header for game file
 
   games << ["year", "league_id", "league_key",
@@ -74,6 +75,7 @@ last_year = ARGV[2]
     end
 
     url = club_url.gsub("index", "fixtures")+"?leagueId=0&season=#{year}"
+    #&seasonType=1"
 
     print "pulling #{year}/#{club_name}"
 

@@ -32,7 +32,7 @@ leagues.each do |league|
 
   league_url = league["league_url"]
 
-  table_url = league_url.gsub("index","")+"table?season=#{year}"
+  table_url = league_url.gsub("index","")+"table?season=#{year}&seasonType=1"
 
   begin
     doc = Nokogiri::HTML(open(table_url))
