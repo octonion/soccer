@@ -3,6 +3,7 @@ begin;
 drop table if exists club.games;
 
 create table club.games (
+	year		      integer,
 	league_id	      integer,
 	league_key	      text,
 	club_id		      integer,
@@ -37,6 +38,7 @@ create table club.games (
 --copy club.games from '/tmp/games.tsv' with delimiter as E'\t' csv;
 
 create temporary table g (
+	year		      integer,
 	league_id	      integer,
 	league_key	      text,
 	club_id		      integer,
