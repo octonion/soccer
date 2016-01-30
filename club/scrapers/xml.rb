@@ -1,8 +1,12 @@
 #!/usr/bin/env ruby
 
 require 'csv'
-require 'open-uri'
+
 require 'nokogiri'
+require 'mechanize'
+
+agent = Mechanize.new{ |agent| agent.history.max_size=0 }
+agent.user_agent = 'Mozilla/5.0'
 
 base_url = "http://www.espnfc.us/gamepackage10/data"
 
@@ -26,7 +30,8 @@ game_ids.each do |game_id|
   url = "#{base_url}/gamecast?gameId=#{game_id}&langId=0&snap=0"
 
   begin
-    doc = open(url).read
+    doc = agent.get(url).body
+    #doc = open(url).read
   rescue
     print " ... sleeping"
     sleep 10
