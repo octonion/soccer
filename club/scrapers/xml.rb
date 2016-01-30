@@ -13,9 +13,15 @@ games = CSV.open("tsv/games_#{league_key}_#{year}.tsv",
                  "r",
                  {:col_sep => "\t", :headers => TRUE})
 
-games.each do |game|
+game_ids = []
 
-  game_id = game["game_id"]
+games.each do |game|
+  game_ids << game["game_id"]
+end
+
+game_ids.uniq!
+
+game_ids.each do |game_id|
 
   url = "#{base_url}/gamecast?gameId=#{game_id}&langId=0&snap=0"
 
