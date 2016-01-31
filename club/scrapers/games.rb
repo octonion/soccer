@@ -158,7 +158,7 @@ last_year = ARGV[2]
         away_goals = away_score.split(" ")[0]
         away_pk = away_score.split(" ")[1].gsub("(","").gsub(")","")
       else
-        away_goals = home_score
+        away_goals = away_score
         away_pk = nil
       end
 
