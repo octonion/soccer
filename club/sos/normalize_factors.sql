@@ -157,6 +157,7 @@ where
 and npl.parameter not in ('field','year')
 );
 
+/*
 create temporary table scale (
        parameter		text,
        mean			float,
@@ -176,15 +177,18 @@ update club._factors
 set raw_factor=raw_factor-s.mean
 from scale s
 where s.parameter=club._factors.parameter;
+*/
 
 update club._factors
 set exp_factor=exp(raw_factor);
 
 -- 'neutral' park confounded with 'none' field; set factor = 1.0 for field 'none'
 
+/*
 insert into club._factors
 (parameter,level,type,method,year,first_year,last_year,raw_factor,exp_factor)
 values
 ('field','none','fixed','log_regression',null,null,null,0.0,1.0);
+*/
 
 commit;
