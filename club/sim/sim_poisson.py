@@ -162,4 +162,10 @@ season['gd'] = season['gf']-season['ga']
 season['pts'] = 3*season['w']+season['d']
 
 final = season.sort(['pts', 'gd', 'gf'], ascending=[0, 0, 0])
+
+final['i'] = final['pts']*1000000+(final['gd']+100)*1000+final['gf']
+
+final['rank'] = final['i'].rank(ascending=0, method='min')
+
+final.drop(['i'],inplace=True,axis=1)
 print(final)
