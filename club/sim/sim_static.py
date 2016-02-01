@@ -2,8 +2,6 @@
 
 import sys
 import csv
-import datetime
-import psycopg2
 
 import numpy as np
 
