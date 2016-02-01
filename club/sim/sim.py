@@ -21,16 +21,12 @@ end = today + datetime.timedelta(days=6)
 
 select_games = """
 select
---g.date::date,
---'home',
-t.club_name,
---(tf.exp_factor*sft.offensive),
-o.club_name,
---(of.exp_factor*sfo.offensive),
+t.club_name as team_name,
+o.club_name as opponent_name,
 
-skellam(tf.exp_factor*sft.offensive,of.exp_factor*sfo.offensive,'win') as win,
-skellam(tf.exp_factor*sft.offensive,of.exp_factor*sfo.offensive,'draw') as draw,
-skellam(tf.exp_factor*sft.offensive,of.exp_factor*sfo.offensive,'lose') as lose
+skellam(tf.exp_factor*sft.offensive,of.exp_factor*sfo.offensive,'win') as w,
+skellam(tf.exp_factor*sft.offensive,of.exp_factor*sfo.offensive,'draw') as d,
+skellam(tf.exp_factor*sft.offensive,of.exp_factor*sfo.offensive,'lose') as l
 
 from club.games g
 join club.teams t
