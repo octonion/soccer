@@ -21,7 +21,7 @@ r = np.random.uniform(low=0.0, high=1.0, size=len(games))
 
 for i, game in games.iterrows():
 
-    team.extend([game['team_name'],game['opponent_name']])
+    team.extend([game['home'],game['away']])
 
     if (r[i] < game['w']):
         w.extend([1,0])
