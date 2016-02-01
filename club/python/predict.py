@@ -31,11 +31,11 @@ skellam(tf.exp_factor*sft.offensive,of.exp_factor*sfo.offensive,'lose') as lose,
 skellam(tf.exp_factor*sft.offensive,of.exp_factor*sfo.offensive,'draw') as draw
 
 from club.games ts
-join club.clubs t
+join club.teams t
   on (t.club_id,t.year)=(ts.home_team_id,ts.year)
 join club._schedule_factors sft
   on (sft.team_id,sft.year)=(ts.home_team_id,ts.year)
-join club.clubs o
+join club.teams o
   on (o.club_id,o.year)=(ts.away_team_id,ts.year)
 join club._schedule_factors sfo
   on (sfo.team_id,sfo.year)=(ts.away_team_id,ts.year)

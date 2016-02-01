@@ -1,8 +1,8 @@
 begin;
 
-drop table if exists club.clubs;
+drop table if exists club.teams;
 
-create table club.clubs (
+create table club.teams (
 	year		      integer,
 	league_id	      integer,
 	league_key	      text,
@@ -23,9 +23,9 @@ create temporary table c (
 	club_url	      text
 );
 
-copy c from '/tmp/clubs.tsv' with delimiter as E'\t' csv;
+copy c from '/tmp/teams.tsv' with delimiter as E'\t' csv;
 
-insert into club.clubs
+insert into club.teams
 (year,league_id,league_key,club_id,club_key,club_name,club_url)
 (
 select

@@ -32,12 +32,12 @@ psql soccer -f loaders/leagues.sql
 rm /tmp/leagues.tsv
 
 echo
-echo "Clubs"
+echo "Teams"
 echo
 
-tail -q -n+2 tsv/clubs_*.tsv >> /tmp/clubs.tsv
-psql soccer -f loaders/clubs.sql
-rm /tmp/clubs.tsv
+tail -q -n+2 tsv/clubs_*.tsv >> /tmp/teams.tsv
+psql soccer -f loaders/teams.sql
+rm /tmp/teams.tsv
 
 echo
 echo "Games"
