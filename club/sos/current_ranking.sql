@@ -15,7 +15,7 @@ insert into r
 (team,team_id,year,str,ofs,dfs,sos)
 (
 select
-c.club_name,
+t.club_name,
 sf.team_id,
 sf.year,
 (sf.strength)::numeric(5,3) as str,
