@@ -46,7 +46,7 @@ join club._factors of on
 where not(ts.date='LIVE')
 and ts.date::date between current_date and current_date+6
 and ts.club_id=ts.home_team_id
-order by ts.club_name asc,ts.date::date asc
+order by ts.date::date asc,ts.club_name asc
 ;
 """
 
