@@ -87,19 +87,19 @@ set field=f.exp_factor
 from club._factors f
 where (f.parameter,f.level)=('field',r.field_id);
 
--- opponent league_offense
+-- opponent offense_league
 
 update r
 set o_league=f.exp_factor
 from club._factors f
-where (f.parameter,f.level)=('league_offense',r.opponent_league_key);
+where (f.parameter,f.level)=('offense_league',r.opponent_league_key);
 
--- opponent league_defense
+-- opponent defense_league
 
 update r
 set o_league=f.exp_factor
 from club._factors f
-where (f.parameter,f.level)=('league_defense',r.opponent_league_key);
+where (f.parameter,f.level)=('defense_league',r.opponent_league_key);
 
 --
 
