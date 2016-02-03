@@ -97,7 +97,7 @@ where (f.parameter,f.level)=('offense_league',r.opponent_league_key);
 -- opponent defense_league
 
 update r
-set o_league=f.exp_factor
+set d_league=f.exp_factor
 from club._factors f
 where (f.parameter,f.level)=('defense_league',r.opponent_league_key);
 
