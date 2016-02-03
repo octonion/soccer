@@ -1,31 +1,54 @@
 select
-year,
-club_name,
---home_team_name,
---away_team_name,
---home_goals,
---home_pk,
---away_goals,
---away_pk,
-(case when club_id=home_team_id
-      and ((home_goals > away_goals)
-           or (home_goals=away_goals and home_pk>away_pk)) then 'win'
-      when club_id=away_team_id
-      and ((home_goals < away_goals)
-           or (home_goals=away_goals and home_pk<away_pk)) then 'win'
-      when ((home_goals=away_goals) and
-            ((home_pk is null and away_pk is null) or (home_pk=away_pk)))
-	    then 'draw'
-      else 'lose'
-end) as result,
-count(*) as n
-from club.games
+g.club_name as team,
+sum(
+case when g.club_id=g.home_team_id
+     and (home_goals > away_goals) then 1
+     when club_id=away_team_id
+     and (home_goals < away_goals) then 1
+else 0
+end) as w,
+sum(
+case when (home_goals=away_goals) then 1
+else 0
+end) as d,
+sum(
+case when club_id=home_team_id
+     and (home_goals < away_goals) then 1
+     when club_id=away_team_id
+     and (home_goals > away_goals) then 1
+else 0
+end) as l,
+sum(
+case when g.club_id=g.home_team_id then home_goals
+     else away_goals
+end) as gf,
+sum(
+case when g.club_id=g.home_team_id then away_goals
+     else home_goals
+end) as ga,
+sum(
+case when g.club_id=g.home_team_id then home_goals-away_goals
+     else away_goals-home_goals
+end) as gd,
+
+sum(
+case when g.club_id=g.home_team_id
+       and (home_goals > away_goals) then 3
+     when club_id=away_team_id
+       and (home_goals < away_goals) then 3
+     when (home_goals=away_goals) then 1
+else 0
+end) as pts
+
+from club.games g
 where
-year=2015
-and league_key = 'barclays+premier+league'
---and club_key = 'everton'
-and home_goals is not null
-and away_goals is not null
-and competition = 'Prem'
-group by year,club_name,result
-order by year,club_name,result;
+    not(g.date='LIVE')
+and g.league_key = 'barclays+premier+league'
+and g.competition='Prem'
+and g.year=2015
+and g.date::date <= current_date
+and g.home_goals is not null
+and g.away_goals is not null
+group by g.club_name
+order by pts desc,gd desc,gf desc;
+
