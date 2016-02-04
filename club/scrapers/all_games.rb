@@ -8,8 +8,8 @@ require 'mechanize'
 agent = Mechanize.new{ |agent| agent.history.max_size=0 }
 agent.user_agent = 'Mozilla/5.0'
 
-first_year = 2000
-last_year = 2015
+first_year = ARGV[0]
+last_year = ARGV[1]
 
 leagues = CSV.open("tsv/leagues.tsv",
                    "r",

@@ -1,6 +1,6 @@
 select
 g.club_name as team,
-count(*) as g,
+count(*) as p,
 sum(
 case when g.club_id=g.home_team_id
      and (home_goals > away_goals) then 1
@@ -52,4 +52,3 @@ and g.home_goals is not null
 and g.away_goals is not null
 group by g.club_name
 order by pts desc,gd desc,gf desc;
-
