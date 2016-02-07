@@ -124,7 +124,7 @@ with open('sims2.csv', 'w') as f:
     header = ['team','n','rank','w','d','l','gf','ga','gd','pts']
     csv.writer(f).writerows([header])
 
-    for j in range(10000):
+    for j in range(100000):
 
         team = []
         w = []

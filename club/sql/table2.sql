@@ -40,8 +40,8 @@ case when g.club_id=g.home_team_id
      when (home_goals=away_goals) then 1
 else 0
 end) as pts,
-(coalesce(sc.n,0)::float/10000::float)::numeric(4,3) as champ,
-((coalesce(s18.n,0)+coalesce(s19.n,0)+coalesce(s20.n,0))::float/10000::float)::numeric(4,3) as rlg
+(coalesce(sc.n,0)::float/100000::float)::numeric(4,3) as champ,
+((coalesce(s18.n,0)+coalesce(s19.n,0)+coalesce(s20.n,0))::float/100000::float)::numeric(4,3) as rlg
 
 from club.games g
 left join club.seeds sc
