@@ -23,4 +23,4 @@ max(pts) as pts_max
 from club.sims
 group by team
 order by team
-) to '/tmp/team_table.cvs' csv header;
+) to '/tmp/team_table.csv' csv header;
