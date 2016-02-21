@@ -2,7 +2,7 @@
 
 You'll find these in the XML, both for teams and for individuals players.
 
-The data consists of 704 numbers separated by the delimiter "~". These are heat values starting in the bottom left, with 32 heat values per row and 22 rows covering the entire field.
+The data consists of 704 numbers separated by the delimiter "~". These are heat values starting in the bottom left, with 32 heat values per row and 22 rows covering the entire field. Higher values indicate more time spent in that area of the field during the course of the game.
 
 Example, using Oscar's heat map for Chelsea in the FA Cup game on 1/31/2016.
 
