@@ -11,53 +11,85 @@ agent.user_agent = 'Mozilla/5.0'
 base_url = "http://www.espnfc.us/gamepackage10/data"
 
 league_key = ARGV[0]
-year = ARGV[1]
+first_year = ARGV[1]
+last_year = ARGV[2]
 
-games = CSV.open("tsv/games_#{league_key}_#{year}.tsv",
-                 "r",
-                 {:col_sep => "\t", :headers => TRUE})
+retries = 2
 
-game_ids = []
+(first_year..last_year).each do |year|
 
-games.each do |game|
-  game_ids << game["game_id"]
-end
+  games = CSV.open("tsv/games_#{league_key}_#{year}.tsv",
+                   "r",
+                   {:col_sep => "\t", :headers => TRUE})
 
-game_ids.uniq!
+  game_ids = []
 
-game_ids.each do |game_id|
-
-  url = "#{base_url}/gamecast?gameId=#{game_id}&langId=0&snap=0"
-
-  begin
-    doc = agent.get(url).body
-    #doc = open(url).read
-  rescue
-    print " ... sleeping"
-    sleep 10
-    retry
+  games.each do |game|
+    game_ids << game["game_id"]
   end
+  games.close
 
-  xml = Nokogiri::XML(doc)
+  game_ids.sort!.uniq!
 
-  File.open("xml/#{league_key}/#{year}/gamecast_#{game_id}.xml","w") do |file|
-    file << xml
-  end
+  game_ids.each do |game_id|
 
-  url = "#{base_url}/timeline?gameId=#{game_id}&langId=0&snap=0"
+    print "#{game_id}"
 
-  begin
-    doc = open(url).read
-  rescue
-    print " ... sleeping"
-    sleep 10
-    retry
-  end
-
-  xml = Nokogiri::XML(doc)
+    game_file = "xml/#{league_key}/#{year}/gamecast_#{game_id}.xml"
   
-  File.open("xml/#{league_key}/#{year}/timeline_#{game_id}.xml","w") do |file|
-    file << xml
-  end
+    #  if (File.file?(game_file))
+    #    print "...gamecast already present\n"
+    #    next
+    #  end
 
+    url = "#{base_url}/gamecast?gameId=#{game_id}&langId=0&snap=0"
+
+    tries = 0
+    begin
+      doc = agent.get(url).body
+    rescue
+      tries += 1
+      if (tries>retries)
+        print "...gamecast not found.\n"
+        next
+      else
+        print "...sleeping"
+        sleep 5
+        retry
+      end
+    end
+    print "...gamecast found"
+
+    xml = Nokogiri::XML(doc)
+
+    File.open(game_file,"w") do |file|
+      file << xml
+    end
+
+    url = "#{base_url}/timeline?gameId=#{game_id}&langId=0&snap=0"
+
+    tries = 0
+    begin
+      doc = agent.get(url).body
+    rescue
+      tries += 1
+      if (tries>retries)
+        print "...timeline not found\n"
+        next
+      else
+        print "...sleeping"
+        sleep 5
+        retry
+      end
+    end
+    print "...timeline found\n"
+  
+    xml = Nokogiri::XML(doc)
+  
+    File.open("xml/#{league_key}/#{year}/timeline_#{game_id}.xml","w") do |file|
+      file << xml
+    end
+
+  end
+  
 end
