@@ -6,9 +6,10 @@ require "nokogiri"
 args = ARGV
 dir = args[0]
 
-games = CSV.open("#{dir}/games.csv", "w")
+gamecast = CSV.open("#{dir}/gamecast.csv", "w")
 attacks =  CSV.open("#{dir}/attacks.csv","w")
 shots = CSV.open("#{dir}/shots.csv","w")
+parts = CSV.open("#{dir}/parts.csv","w")
 
 args[1..-1].each do |file|
       
@@ -37,8 +38,7 @@ args[1..-1].each do |file|
          home_id, home_color, home_name,
          away_id, away_color, away_name]
 
-  games << row
-
+  gamecast << row
 
   attack_keys = ["key", "jersey", "avgX", "avgY", "posX", "posY",
                  "left", "middle", "right", "playerId", "teamId", "position"]
@@ -86,7 +86,7 @@ args[1..-1].each do |file|
   play_keys = ["id", "clock", "addedTime", "period", "startX", "startY",
                "teamId", "goal", "ownGoal", "shootout", "videoId"]
 
-  part_keys = ["pId", "jersey", "startX", "startY"]
+  part_keys = ["pId", "jersey", "startX", "startY", "endX", "endY", "endZ"]
 
   game.search("shots/play").each do |play|
 
@@ -94,12 +94,14 @@ args[1..-1].each do |file|
 
     a = play.attributes
     play_keys.each do |key|
-      value = a[key].value
-      if (value.size==0)
+      value = a[key].value rescue nil
+      if not(value==nil) and (value.size==0)
         value = nil
       end
       row += [value]
     end
+
+    id = a["id"].value
 
     h = {}
     play.children.each do |child|
@@ -111,27 +113,35 @@ args[1..-1].each do |file|
     row += [h["topScoreText"]]
     row += [h["shotByText"]]
 
-    part = play.search("part").first
-
-    a = part.attributes
-    part_keys.each do |key|
-      value = a[key].value
-      if (value.size==0)
-        value = nil
-      end
-      row += [value]
-    end
-
-    h = {}
-    part.children.each do |child|
-      h["#{child.name}"] = child.text.strip
-    end
-
-    row += [h["player"]]
-    row += [h["result"]]
-    row += [h["resultText"]]
-
+    parts_xml = play.search("part")
+    row += [parts_xml.size]
     shots << row
+
+    parts_xml.each_with_index do |part,i|
+      
+      row = [game_id, id, i]
+      
+      a = part.attributes
+      part_keys.each do |key|
+        value = a[key].value rescue nil
+        if not(value==nil) and (value.size==0)
+          value = nil
+        end
+        row += [value]
+      end
+
+      h = {}
+      part.children.each do |child|
+        h["#{child.name}"] = child.text.strip
+      end
+
+      row += [h["player"]]
+      row += [h["result"]]
+      row += [h["resultText"]]
+
+      parts << row
+
+    end
 
   end
   
