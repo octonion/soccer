@@ -3,11 +3,14 @@
 require "csv"
 require "nokogiri"
 
-games = CSV.open("games.csv", "w")
-attacks =  CSV.open("attacks.csv","w")
-shots = CSV.open("shots.csv","w")
+args = ARGV
+dir = args[0]
 
-$*.each do |file|
+games = CSV.open("#{dir}/games.csv", "w")
+attacks =  CSV.open("#{dir}/attacks.csv","w")
+shots = CSV.open("#{dir}/shots.csv","w")
+
+args[1..-1].each do |file|
       
   file_name = File.basename(file)
 
@@ -47,15 +50,34 @@ $*.each do |file|
     a = attack.attributes
 
     attack_keys.each do |key|
-      row << a[key].value
+      value = a[key].value
+      if (value.size==0)
+        value = nil
+      end
+      row += [value]
     end
 
     h = {}
     attack.children.each do |child|
       h["#{child.name}"] = child.text.strip
     end
-    row << h["cdata-section"]
-    row << h["grid"]
+
+    row += [h["cdata-section"]]
+
+    grid = h["grid"]
+    heat_map = []
+
+    if not(grid==nil)
+      values = grid.split("~")
+      flat = []
+      values.each { |v| flat << v.to_i }
+      (0..21).each do |i|
+        heat_map += [flat[(32*i)..(32*i+31)]]
+      end
+      row += [heat_map.reverse]
+    else
+      row += [nil]
+    end
 
     attacks << row
 
@@ -72,7 +94,11 @@ $*.each do |file|
 
     a = play.attributes
     play_keys.each do |key|
-      row << a[key].value
+      value = a[key].value
+      if (value.size==0)
+        value = nil
+      end
+      row += [value]
     end
 
     h = {}
@@ -80,16 +106,20 @@ $*.each do |file|
       h["#{child.name}"] = child.text.strip
     end
 
-    row << h["player"]
-    row << h["result"]
-    row << h["topScoreText"]
-    row << h["shotByText"]
+    row += [h["player"]]
+    row += [h["result"]]
+    row += [h["topScoreText"]]
+    row += [h["shotByText"]]
 
     part = play.search("part").first
 
     a = part.attributes
     part_keys.each do |key|
-      row << a[key].value
+      value = a[key].value
+      if (value.size==0)
+        value = nil
+      end
+      row += [value]
     end
 
     h = {}
@@ -97,9 +127,9 @@ $*.each do |file|
       h["#{child.name}"] = child.text.strip
     end
 
-    row << h["player"]
-    row << h["result"]
-    row << h["resultText"]
+    row += [h["player"]]
+    row += [h["result"]]
+    row += [h["resultText"]]
 
     shots << row
 
