@@ -4,6 +4,8 @@ drop table if exists club.shots;
 
 create table club.shots (
 	game_id		      integer,
+	year		      integer,
+	league_key	      text,
 	shot_id		      integer,
 	clock		      integer,
 	added_time	      text,
@@ -20,7 +22,7 @@ create table club.shots (
 	top_score_text	      text,
 	shot_by_text	      text,
 	parts		      integer,
-	primary key (game_id,shot_id)
+	primary key (game_id, league_key, shot_id)
 );
 
 copy club.shots from '/tmp/shots.csv' csv;

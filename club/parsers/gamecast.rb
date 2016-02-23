@@ -12,6 +12,9 @@ shots = CSV.open("#{dir}/shots.csv","w")
 parts = CSV.open("#{dir}/parts.csv","w")
 
 args[1..-1].each do |file|
+
+  year = File.dirname(file).split("/")[-1]
+  league_key = File.dirname(file).split("/")[-2]
       
   file_name = File.basename(file)
 
@@ -34,7 +37,7 @@ args[1..-1].each do |file|
   away_color = away.attribute("color")
   away_name = away.inner_text
   
-  row = [game_id,
+  row = [game_id, year, league_key,
          home_id, home_color, home_name,
          away_id, away_color, away_name]
 
@@ -45,7 +48,7 @@ args[1..-1].each do |file|
 
   game.search("attack/entry").each do |attack|
 
-    row = [game_id]
+    row = [game_id, year, league_key]
 
     a = attack.attributes
 
@@ -90,7 +93,7 @@ args[1..-1].each do |file|
 
   game.search("shots/play").each do |play|
 
-    row = [game_id]
+    row = [game_id, year, league_key]
 
     a = play.attributes
     play_keys.each do |key|
@@ -119,7 +122,7 @@ args[1..-1].each do |file|
 
     parts_xml.each_with_index do |part,i|
       
-      row = [game_id, id, i]
+      row = [game_id, year, league_key, id, i]
       
       a = part.attributes
       part_keys.each do |key|

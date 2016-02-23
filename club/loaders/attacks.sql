@@ -4,6 +4,8 @@ drop table if exists club.attacks;
 
 create table club.attacks (
 	game_id		      integer,
+	year		      integer,
+	league_key	      text,
 	key		      text,
 	jersey		      integer,
 	avg_x		      float,
