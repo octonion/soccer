@@ -7,5 +7,5 @@ last=$3
 for year in `seq $first $last`
 do
     echo $league/$year
-    ./parsers/gamecast.rb csv/$1 xml/$league/$year/gamecast_*.xml
+    ./parsers/gamecast.rb csv/$1/$year xml/$league/$year/gamecast_*.xml
 done
