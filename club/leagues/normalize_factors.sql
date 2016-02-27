@@ -130,7 +130,7 @@ left outer join club._basic_factors nbf
 where
     npl.type='fixed'
 and npl.parameter in ('field')
-and npl.level not in ('none')
+--and npl.level not in ('neutral')
 );
 
 -- other fixed
