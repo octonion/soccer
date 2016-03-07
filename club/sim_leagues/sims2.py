@@ -53,7 +53,7 @@ where
     not(g.date='LIVE')
 and g.league_key = 'barclays+premier+league'
 and g.competition='Prem'
-and g.date::date >= current_date
+and (g.date::date >= current_date or (g.year=2015 and g.status='Postp'))
 and g.home_goals is null
 and g.away_goals is null
 and g.club_id=g.home_team_id
