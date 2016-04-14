@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# coding: utf-8
 
 require 'csv'
 
@@ -19,15 +20,26 @@ leagues = CSV.open("tsv/leagues.tsv",
                    "r",
                    {:col_sep => "\t", :headers => TRUE})
 
+skip = ["barclays+premier+league","spanish+primera+división","german+bundesliga","italian+serie+a","french+ligue+1","major+league+soccer","mexican+liga+mx","english+league+championship","australian+a-league","indian+super+league","futebol+brasileiro","primera+división+de+argentina","dutch+eredivisie","portuguese+liga","turkish+super+lig","scottish+premiership","russian+premier+league"]
+
 leagues.each do |league|
 
-    league_key = league["league_key"]
+  league_key = league["league_key"]
+
+  if skip.include?(league_key)
+    next
+  end
   
 (first_year..last_year).each do |year|
 
-  games = CSV.open("tsv/games_#{league_key}_#{year}.tsv",
-                   "r",
-                   {:col_sep => "\t", :headers => TRUE})
+  begin
+    games = CSV.open("tsv/games_#{league_key}_#{year}.tsv",
+                     "r",
+                     {:col_sep => "\t", :headers => TRUE})
+  rescue
+    print "skipping #{league_key}/#{year}\n"
+    next
+  end
 
   game_ids = []
 
