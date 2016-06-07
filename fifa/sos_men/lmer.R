@@ -27,6 +27,23 @@ where
 and r.gender_id='men'
 and r.team_id is not NULL
 and r.opponent_id is not NULL
+
+and r.team_id in
+(
+select team_id
+from fifa.men_results
+where gender_id='men'
+group by team_id
+having count(*)>=10)
+
+and r.opponent_id in
+(
+select team_id
+from fifa.men_results
+where gender_id='men'
+group by team_id
+having count(*)>=10)
+
 ;")
 
 games <- fetch(query,n=-1)
@@ -95,9 +112,9 @@ fit <- glmer(model,
              data=g,
 	     verbose=TRUE,
 	     family=poisson(link=log),
-	     weights=w
-	     #nAGQ=0,
-	     #control=glmerControl(optimizer="nloptwrap")
+	     weights=w,
+	     nAGQ=0,
+	     control=glmerControl(optimizer="nloptwrap")
 	     )
 
 fit
