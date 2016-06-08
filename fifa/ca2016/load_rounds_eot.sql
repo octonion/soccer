@@ -427,4 +427,16 @@ update fifa.men_matrix_field
 set field='away'
 where (year,opponent_id)=(2016,'usa');
 
+-- Mexico
+
+update fifa.men_matrix_field
+set field='home'
+where (year,team_id)=(2016,'mex')
+and not((year,opponent_id)=(2016,'usa'));
+
+update fifa.men_matrix_field
+set field='away'
+where (year,opponent_id)=(2016,'mex')
+and not((year,team_id)=(2016,'use'));
+
 commit;
