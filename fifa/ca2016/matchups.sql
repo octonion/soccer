@@ -39,9 +39,9 @@ join fifa.men_basic_factors bf
 where
 
 s1.team_id in
-  ('usa')
+  ('usa','mex')
 and s2.team_id in
-  ('col','ecu','arg','mex','bra','uru','chi')
+  ('col','ecu','arg','bra','uru','chi','par','crc','per','hai','ven','jam','pan','bol')
 );
 
 insert into m
@@ -74,9 +74,9 @@ join fifa.men_basic_factors bf
 where
 
 s1.team_id in
-  ('col','ecu','arg','mex','bra','uru','chi')
+  ('col','ecu','arg','bra','uru','chi','par','crc','per','hai','ven','jam','pan','bol')
 and s2.team_id in
-  ('usa')
+  ('usa','mex')
 );
 
 insert into m
@@ -105,10 +105,45 @@ join fifa.men_basic_factors bf
 where
 
 s1.team_id in
-  ('col','ecu','arg','mex','bra','uru','chi')
+  ('col','ecu','arg','bra','uru','chi','par','crc','per','hai','ven','jam','pan','bol')
 and s2.team_id in
-  ('col','ecu','arg','mex','bra','uru','chi')
+  ('col','ecu','arg','bra','uru','chi','par','crc','per','hai','ven','jam','pan','bol')
 );
+
+
+-- USA vs Mexico
+
+insert into m
+(team_id,team_name,opponent_id,opponent_name,team_mu,opponent_mu)
+(
+select
+s1.team_id,t1.team_name,s2.team_id,t2.team_name,
+
+exp(bf.estimate)*h.offensive*v.defensive,
+exp(bf.estimate)*v.offensive*h.defensive
+
+from fifa.men_schedule_factors s1
+join fifa.men_schedule_factors s2
+  on (s1.team_id<>s2.team_id)
+join fifa.teams t1
+  on (t1.team_id,t1.gender_id)=(s1.team_id,'men')
+join fifa.teams t2
+  on (t2.team_id,t2.gender_id)=(s2.team_id,'men')
+join fifa.men_schedule_factors h
+  on (h.team_id)=(t1.team_id)
+join fifa.men_schedule_factors v
+  on (v.team_id)=(t2.team_id)
+join fifa.men_basic_factors bf
+  on bf.factor='(Intercept)'
+
+where
+
+s1.team_id in
+  ('usa','mex')
+and s2.team_id in
+  ('usa','mex')
+);
+
 
 copy
 (
