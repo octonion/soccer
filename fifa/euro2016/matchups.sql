@@ -110,7 +110,6 @@ and s2.team_id in
   ('alb','rou','sui','eng','rus','svk','wal','ger','nir','pol','ukr','cro','cze','esp','tur','bel','ita','irl','swe','aut','hun','isl','por')
 );
 
-
 copy
 (
 select
