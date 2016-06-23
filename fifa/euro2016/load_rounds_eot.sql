@@ -411,32 +411,20 @@ r2.team_id,
 from fifa.men_rounds r1
 join fifa.men_rounds r2
   on (r2.year=r1.year and not(r2.team_id=r1.team_id))
-join (select generate_series(1, 4) round_id) gs
+join (select generate_series(1, 5) round_id) gs
   on TRUE
 where
   r1.year=2016
 );
 
--- USA
+-- France
 
 update fifa.men_matrix_field
 set field='home'
-where (year,team_id)=(2016,'usa');
+where (year,team_id)=(2016,'fra');
 
 update fifa.men_matrix_field
 set field='away'
-where (year,opponent_id)=(2016,'usa');
-
--- Mexico
-
-update fifa.men_matrix_field
-set field='home'
-where (year,team_id)=(2016,'mex')
-and not((year,opponent_id)=(2016,'usa'));
-
-update fifa.men_matrix_field
-set field='away'
-where (year,opponent_id)=(2016,'mex')
-and not((year,team_id)=(2016,'use'));
+where (year,opponent_id)=(2016,'fra');
 
 commit;
