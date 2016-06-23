@@ -33,8 +33,8 @@ where
 and r1.round_id=1
 and (mp.rules is null or
      mp.rules=(
-       case when r1.round_id in (1,2,3) then 'no extra time'
-            when r1.round_id in (4) then 'extra time'
+       case when r1.round_id in (1,2,3,4,5) then 'extra time'
+--            when r1.round_id in (4) then 'no extra time'
        end)
     )
 group by r1.year,round,r1.team_id,r1.team_name,r1.bracket
