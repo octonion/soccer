@@ -15,7 +15,8 @@ create table fifa.men_results (
 	field		      text,
 	team_score	      integer,
 	opponent_score	      integer,
-	game_length	      text
+	game_length	      text,
+	cup_name	      text
 );
 
 insert into fifa.men_results
@@ -24,7 +25,8 @@ insert into fifa.men_results
  team_name,team_id,
  opponent_name,opponent_id,
  location_name,field,
- team_score,opponent_score,game_length)
+ team_score,opponent_score,game_length,
+ cup_name)
 (
 select
 g.game_id,
@@ -41,7 +43,8 @@ venue,
 g.home_score,
 g.away_score,
 (case when g.after_extra_time then '1 OT'
-      else '0 OT' end) as game_length
+      else '0 OT' end) as game_length,
+g.cup_name
 from fifa.games g
 where
     g.home_score is not NULL
@@ -66,7 +69,8 @@ insert into fifa.men_results
  team_name,team_id,
  opponent_name,opponent_id,
  location_name,field,
- team_score,opponent_score,game_length)
+ team_score,opponent_score,game_length,
+ cup_name)
 (
 select
 g.game_id,
@@ -83,7 +87,8 @@ venue,
 g.away_score,
 g.home_score,
 (case when g.after_extra_time then '1 OT'
-      else '0 OT' end) as game_length
+      else '0 OT' end) as game_length,
+g.cup_name
 from fifa.games g
 where
     g.home_score is not NULL

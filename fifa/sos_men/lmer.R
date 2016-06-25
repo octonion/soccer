@@ -19,7 +19,9 @@ r.team_id as team,
 r.opponent_id as opponent,
 r.game_length as game_length,
 team_score::float as gs,
-(year-2007)^2 as w
+(case when r.cup_name like '%Friendly%' then 0.5*(year-2007)^2
+      else (year-2007)^2
+end) as w
 from fifa.men_results r
 
 where

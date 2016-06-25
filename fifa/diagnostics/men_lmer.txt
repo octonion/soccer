@@ -9,16 +9,16 @@ Formula: gs ~ field + game_length + (1 | offense) + (1 | defense) + (1 |
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
- 999185.6  999239.3 -499585.8  999171.6     15939 
+ 761162.5  761216.3 -380574.3  761148.5     15939 
 Random effects:
  Groups  Name        Std.Dev.
- game_id (Intercept) 1.0772  
- defense (Intercept) 0.8265  
- offense (Intercept) 0.8209  
+ game_id (Intercept) 0.9884  
+ defense (Intercept) 0.8327  
+ offense (Intercept) 0.8416  
 Number of obs: 15946, groups:  game_id, 7973; defense, 208; offense, 208
 Fixed Effects:
       (Intercept)  fielddefense_home  fieldoffense_home    game_length1 OT  
-          -0.2050            -0.2193             0.2083             0.3116  
+          -0.1761            -0.2284             0.2020             0.2863  
 Generalized linear mixed model fit by maximum likelihood (Adaptive
   Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
  Family: poisson  ( log )
@@ -29,31 +29,31 @@ Weights: w
 Control: glmerControl(optimizer = "nloptwrap")
 
       AIC       BIC    logLik  deviance  df.resid 
- 999185.6  999239.3 -499585.8  999171.6     15939 
+ 761162.5  761216.3 -380574.3  761148.5     15939 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--16.199  -1.726  -0.315   1.488  32.989 
+-15.599  -1.501  -0.240   1.277  34.070 
 
 Random effects:
  Groups  Name        Variance Std.Dev.
- game_id (Intercept) 1.1603   1.0772  
- defense (Intercept) 0.6831   0.8265  
- offense (Intercept) 0.6739   0.8209  
+ game_id (Intercept) 0.9770   0.9884  
+ defense (Intercept) 0.6934   0.8327  
+ offense (Intercept) 0.7082   0.8416  
 Number of obs: 15946, groups:  game_id, 7973; defense, 208; offense, 208
 
 Fixed effects:
                   Estimate Std. Error z value Pr(>|z|)    
-(Intercept)       -0.20505    0.08530  -2.404   0.0162 *  
-fielddefense_home -0.21927    0.03075  -7.132 9.93e-13 ***
-fieldoffense_home  0.20828    0.03070   6.784 1.17e-11 ***
-game_length1 OT    0.31160    0.15627   1.994   0.0462 *  
+(Intercept)       -0.17611    0.08601  -2.047   0.0406 *  
+fielddefense_home -0.22837    0.02881  -7.927 2.25e-15 ***
+fieldoffense_home  0.20198    0.02874   7.027 2.12e-12 ***
+game_length1 OT    0.28626    0.14454   1.980   0.0476 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
             (Intr) flddf_ fldff_
-filddfns_hm -0.259              
-fildffns_hm -0.260  0.992       
-gm_lngth1OT -0.030  0.078  0.078
+filddfns_hm -0.240              
+fildffns_hm -0.241  0.989       
+gm_lngth1OT -0.028  0.079  0.079
 [1] TRUE
