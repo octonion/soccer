@@ -1,56 +1,41 @@
 BEGIN
- rd |        name         |   p   
-----+---------------------+-------
-  2 | France              | 0.793
-  2 | Germany             | 0.744
-  2 | England             | 0.708
-  2 | Belgium             | 0.698
-  2 | Spain               | 0.677
-  2 | Italy               | 0.323
-  2 | Hungary             | 0.302
-  2 | Iceland             | 0.292
-  2 | Slovakia            | 0.256
-  2 | Republic of Ireland | 0.207
-  3 | Portugal            | 0.569
-  3 | France              | 0.521
-  3 | Belgium             | 0.485
-  3 | Poland              | 0.431
-  3 | Spain               | 0.418
-  3 | Germany             | 0.372
-  3 | Wales               | 0.360
-  3 | England             | 0.329
-  3 | Hungary             | 0.154
-  3 | Italy               | 0.136
-  3 | Iceland             | 0.082
-  3 | Slovakia            | 0.074
-  3 | Republic of Ireland | 0.068
-  4 | France              | 0.315
-  4 | Portugal            | 0.305
-  4 | Belgium             | 0.287
-  4 | Spain               | 0.227
-  4 | Poland              | 0.200
-  4 | Germany             | 0.182
-  4 | England             | 0.163
-  4 | Wales               | 0.145
-  4 | Hungary             | 0.063
-  4 | Italy               | 0.051
-  4 | Iceland             | 0.023
-  4 | Slovakia            | 0.022
-  4 | Republic of Ireland | 0.018
-  5 | France              | 0.222
-  5 | Spain               | 0.155
-  5 | Belgium             | 0.122
-  5 | Germany             | 0.118
-  5 | Portugal            | 0.115
-  5 | England             | 0.100
-  5 | Poland              | 0.062
-  5 | Wales               | 0.037
-  5 | Italy               | 0.026
-  5 | Hungary             | 0.016
-  5 | Slovakia            | 0.009
-  5 | Iceland             | 0.009
-  5 | Republic of Ireland | 0.007
-(49 rows)
+ rd |   name   |   p   
+----+----------+-------
+  2 | England  | 0.710
+  2 | Spain    | 0.674
+  2 | Italy    | 0.326
+  2 | Iceland  | 0.290
+  3 | Belgium  | 0.718
+  3 | France   | 0.652
+  3 | Portugal | 0.566
+  3 | Germany  | 0.516
+  3 | Poland   | 0.434
+  3 | Spain    | 0.371
+  3 | England  | 0.286
+  3 | Wales    | 0.282
+  3 | Italy    | 0.113
+  3 | Iceland  | 0.062
+  4 | Belgium  | 0.443
+  4 | France   | 0.378
+  4 | Portugal | 0.268
+  4 | Germany  | 0.242
+  4 | Spain    | 0.190
+  4 | Poland   | 0.175
+  4 | England  | 0.135
+  4 | Wales    | 0.114
+  4 | Italy    | 0.040
+  4 | Iceland  | 0.015
+  5 | France   | 0.254
+  5 | Belgium  | 0.192
+  5 | Germany  | 0.151
+  5 | Spain    | 0.124
+  5 | Portugal | 0.096
+  5 | England  | 0.079
+  5 | Poland   | 0.052
+  5 | Wales    | 0.027
+  5 | Italy    | 0.019
+  5 | Iceland  | 0.006
+(34 rows)
 
-COPY 49
+COPY 34
 COMMIT
