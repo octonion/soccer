@@ -53,7 +53,7 @@ where
     not(g.date='LIVE')
 and g.league_key = 'english+premier+league'
 and g.competition='Prem'
-and (g.date::date >= current_date or (g.year=2015 and g.status='Postp'))
+and (g.date::date >= current_date or (g.year=2016 and g.status='Postp'))
 and ((g.home_goals is null) or (g.away_goals is null))
 and g.club_id=g.home_team_id
 order by g.club_name asc,g.date::date asc
@@ -105,7 +105,7 @@ where
     not(g.date='LIVE')
 and g.league_key = 'english+premier+league'
 and g.competition='Prem'
-and g.year=2015
+and g.year=2016
 and g.date::date <= current_date
 and g.home_goals is not null
 and g.away_goals is not null

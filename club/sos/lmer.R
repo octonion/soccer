@@ -18,7 +18,7 @@ team_score as gs
 from club.results r
 
 where
-    r.year between 2015 and 2015
+    r.year between 2016 and 2016
 ;")
 
 games <- fetch(query,n=-1)

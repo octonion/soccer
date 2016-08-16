@@ -25,7 +25,7 @@ schedule_strength::numeric(5,3) as sos
 from club._schedule_factors sf
 join club.teams t
   on (t.year,t.club_id)=(sf.year,sf.team_id)
-where sf.year in (2015)
+where sf.year in (2016)
 order by str desc);
 
 select

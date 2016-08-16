@@ -62,7 +62,7 @@ r.game_date,
 r.year,
 r.field
 from club.results r
-where r.year between 2015 and 2015
+where r.year between 2016 and 2016
 );
 
 update public.r

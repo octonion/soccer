@@ -85,7 +85,7 @@ where
     not(g.date='LIVE')
 and g.league_key = 'english+premier+league'
 and g.competition='Prem'
-and g.year=2015
+and g.year=2016
 and g.date::date <= current_date
 and g.home_goals is not null
 and g.away_goals is not null

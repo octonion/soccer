@@ -20,13 +20,13 @@ team_score as gs
 from club.results r
 
 where
-    r.year between 2008 and 2015
+    r.year between 2008 and 2016
 
 /*
 and r.team_league_key in
 (select distinct league_key
  from club.teams
- where year=2015)
+ where year=2016)
 and r.team_league_key in
 (select distinct league_key
  from club.teams
@@ -34,7 +34,7 @@ and r.team_league_key in
 and r.opponent_league_key in
 (select distinct league_key
  from club.teams
- where year=2015)
+ where year=2016)
 and r.opponent_league_key in
 (select distinct league_key
  from club.teams
