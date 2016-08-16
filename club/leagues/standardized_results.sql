@@ -56,7 +56,7 @@ and g.away_team_id is not NULL
 
 and g.year>=2008
 
---and g.league_key = 'barclays+premier+league'
+--and g.league_key = 'english+premier+league'
 and g.club_id=g.home_team_id
 --and g.competition='Prem'
 and g.title not in ('Friendly')
@@ -66,7 +66,7 @@ and t.league_key=o.league_key
 and t.league_key in
 (
 'austrian+bundesliga',
-'barclays+premier+league',
+'english+premier+league',
 'belgian+jupiler+league',
 'danish+sas-ligaen',
 'dutch+eredivisie',
@@ -103,7 +103,7 @@ and t.league_key in
 and o.league_key in
 (
 'austrian+bundesliga',
-'barclays+premier+league',
+'english+premier+league',
 'belgian+jupiler+league',
 'danish+sas-ligaen',
 'dutch+eredivisie',
@@ -167,7 +167,7 @@ and g.away_team_id is not NULL
 
 and g.year>=2008
 
---and g.league_key = 'barclays+premier+league'
+--and g.league_key = 'english+premier+league'
 and g.club_id=g.home_team_id
 --and g.competition='Prem'
 and g.title not in ('Friendly')
@@ -177,7 +177,7 @@ and t.league_key=o.league_key
 and t.league_key in
 (
 'austrian+bundesliga',
-'barclays+premier+league',
+'english+premier+league',
 'belgian+jupiler+league',
 'danish+sas-ligaen',
 'dutch+eredivisie',
@@ -214,7 +214,7 @@ and t.league_key in
 and o.league_key in
 (
 'austrian+bundesliga',
-'barclays+premier+league',
+'english+premier+league',
 'belgian+jupiler+league',
 'danish+sas-ligaen',
 'dutch+eredivisie',
@@ -288,7 +288,7 @@ and g.away_team_id is not NULL
 
 and g.year>=2008
 
---and g.league_key = 'barclays+premier+league'
+--and g.league_key = 'english+premier+league'
 and g.club_id=g.home_team_id
 --and g.competition='Prem'
 and g.title not in ('Friendly')
@@ -298,7 +298,7 @@ and not(t.league_key=o.league_key)
 and t.league_key in
 (
 'austrian+bundesliga',
-'barclays+premier+league',
+'english+premier+league',
 'belgian+jupiler+league',
 'danish+sas-ligaen',
 'dutch+eredivisie',
@@ -335,7 +335,7 @@ and t.league_key in
 and o.league_key in
 (
 'austrian+bundesliga',
-'barclays+premier+league',
+'english+premier+league',
 'belgian+jupiler+league',
 'danish+sas-ligaen',
 'dutch+eredivisie',
@@ -399,7 +399,7 @@ and g.away_team_id is not NULL
 
 and g.year>=2008
 
---and g.league_key = 'barclays+premier+league'
+--and g.league_key = 'english+premier+league'
 and g.club_id=g.home_team_id
 --and g.competition='Prem'
 and g.title not in ('Friendly')
@@ -409,7 +409,7 @@ and not(t.league_key=o.league_key)
 and t.league_key in
 (
 'austrian+bundesliga',
-'barclays+premier+league',
+'english+premier+league',
 'belgian+jupiler+league',
 'danish+sas-ligaen',
 'dutch+eredivisie',
@@ -446,7 +446,7 @@ and t.league_key in
 and o.league_key in
 (
 'austrian+bundesliga',
-'barclays+premier+league',
+'english+premier+league',
 'belgian+jupiler+league',
 'danish+sas-ligaen',
 'dutch+eredivisie',

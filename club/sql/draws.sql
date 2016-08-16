@@ -31,7 +31,7 @@ end)::float/count(*)
 from club.games g
 where
     not(g.date='LIVE')
-and g.league_key = 'barclays+premier+league'
+and g.league_key = 'english+premier+league'
 and g.competition='Prem'
 --and g.year=2015
 and g.date::date <= current_date
