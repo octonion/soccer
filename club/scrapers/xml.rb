@@ -18,9 +18,13 @@ retries = 2
 
 (first_year..last_year).each do |year|
 
-  games = CSV.open("tsv/games_#{league_key}_#{year}.tsv",
-                   "r",
-                   {:col_sep => "\t", :headers => TRUE})
+  begin
+    games = CSV.open("tsv/games_#{league_key}_#{year}.tsv",
+                     "r",
+                     {:col_sep => "\t", :headers => TRUE})
+  rescue
+    next
+  end
 
   game_ids = []
 

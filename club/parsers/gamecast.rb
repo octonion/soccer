@@ -21,8 +21,12 @@ args[1..-1].each do |file|
   game_id = file_name.split("_")[1].split(".")[0]
   
   print "Parsing #{game_id} ...\n"
-      
-  xml = Nokogiri::XML(File.open(file))
+
+  begin
+    xml = Nokogiri::XML(File.open(file))
+  rescue
+    next
+  end
 
   game = xml.search("/game").first
 
