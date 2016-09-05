@@ -3,6 +3,8 @@
 require "csv"
 require "nokogiri"
 
+require "cgi"
+
 args = ARGV
 dir = args[0]
 
@@ -115,6 +117,11 @@ args[1..-1].each do |file|
       h["#{child.name}"] = child.text.strip
     end
 
+    # Am I losing information here?
+    # Need to handle this for data fields
+
+    h["shotByText"].encode!("UTF-8", "ISO-8859-1", :invalid => :replace, :undef => :replace, :replace => "")
+
     row += [h["player"]]
     row += [h["result"]]
     row += [h["topScoreText"]]
@@ -122,6 +129,7 @@ args[1..-1].each do |file|
 
     parts_xml = play.search("part")
     row += [parts_xml.size]
+
     shots << row
 
     parts_xml.each_with_index do |part,i|
