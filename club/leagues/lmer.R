@@ -20,13 +20,13 @@ team_score as gs
 from club.results r
 
 where
-    r.year between 2008 and 2016
+    r.year between 2000 and 2016
 
 /*
 and r.team_league_key in
 (select distinct league_key
  from club.teams
- where year=2016)
+ where year=2015)
 and r.team_league_key in
 (select distinct league_key
  from club.teams
@@ -34,44 +34,48 @@ and r.team_league_key in
 and r.opponent_league_key in
 (select distinct league_key
  from club.teams
- where year=2016)
+ where year=2008)
 and r.opponent_league_key in
 (select distinct league_key
  from club.teams
- where year=2008)
+ where year=2015)
 
 and r.team_league_key not in
 (
---'primera+a+de+ecuador',
---'primera+división+de+argentina',
---'primera+división+de+uruguay',
---'fútbol+profesional+colombiano',
---'primera+división+de+paraguay',
---'liga+profesional+boliviana',
---'primera+división+de+chile',
---'turkish+super+lig',
+'primera+a+de+ecuador',
+'primera+división+de+argentina',
+'primera+división+de+uruguay',
+'fútbol+profesional+colombiano',
+'primera+división+de+paraguay',
+'liga+profesional+boliviana',
+'primera+división+de+chile',
+'turkish+super+lig',
 'welsh+premier+league',
 'northern+irish+premiership',
---'primera+profesional+de+perú',
+'primera+profesional+de+perú',
 'greek+super+league',
-'scottish+premiership'
+'scottish+premiership',
+'mexican+liga+mx',
+'australian+a-league'
 )
 
 and r.opponent_league_key not in
 (
---'primera+a+de+ecuador',
---'primera+división+de+argentina',
---'primera+división+de+uruguay',
---'fútbol+profesional+colombiano',
---'primera+división+de+paraguay',
---'liga+profesional+boliviana',
---'primera+división+de+chile',
---'turkish+super+lig',
+'primera+a+de+ecuador',
+'primera+división+de+argentina',
+'primera+división+de+uruguay',
+'fútbol+profesional+colombiano',
+'primera+división+de+paraguay',
+'liga+profesional+boliviana',
+'primera+división+de+chile',
+'turkish+super+lig',
 'welsh+premier+league',
 'northern+irish+premiership',
---'primera+profesional+de+perú',
+'primera+profesional+de+perú',
 'greek+super+league',
-'scottish+premiership'
+'scottish+premiership',
+'mexican+liga+mx',
+'australian+a-league'
 )
 */
 
