@@ -28,11 +28,15 @@ leagues.each do |league|
   league_key = league["league_key"]
   league_name = league["league_name"]
 
+  #if not(league_key=='futebol+brasileiro')
+  #  next
+  #end
+
   print "pulling #{league_name}"
 
   league_url = league["league_url"]
 
-  table_url = league_url.gsub("index","")+"table?season=#{year}&seasonType=1"
+  table_url = league_url.gsub("index","")+"table?season=#{year}" #&seasonType=1"
 
   begin
     doc = Nokogiri::HTML(open(table_url))

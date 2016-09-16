@@ -22,3 +22,9 @@ psql soccer -c "vacuum full verbose analyze club._schedule_factors;"
 
 psql soccer -f leagues/current_ranking.sql > leagues/current_ranking.txt
 cp /tmp/current_ranking.csv leagues/current_ranking.csv
+
+psql soccer -f leagues/league_ranking.sql > leagues/league_ranking.txt
+cp /tmp/league_ranking.csv leagues/league_ranking.csv
+
+psql soccer -f leagues/connectivity.sql > leagues/connectivity.txt
+cp /tmp/connectivity.csv leagues/connectivity.csv

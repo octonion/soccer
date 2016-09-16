@@ -5,6 +5,7 @@ create temporary table r (
        team 	 	text,
        team_id   	integer,
        league_key	text,
+       league		text,
        year	 	integer,
        str	 	numeric(5,3),
        ofs	 	numeric(5,3),
@@ -13,12 +14,13 @@ create temporary table r (
 );
 
 insert into r
-(team,team_id,league_key,year,str,ofs,dfs,sos)
+(team,team_id,league_key,league,year,str,ofs,dfs,sos)
 (
 select
 t.club_name,
 sf.team_id,
 t.league_key,
+l.league_name,
 sf.year,
 (sf.strength*o.exp_factor/d.exp_factor)::numeric(5,3) as str,
 (offensive*o.exp_factor)::numeric(5,3) as ofs,
@@ -31,18 +33,20 @@ join club._factors o
   on (o.parameter,o.level)=('offense_league',t.league_key)
 join club._factors d
   on (d.parameter,d.level)=('defense_league',t.league_key)
-where sf.year in (2016)
+join club.leagues l
+  on (l.league_key)=(t.league_key)
+where sf.year in (2014)
 order by str desc);
 
 select
-rk,team,str,ofs,dfs,sos
+rk,team,league,str,ofs,dfs,sos
 from r
 order by rk asc;
 
 copy
 (
 select
-rk,team,str,ofs,dfs,sos
+rk,team,league,str,ofs,dfs,sos
 from r
 order by rk asc
 ) to '/tmp/current_ranking.csv' csv header;

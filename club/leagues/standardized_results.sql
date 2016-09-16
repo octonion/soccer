@@ -6,6 +6,7 @@ create table club.results (
 	game_id		      integer,
 	game_date	      date,
 	year		      integer,
+	competition	      text,
 	team_name	      text,
 	team_id		      integer,
 	team_league_key	      text,
@@ -22,6 +23,7 @@ create table club.results (
 insert into club.results
 (
 game_id,game_date,year,
+competition,
 team_name,team_id,team_league_key,
 opponent_name,opponent_id,opponent_league_key,
 location_name,location_id,
@@ -32,6 +34,7 @@ select
 game_id,
 date::date,
 g.year,
+g.competition,
 g.home_team_name,
 t.club_id,
 t.league_key,
@@ -44,11 +47,11 @@ t.club_id as location_id,
 abs(g.home_goals),
 abs(g.away_goals)
 from club.games g
-left join club.alias_all at
+left outer join club.alias_all at
   on (at.game_team_name)=(g.home_team_name)
 join club.teams t
   on (t.year,t.club_id)=(g.year,coalesce(g.home_team_id,at.game_club_id))
-left join club.alias_all ao
+left outer join club.alias_all ao
   on (ao.game_team_name)=(g.away_team_name)
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
@@ -63,7 +66,7 @@ and g.year>=2000
 --and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
 --and g.competition='Prem'
-and g.title not in ('Friendly')
+--and g.title not in ('Friendly')
 
 and t.league_key=o.league_key
 
@@ -151,6 +154,7 @@ select
 game_id,
 date::date,
 g.year,
+g.competition,
 g.away_team_name,
 o.club_id,
 o.league_key,
@@ -163,11 +167,11 @@ t.club_id as location_id,
 abs(g.away_goals),
 abs(g.home_goals)
 from club.games g
-left join club.alias_all at
+left outer join club.alias_all at
   on (at.game_team_name)=(g.home_team_name)
 join club.teams t
   on (t.year,t.club_id)=(g.year,coalesce(g.home_team_id,at.game_club_id))
-left join club.alias_all ao
+left outer join club.alias_all ao
   on (ao.game_team_name)=(g.away_team_name)
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
@@ -182,7 +186,7 @@ and g.year>=2000
 --and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
 --and g.competition='Prem'
-and g.title not in ('Friendly')
+--and g.title not in ('Friendly')
 
 and t.league_key=o.league_key
 
@@ -270,6 +274,7 @@ and o.league_key in
 insert into club.results
 (
 game_id,game_date,year,
+competition,
 team_name,team_id,team_league_key,
 opponent_name,opponent_id,opponent_league_key,
 location_name,location_id,
@@ -280,6 +285,7 @@ select
 game_id,
 date::date,
 g.year,
+g.competition,
 g.home_team_name,
 t.club_id,
 t.league_key,
@@ -311,7 +317,7 @@ and g.year>=2000
 --and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
 --and g.competition='Prem'
-and g.title not in ('Friendly')
+--and g.title not in ('Friendly')
 
 and not(t.league_key=o.league_key)
 
@@ -399,6 +405,7 @@ select
 game_id,
 date::date,
 g.year,
+g.competition,
 g.away_team_name,
 o.club_id,
 o.league_key,
@@ -430,7 +437,7 @@ and g.year>=2000
 --and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
 --and g.competition='Prem'
-and g.title not in ('Friendly')
+--and g.title not in ('Friendly')
 
 and not(t.league_key=o.league_key)
 

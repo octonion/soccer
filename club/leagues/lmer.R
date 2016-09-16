@@ -16,7 +16,11 @@ r.team_id as team,
 r.team_league_key as team_league,
 r.opponent_id as opponent,
 r.opponent_league_key as opponent_league,
-team_score as gs
+team_score as gs,
+(case
+when r.competition in ('','Friendly') then 0.5
+else 1.0
+end) as w
 from club.results r
 
 where
@@ -41,6 +45,8 @@ and r.opponent_league_key in
  where year=2015)
 */
 
+-- Ignore leagues with no outside connectivity
+
 and r.team_league_key not in
 (
 --'primera+a+de+ecuador',
@@ -58,7 +64,11 @@ and r.team_league_key not in
 --'scottish+premiership',
 --'mexican+liga+mx',
 --'australian+a-league'
-'north+american+soccer+league'
+'indonesian+super+league',
+'jamaica+premier+league',
+'malaysian+super+league',
+'north+american+soccer+league',
+'singapore+s-league'
 )
 
 and r.opponent_league_key not in
@@ -78,7 +88,11 @@ and r.opponent_league_key not in
 --'scottish+premiership',
 --'mexican+liga+mx',
 --'australian+a-league'
-'north+american+soccer+league'
+'indonesian+super+league',
+'jamaica+premier+league',
+'malaysian+super+league',
+'north+american+soccer+league',
+'singapore+s-league'
 )
 
 ;")
@@ -136,7 +150,7 @@ for (n in rpn) {
 parameter_levels <- as.data.frame(do.call("rbind",pll))
 dbWriteTable(con,c("club","_parameter_levels"),parameter_levels,row.names=TRUE)
 
-g <- cbind(fp,rp)
+g <- cbind(fp,rp,w)
 
 dim(g)
 
@@ -144,6 +158,7 @@ model <- gs ~ year+offense_league+defense_league+field+(1|offense)+(1|defense)+(
 
 fit <- glmer(model,
              data=g,
+	     weights=w,
 #	     verbose=TRUE,
              family=poisson(link=log),
              nAGQ=0,

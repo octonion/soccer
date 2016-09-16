@@ -6,6 +6,7 @@ create table club.results (
 	game_id		      integer,
 	game_date	      date,
 	year		      integer,
+	competition	      text,
 	team_name	      text,
 	team_id		      integer,
 	opponent_name	      text,
@@ -21,6 +22,7 @@ create table club.results (
 insert into club.results
 (
 game_id,game_date,year,
+competition,
 team_name,team_id,
 opponent_name,opponent_id,
 location_name,location_id,
@@ -31,6 +33,7 @@ select
 game_id,
 date::date,
 g.year,
+g.competition,
 g.home_team_name,
 g.home_team_id,
 g.away_team_name,
@@ -57,6 +60,7 @@ select
 game_id,
 date::date,
 g.year,
+g.competition,
 g.away_team_name,
 g.away_team_id,
 g.home_team_name,
