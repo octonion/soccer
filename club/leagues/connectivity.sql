@@ -2,6 +2,18 @@ select
 r.year,
 tl.league_name as team,
 ol.league_name as opponent,
+sum(
+case when team_score>opponent_score then 1
+     else 0
+end) as w,
+sum(
+case when team_score=opponent_score then 1
+     else 0
+end) as d,
+sum(
+case when team_score<opponent_score then 1
+     else 0
+end) as l,
 count(*) as n
 from club.results r
 join club.leagues tl
@@ -16,6 +28,18 @@ select
 r.year,
 tl.league_name as team,
 ol.league_name as opponent,
+sum(
+case when team_score>opponent_score then 1
+     else 0
+end) as w,
+sum(
+case when team_score=opponent_score then 1
+     else 0
+end) as d,
+sum(
+case when team_score<opponent_score then 1
+     else 0
+end) as l,
 count(*) as n
 from club.results r
 join club.leagues tl
