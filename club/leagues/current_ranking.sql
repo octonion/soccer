@@ -31,7 +31,7 @@ join club._factors o
   on (o.parameter,o.level)=('offense_league',t.league_key)
 join club._factors d
   on (d.parameter,d.level)=('defense_league',t.league_key)
-where sf.year in (2014)
+where sf.year in (2016)
 order by str desc);
 
 select
