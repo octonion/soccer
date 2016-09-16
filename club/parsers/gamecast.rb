@@ -8,6 +8,18 @@ require "cgi"
 args = ARGV
 dir = args[0]
 
+print "Target dir is #{dir}\n"
+
+if (args[1..-1].size==1) and (args[1].include?('*'))
+  print "No xml files to process; skipping.\n"
+  exit
+end
+
+if not(File.directory?(dir))
+  print "Target csv directory missing; skipping.\n"
+  exit
+end
+
 gamecast = CSV.open("#{dir}/gamecast.csv", "w")
 attacks =  CSV.open("#{dir}/attacks.csv","w")
 shots = CSV.open("#{dir}/shots.csv","w")

@@ -28,6 +28,7 @@ echo "Leagues"
 echo
 
 cp tsv/leagues.tsv /tmp/leagues.tsv
+#tail -q -n+2 tsv/leagues_hidden.tsv >> /tmp/leagues.tsv
 psql soccer -f loaders/leagues.sql
 rm /tmp/leagues.tsv
 

@@ -55,6 +55,4 @@ leagues.each do |league|
 
   print " - found #{found} clubs\n"
 
-  #exit
-
 end

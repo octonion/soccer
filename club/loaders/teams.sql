@@ -10,7 +10,7 @@ create table club.teams (
 	club_key	      text,
 	club_name	      text,
 	club_url	      text,
-	primary key (year,club_id)
+	primary key (year,league_id,club_id)
 );
 
 create temporary table c (

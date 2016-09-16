@@ -20,7 +20,9 @@ leagues = CSV.open("tsv/leagues.tsv",
                    "r",
                    {:col_sep => "\t", :headers => TRUE})
 
-skip = ["english+premier+league","spanish+primera+división","german+bundesliga","italian+serie+a","french+ligue+1","major+league+soccer","mexican+liga+mx","english+league+championship","australian+a-league","indian+super+league","futebol+brasileiro","primera+división+de+argentina","dutch+eredivisie","portuguese+liga","turkish+super+lig","scottish+premiership","russian+premier+league"]
+#skip = ["english+premier+league","spanish+primera+división","german+bundesliga","italian+serie+a","french+ligue+1","major+league+soccer","mexican+liga+mx","english+league+championship","australian+a-league","indian+super+league","futebol+brasileiro","primera+división+de+argentina","dutch+eredivisie","portuguese+liga","turkish+super+lig","scottish+premiership","russian+premier+league"]
+
+skip = []
 
 leagues.each do |league|
 
