@@ -10,7 +10,7 @@ while read league_id league_key rest; do
 	continue
     fi
 
-    for ((year=$1; year<=$2; year++)); do
+    for ((year=$first; year<=$last; year++)); do
 	echo "Parsing "$league_key/$year
 	./parsers/gamecast.rb csv/$league_key/$year xml/$league_key/$year/gamecast_*.xml
     done
