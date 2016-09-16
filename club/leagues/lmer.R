@@ -39,45 +39,47 @@ and r.opponent_league_key in
 (select distinct league_key
  from club.teams
  where year=2015)
+*/
 
 and r.team_league_key not in
 (
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+uruguay',
-'fútbol+profesional+colombiano',
-'primera+división+de+paraguay',
-'liga+profesional+boliviana',
-'primera+división+de+chile',
-'turkish+super+lig',
-'welsh+premier+league',
-'northern+irish+premiership',
-'primera+profesional+de+perú',
-'greek+super+league',
-'scottish+premiership',
-'mexican+liga+mx',
-'australian+a-league'
+--'primera+a+de+ecuador',
+--'primera+división+de+argentina',
+--'primera+división+de+uruguay',
+--'fútbol+profesional+colombiano',
+--'primera+división+de+paraguay',
+--'liga+profesional+boliviana',
+--'primera+división+de+chile',
+--'turkish+super+lig',
+--'welsh+premier+league',
+--'northern+irish+premiership',
+--'primera+profesional+de+perú',
+--'greek+super+league',
+--'scottish+premiership',
+--'mexican+liga+mx',
+--'australian+a-league'
+'north+american+soccer+league'
 )
 
 and r.opponent_league_key not in
 (
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+uruguay',
-'fútbol+profesional+colombiano',
-'primera+división+de+paraguay',
-'liga+profesional+boliviana',
-'primera+división+de+chile',
-'turkish+super+lig',
-'welsh+premier+league',
-'northern+irish+premiership',
-'primera+profesional+de+perú',
-'greek+super+league',
-'scottish+premiership',
-'mexican+liga+mx',
-'australian+a-league'
+--'primera+a+de+ecuador',
+--'primera+división+de+argentina',
+--'primera+división+de+uruguay',
+--'fútbol+profesional+colombiano',
+--'primera+división+de+paraguay',
+--'liga+profesional+boliviana',
+--'primera+división+de+chile',
+--'turkish+super+lig',
+--'welsh+premier+league',
+--'northern+irish+premiership',
+--'primera+profesional+de+perú',
+--'greek+super+league',
+--'scottish+premiership',
+--'mexican+liga+mx',
+--'australian+a-league'
+'north+american+soccer+league'
 )
-*/
 
 ;")
 
@@ -142,7 +144,7 @@ model <- gs ~ year+offense_league+defense_league+field+(1|offense)+(1|defense)+(
 
 fit <- glmer(model,
              data=g,
-	     verbose=TRUE,
+#	     verbose=TRUE,
              family=poisson(link=log),
              nAGQ=0,
              control=glmerControl(optimizer = "nloptwrap"))

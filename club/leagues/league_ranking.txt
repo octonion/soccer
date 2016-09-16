@@ -1,52 +1,54 @@
 BEGIN
 CREATE TABLE
-INSERT 0 43
- rk |                 lg                 |   str   |   ofs   |  dfs   
-----+------------------------------------+---------+---------+--------
-  1 | Spanish Primera División           |   0.881 |   0.416 |  0.466
-  2 | English Premier League             |   0.797 |   0.375 |  0.422
-  3 | Futebol Brasileiro                 |   0.779 |   0.298 |  0.481
-  4 | German Bundesliga                  |   0.705 |   0.370 |  0.335
-  5 | Primera División de Argentina      |   0.653 |   0.250 |  0.403
-  6 | Italian Serie A                    |   0.604 |   0.268 |  0.337
-  7 | Mexican Liga MX                    |   0.579 |   0.284 |  0.295
-  8 | French Ligue 1                     |   0.576 |   0.210 |  0.365
-  9 | Russian Premier League             |   0.474 |   0.175 |  0.299
- 10 | Primera A de Ecuador               |   0.463 |   0.128 |  0.335
- 11 | Dutch Eredivisie                   |   0.387 |   0.215 |  0.172
- 12 | Fútbol Profesional Colombiano      |   0.382 |   0.128 |  0.254
- 13 | Indonesian Super League            |   0.374 |   0.374 |  0.000
- 14 | Portuguese Liga                    |   0.373 |   0.131 |  0.241
- 15 | Primera División de Uruguay        |   0.355 |   0.189 |  0.166
- 16 | Major League Soccer                |   0.265 |   0.113 |  0.152
- 17 | Primera División de Paraguay       |   0.256 |   0.104 |  0.151
- 18 | Turkish Super Lig                  |   0.230 |   0.071 |  0.159
- 19 | French Ligue 2                     |   0.200 |  -0.006 |  0.206
- 20 | Belgian Jupiler League             |   0.198 |   0.096 |  0.102
- 21 | Malaysian Super League             |   0.191 |   0.191 |  0.000
- 22 | Primera División de Chile          |   0.156 |   0.095 |  0.060
- 23 | English League Championship        |   0.111 |   0.017 |  0.094
- 24 | Thai Premier League                |   0.061 |   0.061 |  0.000
- 25 | Swiss Super League                 |   0.054 |   0.050 |  0.004
- 26 | Greek Super League                 |   0.053 |  -0.071 |  0.124
- 27 | Singapore S-League                 |   0.006 |   0.006 |  0.000
- 28 | Australian A-League                |   0.000 |   0.000 |  0.000
- 29 | German 2. Bundesliga               |  -0.067 |  -0.072 |  0.006
- 30 | Primera División de Venezuela      |  -0.112 |  -0.056 | -0.056
- 31 | Liga Profesional Boliviana         |  -0.129 |  -0.031 | -0.098
- 32 | Austrian Bundesliga                |  -0.146 |  -0.082 | -0.063
- 33 | Primera Profesional de Perú        |  -0.153 |  -0.133 | -0.020
- 34 | Danish SAS-Ligaen                  |  -0.159 |  -0.081 | -0.078
- 35 | English League One                 |  -0.209 |  -0.134 | -0.076
- 36 | Scottish Premiership               |  -0.232 |  -0.137 | -0.095
- 37 | Swedish Allsvenskanliga            |  -0.276 |  -0.161 | -0.116
- 38 | Italian Serie B                    |  -0.331 |  -0.215 | -0.115
- 39 | English League Two                 |  -0.519 |  -0.226 | -0.292
- 40 | League of Ireland Premier Division |  -1.064 |  -0.589 | -0.476
- 41 | Welsh Premier League               |  -1.489 |  -0.661 | -0.829
- 42 | Northern Irish Premiership         |  -1.631 |  -0.822 | -0.809
- 43 | North American Soccer League       | -11.220 | -11.569 |  0.348
-(43 rows)
+INSERT 0 45
+ rk |                 lg                 |  str   |  ofs   |  dfs   
+----+------------------------------------+--------+--------+--------
+  1 | Futebol Brasileiro                 |  1.040 |  0.472 |  0.569
+  2 | Spanish Primera División           |  0.877 |  0.417 |  0.461
+  3 | English Premier League             |  0.808 |  0.384 |  0.424
+  4 | Primera División de Argentina      |  0.730 |  0.296 |  0.434
+  5 | German Bundesliga                  |  0.677 |  0.356 |  0.321
+  6 | Mexican Liga MX                    |  0.638 |  0.317 |  0.321
+  7 | Italian Serie A                    |  0.598 |  0.267 |  0.331
+  8 | French Ligue 1                     |  0.592 |  0.223 |  0.369
+  9 | Fútbol Profesional Colombiano      |  0.452 |  0.171 |  0.281
+ 10 | Russian Premier League             |  0.427 |  0.147 |  0.279
+ 11 | Indonesian Super League            |  0.389 |  0.389 |  0.000
+ 12 | Primera A de Ecuador               |  0.338 |  0.122 |  0.216
+ 13 | Chinese Super League               |  0.336 |  0.044 |  0.292
+ 14 | Major League Soccer                |  0.332 |  0.153 |  0.179
+ 15 | Portuguese Liga                    |  0.329 |  0.104 |  0.225
+ 16 | Primera División de Uruguay        |  0.316 |  0.165 |  0.151
+ 17 | Primera División de Paraguay       |  0.290 |  0.127 |  0.164
+ 18 | Japanese J League                  |  0.246 |  0.123 |  0.123
+ 19 | Primera División de Chile          |  0.227 |  0.139 |  0.088
+ 20 | Turkish Super Lig                  |  0.164 |  0.055 |  0.109
+ 21 | English League Championship        |  0.142 |  0.043 |  0.099
+ 22 | Malaysian Super League             |  0.114 |  0.114 |  0.000
+ 23 | French Ligue 2                     |  0.109 | -0.020 |  0.129
+ 24 | Dutch Eredivisie                   |  0.094 |  0.084 |  0.010
+ 25 | Singapore S-League                 |  0.026 |  0.026 |  0.000
+ 26 | Swiss Super League                 |  0.015 |  0.031 | -0.016
+ 27 | Australian A-League                |  0.000 |  0.000 |  0.000
+ 28 | Primera División de Venezuela      | -0.017 | -0.031 |  0.013
+ 29 | Greek Super League                 | -0.038 | -0.109 |  0.071
+ 30 | Jamaica Premier League             | -0.048 | -0.048 |  0.000
+ 31 | Liga Profesional Boliviana         | -0.057 |  0.014 | -0.072
+ 32 | Belgian Jupiler League             | -0.079 | -0.039 | -0.039
+ 33 | German 2. Bundesliga               | -0.095 | -0.061 | -0.034
+ 34 | Primera Profesional de Perú        | -0.154 | -0.127 | -0.028
+ 35 | Danish SAS-Ligaen                  | -0.162 | -0.087 | -0.075
+ 36 | Austrian Bundesliga                | -0.184 | -0.087 | -0.097
+ 37 | English League One                 | -0.278 | -0.156 | -0.122
+ 38 | Scottish Premiership               | -0.292 | -0.169 | -0.122
+ 39 | Swedish Allsvenskanliga            | -0.311 | -0.167 | -0.145
+ 40 | Italian Serie B                    | -0.453 | -0.289 | -0.164
+ 41 | English League Two                 | -0.580 | -0.323 | -0.257
+ 42 | League of Ireland Premier Division | -1.089 | -0.588 | -0.501
+ 43 | Thai Premier League                | -1.838 | -0.900 | -0.939
+ 44 | Welsh Premier League               | -1.872 | -0.887 | -0.985
+ 45 | Northern Irish Premiership         | -1.945 | -0.925 | -1.020
+(45 rows)
 
-COPY 43
+COPY 45
 COMMIT

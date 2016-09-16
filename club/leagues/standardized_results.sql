@@ -33,31 +33,35 @@ game_id,
 date::date,
 g.year,
 g.home_team_name,
-g.home_team_id,
+t.club_id,
 t.league_key,
 g.away_team_name,
-g.away_team_id,
+o.club_id,
 o.league_key,
 g.home_team_name as location_name,
-g.home_team_id as location_id,
+t.club_id as location_id,
 'offense_home' as field,
 abs(g.home_goals),
 abs(g.away_goals)
 from club.games g
+left join club.alias_all at
+  on (at.game_team_name)=(g.home_team_name)
 join club.teams t
-  on (t.year,t.club_id)=(g.year,g.home_team_id)
+  on (t.year,t.club_id)=(g.year,coalesce(g.home_team_id,at.game_club_id))
+left join club.alias_all ao
+  on (ao.game_team_name)=(g.away_team_name)
 join club.teams o
-  on (o.year,o.club_id)=(g.year,g.away_team_id)
+  on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
     g.home_goals is not NULL
 and g.away_goals is not NULL
-and g.home_team_id is not NULL
-and g.away_team_id is not NULL
+--and g.home_team_id is not NULL
+--and g.away_team_id is not NULL
 
 and g.year>=2000
 
 --and g.league_key = 'english+premier+league'
-and g.club_id=g.home_team_id
+and g.club_id=t.club_id
 --and g.competition='Prem'
 and g.title not in ('Friendly')
 
@@ -98,7 +102,8 @@ and t.league_key in
 'swedish+allsvenskanliga',
 'swiss+super+league',
 'turkish+super+lig',
-'australian+a-league'
+'australian+a-league',
+'japanese+j+league'
 )
 
 and o.league_key in
@@ -135,7 +140,8 @@ and o.league_key in
 'swedish+allsvenskanliga',
 'swiss+super+league',
 'turkish+super+lig',
-'australian+a-league'
+'australian+a-league',
+'japanese+j+league'
 )
 */
 
@@ -146,31 +152,35 @@ game_id,
 date::date,
 g.year,
 g.away_team_name,
-g.away_team_id,
+o.club_id,
 o.league_key,
 g.home_team_name,
-g.home_team_id,
+t.club_id,
 t.league_key,
 g.home_team_name as location_name,
-g.home_team_id as location_id,
+t.club_id as location_id,
 'defense_home' as field,
 abs(g.away_goals),
 abs(g.home_goals)
 from club.games g
+left join club.alias_all at
+  on (at.game_team_name)=(g.home_team_name)
 join club.teams t
-  on (t.year,t.club_id)=(g.year,g.home_team_id)
+  on (t.year,t.club_id)=(g.year,coalesce(g.home_team_id,at.game_club_id))
+left join club.alias_all ao
+  on (ao.game_team_name)=(g.away_team_name)
 join club.teams o
-  on (o.year,o.club_id)=(g.year,g.away_team_id)
+  on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
     g.home_goals is not NULL
 and g.away_goals is not NULL
-and g.home_team_id is not NULL
-and g.away_team_id is not NULL
+--and g.home_team_id is not NULL
+--and g.away_team_id is not NULL
 
 and g.year>=2000
 
 --and g.league_key = 'english+premier+league'
-and g.club_id=g.home_team_id
+and g.club_id=t.club_id
 --and g.competition='Prem'
 and g.title not in ('Friendly')
 
@@ -211,7 +221,8 @@ and t.league_key in
 'swedish+allsvenskanliga',
 'swiss+super+league',
 'turkish+super+lig',
-'australian+a-league'
+'australian+a-league',
+'japanese+j+league'
 )
 
 and o.league_key in
@@ -248,7 +259,8 @@ and o.league_key in
 'swedish+allsvenskanliga',
 'swiss+super+league',
 'turkish+super+lig',
-'australian+a-league'
+'australian+a-league',
+'japanese+j+league'
 )
 */
 
@@ -269,31 +281,35 @@ game_id,
 date::date,
 g.year,
 g.home_team_name,
-g.home_team_id,
+t.club_id,
 t.league_key,
 g.away_team_name,
-g.away_team_id,
+o.club_id,
 o.league_key,
 g.home_team_name as location_name,
-g.home_team_id as location_id,
+t.club_id as location_id,
 'neutral' as field,
 abs(g.home_goals),
 abs(g.away_goals)
 from club.games g
+left join club.alias_all at
+  on (at.game_team_name)=(g.home_team_name)
 join club.teams t
-  on (t.year,t.club_id)=(g.year,g.home_team_id)
+  on (t.year,t.club_id)=(g.year,coalesce(g.home_team_id,at.game_club_id))
+left join club.alias_all ao
+  on (ao.game_team_name)=(g.away_team_name)
 join club.teams o
-  on (o.year,o.club_id)=(g.year,g.away_team_id)
+  on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
     g.home_goals is not NULL
 and g.away_goals is not NULL
-and g.home_team_id is not NULL
-and g.away_team_id is not NULL
+--and g.home_team_id is not NULL
+--and g.away_team_id is not NULL
 
 and g.year>=2000
 
 --and g.league_key = 'english+premier+league'
-and g.club_id=g.home_team_id
+and g.club_id=t.club_id
 --and g.competition='Prem'
 and g.title not in ('Friendly')
 
@@ -334,7 +350,8 @@ and t.league_key in
 'swedish+allsvenskanliga',
 'swiss+super+league',
 'turkish+super+lig',
-'australian+a-league'
+'australian+a-league',
+'japanese+j+league'
 )
 
 and o.league_key in
@@ -371,7 +388,8 @@ and o.league_key in
 'swedish+allsvenskanliga',
 'swiss+super+league',
 'turkish+super+lig',
-'australian+a-league'
+'australian+a-league',
+'japanese+j+league'
 )
 */
 
@@ -382,31 +400,35 @@ game_id,
 date::date,
 g.year,
 g.away_team_name,
-g.away_team_id,
+o.club_id,
 o.league_key,
 g.home_team_name,
-g.home_team_id,
+t.club_id,
 t.league_key,
 g.home_team_name as location_name,
-g.home_team_id as location_id,
+t.club_id as location_id,
 'neutral' as field,
 abs(g.away_goals),
 abs(g.home_goals)
 from club.games g
+left join club.alias_all at
+  on (at.game_team_name)=(g.home_team_name)
 join club.teams t
-  on (t.year,t.club_id)=(g.year,g.home_team_id)
+  on (t.year,t.club_id)=(g.year,coalesce(g.home_team_id,at.game_club_id))
+left join club.alias_all ao
+  on (ao.game_team_name)=(g.away_team_name)
 join club.teams o
-  on (o.year,o.club_id)=(g.year,g.away_team_id)
+  on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
     g.home_goals is not NULL
 and g.away_goals is not NULL
-and g.home_team_id is not NULL
-and g.away_team_id is not NULL
+--and g.home_team_id is not NULL
+--and g.away_team_id is not NULL
 
 and g.year>=2000
 
 --and g.league_key = 'english+premier+league'
-and g.club_id=g.home_team_id
+and g.club_id=t.club_id
 --and g.competition='Prem'
 and g.title not in ('Friendly')
 
@@ -447,7 +469,8 @@ and t.league_key in
 'swedish+allsvenskanliga',
 'swiss+super+league',
 'turkish+super+lig',
-'australian+a-league'
+'australian+a-league',
+'japanese+j+league'
 )
 
 and o.league_key in
@@ -484,7 +507,8 @@ and o.league_key in
 'swedish+allsvenskanliga',
 'swiss+super+league',
 'turkish+super+lig',
-'australian+a-league'
+'australian+a-league',
+'japanese+j+league'
 )
 */
 
