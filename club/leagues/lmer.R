@@ -26,6 +26,9 @@ from club.results r
 where
     r.year between 2000 and 2016
 
+and r.team_score is not null
+and r.opponent_score is not null
+
 /*
 and r.team_league_key in
 (select distinct league_key

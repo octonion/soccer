@@ -176,7 +176,7 @@ with open('sims2.csv', 'w') as f:
         season['gd'] = season['gf']-season['ga']
         season['pts'] = 3*season['w']+season['d']
 
-        final = season.sort(['pts', 'gd', 'gf'], ascending=[0, 0, 0])
+        final = season.sort_values(by=['pts', 'gd', 'gf'], ascending=[0, 0, 0])
 
         final['i'] = final['pts']*1000000+(final['gd']+100)*1000+final['gf']
 

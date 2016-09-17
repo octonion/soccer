@@ -7,6 +7,7 @@ create table club.results (
 	game_date	      date,
 	year		      integer,
 	competition	      text,
+	status		      text,
 	team_name	      text,
 	team_id		      integer,
 	team_league_key	      text,
@@ -23,7 +24,7 @@ create table club.results (
 insert into club.results
 (
 game_id,game_date,year,
-competition,
+competition,status,
 team_name,team_id,team_league_key,
 opponent_name,opponent_id,opponent_league_key,
 location_name,location_id,
@@ -32,9 +33,11 @@ team_score,opponent_score)
 (
 select
 game_id,
+-- Postp?
 date::date,
 g.year,
 g.competition,
+g.status,
 g.home_team_name,
 t.club_id,
 t.league_key,
@@ -56,12 +59,13 @@ left outer join club.alias_all ao
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
-    g.home_goals is not NULL
-and g.away_goals is not NULL
+--    g.home_goals is not NULL
+--and g.away_goals is not NULL
 --and g.home_team_id is not NULL
 --and g.away_team_id is not NULL
 
-and g.year>=2000
+    g.year>=2000
+and not(g.date='LIVE')
 
 --and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
@@ -155,6 +159,7 @@ game_id,
 date::date,
 g.year,
 g.competition,
+g.status,
 g.away_team_name,
 o.club_id,
 o.league_key,
@@ -176,12 +181,13 @@ left outer join club.alias_all ao
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
-    g.home_goals is not NULL
-and g.away_goals is not NULL
+--    g.home_goals is not NULL
+--and g.away_goals is not NULL
 --and g.home_team_id is not NULL
 --and g.away_team_id is not NULL
 
-and g.year>=2000
+    g.year>=2000
+and not(g.date='LIVE')
 
 --and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
@@ -274,7 +280,7 @@ and o.league_key in
 insert into club.results
 (
 game_id,game_date,year,
-competition,
+competition,status,
 team_name,team_id,team_league_key,
 opponent_name,opponent_id,opponent_league_key,
 location_name,location_id,
@@ -286,6 +292,7 @@ game_id,
 date::date,
 g.year,
 g.competition,
+g.status,
 g.home_team_name,
 t.club_id,
 t.league_key,
@@ -307,12 +314,13 @@ left join club.alias_all ao
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
-    g.home_goals is not NULL
-and g.away_goals is not NULL
+--    g.home_goals is not NULL
+--and g.away_goals is not NULL
 --and g.home_team_id is not NULL
 --and g.away_team_id is not NULL
 
-and g.year>=2000
+    g.year>=2000
+and not(g.date='LIVE')
 
 --and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
@@ -406,6 +414,7 @@ game_id,
 date::date,
 g.year,
 g.competition,
+g.status,
 g.away_team_name,
 o.club_id,
 o.league_key,
@@ -427,12 +436,13 @@ left join club.alias_all ao
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
-    g.home_goals is not NULL
-and g.away_goals is not NULL
+--    g.home_goals is not NULL
+--and g.away_goals is not NULL
 --and g.home_team_id is not NULL
 --and g.away_team_id is not NULL
 
-and g.year>=2000
+    g.year>=2000
+and not(g.date='LIVE')
 
 --and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
