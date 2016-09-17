@@ -21,8 +21,8 @@ end = today + datetime.timedelta(days=6)
 
 select_games = """
 select
-t.club_name as team_name,
-o.club_name as opponent_name,
+g.team_name,
+g.opponent_name,
 (teo.exp_factor*tf.exp_factor*sft.offensive*opd.exp_factor) as etg,
 (opo.exp_factor*of.exp_factor*sfo.offensive*ted.exp_factor) as eog
 from club.results g
@@ -54,6 +54,8 @@ where
 and g.competition='Bras'
 and ((g.game_date >= current_date) or (g.year=2016 and g.status='Postp'))
 and ((g.team_score is null) or (g.opponent_score is null))
+
+and g.field='offense_home'
 
 order by g.team_name asc,g.game_date asc
 ;
