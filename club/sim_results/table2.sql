@@ -26,9 +26,13 @@ else 0
 end) as pts,
 
 (coalesce(sc.n,0)::float/10000::float)::numeric(4,3) as champ,
-((coalesce(sc.n,0)+coalesce(s2.n,0)+coalesce(s3.n,0)+coalesce(s4.n,0))::float/10000::float)::numeric(4,3) as "1-4",
+((coalesce(sc.n,0)+coalesce(s2.n,0))::float/10000::float)::numeric(4,3) as top2,
+((coalesce(sc.n,0)+coalesce(s2.n,0)+coalesce(s3.n,0))::float/10000::float)::numeric(4,3) as top3,
+((coalesce(sc.n,0)+coalesce(s2.n,0)+coalesce(s3.n,0)+coalesce(s4.n,0))::float/10000::float)::numeric(4,3) as top4,
 ((coalesce(s5.n,0)+coalesce(s6.n,0)+coalesce(s7.n,0))::float/10000::float)::numeric(4,3) as "5-7",
-((coalesce(l3.n,0)+coalesce(l2.n,0)+coalesce(l1.n,0))::float/10000::float)::numeric(4,3) as bot3
+((coalesce(l4.n,0)+coalesce(l3.n,0)+coalesce(l2.n,0)+coalesce(l1.n,0))::float/10000::float)::numeric(4,3) as bot4,
+((coalesce(l3.n,0)+coalesce(l2.n,0)+coalesce(l1.n,0))::float/10000::float)::numeric(4,3) as bot3,
+((coalesce(l2.n,0)+coalesce(l1.n,0))::float/10000::float)::numeric(4,3) as bot2
 
 from club.results g
 join club.intraleague_keys ik
@@ -50,6 +54,8 @@ left join club.seeds s6
   on (g.team_name,6)=(s6.team_name,s6.rank)
 left join club.seeds s7
   on (g.team_name,7)=(s7.team_name,s7.rank)
+left join club.seeds l4
+  on (g.team_name,ls.n-3)=(l4.team_name,l4.rank)
 left join club.seeds l3
   on (g.team_name,ls.n-2)=(l3.team_name,l3.rank)
 left join club.seeds l2
@@ -64,5 +70,5 @@ and g.year=2016
 and g.game_date <= current_date
 and g.team_score is not null
 and g.opponent_score is not null
-group by g.team_name,champ,"1-4","5-7",bot3
+group by g.team_name,champ,top2,top3,top4,"5-7",bot4,bot3,bot2
 order by pts desc,gd desc,gf desc;
