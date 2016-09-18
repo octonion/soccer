@@ -55,12 +55,14 @@ where
     g.team_league_key = 'dummy_league_key'
 --and g.competition='Bund'
 
---and ((g.game_date >= current_date) or (g.year=2016 and g.status='Postp'))
+and ((g.game_date >= current_date) or (g.year=2016 and g.status='Postp'))
 
-and (g.game_date >= current_date)
-and g.status is null
+--and (g.game_date >= current_date)
+--and g.status is null
 
-and ((g.team_score is null) or (g.opponent_score is null))
+and ((g.team_score is null) or
+     (g.opponent_score is null) or
+     (g.status='Aban'))
 
 and g.field='offense_home'
 
