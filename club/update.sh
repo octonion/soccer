@@ -21,7 +21,7 @@ cd sim_results
 ./sim.sh english+league+championship
 ./sim.sh english+league+one
 ./sim.sh english+league+two
-./sim.sh english+national+two
+./sim.sh english+national+league
 ./sim.sh french+ligue+1
 ./sim.sh german+bundesliga
 ./sim.sh italian+serie+a
