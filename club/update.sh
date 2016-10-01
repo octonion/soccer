@@ -3,6 +3,7 @@
 ./scrapers/all_games.rb 2016 2016
 
 ./load.sh
+#./load_gamecast.sh
 
 #psql soccer -f cleaning/teams.sql
 #./alias/
