@@ -1,12 +1,10 @@
 #!/bin/bash
 
 ./scrapers/all_games.rb 2016 2016
+#./scrapers/all_xml.rb 2016 2016
 
 ./load.sh
 #./load_gamecast.sh
-
-#psql soccer -f cleaning/teams.sql
-#./alias/
 
 ./clean.sh
 ./alias.sh
@@ -17,6 +15,8 @@ psql soccer -f keys/intraleague_keys.sql
 ./sos_leagues.sh
 
 cd sim_results
+
+./sim.sh portuguese+liga
 
 ./sim.sh english+premier+league
 ./sim.sh english+league+championship
