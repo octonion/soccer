@@ -34,6 +34,8 @@ cd sim_results
 ./sim.sh german+bundesliga
 ./sim.sh german+2.+bundesliga
 
+./sim.sh indian+super+league
+
 ./sim.sh italian+serie+a
 ./sim.sh italian+serie+b
 
@@ -42,6 +44,8 @@ cd sim_results
 ./sim.sh northern+irish+premiership
 
 ./sim.sh portuguese+liga
+
+./sim.sh russian+premier+league
 
 ./sim.sh scottish+premiership
 ./sim.sh scottish+championship
