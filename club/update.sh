@@ -24,6 +24,8 @@ cd sim_results
 
 ./sim.sh australian+a-league
 
+./sim.sh danish+sas-ligaen
+
 ./sim.sh dutch+eredivisie
 
 ./sim.sh french+ligue+1
