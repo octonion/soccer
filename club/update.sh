@@ -24,6 +24,10 @@ cd sim_results
 
 ./sim.sh australian+a-league
 
+./sim.sh austrian+bundesliga
+
+./sim.sh belgian+jupiler+league
+
 ./sim.sh danish+sas-ligaen
 
 ./sim.sh dutch+eredivisie
