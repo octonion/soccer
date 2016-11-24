@@ -23,9 +23,10 @@ select_games = """
 select
 g.team_name,
 g.opponent_name,
-(teo.exp_factor*tf.exp_factor*sft.offensive*opd.exp_factor) as etg,
-(opo.exp_factor*of.exp_factor*sfo.offensive*ted.exp_factor) as eog
+(exp(i.estimate)*y.exp_factor*tf.exp_factor*teo.exp_factor*sft.offensive*opd.exp_factor*sfo.defensive) as etg,
+(exp(i.estimate)*y.exp_factor*of.exp_factor*opo.exp_factor*sfo.offensive*ted.exp_factor*sft.defensive) as eog
 from club.results g
+
 join club.teams t
   on (t.club_id,t.year)=(g.team_id,g.year)
 join club._schedule_factors sft
@@ -51,6 +52,13 @@ join club._factors of on
   of.level='defense_home'
 join club.intraleague_keys ik
   on (ik.league_key,ik.intraleague_key)=(g.team_league_key,g.competition)
+
+join club._factors y on
+  y.level='2016'
+
+join club._basic_factors i on
+  i.factor='(Intercept)'
+
 where
     g.team_league_key = 'dummy_league_key'
 --and g.competition='Bund'
