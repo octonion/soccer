@@ -66,7 +66,7 @@ join club._basic_factors i on
   i.factor='(Intercept)'
 
 where not(ts.date='LIVE')
-and ts.date::date between current_date and current_date+6
+and ts.date::date between current_date-1 and current_date+6
 and ts.club_id=ts.home_team_id
 order by ts.date::date asc,ts.club_name asc
 ;
@@ -77,7 +77,7 @@ cur.execute(select)
 
 rows = cur.fetchall()
 
-csvfile = open('predict2_weekly.csv', 'w', newline='')
+csvfile = open('predict_weekly.csv', 'w', newline='')
 predict = csv.writer(csvfile)
 
 header = ["game_date","team","site","opponent",
