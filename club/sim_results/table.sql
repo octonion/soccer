@@ -29,10 +29,12 @@ join club.intraleague_keys ik
   
 where
     g.team_league_key = 'dummy_league_key'
---and g.competition='Bund'
+
 and g.year=2016
 and g.game_date <= current_date
 and g.team_score is not null
 and g.opponent_score is not null
+and g.status not like '%'''
+
 group by g.team_name
 order by pts desc,gd desc,gf desc;

@@ -70,5 +70,7 @@ and g.year=2016
 and g.game_date <= current_date
 and g.team_score is not null
 and g.opponent_score is not null
+and not(g.status like '%''')
+
 group by g.team_name,champ,top2,top3,top4,"5-7",bot4,bot3,bot2
 order by pts desc,gd desc,gf desc;

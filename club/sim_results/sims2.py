@@ -70,7 +70,8 @@ and ((g.game_date >= current_date) or (g.year=2016 and g.status='Postp'))
 
 and ((g.team_score is null) or
      (g.opponent_score is null) or
-     (g.status='Aban'))
+     (g.status='Aban') or
+     (g.status like '%'''))
 
 and g.field='offense_home'
 
@@ -114,6 +115,8 @@ and g.year=2016
 and g.game_date <= current_date
 and g.team_score is not null
 and g.opponent_score is not null
+and not(g.status like '%''')
+
 group by g.team_name
 order by g.team_name asc
 ;
