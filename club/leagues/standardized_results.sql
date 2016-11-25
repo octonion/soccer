@@ -59,98 +59,12 @@ left outer join club.alias_all ao
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
---    g.home_goals is not NULL
---and g.away_goals is not NULL
---and g.home_team_id is not NULL
---and g.away_team_id is not NULL
 
     g.year>=2000
 and not(g.date='LIVE')
 
---and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
---and g.competition='Prem'
---and g.title not in ('Friendly')
-
-and t.league_key=o.league_key
-
-/*
-and t.league_key in
-(
-'austrian+bundesliga',
-'english+premier+league',
-'belgian+jupiler+league',
-'danish+sas-ligaen',
-'dutch+eredivisie',
-'english+league+championship',
-'english+league+one',
-'english+league+two',
-'french+ligue+1',
-'french+ligue+2',
-'fútbol+profesional+colombiano',
-'futebol+brasileiro',
-'german+2.+bundesliga',
-'german+bundesliga',
-'italian+serie+a',
-'italian+serie+b',
-'liga+profesional+boliviana',
-'major+league+soccer',
-'mexican+liga+mx',
-'portuguese+liga',
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+chile',
-'primera+división+de+paraguay',
-'primera+división+de+uruguay',
-'primera+división+de+venezuela',
-'primera+profesional+de+perú',
-'russian+premier+league',
-'spanish+primera+división',
-'swedish+allsvenskanliga',
-'swiss+super+league',
-'turkish+super+lig',
-'australian+a-league',
-'japanese+j+league'
-)
-
-and o.league_key in
-(
-'austrian+bundesliga',
-'english+premier+league',
-'belgian+jupiler+league',
-'danish+sas-ligaen',
-'dutch+eredivisie',
-'english+league+championship',
-'english+league+one',
-'english+league+two',
-'french+ligue+1',
-'french+ligue+2',
-'fútbol+profesional+colombiano',
-'futebol+brasileiro',
-'german+2.+bundesliga',
-'german+bundesliga',
-'italian+serie+a',
-'italian+serie+b',
-'liga+profesional+boliviana',
-'major+league+soccer',
-'mexican+liga+mx',
-'portuguese+liga',
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+chile',
-'primera+división+de+paraguay',
-'primera+división+de+uruguay',
-'primera+división+de+venezuela',
-'primera+profesional+de+perú',
-'russian+premier+league',
-'spanish+primera+división',
-'swedish+allsvenskanliga',
-'swiss+super+league',
-'turkish+super+lig',
-'australian+a-league',
-'japanese+j+league'
-)
-*/
+--and t.league_key=o.league_key
 
 union all
 
@@ -181,102 +95,16 @@ left outer join club.alias_all ao
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
---    g.home_goals is not NULL
---and g.away_goals is not NULL
---and g.home_team_id is not NULL
---and g.away_team_id is not NULL
 
     g.year>=2000
 and not(g.date='LIVE')
 
---and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
---and g.competition='Prem'
---and g.title not in ('Friendly')
-
-and t.league_key=o.league_key
-
-/*
-and t.league_key in
-(
-'austrian+bundesliga',
-'english+premier+league',
-'belgian+jupiler+league',
-'danish+sas-ligaen',
-'dutch+eredivisie',
-'english+league+championship',
-'english+league+one',
-'english+league+two',
-'french+ligue+1',
-'french+ligue+2',
-'fútbol+profesional+colombiano',
-'futebol+brasileiro',
-'german+2.+bundesliga',
-'german+bundesliga',
-'italian+serie+a',
-'italian+serie+b',
-'liga+profesional+boliviana',
-'major+league+soccer',
-'mexican+liga+mx',
-'portuguese+liga',
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+chile',
-'primera+división+de+paraguay',
-'primera+división+de+uruguay',
-'primera+división+de+venezuela',
-'primera+profesional+de+perú',
-'russian+premier+league',
-'spanish+primera+división',
-'swedish+allsvenskanliga',
-'swiss+super+league',
-'turkish+super+lig',
-'australian+a-league',
-'japanese+j+league'
-)
-
-and o.league_key in
-(
-'austrian+bundesliga',
-'english+premier+league',
-'belgian+jupiler+league',
-'danish+sas-ligaen',
-'dutch+eredivisie',
-'english+league+championship',
-'english+league+one',
-'english+league+two',
-'french+ligue+1',
-'french+ligue+2',
-'fútbol+profesional+colombiano',
-'futebol+brasileiro',
-'german+2.+bundesliga',
-'german+bundesliga',
-'italian+serie+a',
-'italian+serie+b',
-'liga+profesional+boliviana',
-'major+league+soccer',
-'mexican+liga+mx',
-'portuguese+liga',
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+chile',
-'primera+división+de+paraguay',
-'primera+división+de+uruguay',
-'primera+división+de+venezuela',
-'primera+profesional+de+perú',
-'russian+premier+league',
-'spanish+primera+división',
-'swedish+allsvenskanliga',
-'swiss+super+league',
-'turkish+super+lig',
-'australian+a-league',
-'japanese+j+league'
-)
-*/
+--and t.league_key=o.league_key
 
 );
 
-
+/*
 insert into club.results
 (
 game_id,game_date,year,
@@ -314,98 +142,12 @@ left join club.alias_all ao
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
---    g.home_goals is not NULL
---and g.away_goals is not NULL
---and g.home_team_id is not NULL
---and g.away_team_id is not NULL
 
     g.year>=2000
 and not(g.date='LIVE')
 
---and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
---and g.competition='Prem'
---and g.title not in ('Friendly')
-
 and not(t.league_key=o.league_key)
-
-/*
-and t.league_key in
-(
-'austrian+bundesliga',
-'english+premier+league',
-'belgian+jupiler+league',
-'danish+sas-ligaen',
-'dutch+eredivisie',
-'english+league+championship',
-'english+league+one',
-'english+league+two',
-'french+ligue+1',
-'french+ligue+2',
-'fútbol+profesional+colombiano',
-'futebol+brasileiro',
-'german+2.+bundesliga',
-'german+bundesliga',
-'italian+serie+a',
-'italian+serie+b',
-'liga+profesional+boliviana',
-'major+league+soccer',
-'mexican+liga+mx',
-'portuguese+liga',
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+chile',
-'primera+división+de+paraguay',
-'primera+división+de+uruguay',
-'primera+división+de+venezuela',
-'primera+profesional+de+perú',
-'russian+premier+league',
-'spanish+primera+división',
-'swedish+allsvenskanliga',
-'swiss+super+league',
-'turkish+super+lig',
-'australian+a-league',
-'japanese+j+league'
-)
-
-and o.league_key in
-(
-'austrian+bundesliga',
-'english+premier+league',
-'belgian+jupiler+league',
-'danish+sas-ligaen',
-'dutch+eredivisie',
-'english+league+championship',
-'english+league+one',
-'english+league+two',
-'french+ligue+1',
-'french+ligue+2',
-'fútbol+profesional+colombiano',
-'futebol+brasileiro',
-'german+2.+bundesliga',
-'german+bundesliga',
-'italian+serie+a',
-'italian+serie+b',
-'liga+profesional+boliviana',
-'major+league+soccer',
-'mexican+liga+mx',
-'portuguese+liga',
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+chile',
-'primera+división+de+paraguay',
-'primera+división+de+uruguay',
-'primera+división+de+venezuela',
-'primera+profesional+de+perú',
-'russian+premier+league',
-'spanish+primera+división',
-'swedish+allsvenskanliga',
-'swiss+super+league',
-'turkish+super+lig',
-'australian+a-league',
-'japanese+j+league'
-)
-*/
 
 union all
 
@@ -436,99 +178,14 @@ left join club.alias_all ao
 join club.teams o
   on (o.year,o.club_id)=(g.year,coalesce(g.away_team_id,ao.game_club_id))
 where
---    g.home_goals is not NULL
---and g.away_goals is not NULL
---and g.home_team_id is not NULL
---and g.away_team_id is not NULL
 
     g.year>=2000
 and not(g.date='LIVE')
 
---and g.league_key = 'english+premier+league'
 and g.club_id=t.club_id
---and g.competition='Prem'
---and g.title not in ('Friendly')
-
 and not(t.league_key=o.league_key)
 
-/*
-and t.league_key in
-(
-'austrian+bundesliga',
-'english+premier+league',
-'belgian+jupiler+league',
-'danish+sas-ligaen',
-'dutch+eredivisie',
-'english+league+championship',
-'english+league+one',
-'english+league+two',
-'french+ligue+1',
-'french+ligue+2',
-'fútbol+profesional+colombiano',
-'futebol+brasileiro',
-'german+2.+bundesliga',
-'german+bundesliga',
-'italian+serie+a',
-'italian+serie+b',
-'liga+profesional+boliviana',
-'major+league+soccer',
-'mexican+liga+mx',
-'portuguese+liga',
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+chile',
-'primera+división+de+paraguay',
-'primera+división+de+uruguay',
-'primera+división+de+venezuela',
-'primera+profesional+de+perú',
-'russian+premier+league',
-'spanish+primera+división',
-'swedish+allsvenskanliga',
-'swiss+super+league',
-'turkish+super+lig',
-'australian+a-league',
-'japanese+j+league'
-)
-
-and o.league_key in
-(
-'austrian+bundesliga',
-'english+premier+league',
-'belgian+jupiler+league',
-'danish+sas-ligaen',
-'dutch+eredivisie',
-'english+league+championship',
-'english+league+one',
-'english+league+two',
-'french+ligue+1',
-'french+ligue+2',
-'fútbol+profesional+colombiano',
-'futebol+brasileiro',
-'german+2.+bundesliga',
-'german+bundesliga',
-'italian+serie+a',
-'italian+serie+b',
-'liga+profesional+boliviana',
-'major+league+soccer',
-'mexican+liga+mx',
-'portuguese+liga',
-'primera+a+de+ecuador',
-'primera+división+de+argentina',
-'primera+división+de+chile',
-'primera+división+de+paraguay',
-'primera+división+de+uruguay',
-'primera+división+de+venezuela',
-'primera+profesional+de+perú',
-'russian+premier+league',
-'spanish+primera+división',
-'swedish+allsvenskanliga',
-'swiss+super+league',
-'turkish+super+lig',
-'australian+a-league',
-'japanese+j+league'
-)
-*/
-
 );
+*/
 
 commit;
