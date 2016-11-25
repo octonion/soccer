@@ -14,6 +14,11 @@ psql soccer -f keys/intraleague_keys.sql
 
 ./sos_leagues.sh
 
+cd python
+./predict.py
+
+cd ..
+
 cd sim_results
 
 ./sim.sh english+premier+league
@@ -38,7 +43,11 @@ cd sim_results
 ./sim.sh german+bundesliga
 ./sim.sh german+2.+bundesliga
 
+./sim.sh greek+super+league
+
 ./sim.sh indian+super+league
+
+./sim.sh israeli+premier+league
 
 ./sim.sh italian+serie+a
 ./sim.sh italian+serie+b
@@ -48,6 +57,8 @@ cd sim_results
 ./sim.sh northern+irish+premiership
 
 ./sim.sh portuguese+liga
+
+./sim.sh romanian+first+division
 
 ./sim.sh russian+premier+league
 
@@ -60,3 +71,7 @@ cd sim_results
 ./sim.sh spanish+segunda+division
 
 ./sim.sh swiss+super+league
+
+./sim.sh turkish+super+lig
+
+cd ..
