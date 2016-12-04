@@ -35,6 +35,7 @@ where n=(
 select max(n)
 from c c2
 where (c2.league_key)=(c1.league_key)
+and not(c1.league_key='north+american+soccer+league')
 )
 );
 
