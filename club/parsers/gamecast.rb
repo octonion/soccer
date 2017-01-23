@@ -80,7 +80,7 @@ args[1..-1].each do |file|
 
     h = {}
     attack.children.each do |child|
-      h["#{child.name}"] = child.text.strip
+      h["#{child.name}"] = child.text.encode!("UTF-8", "ISO-8859-1", :invalid => :replace, :undef => :replace, :replace => "").strip
     end
 
     row += [h["cdata-section"]]
@@ -126,7 +126,7 @@ args[1..-1].each do |file|
 
     h = {}
     play.children.each do |child|
-      h["#{child.name}"] = child.text.strip
+      h["#{child.name}"] = child.text.encode!("UTF-8", "ISO-8859-1", :invalid => :replace, :undef => :replace, :replace => "").strip
     end
 
     # Am I losing information here?
@@ -159,7 +159,7 @@ args[1..-1].each do |file|
 
       h = {}
       part.children.each do |child|
-        h["#{child.name}"] = child.text.strip
+        h["#{child.name}"] = child.text.encode!("UTF-8", "ISO-8859-1", :invalid => :replace, :undef => :replace, :replace => "").strip
       end
 
       row += [h["player"]]
