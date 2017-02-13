@@ -1,6 +1,6 @@
-[1] 395078      9
+[1] 395204      9
 [1] TRUE
-[1] 395078      7
+[1] 395204      7
 Generalized linear mixed model fit by maximum likelihood (Adaptive
   Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
  Family: poisson  ( log )
@@ -9,288 +9,288 @@ Formula: gs ~ year + offense_league + defense_league + field + (1 | offense) +
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
-1144863.2 1146387.4 -572291.6 1144583.2    394938 
+1145217.7 1146741.9 -572468.8 1144937.7    395064 
 Random effects:
- Groups  Name        Std.Dev.
- game_id (Intercept) 0.0000  
- defense (Intercept) 0.1784  
- offense (Intercept) 0.1858  
-Number of obs: 395078, groups:  game_id, 197354; defense, 10512; offense, 10512
+ Groups  Name        Std.Dev. 
+ game_id (Intercept) 1.572e-05
+ defense (Intercept) 1.784e-01
+ offense (Intercept) 1.858e-01
+Number of obs: 395204, groups:  game_id, 197417; defense, 10512; offense, 10512
 Fixed Effects:
                                      (Intercept)  
-                                        0.087720  
+                                        0.087605  
                                         year2001  
-                                       -0.045190  
+                                       -0.045102  
                                         year2002  
-                                       -0.031531  
+                                       -0.031479  
                                         year2003  
-                                       -0.030653  
+                                       -0.030600  
                                         year2004  
-                                       -0.050185  
+                                       -0.050136  
                                         year2005  
-                                       -0.059717  
+                                       -0.059664  
                                         year2006  
-                                       -0.054953  
+                                       -0.054877  
                                         year2007  
-                                       -0.045869  
+                                       -0.045792  
                                         year2008  
-                                       -0.044959  
+                                       -0.044881  
                                         year2009  
-                                       -0.050098  
+                                       -0.050025  
                                         year2010  
-                                       -0.037149  
+                                       -0.037078  
                                         year2011  
-                                       -0.037718  
+                                       -0.037638  
                                         year2012  
-                                       -0.030943  
+                                       -0.030861  
                                         year2013  
-                                       -0.044188  
+                                       -0.044105  
                                         year2014  
-                                       -0.052654  
+                                       -0.052577  
                                         year2015  
-                                       -0.048670  
+                                       -0.048589  
                                         year2016  
-                                       -0.050881  
+                                       -0.050591  
                offense_leagueaustralian+a-league  
-                                        0.046286  
+                                        0.047131  
                offense_leagueaustrian+bundesliga  
-                                       -0.002817  
+                                       -0.003502  
             offense_leaguebelgian+jupiler+league  
-                                        0.089886  
+                                        0.089625  
                      offense_leaguebrasileirao+b  
-                                        0.135406  
+                                        0.135423  
               offense_leaguechinese+super+league  
-                                        0.052243  
+                                        0.052374  
                  offense_leaguedanish+sas-ligaen  
-                                       -0.037730  
+                                       -0.037808  
               offense_leaguedutch+eerste+divisie  
-                                       -0.209553  
+                                       -0.210378  
                   offense_leaguedutch+eredivisie  
-                                        0.143921  
+                                        0.143186  
        offense_leagueenglish+league+championship  
-                                        0.138586  
+                                        0.138508  
                 offense_leagueenglish+league+one  
-                                       -0.067725  
+                                       -0.067819  
                 offense_leagueenglish+league+two  
-                                       -0.218648  
+                                       -0.218740  
            offense_leagueenglish+national+league  
-                                       -0.388779  
+                                       -0.388880  
             offense_leagueenglish+premier+league  
-                                        0.466107  
+                                        0.465926  
                     offense_leaguefrench+ligue+1  
-                                        0.278093  
+                                        0.277958  
                     offense_leaguefrench+ligue+2  
-                                        0.056380  
+                                        0.055926  
      offense_leaguefútbol+profesional+colombiano  
-                                        0.188002  
+                                        0.188134  
                 offense_leaguefutebol+brasileiro  
-                                        0.379117  
+                                        0.379150  
               offense_leaguegerman+2.+bundesliga  
-                                        0.024070  
+                                        0.024155  
                  offense_leaguegerman+bundesliga  
-                                        0.428223  
+                                        0.428094  
                 offense_leaguegreek+super+league  
-                                       -0.015044  
+                                       -0.016019  
                offense_leagueindian+super+league  
-                                        0.105342  
+                                        0.105239  
             offense_leagueisraeli+premier+league  
-                                       -0.042429  
+                                       -0.039086  
                    offense_leagueitalian+serie+a  
-                                        0.320666  
+                                        0.320678  
                    offense_leagueitalian+serie+b  
-                                       -0.160366  
+                                       -0.160639  
                  offense_leaguejapanese+j+league  
-                                        0.201587  
+                                        0.201917  
 offense_leagueleague+of+ireland+premier+division  
-                                       -0.542832  
+                                       -0.542370  
         offense_leagueliga+nacional+de+guatemala  
-                                       -0.349355  
+                                       -0.349648  
         offense_leagueliga+profesional+boliviana  
-                                        0.010595  
+                                        0.010543  
                offense_leaguemajor+league+soccer  
-                                        0.125125  
+                                        0.125151  
             offense_leaguemaltese+premier+league  
-                                       -0.233109  
+                                       -0.243330  
                    offense_leaguemexican+liga+mx  
-                                        0.328891  
+                                        0.328883  
            offense_leaguenacional+b+de+argentina  
-                                        0.085924  
+                                        0.086032  
         offense_leaguenorthern+irish+premiership  
-                                       -0.969906  
+                                       -0.970003  
              offense_leaguenorwegian+tippeligaen  
-                                       -0.069068  
+                                       -0.069201  
                    offense_leagueportuguese+liga  
-                                        0.160699  
+                                        0.160596  
               offense_leagueprimera+a+de+ecuador  
-                                        0.114490  
+                                        0.114441  
    offense_leagueprimera+division+b+de+argentina  
-                                        0.030471  
+                                        0.030601  
    offense_leagueprimera+division+c+de+argentina  
-                                       -0.219865  
+                                       -0.219726  
    offense_leagueprimera+division+d+de+argentina  
-                                       -0.370963  
+                                       -0.370784  
      offense_leagueprimera+división+de+argentina  
-                                        0.299127  
+                                        0.299209  
          offense_leagueprimera+división+de+chile  
-                                        0.169453  
+                                        0.168940  
    offense_leagueprimera+division+de+el+salvador  
-                                       -0.421428  
+                                       -0.421415  
       offense_leagueprimera+división+de+paraguay  
-                                        0.142442  
+                                        0.142283  
        offense_leagueprimera+división+de+uruguay  
-                                        0.169790  
+                                        0.169665  
      offense_leagueprimera+división+de+venezuela  
-                                       -0.148185  
+                                       -0.148204  
        offense_leagueprimera+profesional+de+perú  
-                                       -0.125088  
+                                       -0.124847  
            offense_leagueromanian+first+division  
-                                       -0.235736  
+                                       -0.229539  
             offense_leaguerussian+premier+league  
-                                        0.226379  
+                                        0.226275  
              offense_leaguescottish+championship  
-                                       -0.470228  
+                                       -0.470086  
                offense_leaguescottish+league+one  
-                                       -0.728370  
+                                       -0.728358  
                offense_leaguescottish+league+two  
-                                       -0.966480  
+                                       -0.966454  
               offense_leaguescottish+premiership  
-                                       -0.098211  
+                                       -0.098710  
          offense_leaguesouth+african+premiership  
-                                       -0.948661  
+                                       -0.948595  
           offense_leaguespanish+primera+división  
-                                        0.477469  
+                                        0.477153  
           offense_leaguespanish+segunda+division  
-                                        0.105553  
+                                        0.104866  
            offense_leagueswedish+allsvenskanliga  
-                                       -0.146759  
+                                       -0.146568  
                 offense_leagueswiss+super+league  
-                                        0.092034  
+                                        0.092391  
                offense_leaguethai+premier+league  
-                                       -0.933667  
+                                       -0.933428  
                  offense_leagueturkish+super+lig  
-                                        0.127038  
+                                        0.126550  
               offense_leaguewelsh+premier+league  
-                                       -0.740926  
+                                       -0.741030  
                defense_leagueaustralian+a-league  
-                                        0.065897  
+                                        0.065674  
                defense_leagueaustrian+bundesliga  
-                                        0.115863  
+                                        0.116225  
             defense_leaguebelgian+jupiler+league  
-                                        0.003135  
+                                        0.003368  
                      defense_leaguebrasileirao+b  
-                                       -0.070106  
+                                       -0.070142  
               defense_leaguechinese+super+league  
-                                        0.014514  
+                                        0.014179  
                  defense_leaguedanish+sas-ligaen  
-                                        0.123667  
+                                        0.123728  
               defense_leaguedutch+eerste+divisie  
-                                        0.423724  
+                                        0.424527  
                   defense_leaguedutch+eredivisie  
-                                        0.035794  
+                                        0.036316  
        defense_leagueenglish+league+championship  
-                                       -0.089644  
+                                       -0.089571  
                 defense_leagueenglish+league+one  
-                                        0.139511  
+                                        0.139601  
                 defense_leagueenglish+league+two  
-                                        0.258605  
+                                        0.258691  
            defense_leagueenglish+national+league  
-                                        0.483821  
+                                        0.483912  
             defense_leagueenglish+premier+league  
-                                       -0.396613  
+                                       -0.396554  
                     defense_leaguefrench+ligue+1  
-                                       -0.316690  
+                                       -0.316022  
                     defense_leaguefrench+ligue+2  
-                                       -0.100397  
+                                       -0.099969  
      defense_leaguefútbol+profesional+colombiano  
-                                       -0.184924  
+                                       -0.185087  
                 defense_leaguefutebol+brasileiro  
-                                       -0.343065  
+                                       -0.343119  
               defense_leaguegerman+2.+bundesliga  
-                                        0.052356  
+                                        0.052445  
                  defense_leaguegerman+bundesliga  
-                                       -0.292572  
+                                       -0.292367  
                 defense_leaguegreek+super+league  
-                                       -0.077338  
+                                       -0.075771  
             defense_leagueisraeli+premier+league  
-                                       -0.103100  
+                                       -0.108927  
                    defense_leagueitalian+serie+a  
-                                       -0.277459  
+                                       -0.276980  
                    defense_leagueitalian+serie+b  
-                                        0.137167  
+                                        0.137222  
                  defense_leaguejapanese+j+league  
-                                       -0.108506  
+                                       -0.108860  
 defense_leagueleague+of+ireland+premier+division  
-                                        0.577479  
+                                        0.576976  
         defense_leagueliga+nacional+de+guatemala  
-                                        0.373408  
+                                        0.373199  
         defense_leagueliga+profesional+boliviana  
-                                        0.183949  
+                                        0.184290  
                defense_leaguemajor+league+soccer  
-                                       -0.031671  
+                                       -0.031708  
             defense_leaguemaltese+premier+league  
-                                        0.218821  
+                                        0.218808  
                    defense_leaguemexican+liga+mx  
-                                       -0.220557  
+                                       -0.220553  
            defense_leaguenacional+b+de+argentina  
-                                       -0.214127  
+                                       -0.214270  
         defense_leaguenorthern+irish+premiership  
-                                        1.162726  
+                                        1.162793  
              defense_leaguenorwegian+tippeligaen  
-                                        0.226391  
+                                        0.226477  
                    defense_leagueportuguese+liga  
-                                       -0.178298  
+                                       -0.177858  
               defense_leagueprimera+a+de+ecuador  
-                                       -0.106694  
+                                       -0.106665  
    defense_leagueprimera+division+b+de+argentina  
-                                       -0.218135  
+                                       -0.218284  
    defense_leagueprimera+division+c+de+argentina  
-                                        0.061809  
+                                        0.061658  
    defense_leagueprimera+division+d+de+argentina  
-                                        0.283262  
+                                        0.283051  
      defense_leagueprimera+división+de+argentina  
-                                       -0.342736  
+                                       -0.342833  
          defense_leagueprimera+división+de+chile  
-                                       -0.013393  
+                                       -0.013085  
    defense_leagueprimera+division+de+el+salvador  
-                                        0.431080  
+                                        0.431056  
       defense_leagueprimera+división+de+paraguay  
-                                       -0.074884  
+                                       -0.074745  
        defense_leagueprimera+división+de+uruguay  
-                                       -0.064586  
+                                       -0.064472  
      defense_leagueprimera+división+de+venezuela  
-                                        0.154732  
+                                        0.154730  
        defense_leagueprimera+profesional+de+perú  
-                                        0.136343  
+                                        0.136081  
            defense_leagueromanian+first+division  
-                                        0.203128  
+                                        0.200720  
             defense_leaguerussian+premier+league  
-                                       -0.260613  
+                                       -0.260544  
              defense_leaguescottish+championship  
-                                        0.551308  
+                                        0.550960  
                defense_leaguescottish+league+one  
-                                        0.919979  
+                                        0.919954  
                defense_leaguescottish+league+two  
-                                        1.143352  
+                                        1.143312  
               defense_leaguescottish+premiership  
-                                        0.155504  
+                                        0.155887  
          defense_leaguesouth+african+premiership  
-                                        0.867678  
+                                        0.867596  
           defense_leaguespanish+primera+división  
-                                       -0.413631  
+                                       -0.413390  
           defense_leaguespanish+segunda+division  
-                                       -0.117923  
+                                       -0.117779  
            defense_leagueswedish+allsvenskanliga  
-                                        0.239011  
+                                        0.238790  
                 defense_leagueswiss+super+league  
-                                        0.067060  
+                                        0.067606  
                defense_leaguethai+premier+league  
-                                        1.103534  
+                                        1.103193  
                  defense_leagueturkish+super+lig  
-                                       -0.080801  
+                                       -0.080696  
               defense_leaguewelsh+premier+league  
-                                        0.946417  
+                                        0.946496  
                                fieldoffense_home  
-                                        0.284704  
+                                        0.284762  
 fit warnings:
 fixed-effect model matrix is rank deficient so dropping 1 column / coefficient
 Generalized linear mixed model fit by maximum likelihood (Adaptive
@@ -303,294 +303,294 @@ Weights: w
 Control: glmerControl(optimizer = "nloptwrap")
 
       AIC       BIC    logLik  deviance  df.resid 
-1144863.2 1146387.4 -572291.6 1144583.2    394938 
+1145217.7 1146741.9 -572468.8 1144937.7    395064 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--2.0954 -0.9189 -0.1365  0.5838  6.1715 
+-2.0956 -0.9189 -0.1364  0.5838  6.1714 
 
 Random effects:
- Groups  Name        Variance Std.Dev.
- game_id (Intercept) 0.00000  0.0000  
- defense (Intercept) 0.03181  0.1784  
- offense (Intercept) 0.03453  0.1858  
-Number of obs: 395078, groups:  game_id, 197354; defense, 10512; offense, 10512
+ Groups  Name        Variance  Std.Dev. 
+ game_id (Intercept) 2.472e-10 1.572e-05
+ defense (Intercept) 3.184e-02 1.784e-01
+ offense (Intercept) 3.453e-02 1.858e-01
+Number of obs: 395204, groups:  game_id, 197417; defense, 10512; offense, 10512
 
 Fixed effects:
                                                   Estimate Std. Error z value
-(Intercept)                                       0.087720   0.057623    1.52
-year2001                                         -0.045190   0.041081   -1.10
-year2002                                         -0.031531   0.040411   -0.78
-year2003                                         -0.030653   0.040368   -0.76
-year2004                                         -0.050185   0.040379   -1.24
-year2005                                         -0.059717   0.039650   -1.51
-year2006                                         -0.054953   0.038566   -1.42
-year2007                                         -0.045869   0.038532   -1.19
-year2008                                         -0.044959   0.038284   -1.17
-year2009                                         -0.050098   0.038388   -1.31
-year2010                                         -0.037149   0.038351   -0.97
-year2011                                         -0.037718   0.038309   -0.98
-year2012                                         -0.030943   0.038349   -0.81
-year2013                                         -0.044188   0.038355   -1.15
-year2014                                         -0.052654   0.038408   -1.37
-year2015                                         -0.048670   0.038405   -1.27
-year2016                                         -0.050881   0.038391   -1.33
-offense_leagueaustralian+a-league                 0.046286   0.192393    0.24
-offense_leagueaustrian+bundesliga                -0.002817   0.100920   -0.03
-offense_leaguebelgian+jupiler+league              0.089886   0.096248    0.93
-offense_leaguebrasileirao+b                       0.135406   0.070438    1.92
-offense_leaguechinese+super+league                0.052243   0.225539    0.23
-offense_leaguedanish+sas-ligaen                  -0.037730   0.097208   -0.39
-offense_leaguedutch+eerste+divisie               -0.209553   0.100409   -2.09
-offense_leaguedutch+eredivisie                    0.143921   0.090506    1.59
-offense_leagueenglish+league+championship         0.138586   0.088352    1.57
-offense_leagueenglish+league+one                 -0.067725   0.088888   -0.76
-offense_leagueenglish+league+two                 -0.218648   0.089107   -2.45
-offense_leagueenglish+national+league            -0.388779   0.092743   -4.19
-offense_leagueenglish+premier+league              0.466107   0.086288    5.40
-offense_leaguefrench+ligue+1                      0.278093   0.089805    3.10
-offense_leaguefrench+ligue+2                      0.056380   0.101921    0.55
-offense_leaguefútbol+profesional+colombiano       0.188002   0.073485    2.56
-offense_leaguefutebol+brasileiro                  0.379117   0.064400    5.89
-offense_leaguegerman+2.+bundesliga                0.024070   0.098907    0.24
-offense_leaguegerman+bundesliga                   0.428223   0.088276    4.85
-offense_leaguegreek+super+league                 -0.015044   0.097632   -0.15
-offense_leagueindian+super+league                 0.105342   0.095973    1.10
-offense_leagueisraeli+premier+league             -0.042429   0.191673   -0.22
-offense_leagueitalian+serie+a                     0.320666   0.087211    3.68
-offense_leagueitalian+serie+b                    -0.160366   0.098118   -1.63
-offense_leaguejapanese+j+league                   0.201587   0.191775    1.05
-offense_leagueleague+of+ireland+premier+division -0.542832   0.131176   -4.14
-offense_leagueliga+nacional+de+guatemala         -0.349355   0.111955   -3.12
-offense_leagueliga+profesional+boliviana          0.010595   0.076005    0.14
-offense_leaguemajor+league+soccer                 0.125125   0.073460    1.70
-offense_leaguemaltese+premier+league             -0.233109   0.360720   -0.65
-offense_leaguemexican+liga+mx                     0.328891   0.051882    6.34
-offense_leaguenacional+b+de+argentina             0.085924   0.088450    0.97
-offense_leaguenorthern+irish+premiership         -0.969906   0.137545   -7.05
-offense_leaguenorwegian+tippeligaen              -0.069068   0.107921   -0.64
-offense_leagueportuguese+liga                     0.160699   0.090530    1.78
-offense_leagueprimera+a+de+ecuador                0.114490   0.077547    1.48
-offense_leagueprimera+division+b+de+argentina     0.030471   0.108867    0.28
-offense_leagueprimera+division+c+de+argentina    -0.219865   0.121353   -1.81
-offense_leagueprimera+division+d+de+argentina    -0.370963   0.136091   -2.73
-offense_leagueprimera+división+de+argentina       0.299127   0.065685    4.55
-offense_leagueprimera+división+de+chile           0.169453   0.071191    2.38
-offense_leagueprimera+division+de+el+salvador    -0.421428   0.128762   -3.27
-offense_leagueprimera+división+de+paraguay        0.142442   0.071327    2.00
-offense_leagueprimera+división+de+uruguay         0.169790   0.071826    2.36
-offense_leagueprimera+división+de+venezuela      -0.148185   0.076736   -1.93
-offense_leagueprimera+profesional+de+perú        -0.125088   0.078468   -1.59
-offense_leagueromanian+first+division            -0.235736   0.189018   -1.25
-offense_leaguerussian+premier+league              0.226379   0.092818    2.44
-offense_leaguescottish+championship              -0.470228   0.098592   -4.77
-offense_leaguescottish+league+one                -0.728370   0.099548   -7.32
-offense_leaguescottish+league+two                -0.966480   0.100524   -9.61
-offense_leaguescottish+premiership               -0.098211   0.095047   -1.03
-offense_leaguesouth+african+premiership          -0.948661   0.393790   -2.41
-offense_leaguespanish+primera+división            0.477469   0.086736    5.50
-offense_leaguespanish+segunda+division            0.105553   0.100332    1.05
-offense_leagueswedish+allsvenskanliga            -0.146759   0.106895   -1.37
-offense_leagueswiss+super+league                  0.092034   0.096447    0.95
-offense_leaguethai+premier+league                -0.933667   0.314516   -2.97
-offense_leagueturkish+super+lig                   0.127038   0.096289    1.32
-offense_leaguewelsh+premier+league               -0.740926   0.145627   -5.09
-defense_leagueaustralian+a-league                 0.065897   0.191610    0.34
-defense_leagueaustrian+bundesliga                 0.115863   0.099351    1.17
-defense_leaguebelgian+jupiler+league              0.003135   0.094865    0.03
-defense_leaguebrasileirao+b                      -0.070106   0.068868   -1.02
-defense_leaguechinese+super+league                0.014514   0.224147    0.06
-defense_leaguedanish+sas-ligaen                   0.123667   0.095757    1.29
-defense_leaguedutch+eerste+divisie                0.423724   0.098942    4.28
-defense_leaguedutch+eredivisie                    0.035794   0.089189    0.40
-defense_leagueenglish+league+championship        -0.089644   0.087120   -1.03
-defense_leagueenglish+league+one                  0.139511   0.087647    1.59
-defense_leagueenglish+league+two                  0.258605   0.087843    2.94
-defense_leagueenglish+national+league             0.483821   0.091508    5.29
-defense_leagueenglish+premier+league             -0.396613   0.085050   -4.66
-defense_leaguefrench+ligue+1                     -0.316690   0.088547   -3.58
-defense_leaguefrench+ligue+2                     -0.100397   0.100722   -1.00
-defense_leaguefútbol+profesional+colombiano      -0.184924   0.071854   -2.57
-defense_leaguefutebol+brasileiro                 -0.343065   0.062813   -5.46
-defense_leaguegerman+2.+bundesliga                0.052356   0.097579    0.54
-defense_leaguegerman+bundesliga                  -0.292572   0.087017   -3.36
-defense_leaguegreek+super+league                 -0.077338   0.096081   -0.80
-defense_leagueisraeli+premier+league             -0.103100   0.189425   -0.54
-defense_leagueitalian+serie+a                    -0.277459   0.085929   -3.23
-defense_leagueitalian+serie+b                     0.137167   0.096798    1.42
-defense_leaguejapanese+j+league                  -0.108506   0.191171   -0.57
-defense_leagueleague+of+ireland+premier+division  0.577479   0.129625    4.45
-defense_leagueliga+nacional+de+guatemala          0.373408   0.110446    3.38
-defense_leagueliga+profesional+boliviana          0.183949   0.073983    2.49
-defense_leaguemajor+league+soccer                -0.031671   0.071834   -0.44
-defense_leaguemaltese+premier+league              0.218821   0.350729    0.62
-defense_leaguemexican+liga+mx                    -0.220557   0.049841   -4.43
-defense_leaguenacional+b+de+argentina            -0.214127   0.087054   -2.46
-defense_leaguenorthern+irish+premiership          1.162726   0.136055    8.55
-defense_leaguenorwegian+tippeligaen               0.226391   0.106562    2.12
-defense_leagueportuguese+liga                    -0.178298   0.089114   -2.00
-defense_leagueprimera+a+de+ecuador               -0.106694   0.075683   -1.41
-defense_leagueprimera+division+b+de+argentina    -0.218135   0.107839   -2.02
-defense_leagueprimera+division+c+de+argentina     0.061809   0.120179    0.51
-defense_leagueprimera+division+d+de+argentina     0.283262   0.134970    2.10
-defense_leagueprimera+división+de+argentina      -0.342736   0.064075   -5.35
-defense_leagueprimera+división+de+chile          -0.013393   0.069523   -0.19
-defense_leagueprimera+division+de+el+salvador     0.431080   0.126996    3.39
-defense_leagueprimera+división+de+paraguay       -0.074884   0.069556   -1.08
-defense_leagueprimera+división+de+uruguay        -0.064586   0.070175   -0.92
-defense_leagueprimera+división+de+venezuela       0.154732   0.074871    2.07
-defense_leagueprimera+profesional+de+perú         0.136343   0.076629    1.78
-defense_leagueromanian+first+division             0.203128   0.184697    1.10
-defense_leaguerussian+premier+league             -0.260613   0.091510   -2.85
-defense_leaguescottish+championship               0.551308   0.097409    5.66
-defense_leaguescottish+league+one                 0.919979   0.098219    9.37
-defense_leaguescottish+league+two                 1.143352   0.099114   11.54
-defense_leaguescottish+premiership                0.155504   0.093677    1.66
-defense_leaguesouth+african+premiership           0.867678   0.393252    2.21
-defense_leaguespanish+primera+división           -0.413631   0.085475   -4.84
-defense_leaguespanish+segunda+division           -0.117923   0.099106   -1.19
-defense_leagueswedish+allsvenskanliga             0.239011   0.105578    2.26
-defense_leagueswiss+super+league                  0.067060   0.094901    0.71
-defense_leaguethai+premier+league                 1.103534   0.310606    3.55
-defense_leagueturkish+super+lig                  -0.080801   0.094892   -0.85
-defense_leaguewelsh+premier+league                0.946417   0.144379    6.56
-fieldoffense_home                                 0.284704   0.002804  101.53
+(Intercept)                                       0.087605   0.057631    1.52
+year2001                                         -0.045102   0.041087   -1.10
+year2002                                         -0.031479   0.040417   -0.78
+year2003                                         -0.030600   0.040374   -0.76
+year2004                                         -0.050136   0.040385   -1.24
+year2005                                         -0.059664   0.039656   -1.50
+year2006                                         -0.054877   0.038571   -1.42
+year2007                                         -0.045792   0.038538   -1.19
+year2008                                         -0.044881   0.038289   -1.17
+year2009                                         -0.050025   0.038393   -1.30
+year2010                                         -0.037078   0.038357   -0.97
+year2011                                         -0.037638   0.038314   -0.98
+year2012                                         -0.030861   0.038355   -0.80
+year2013                                         -0.044105   0.038360   -1.15
+year2014                                         -0.052577   0.038414   -1.37
+year2015                                         -0.048589   0.038410   -1.27
+year2016                                         -0.050591   0.038393   -1.32
+offense_leagueaustralian+a-league                 0.047131   0.192448    0.24
+offense_leagueaustrian+bundesliga                -0.003502   0.100932   -0.03
+offense_leaguebelgian+jupiler+league              0.089625   0.096252    0.93
+offense_leaguebrasileirao+b                       0.135423   0.070440    1.92
+offense_leaguechinese+super+league                0.052374   0.225589    0.23
+offense_leaguedanish+sas-ligaen                  -0.037808   0.097215   -0.39
+offense_leaguedutch+eerste+divisie               -0.210378   0.100416   -2.10
+offense_leaguedutch+eredivisie                    0.143186   0.090512    1.58
+offense_leagueenglish+league+championship         0.138508   0.088359    1.57
+offense_leagueenglish+league+one                 -0.067819   0.088895   -0.76
+offense_leagueenglish+league+two                 -0.218740   0.089113   -2.45
+offense_leagueenglish+national+league            -0.388880   0.092750   -4.19
+offense_leagueenglish+premier+league              0.465926   0.086295    5.40
+offense_leaguefrench+ligue+1                      0.277958   0.089812    3.09
+offense_leaguefrench+ligue+2                      0.055926   0.101924    0.55
+offense_leaguefútbol+profesional+colombiano       0.188134   0.073488    2.56
+offense_leaguefutebol+brasileiro                  0.379150   0.064403    5.89
+offense_leaguegerman+2.+bundesliga                0.024155   0.098912    0.24
+offense_leaguegerman+bundesliga                   0.428094   0.088283    4.85
+offense_leaguegreek+super+league                 -0.016019   0.097628   -0.16
+offense_leagueindian+super+league                 0.105239   0.095986    1.10
+offense_leagueisraeli+premier+league             -0.039086   0.191585   -0.20
+offense_leagueitalian+serie+a                     0.320678   0.087218    3.68
+offense_leagueitalian+serie+b                    -0.160639   0.098118   -1.64
+offense_leaguejapanese+j+league                   0.201917   0.191816    1.05
+offense_leagueleague+of+ireland+premier+division -0.542370   0.131186   -4.13
+offense_leagueliga+nacional+de+guatemala         -0.349648   0.111956   -3.12
+offense_leagueliga+profesional+boliviana          0.010543   0.075999    0.14
+offense_leaguemajor+league+soccer                 0.125151   0.073463    1.70
+offense_leaguemaltese+premier+league             -0.243330   0.361602   -0.67
+offense_leaguemexican+liga+mx                     0.328883   0.051884    6.34
+offense_leaguenacional+b+de+argentina             0.086032   0.088452    0.97
+offense_leaguenorthern+irish+premiership         -0.970003   0.137551   -7.05
+offense_leaguenorwegian+tippeligaen              -0.069201   0.107920   -0.64
+offense_leagueportuguese+liga                     0.160596   0.090536    1.77
+offense_leagueprimera+a+de+ecuador                0.114441   0.077550    1.48
+offense_leagueprimera+division+b+de+argentina     0.030601   0.108869    0.28
+offense_leagueprimera+division+c+de+argentina    -0.219726   0.121356   -1.81
+offense_leagueprimera+division+d+de+argentina    -0.370784   0.136093   -2.72
+offense_leagueprimera+división+de+argentina       0.299209   0.065687    4.56
+offense_leagueprimera+división+de+chile           0.168940   0.071192    2.37
+offense_leagueprimera+division+de+el+salvador    -0.421415   0.128765   -3.27
+offense_leagueprimera+división+de+paraguay        0.142283   0.071330    1.99
+offense_leagueprimera+división+de+uruguay         0.169665   0.071829    2.36
+offense_leagueprimera+división+de+venezuela      -0.148204   0.076737   -1.93
+offense_leagueprimera+profesional+de+perú        -0.124847   0.078470   -1.59
+offense_leagueromanian+first+division            -0.229539   0.188742   -1.22
+offense_leaguerussian+premier+league              0.226275   0.092824    2.44
+offense_leaguescottish+championship              -0.470086   0.098596   -4.77
+offense_leaguescottish+league+one                -0.728358   0.099556   -7.32
+offense_leaguescottish+league+two                -0.966454   0.100532   -9.61
+offense_leaguescottish+premiership               -0.098710   0.095057   -1.04
+offense_leaguesouth+african+premiership          -0.948595   0.393804   -2.41
+offense_leaguespanish+primera+división            0.477153   0.086743    5.50
+offense_leaguespanish+segunda+division            0.104866   0.100341    1.05
+offense_leagueswedish+allsvenskanliga            -0.146568   0.106898   -1.37
+offense_leagueswiss+super+league                  0.092391   0.096448    0.96
+offense_leaguethai+premier+league                -0.933428   0.314551   -2.97
+offense_leagueturkish+super+lig                   0.126550   0.096296    1.31
+offense_leaguewelsh+premier+league               -0.741030   0.145634   -5.09
+defense_leagueaustralian+a-league                 0.065674   0.191665    0.34
+defense_leagueaustrian+bundesliga                 0.116225   0.099366    1.17
+defense_leaguebelgian+jupiler+league              0.003368   0.094872    0.04
+defense_leaguebrasileirao+b                      -0.070142   0.068873   -1.02
+defense_leaguechinese+super+league                0.014179   0.224201    0.06
+defense_leaguedanish+sas-ligaen                   0.123728   0.095766    1.29
+defense_leaguedutch+eerste+divisie                0.424527   0.098951    4.29
+defense_leaguedutch+eredivisie                    0.036316   0.089197    0.41
+defense_leagueenglish+league+championship        -0.089571   0.087129   -1.03
+defense_leagueenglish+league+one                  0.139601   0.087656    1.59
+defense_leagueenglish+league+two                  0.258691   0.087852    2.94
+defense_leagueenglish+national+league             0.483912   0.091517    5.29
+defense_leagueenglish+premier+league             -0.396554   0.085060   -4.66
+defense_leaguefrench+ligue+1                     -0.316022   0.088556   -3.57
+defense_leaguefrench+ligue+2                     -0.099969   0.100727   -0.99
+defense_leaguefútbol+profesional+colombiano      -0.185087   0.071861   -2.58
+defense_leaguefutebol+brasileiro                 -0.343119   0.062818   -5.46
+defense_leaguegerman+2.+bundesliga                0.052445   0.097586    0.54
+defense_leaguegerman+bundesliga                  -0.292367   0.087026   -3.36
+defense_leaguegreek+super+league                 -0.075771   0.096079   -0.79
+defense_leagueisraeli+premier+league             -0.108927   0.189350   -0.58
+defense_leagueitalian+serie+a                    -0.276980   0.085939   -3.22
+defense_leagueitalian+serie+b                     0.137222   0.096800    1.42
+defense_leaguejapanese+j+league                  -0.108860   0.191213   -0.57
+defense_leagueleague+of+ireland+premier+division  0.576976   0.129637    4.45
+defense_leagueliga+nacional+de+guatemala          0.373199   0.110450    3.38
+defense_leagueliga+profesional+boliviana          0.184290   0.073982    2.49
+defense_leaguemajor+league+soccer                -0.031708   0.071840   -0.44
+defense_leaguemaltese+premier+league              0.218808   0.351738    0.62
+defense_leaguemexican+liga+mx                    -0.220553   0.049847   -4.42
+defense_leaguenacional+b+de+argentina            -0.214270   0.087059   -2.46
+defense_leaguenorthern+irish+premiership          1.162793   0.136062    8.55
+defense_leaguenorwegian+tippeligaen               0.226477   0.106563    2.13
+defense_leagueportuguese+liga                    -0.177858   0.089123   -2.00
+defense_leagueprimera+a+de+ecuador               -0.106665   0.075690   -1.41
+defense_leagueprimera+division+b+de+argentina    -0.218284   0.107843   -2.02
+defense_leagueprimera+division+c+de+argentina     0.061658   0.120184    0.51
+defense_leagueprimera+division+d+de+argentina     0.283051   0.134975    2.10
+defense_leagueprimera+división+de+argentina      -0.342833   0.064080   -5.35
+defense_leagueprimera+división+de+chile          -0.013085   0.069527   -0.19
+defense_leagueprimera+division+de+el+salvador     0.431056   0.127001    3.39
+defense_leagueprimera+división+de+paraguay       -0.074745   0.069562   -1.07
+defense_leagueprimera+división+de+uruguay        -0.064472   0.070181   -0.92
+defense_leagueprimera+división+de+venezuela       0.154730   0.074875    2.07
+defense_leagueprimera+profesional+de+perú         0.136081   0.076634    1.78
+defense_leagueromanian+first+division             0.200720   0.184486    1.09
+defense_leaguerussian+premier+league             -0.260544   0.091519   -2.85
+defense_leaguescottish+championship               0.550960   0.097415    5.66
+defense_leaguescottish+league+one                 0.919954   0.098230    9.37
+defense_leaguescottish+league+two                 1.143312   0.099124   11.53
+defense_leaguescottish+premiership                0.155887   0.093688    1.66
+defense_leaguesouth+african+premiership           0.867596   0.393266    2.21
+defense_leaguespanish+primera+división           -0.413390   0.085484   -4.84
+defense_leaguespanish+segunda+division           -0.117779   0.099118   -1.19
+defense_leagueswedish+allsvenskanliga             0.238790   0.105584    2.26
+defense_leagueswiss+super+league                  0.067606   0.094906    0.71
+defense_leaguethai+premier+league                 1.103193   0.310643    3.55
+defense_leagueturkish+super+lig                  -0.080696   0.094902   -0.85
+defense_leaguewelsh+premier+league                0.946496   0.144388    6.56
+fieldoffense_home                                 0.284762   0.002804  101.57
                                                  Pr(>|z|)    
-(Intercept)                                      0.127931    
-year2001                                         0.271323    
-year2002                                         0.435241    
-year2003                                         0.447653    
-year2004                                         0.213920    
-year2005                                         0.132039    
-year2006                                         0.154180    
-year2007                                         0.233886    
-year2008                                         0.240247    
-year2009                                         0.191880    
-year2010                                         0.332722    
-year2011                                         0.324834    
-year2012                                         0.419744    
-year2013                                         0.249287    
-year2014                                         0.170411    
-year2015                                         0.205049    
-year2016                                         0.185053    
-offense_leagueaustralian+a-league                0.809882    
-offense_leagueaustrian+bundesliga                0.977735    
-offense_leaguebelgian+jupiler+league             0.350359    
-offense_leaguebrasileirao+b                      0.054562 .  
-offense_leaguechinese+super+league               0.816821    
-offense_leaguedanish+sas-ligaen                  0.697919    
-offense_leaguedutch+eerste+divisie               0.036888 *  
-offense_leaguedutch+eredivisie                   0.111794    
-offense_leagueenglish+league+championship        0.116747    
-offense_leagueenglish+league+one                 0.446109    
-offense_leagueenglish+league+two                 0.014136 *  
+(Intercept)                                      0.128485    
+year2001                                         0.272325    
+year2002                                         0.436070    
+year2003                                         0.448496    
+year2004                                         0.214435    
+year2005                                         0.132440    
+year2006                                         0.154811    
+year2007                                         0.234745    
+year2008                                         0.241135    
+year2009                                         0.192592    
+year2010                                         0.333714    
+year2011                                         0.325920    
+year2012                                         0.421037    
+year2013                                         0.250239    
+year2014                                         0.171094    
+year2015                                         0.205868    
+year2016                                         0.187599    
+offense_leagueaustralian+a-league                0.806532    
+offense_leagueaustrian+bundesliga                0.972321    
+offense_leaguebelgian+jupiler+league             0.351778    
+offense_leaguebrasileirao+b                      0.054539 .  
+offense_leaguechinese+super+league               0.816409    
+offense_leaguedanish+sas-ligaen                  0.697341    
+offense_leaguedutch+eerste+divisie               0.036165 *  
+offense_leaguedutch+eredivisie                   0.113660    
+offense_leagueenglish+league+championship        0.116982    
+offense_leagueenglish+league+one                 0.445515    
+offense_leagueenglish+league+two                 0.014103 *  
 offense_leagueenglish+national+league            2.76e-05 ***
-offense_leagueenglish+premier+league             6.60e-08 ***
-offense_leaguefrench+ligue+1                     0.001957 ** 
-offense_leaguefrench+ligue+2                     0.580143    
-offense_leaguefútbol+profesional+colombiano      0.010516 *  
-offense_leaguefutebol+brasileiro                 3.94e-09 ***
-offense_leaguegerman+2.+bundesliga               0.807730    
-offense_leaguegerman+bundesliga                  1.23e-06 ***
-offense_leaguegreek+super+league                 0.877544    
-offense_leagueindian+super+league                0.272372    
-offense_leagueisraeli+premier+league             0.824810    
+offense_leagueenglish+premier+league             6.69e-08 ***
+offense_leaguefrench+ligue+1                     0.001969 ** 
+offense_leaguefrench+ligue+2                     0.583208    
+offense_leaguefútbol+profesional+colombiano      0.010466 *  
+offense_leaguefutebol+brasileiro                 3.93e-09 ***
+offense_leaguegerman+2.+bundesliga               0.807068    
+offense_leaguegerman+bundesliga                  1.24e-06 ***
+offense_leaguegreek+super+league                 0.869664    
+offense_leagueindian+super+league                0.272906    
+offense_leagueisraeli+premier+league             0.838344    
 offense_leagueitalian+serie+a                    0.000236 ***
-offense_leagueitalian+serie+b                    0.102170    
-offense_leaguejapanese+j+league                  0.293183    
-offense_leagueleague+of+ireland+premier+division 3.50e-05 ***
-offense_leagueliga+nacional+de+guatemala         0.001805 ** 
-offense_leagueliga+profesional+boliviana         0.889137    
-offense_leaguemajor+league+soccer                0.088508 .  
-offense_leaguemaltese+premier+league             0.518129    
-offense_leaguemexican+liga+mx                    2.31e-10 ***
-offense_leaguenacional+b+de+argentina            0.331327    
-offense_leaguenorthern+irish+premiership         1.77e-12 ***
-offense_leaguenorwegian+tippeligaen              0.522181    
-offense_leagueportuguese+liga                    0.075884 .  
-offense_leagueprimera+a+de+ecuador               0.139839    
-offense_leagueprimera+division+b+de+argentina    0.779558    
-offense_leagueprimera+division+c+de+argentina    0.070020 .  
-offense_leagueprimera+division+d+de+argentina    0.006414 ** 
-offense_leagueprimera+división+de+argentina      5.26e-06 ***
-offense_leagueprimera+división+de+chile          0.017300 *  
-offense_leagueprimera+division+de+el+salvador    0.001064 ** 
-offense_leagueprimera+división+de+paraguay       0.045822 *  
-offense_leagueprimera+división+de+uruguay        0.018084 *  
-offense_leagueprimera+división+de+venezuela      0.053469 .  
-offense_leagueprimera+profesional+de+perú        0.110909    
-offense_leagueromanian+first+division            0.212338    
-offense_leaguerussian+premier+league             0.014729 *  
-offense_leaguescottish+championship              1.85e-06 ***
-offense_leaguescottish+league+one                2.54e-13 ***
+offense_leagueitalian+serie+b                    0.101588    
+offense_leaguejapanese+j+league                  0.292496    
+offense_leagueleague+of+ireland+premier+division 3.56e-05 ***
+offense_leagueliga+nacional+de+guatemala         0.001790 ** 
+offense_leagueliga+profesional+boliviana         0.889665    
+offense_leaguemajor+league+soccer                0.088456 .  
+offense_leaguemaltese+premier+league             0.500997    
+offense_leaguemexican+liga+mx                    2.32e-10 ***
+offense_leaguenacional+b+de+argentina            0.330730    
+offense_leaguenorthern+irish+premiership         1.76e-12 ***
+offense_leaguenorwegian+tippeligaen              0.521374    
+offense_leagueportuguese+liga                    0.076090 .  
+offense_leagueprimera+a+de+ecuador               0.140023    
+offense_leagueprimera+division+b+de+argentina    0.778652    
+offense_leagueprimera+division+c+de+argentina    0.070204 .  
+offense_leagueprimera+division+d+de+argentina    0.006440 ** 
+offense_leagueprimera+división+de+argentina      5.24e-06 ***
+offense_leagueprimera+división+de+chile          0.017643 *  
+offense_leagueprimera+division+de+el+salvador    0.001065 ** 
+offense_leagueprimera+división+de+paraguay       0.046073 *  
+offense_leagueprimera+división+de+uruguay        0.018173 *  
+offense_leagueprimera+división+de+venezuela      0.053443 .  
+offense_leagueprimera+profesional+de+perú        0.111605    
+offense_leagueromanian+first+division            0.223929    
+offense_leaguerussian+premier+league             0.014782 *  
+offense_leaguescottish+championship              1.86e-06 ***
+offense_leaguescottish+league+one                2.55e-13 ***
 offense_leaguescottish+league+two                 < 2e-16 ***
-offense_leaguescottish+premiership               0.301470    
-offense_leaguesouth+african+premiership          0.015994 *  
-offense_leaguespanish+primera+división           3.69e-08 ***
-offense_leaguespanish+segunda+division           0.292784    
-offense_leagueswedish+allsvenskanliga            0.169778    
-offense_leagueswiss+super+league                 0.339963    
-offense_leaguethai+premier+league                0.002992 ** 
-offense_leagueturkish+super+lig                  0.187058    
-offense_leaguewelsh+premier+league               3.62e-07 ***
-defense_leagueaustralian+a-league                0.730913    
-defense_leagueaustrian+bundesliga                0.243534    
-defense_leaguebelgian+jupiler+league             0.973639    
-defense_leaguebrasileirao+b                      0.308692    
-defense_leaguechinese+super+league               0.948372    
-defense_leaguedanish+sas-ligaen                  0.196541    
-defense_leaguedutch+eerste+divisie               1.85e-05 ***
-defense_leaguedutch+eredivisie                   0.688183    
-defense_leagueenglish+league+championship        0.303490    
-defense_leagueenglish+league+one                 0.111444    
-defense_leagueenglish+league+two                 0.003240 ** 
+offense_leaguescottish+premiership               0.299071    
+offense_leaguesouth+african+premiership          0.016005 *  
+offense_leaguespanish+primera+división           3.78e-08 ***
+offense_leaguespanish+segunda+division           0.295980    
+offense_leagueswedish+allsvenskanliga            0.170345    
+offense_leagueswiss+super+league                 0.338096    
+offense_leaguethai+premier+league                0.003002 ** 
+offense_leagueturkish+super+lig                  0.188790    
+offense_leaguewelsh+premier+league               3.61e-07 ***
+defense_leagueaustralian+a-league                0.731860    
+defense_leagueaustrian+bundesliga                0.242136    
+defense_leaguebelgian+jupiler+league             0.971679    
+defense_leaguebrasileirao+b                      0.308479    
+defense_leaguechinese+super+league               0.949573    
+defense_leaguedanish+sas-ligaen                  0.196365    
+defense_leaguedutch+eerste+divisie               1.78e-05 ***
+defense_leaguedutch+eredivisie                   0.683906    
+defense_leagueenglish+league+championship        0.303938    
+defense_leagueenglish+league+one                 0.111252    
+defense_leagueenglish+league+two                 0.003233 ** 
 defense_leagueenglish+national+league            1.24e-07 ***
-defense_leagueenglish+premier+league             3.11e-06 ***
-defense_leaguefrench+ligue+1                     0.000348 ***
-defense_leaguefrench+ligue+2                     0.318877    
-defense_leaguefútbol+profesional+colombiano      0.010064 *  
-defense_leaguefutebol+brasileiro                 4.72e-08 ***
-defense_leaguegerman+2.+bundesliga               0.591575    
-defense_leaguegerman+bundesliga                  0.000773 ***
-defense_leaguegreek+super+league                 0.420864    
-defense_leagueisraeli+premier+league             0.586250    
-defense_leagueitalian+serie+a                    0.001243 ** 
-defense_leagueitalian+serie+b                    0.156469    
-defense_leaguejapanese+j+league                  0.570314    
-defense_leagueleague+of+ireland+premier+division 8.39e-06 ***
-defense_leagueliga+nacional+de+guatemala         0.000722 ***
-defense_leagueliga+profesional+boliviana         0.012905 *  
-defense_leaguemajor+league+soccer                0.659292    
-defense_leaguemaltese+premier+league             0.532691    
-defense_leaguemexican+liga+mx                    9.63e-06 ***
-defense_leaguenacional+b+de+argentina            0.013905 *  
+defense_leagueenglish+premier+league             3.13e-06 ***
+defense_leaguefrench+ligue+1                     0.000359 ***
+defense_leaguefrench+ligue+2                     0.320966    
+defense_leaguefútbol+profesional+colombiano      0.010005 *  
+defense_leaguefutebol+brasileiro                 4.71e-08 ***
+defense_leaguegerman+2.+bundesliga               0.590975    
+defense_leaguegerman+bundesliga                  0.000781 ***
+defense_leaguegreek+super+league                 0.430328    
+defense_leagueisraeli+premier+league             0.565113    
+defense_leagueitalian+serie+a                    0.001269 ** 
+defense_leagueitalian+serie+b                    0.156313    
+defense_leaguejapanese+j+league                  0.569145    
+defense_leagueleague+of+ireland+premier+division 8.56e-06 ***
+defense_leagueliga+nacional+de+guatemala         0.000728 ***
+defense_leagueliga+profesional+boliviana         0.012737 *  
+defense_leaguemajor+league+soccer                0.658944    
+defense_leaguemaltese+premier+league             0.533891    
+defense_leaguemexican+liga+mx                    9.66e-06 ***
+defense_leaguenacional+b+de+argentina            0.013847 *  
 defense_leaguenorthern+irish+premiership          < 2e-16 ***
-defense_leaguenorwegian+tippeligaen              0.033628 *  
-defense_leagueportuguese+liga                    0.045415 *  
-defense_leagueprimera+a+de+ecuador               0.158612    
-defense_leagueprimera+division+b+de+argentina    0.043095 *  
-defense_leagueprimera+division+c+de+argentina    0.607040    
-defense_leagueprimera+division+d+de+argentina    0.035843 *  
-defense_leagueprimera+división+de+argentina      8.84e-08 ***
-defense_leagueprimera+división+de+chile          0.847239    
-defense_leagueprimera+division+de+el+salvador    0.000688 ***
-defense_leagueprimera+división+de+paraguay       0.281659    
-defense_leagueprimera+división+de+uruguay        0.357386    
-defense_leagueprimera+división+de+venezuela      0.038767 *  
-defense_leagueprimera+profesional+de+perú        0.075197 .  
-defense_leagueromanian+first+division            0.271422    
-defense_leaguerussian+premier+league             0.004401 ** 
-defense_leaguescottish+championship              1.52e-08 ***
+defense_leaguenorwegian+tippeligaen              0.033563 *  
+defense_leagueportuguese+liga                    0.045972 *  
+defense_leagueprimera+a+de+ecuador               0.158764    
+defense_leagueprimera+division+b+de+argentina    0.042961 *  
+defense_leagueprimera+division+c+de+argentina    0.607932    
+defense_leagueprimera+division+d+de+argentina    0.035987 *  
+defense_leagueprimera+división+de+argentina      8.79e-08 ***
+defense_leagueprimera+división+de+chile          0.850725    
+defense_leagueprimera+division+de+el+salvador    0.000689 ***
+defense_leagueprimera+división+de+paraguay       0.282598    
+defense_leagueprimera+división+de+uruguay        0.358276    
+defense_leagueprimera+división+de+venezuela      0.038780 *  
+defense_leagueprimera+profesional+de+perú        0.075778 .  
+defense_leagueromanian+first+division            0.276598    
+defense_leaguerussian+premier+league             0.004415 ** 
+defense_leaguescottish+championship              1.55e-08 ***
 defense_leaguescottish+league+one                 < 2e-16 ***
 defense_leaguescottish+league+two                 < 2e-16 ***
-defense_leaguescottish+premiership               0.096912 .  
-defense_leaguesouth+african+premiership          0.027355 *  
-defense_leaguespanish+primera+división           1.30e-06 ***
-defense_leaguespanish+segunda+division           0.234100    
-defense_leagueswedish+allsvenskanliga            0.023584 *  
-defense_leagueswiss+super+league                 0.479799    
-defense_leaguethai+premier+league                0.000381 ***
-defense_leagueturkish+super+lig                  0.394489    
+defense_leaguescottish+premiership               0.096135 .  
+defense_leaguesouth+african+premiership          0.027375 *  
+defense_leaguespanish+primera+división           1.33e-06 ***
+defense_leaguespanish+segunda+division           0.234730    
+defense_leagueswedish+allsvenskanliga            0.023721 *  
+defense_leagueswiss+super+league                 0.476251    
+defense_leaguethai+premier+league                0.000383 ***
+defense_leagueturkish+super+lig                  0.395154    
 defense_leaguewelsh+premier+league               5.56e-11 ***
 fieldoffense_home                                 < 2e-16 ***
 ---
