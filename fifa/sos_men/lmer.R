@@ -25,7 +25,7 @@ end) as w
 from fifa.men_results r
 
 where
-    r.year between 2008 and 2016
+    r.year between 2008 and 2017
 and r.gender_id='men'
 and r.team_id is not NULL
 and r.opponent_id is not NULL

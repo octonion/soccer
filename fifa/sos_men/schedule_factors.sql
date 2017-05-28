@@ -55,7 +55,7 @@ r.team_id,
 r.opponent_id,
 r.field
 from fifa.men_results r
-where r.year between 2008 and 2016
+where r.year between 2008 and 2017
 );
 
 update r
