@@ -1,7 +1,7 @@
 #!/bin/bash
 
-./scrapers/all_games.rb 2016 2016
-#./scrapers/all_xml.rb 2016 2016
+./scrapers/all_games.rb 2017 2017
+#./scrapers/all_xml.rb 2017 2017
 
 ./load.sh
 #./load_gamecast.sh
