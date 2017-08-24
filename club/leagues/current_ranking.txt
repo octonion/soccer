@@ -1,656 +1,729 @@
 BEGIN
 CREATE TABLE
-INSERT 0 647
+INSERT 0 720
  rk  |             team             |               league               |  str  |  ofs  |  dfs  |  sos  
 -----+------------------------------+------------------------------------+-------+-------+-------+-------
-   1 | Corinthians                  | Futebol Brasileiro                 | 3.491 | 1.699 | 0.487 | 1.347
-   2 | Liverpool                    | English Premier League             | 3.464 | 2.040 | 0.589 | 1.437
-   3 | Manchester City              | English Premier League             | 3.154 | 1.850 | 0.587 | 1.505
-   4 | Gremio                       | Futebol Brasileiro                 | 3.147 | 1.950 | 0.620 | 1.347
-   5 | Manchester United            | English Premier League             | 3.140 | 1.907 | 0.607 | 1.461
-   6 | Huddersfield Town            | English Premier League             | 2.829 | 1.765 | 0.624 | 1.489
-   7 | Atletico Madrid              | Spanish Primera División           | 2.828 | 1.676 | 0.593 | 1.515
-   8 | Celta Vigo                   | Spanish Primera División           | 2.825 | 1.806 | 0.639 | 1.513
-   9 | Barcelona                    | Spanish Primera División           | 2.824 | 1.812 | 0.642 | 1.498
-  10 | U.A.N.L                      | Mexican Liga MX                    | 2.747 | 1.708 | 0.622 | 1.299
-  11 | Real Madrid                  | Spanish Primera División           | 2.727 | 1.832 | 0.672 | 1.538
-  12 | Espanyol                     | Spanish Primera División           | 2.727 | 1.668 | 0.612 | 1.520
-  13 | Valencia                     | Spanish Primera División           | 2.722 | 1.720 | 0.632 | 1.517
-  14 | Girona                       | Spanish Primera División           | 2.696 | 1.660 | 0.616 | 1.528
-  15 | Burnley                      | English Premier League             | 2.669 | 1.762 | 0.660 | 1.489
-  16 | Tottenham Hotspur            | English Premier League             | 2.664 | 1.809 | 0.679 | 1.498
-  17 | Real Betis                   | Spanish Primera División           | 2.656 | 1.661 | 0.625 | 1.518
-  18 | Southampton                  | English Premier League             | 2.643 | 1.611 | 0.610 | 1.499
-  19 | Flamengo                     | Futebol Brasileiro                 | 2.616 | 1.724 | 0.659 | 1.348
-  20 | Getafe                       | Spanish Primera División           | 2.598 | 1.605 | 0.618 | 1.527
-  21 | Palmeiras                    | Futebol Brasileiro                 | 2.574 | 1.665 | 0.647 | 1.380
-  22 | Swansea City                 | English Premier League             | 2.569 | 1.601 | 0.623 | 1.490
-  23 | Watford                      | English Premier League             | 2.561 | 1.753 | 0.684 | 1.500
-  24 | Everton                      | English Premier League             | 2.556 | 1.654 | 0.647 | 1.509
-  25 | Sevilla FC                   | Spanish Primera División           | 2.547 | 1.679 | 0.659 | 1.487
-  26 | AFC Bournemouth              | English Premier League             | 2.528 | 1.581 | 0.625 | 1.489
-  27 | Athletic Bilbao              | Spanish Primera División           | 2.525 | 1.664 | 0.659 | 1.474
-  28 | Real Sociedad                | Spanish Primera División           | 2.502 | 1.597 | 0.638 | 1.511
-  29 | Chelsea                      | English Premier League             | 2.494 | 1.738 | 0.697 | 1.502
-  30 | Villarreal                   | Spanish Primera División           | 2.486 | 1.672 | 0.673 | 1.524
-  31 | West Bromwich Albion         | English Premier League             | 2.455 | 1.533 | 0.625 | 1.475
-  32 | Arsenal                      | English Premier League             | 2.454 | 1.791 | 0.730 | 1.462
-  33 | Santos FC                    | Futebol Brasileiro                 | 2.447 | 1.426 | 0.583 | 1.370
-  34 | Atlético Nacional            | Fútbol Profesional Colombiano      | 2.398 | 1.518 | 0.633 | 1.201
-  35 | Borussia Dortmund            | German Bundesliga                  | 2.372 | 1.643 | 0.693 | 1.336
-  36 | Newcastle United             | English Premier League             | 2.362 | 1.575 | 0.667 | 1.501
-  37 | Crystal Palace               | English Premier League             | 2.354 | 1.559 | 0.662 | 1.505
-  38 | Málaga                       | Spanish Primera División           | 2.348 | 1.589 | 0.677 | 1.514
-  39 | Internazionale               | Italian Serie A                    | 2.338 | 1.529 | 0.654 | 1.382
-  40 | Cruzeiro                     | Futebol Brasileiro                 | 2.335 | 1.427 | 0.611 | 1.375
-  41 | Stoke City                   | English Premier League             | 2.308 | 1.616 | 0.700 | 1.481
-  42 | Brighton & Hove Albion       | English Premier League             | 2.305 | 1.623 | 0.704 | 1.493
-  43 | AC Milan                     | Italian Serie A                    | 2.298 | 1.614 | 0.703 | 1.305
-  44 | Fluminense FC                | Futebol Brasileiro                 | 2.296 | 1.693 | 0.737 | 1.342
-  45 | Monterrey                    | Mexican Liga MX                    | 2.262 | 1.652 | 0.730 | 1.276
-  46 | Leicester City               | English Premier League             | 2.255 | 1.536 | 0.681 | 1.453
-  47 | Lazio                        | Italian Serie A                    | 2.242 | 1.633 | 0.728 | 1.376
-  48 | Botafogo                     | Futebol Brasileiro                 | 2.234 | 1.332 | 0.596 | 1.394
-  49 | Lyon                         | French Ligue 1                     | 2.215 | 1.491 | 0.673 | 1.325
-  50 | Napoli                       | Italian Serie A                    | 2.211 | 1.514 | 0.685 | 1.374
-  51 | Schalke 04                   | German Bundesliga                  | 2.200 | 1.566 | 0.712 | 1.380
-  52 | Cerezo Osaka                 | Japanese J League                  | 2.199 | 1.707 | 0.776 | 1.221
-  53 | SC Freiburg                  | German Bundesliga                  | 2.187 | 1.545 | 0.706 | 1.362
-  54 | Marseille                    | French Ligue 1                     | 2.185 | 1.462 | 0.669 | 1.307
-  55 | Atlético MG                  | Futebol Brasileiro                 | 2.162 | 1.447 | 0.669 | 1.384
-  56 | Borussia Monchengladbach     | German Bundesliga                  | 2.151 | 1.585 | 0.737 | 1.377
-  57 | West Ham United              | English Premier League             | 2.144 | 1.551 | 0.723 | 1.496
-  58 | TSG Hoffenheim               | German Bundesliga                  | 2.139 | 1.576 | 0.737 | 1.403
-  59 | Sport                        | Futebol Brasileiro                 | 2.134 | 1.556 | 0.729 | 1.361
-  60 | Paris Saint-Germain          | French Ligue 1                     | 2.126 | 1.562 | 0.735 | 1.330
-  61 | Kawasaki Frontale            | Japanese J League                  | 2.121 | 1.626 | 0.767 | 1.229
-  62 | São Paulo                    | Futebol Brasileiro                 | 2.118 | 1.612 | 0.761 | 1.401
-  63 | Werder Bremen                | German Bundesliga                  | 2.117 | 1.571 | 0.742 | 1.383
-  64 | Toluca                       | Mexican Liga MX                    | 2.107 | 1.497 | 0.711 | 1.264
-  65 | AS Monaco                    | French Ligue 1                     | 2.099 | 1.556 | 0.742 | 1.326
-  66 | Atlético Paranaense          | Futebol Brasileiro                 | 2.098 | 1.504 | 0.717 | 1.382
-  67 | Atalanta                     | Italian Serie A                    | 2.090 | 1.448 | 0.693 | 1.392
-  68 | Bahia                        | Futebol Brasileiro                 | 2.080 | 1.486 | 0.714 | 1.386
-  69 | AA Ponte Preta               | Futebol Brasileiro                 | 2.079 | 1.411 | 0.679 | 1.408
-  70 | Zenit St Petersburg          | Russian Premier League             | 2.064 | 1.474 | 0.714 | 1.224
-  71 | Bordeaux                     | French Ligue 1                     | 2.057 | 1.443 | 0.701 | 1.325
-  72 | Angers                       | French Ligue 1                     | 2.057 | 1.446 | 0.703 | 1.325
-  73 | Atlas                        | Mexican Liga MX                    | 2.056 | 1.488 | 0.724 | 1.291
-  74 | Jubilo Iwata                 | Japanese J League                  | 2.053 | 1.453 | 0.708 | 1.223
-  75 | Kashima Antlers              | Japanese J League                  | 2.049 | 1.515 | 0.739 | 1.214
-  76 | St Etienne                   | French Ligue 1                     | 2.038 | 1.354 | 0.664 | 1.325
-  77 | FC Augsburg                  | German Bundesliga                  | 2.033 | 1.437 | 0.707 | 1.351
-  78 | Urawa Red Diamonds           | Japanese J League                  | 2.008 | 1.868 | 0.930 | 1.216
-  79 | Hertha Berlin                | German Bundesliga                  | 2.007 | 1.524 | 0.760 | 1.393
-  80 | Sampdoria                    | Italian Serie A                    | 1.990 | 1.454 | 0.730 | 1.407
-  81 | Libertad                     | Primera División de Paraguay       | 1.987 | 1.367 | 0.688 | 1.139
-  82 | Kashiwa Reysol               | Japanese J League                  | 1.986 | 1.466 | 0.738 | 1.224
-  83 | Troyes                       | French Ligue 1                     | 1.985 | 1.398 | 0.704 | 1.326
-  84 | Atlético Junior              | Fútbol Profesional Colombiano      | 1.981 | 1.378 | 0.696 | 1.171
-  85 | Bayer Leverkusen             | German Bundesliga                  | 1.974 | 1.519 | 0.769 | 1.369
-  86 | Gamba Osaka                  | Japanese J League                  | 1.973 | 1.541 | 0.781 | 1.207
-  87 | Cruz Azul                    | Mexican Liga MX                    | 1.970 | 1.380 | 0.700 | 1.307
-  88 | Delfin                       | Primera A de Ecuador               | 1.963 | 1.325 | 0.675 | 1.103
-  89 | Lobos BUAP                   | Mexican Liga MX                    | 1.959 | 1.574 | 0.803 | 1.300
-  90 | Santos                       | Mexican Liga MX                    | 1.959 | 1.625 | 0.830 | 1.304
-  91 | Toulouse                     | French Ligue 1                     | 1.946 | 1.402 | 0.720 | 1.326
-  92 | Millonarios                  | Fútbol Profesional Colombiano      | 1.945 | 1.327 | 0.682 | 1.209
-  93 | Coritiba FBC                 | Futebol Brasileiro                 | 1.942 | 1.387 | 0.714 | 1.400
-  94 | Yokohama F. Marinos          | Japanese J League                  | 1.936 | 1.326 | 0.685 | 1.225
-  95 | Lille                        | French Ligue 1                     | 1.929 | 1.396 | 0.724 | 1.327
-  96 | AS Roma                      | Italian Serie A                    | 1.927 | 1.496 | 0.776 | 1.402
-  97 | Montpellier                  | French Ligue 1                     | 1.926 | 1.313 | 0.682 | 1.327
-  98 | Juventus                     | Italian Serie A                    | 1.919 | 1.494 | 0.779 | 1.415
-  99 | Mainz                        | German Bundesliga                  | 1.917 | 1.446 | 0.754 | 1.353
- 100 | Bayern Munich                | German Bundesliga                  | 1.904 | 1.568 | 0.824 | 1.387
- 101 | Guadalajara                  | Mexican Liga MX                    | 1.896 | 1.307 | 0.689 | 1.292
- 102 | Lokomotiv Moscow             | Russian Premier League             | 1.895 | 1.359 | 0.717 | 1.264
- 103 | Strasbourg                   | French Ligue 1                     | 1.891 | 1.402 | 0.742 | 1.327
- 104 | Guaraní                      | Primera División de Paraguay       | 1.890 | 1.598 | 0.845 | 1.129
- 105 | Stade Rennes                 | French Ligue 1                     | 1.887 | 1.360 | 0.721 | 1.327
- 106 | Guingamp                     | French Ligue 1                     | 1.878 | 1.396 | 0.743 | 1.327
- 107 | Peñarol                      | Primera División de Uruguay        | 1.864 | 1.570 | 0.842 | 1.104
- 108 | América                      | Mexican Liga MX                    | 1.849 | 1.317 | 0.712 | 1.304
- 109 | León                         | Mexican Liga MX                    | 1.846 | 1.540 | 0.834 | 1.296
- 110 | Independiente Medellín       | Fútbol Profesional Colombiano      | 1.841 | 1.470 | 0.799 | 1.193
- 111 | Dinamo Moscow                | Russian Premier League             | 1.820 | 1.379 | 0.757 | 1.266
- 112 | Caen                         | French Ligue 1                     | 1.815 | 1.276 | 0.703 | 1.328
- 113 | CR Vasco da Gama             | Futebol Brasileiro                 | 1.813 | 1.367 | 0.754 | 1.394
- 114 | CSKA Moscow                  | Russian Premier League             | 1.807 | 1.353 | 0.748 | 1.224
- 115 | Morelia                      | Mexican Liga MX                    | 1.804 | 1.248 | 0.692 | 1.300
- 116 | Rostov                       | Russian Premier League             | 1.798 | 1.227 | 0.682 | 1.267
- 117 | Krasnodar                    | Russian Premier League             | 1.778 | 1.382 | 0.777 | 1.227
- 118 | Nacional                     | Primera División de Uruguay        | 1.768 | 1.346 | 0.761 | 1.096
- 119 | Toronto FC                   | Major League Soccer                | 1.751 | 1.464 | 0.836 | 1.089
- 120 | Tijuana                      | Mexican Liga MX                    | 1.750 | 1.367 | 0.781 | 1.278
- 121 | Pachuca                      | Mexican Liga MX                    | 1.743 | 1.228 | 0.704 | 1.299
- 122 | FC Tokyo                     | Japanese J League                  | 1.733 | 1.322 | 0.763 | 1.228
- 123 | EC Vitória                   | Futebol Brasileiro                 | 1.732 | 1.343 | 0.775 | 1.387
- 124 | Barcelona S.C.               | Primera A de Ecuador               | 1.732 | 1.296 | 0.748 | 1.157
- 125 | SC Amiens                    | French Ligue 1                     | 1.719 | 1.271 | 0.739 | 1.330
- 126 | FC Porto                     | Portuguese Liga                    | 1.715 | 1.323 | 0.771 | 1.186
- 127 | Nantes                       | French Ligue 1                     | 1.715 | 1.274 | 0.743 | 1.330
- 128 | Metz                         | French Ligue 1                     | 1.714 | 1.311 | 0.765 | 1.330
- 129 | FK Rubin Kazan               | Russian Premier League             | 1.697 | 1.311 | 0.773 | 1.270
- 130 | Deportivo Cali               | Fútbol Profesional Colombiano      | 1.692 | 1.442 | 0.852 | 1.205
- 131 | Nice                         | French Ligue 1                     | 1.691 | 1.271 | 0.751 | 1.320
- 132 | Independiente Santa Fe       | Fútbol Profesional Colombiano      | 1.690 | 1.137 | 0.673 | 1.194
- 133 | Chicago Fire                 | Major League Soccer                | 1.684 | 1.484 | 0.881 | 1.097
- 134 | Shandong Luneng Taishan      | Chinese Super League               | 1.672 | 1.443 | 0.863 | 1.028
- 135 | Terek Grozny                 | Russian Premier League             | 1.671 | 1.298 | 0.777 | 1.271
- 136 | Deportivo Pasto              | Fútbol Profesional Colombiano      | 1.656 | 1.353 | 0.817 | 1.188
- 137 | Defensor Sporting            | Primera División de Uruguay        | 1.656 | 1.375 | 0.831 | 1.094
- 138 | Spartak Moscow               | Russian Premier League             | 1.642 | 1.362 | 0.829 | 1.272
- 139 | Avaí                         | Futebol Brasileiro                 | 1.640 | 1.141 | 0.695 | 1.396
- 140 | Emelec                       | Primera A de Ecuador               | 1.633 | 1.276 | 0.781 | 1.110
- 141 | Sporting Kansas City         | Major League Soccer                | 1.632 | 1.155 | 0.708 | 1.075
- 142 | Dijon FCO                    | French Ligue 1                     | 1.626 | 1.313 | 0.808 | 1.332
- 143 | Sagan Tosu                   | Japanese J League                  | 1.625 | 1.223 | 0.752 | 1.230
- 144 | Le Havre AC                  | French Ligue 2                     | 1.619 | 1.443 | 0.892 | 1.096
- 145 | Chapecoense AF               | Futebol Brasileiro                 | 1.599 | 1.425 | 0.891 | 1.384
- 146 | Querétaro                    | Mexican Liga MX                    | 1.591 | 1.345 | 0.846 | 1.306
- 147 | Internacional                | Brasileirao B                      | 1.589 | 1.234 | 0.777 | 1.159
- 148 | Necaxa                       | Mexican Liga MX                    | 1.582 | 1.240 | 0.784 | 1.307
- 149 | Cardiff City                 | English League Championship        | 1.580 | 1.270 | 0.804 | 1.144
- 150 | Bristol City                 | English League Championship        | 1.577 | 1.392 | 0.883 | 1.151
- 151 | America Cali                 | Fútbol Profesional Colombiano      | 1.573 | 1.144 | 0.728 | 1.198
- 152 | Goianiense                   | Futebol Brasileiro                 | 1.572 | 1.276 | 0.812 | 1.412
- 153 | Rio Ave                      | Portuguese Liga                    | 1.569 | 1.234 | 0.786 | 1.180
- 154 | Ipswich Town                 | English League Championship        | 1.563 | 1.337 | 0.855 | 1.149
- 155 | Wolverhampton Wanderers      | English League Championship        | 1.558 | 1.230 | 0.790 | 1.153
- 156 | Alianza Petrolera            | Fútbol Profesional Colombiano      | 1.557 | 1.333 | 0.856 | 1.189
- 157 | Olimpia                      | Primera División de Paraguay       | 1.552 | 1.238 | 0.797 | 1.131
- 158 | Atlanta United FC            | Major League Soccer                | 1.546 | 1.459 | 0.944 | 1.084
- 159 | Veracruz                     | Mexican Liga MX                    | 1.503 | 1.153 | 0.767 | 1.312
- 160 | Pumas UNAM                   | Mexican Liga MX                    | 1.502 | 1.344 | 0.894 | 1.315
- 161 | Vissel Kobe                  | Japanese J League                  | 1.494 | 1.238 | 0.829 | 1.233
- 162 | Feirense                     | Portuguese Liga                    | 1.490 | 1.170 | 0.785 | 1.181
- 163 | FK Amkar Perm                | Russian Premier League             | 1.486 | 1.138 | 0.766 | 1.277
- 164 | Vila Nova-GO                 | Brasileirao B                      | 1.484 | 1.167 | 0.787 | 1.107
- 165 | Paraná Clube                 | Brasileirao B                      | 1.484 | 1.215 | 0.819 | 1.131
- 166 | Benfica                      | Portuguese Liga                    | 1.480 | 1.318 | 0.890 | 1.191
- 167 | Belenenses                   | Portuguese Liga                    | 1.479 | 1.160 | 0.785 | 1.182
- 168 | Sunderland                   | English League Championship        | 1.478 | 1.234 | 0.835 | 1.139
- 169 | Portimonense                 | Portuguese Liga                    | 1.476 | 1.229 | 0.833 | 1.182
- 170 | Unión Española               | Primera División de Chile          | 1.476 | 1.251 | 0.848 | 1.102
- 171 | Patriotas F.C.               | Fútbol Profesional Colombiano      | 1.475 | 1.034 | 0.701 | 1.220
- 172 | Moreirense                   | Portuguese Liga                    | 1.474 | 1.159 | 0.786 | 1.182
- 173 | Maritimo                     | Portuguese Liga                    | 1.474 | 1.159 | 0.786 | 1.182
- 174 | Shimizu S-Pulse              | Japanese J League                  | 1.471 | 1.326 | 0.902 | 1.233
- 175 | Houston Dynamo               | Major League Soccer                | 1.468 | 1.348 | 0.919 | 1.081
- 176 | Everton CD                   | Primera División de Chile          | 1.466 | 1.247 | 0.851 | 1.108
- 177 | Deportes Iquique             | Primera División de Chile          | 1.465 | 1.312 | 0.896 | 1.135
- 178 | Anzhi Makhachkala            | Russian Premier League             | 1.461 | 1.182 | 0.809 | 1.278
- 179 | Sporting CP                  | Portuguese Liga                    | 1.460 | 1.133 | 0.776 | 1.162
- 180 | América Mineiro              | Brasileirao B                      | 1.452 | 1.139 | 0.784 | 1.135
- 181 | Birmingham City              | English League Championship        | 1.452 | 1.224 | 0.843 | 1.149
- 182 | Colo Colo                    | Primera División de Chile          | 1.451 | 1.314 | 0.905 | 1.130
- 183 | Beijing Guoan                | Chinese Super League               | 1.450 | 1.290 | 0.889 | 1.039
- 184 | Leeds United                 | English League Championship        | 1.445 | 1.230 | 0.851 | 1.137
- 185 | Paços de Ferreira            | Portuguese Liga                    | 1.445 | 1.170 | 0.809 | 1.183
- 186 | Estoril                      | Portuguese Liga                    | 1.443 | 1.234 | 0.855 | 1.183
- 187 | Wanderers                    | Primera División de Uruguay        | 1.439 | 1.313 | 0.912 | 1.092
- 188 | Vitoria Setubal              | Portuguese Liga                    | 1.431 | 1.161 | 0.811 | 1.183
- 189 | Braga                        | Portuguese Liga                    | 1.430 | 1.233 | 0.862 | 1.163
- 190 | Hull City                    | English League Championship        | 1.426 | 1.313 | 0.921 | 1.148
- 191 | Independiente del Valle      | Primera A de Ecuador               | 1.423 | 1.215 | 0.854 | 1.121
- 192 | Fulham                       | English League Championship        | 1.422 | 1.154 | 0.811 | 1.139
- 193 | Jaguares de Córdoba          | Fútbol Profesional Colombiano      | 1.420 | 1.040 | 0.733 | 1.205
- 194 | Middlesbrough                | English League Championship        | 1.417 | 1.162 | 0.820 | 1.147
- 195 | Nottingham Forest            | English League Championship        | 1.415 | 1.284 | 0.908 | 1.154
- 196 | Juventude                    | Brasileirao B                      | 1.414 | 1.179 | 0.834 | 1.120
- 197 | Sol de América               | Primera División de Paraguay       | 1.413 | 1.193 | 0.844 | 1.147
- 198 | Besiktas                     | Turkish Super Lig                  | 1.408 | 1.213 | 0.862 | 1.130
- 199 | Instituto de Córdoba         | Nacional B de Argentina            | 1.405 | 1.094 | 0.778 | 1.119
- 200 | Club Deportivo Cuenca        | Primera A de Ecuador               | 1.405 | 1.113 | 0.792 | 1.118
- 201 | La Equidad                   | Fútbol Profesional Colombiano      | 1.402 | 1.095 | 0.781 | 1.190
- 202 | Oeste                        | Brasileirao B                      | 1.402 | 1.099 | 0.784 | 1.107
- 203 | Istanbul Basaksehir          | Turkish Super Lig                  | 1.400 | 1.271 | 0.908 | 1.163
- 204 | Puebla                       | Mexican Liga MX                    | 1.388 | 1.204 | 0.867 | 1.298
- 205 | Ceará                        | Brasileirao B                      | 1.386 | 1.122 | 0.810 | 1.104
- 206 | New York City FC             | Major League Soccer                | 1.376 | 1.335 | 0.970 | 1.107
- 207 | Clermont Foot                | French Ligue 2                     | 1.374 | 1.057 | 0.769 | 1.098
- 208 | Gimnastic de Tarragona       | Spanish Segunda Division           | 1.371 | 1.155 | 0.842 | 1.570
- 209 | Feyenoord Rotterdam          | Dutch Eredivisie                   | 1.371 | 1.202 | 0.876 | 1.112
- 210 | Cerro Porteño                | Primera División de Paraguay       | 1.366 | 1.185 | 0.867 | 1.133
- 211 | Fenerbahce                   | Turkish Super Lig                  | 1.366 | 1.219 | 0.892 | 1.120
- 212 | Trabzonspor                  | Turkish Super Lig                  | 1.365 | 1.212 | 0.888 | 1.132
- 213 | Deportes Tolima              | Fútbol Profesional Colombiano      | 1.363 | 1.180 | 0.866 | 1.186
- 214 | Sheffield Wednesday          | English League Championship        | 1.360 | 1.194 | 0.878 | 1.144
- 215 | Guimaraes                    | Portuguese Liga                    | 1.359 | 1.166 | 0.858 | 1.185
- 216 | Stade de Reims               | French Ligue 2                     | 1.355 | 1.099 | 0.811 | 1.102
- 217 | AZ Alkmaar                   | Dutch Eredivisie                   | 1.355 | 1.313 | 0.969 | 1.104
- 218 | Lorient                      | French Ligue 2                     | 1.353 | 1.115 | 0.824 | 1.101
- 219 | Boavista                     | Portuguese Liga                    | 1.351 | 1.167 | 0.863 | 1.204
- 220 | Bolton Wanderers             | English League Championship        | 1.351 | 1.192 | 0.883 | 1.145
- 221 | Ferro Carril Oeste           | Nacional B de Argentina            | 1.350 | 1.122 | 0.831 | 1.364
- 222 | Excelsior                    | Dutch Eredivisie                   | 1.347 | 1.303 | 0.967 | 1.088
- 223 | Brentford                    | English League Championship        | 1.343 | 1.292 | 0.962 | 1.147
- 224 | Valenciennes                 | French Ligue 2                     | 1.342 | 1.107 | 0.825 | 1.103
- 225 | Queens Park Rangers          | English League Championship        | 1.342 | 1.117 | 0.833 | 1.154
- 226 | Reading                      | English League Championship        | 1.340 | 1.176 | 0.878 | 1.147
- 227 | Norwich City                 | English League Championship        | 1.339 | 1.240 | 0.926 | 1.141
- 228 | Macara                       | Primera A de Ecuador               | 1.336 | 1.183 | 0.885 | 1.120
- 229 | Zulte-Waregem                | Belgian Jupiler League             | 1.332 | 1.248 | 0.937 | 1.039
- 230 | FC Utrecht                   | Dutch Eredivisie                   | 1.331 | 1.206 | 0.906 | 1.075
- 231 | FC Dallas                    | Major League Soccer                | 1.331 | 1.218 | 0.915 | 1.092
- 232 | New York Red Bulls           | Major League Soccer                | 1.329 | 1.207 | 0.908 | 1.105
- 233 | Cerro                        | Primera División de Uruguay        | 1.327 | 1.246 | 0.939 | 1.099
- 234 | Derby County                 | English League Championship        | 1.326 | 1.120 | 0.845 | 1.146
- 235 | Goztepe                      | Turkish Super Lig                  | 1.325 | 1.213 | 0.915 | 1.134
- 236 | Club Brugge                  | Belgian Jupiler League             | 1.324 | 1.304 | 0.985 | 1.046
- 237 | Boston River                 | Primera División de Uruguay        | 1.323 | 1.198 | 0.905 | 1.101
- 238 | Vitesse Arnhem               | Dutch Eredivisie                   | 1.320 | 1.291 | 0.978 | 1.091
- 239 | Nurnberg                     | German 2. Bundesliga               | 1.315 | 1.192 | 0.907 | 1.034
- 240 | Konyaspor                    | Turkish Super Lig                  | 1.312 | 1.187 | 0.905 | 1.135
- 241 | Preston North End            | English League Championship        | 1.309 | 1.123 | 0.858 | 1.147
- 242 | Galatasaray                  | Turkish Super Lig                  | 1.308 | 1.197 | 0.915 | 1.107
- 243 | Antalyaspor                  | Turkish Super Lig                  | 1.306 | 1.153 | 0.882 | 1.146
- 244 | Seattle Sounders FC          | Major League Soccer                | 1.301 | 1.231 | 0.946 | 1.085
- 245 | VVV Venlo                    | Dutch Eredivisie                   | 1.301 | 1.257 | 0.967 | 1.090
- 246 | Millwall                     | English League Championship        | 1.301 | 1.195 | 0.918 | 1.146
- 247 | Sheffield United             | English League Championship        | 1.299 | 1.148 | 0.884 | 1.154
- 248 | Argentinos Juniors           | Nacional B de Argentina            | 1.297 | 1.049 | 0.809 | 1.159
- 249 | Ventforet Kofu               | Japanese J League                  | 1.294 | 0.967 | 0.747 | 1.237
- 250 | Cortuluá                     | Fútbol Profesional Colombiano      | 1.293 | 1.103 | 0.853 | 1.200
- 251 | Atlético Huila               | Fútbol Profesional Colombiano      | 1.280 | 1.036 | 0.810 | 1.202
- 252 | Columbus Crew SC             | Major League Soccer                | 1.279 | 1.238 | 0.968 | 1.110
- 253 | Barnsley                     | English League Championship        | 1.279 | 1.265 | 0.990 | 1.147
- 254 | Bucaramanga                  | Fútbol Profesional Colombiano      | 1.278 | 1.013 | 0.793 | 1.203
- 255 | Nimes                        | French Ligue 2                     | 1.276 | 1.153 | 0.903 | 1.107
- 256 | Vegalta Sendai               | Japanese J League                  | 1.275 | 1.221 | 0.958 | 1.238
- 257 | Nacional                     | Primera División de Paraguay       | 1.274 | 1.151 | 0.903 | 1.159
- 258 | CRB                          | Brasileirao B                      | 1.273 | 1.083 | 0.851 | 1.099
- 259 | Consadole Sapporo            | Japanese J League                  | 1.271 | 1.133 | 0.891 | 1.238
- 260 | PEC Zwolle                   | Dutch Eredivisie                   | 1.265 | 1.297 | 1.026 | 1.091
- 261 | Antofagasta                  | Primera División de Chile          | 1.265 | 1.077 | 0.851 | 1.103
- 262 | U. Católica                  | Primera A de Ecuador               | 1.263 | 1.174 | 0.930 | 1.134
- 263 | GFC Ajaccio                  | French Ligue 2                     | 1.263 | 1.029 | 0.815 | 1.103
- 264 | AC Ajaccio                   | French Ligue 2                     | 1.260 | 1.089 | 0.865 | 1.103
- 265 | Deportes Temuco              | Primera División de Chile          | 1.257 | 1.157 | 0.921 | 1.103
- 266 | Santiago Wanderers           | Primera División de Chile          | 1.257 | 1.189 | 0.946 | 1.090
- 267 | US Quevilly                  | French Ligue 2                     | 1.256 | 1.090 | 0.868 | 1.104
- 268 | Montreal Impact              | Major League Soccer                | 1.254 | 1.358 | 1.083 | 1.108
- 269 | Criciúma                     | Brasileirao B                      | 1.248 | 1.150 | 0.921 | 1.124
- 270 | AS Nancy Lorraine            | French Ligue 2                     | 1.248 | 1.022 | 0.819 | 1.104
- 271 | Aston Villa                  | English League Championship        | 1.243 | 1.156 | 0.930 | 1.144
- 272 | San Luis                     | Primera División de Chile          | 1.241 | 1.203 | 0.969 | 1.103
- 273 | Fénix                        | Primera División de Uruguay        | 1.241 | 1.183 | 0.953 | 1.101
- 274 | Sanfrecce Hiroshima          | Japanese J League                  | 1.241 | 1.161 | 0.936 | 1.239
- 275 | Sochaux                      | French Ligue 2                     | 1.237 | 1.162 | 0.939 | 1.105
- 276 | General Díaz                 | Primera División de Paraguay       | 1.235 | 1.194 | 0.967 | 1.140
- 277 | Kayserispor                  | Turkish Super Lig                  | 1.232 | 1.186 | 0.962 | 1.139
- 278 | Universidad de Concepción    | Primera División de Chile          | 1.231 | 1.131 | 0.919 | 1.104
- 279 | Portland Timbers             | Major League Soccer                | 1.230 | 1.354 | 1.101 | 1.078
- 280 | Guarani FC                   | Brasileirao B                      | 1.229 | 1.090 | 0.887 | 1.107
- 281 | FC Zürich                    | Swiss Super League                 | 1.229 | 1.136 | 0.924 | 1.022
- 282 | Boa MG                       | Brasileirao B                      | 1.228 | 1.041 | 0.848 | 1.106
- 283 | LDU Quito                    | Primera A de Ecuador               | 1.226 | 1.164 | 0.950 | 1.140
- 284 | Heerenveen                   | Dutch Eredivisie                   | 1.223 | 1.275 | 1.043 | 1.092
- 285 | El Nacional                  | Primera A de Ecuador               | 1.223 | 1.212 | 0.991 | 1.124
- 286 | SC Heracles Almelo           | Dutch Eredivisie                   | 1.221 | 1.216 | 0.995 | 1.092
- 287 | Burton Albion                | English League Championship        | 1.221 | 1.162 | 0.952 | 1.161
- 288 | Huachipato                   | Primera División de Chile          | 1.219 | 1.137 | 0.932 | 1.100
- 289 | Royal Charleroi SC           | Belgian Jupiler League             | 1.218 | 1.126 | 0.925 | 1.043
- 290 | Vancouver Whitecaps          | Major League Soccer                | 1.213 | 1.169 | 0.963 | 1.080
- 291 | FC Basel                     | Swiss Super League                 | 1.210 | 1.238 | 1.023 | 1.023
- 292 | Niort                        | French Ligue 2                     | 1.209 | 1.048 | 0.867 | 1.103
- 293 | Fortuna Düsseldorf           | German 2. Bundesliga               | 1.208 | 1.185 | 0.981 | 1.027
- 294 | Danubio F.C.                 | Primera División de Uruguay        | 1.205 | 1.058 | 0.879 | 1.112
- 295 | Universidad de Chile         | Primera División de Chile          | 1.198 | 1.169 | 0.976 | 1.156
- 296 | FC Groningen                 | Dutch Eredivisie                   | 1.191 | 1.257 | 1.056 | 1.093
- 297 | Rionegro Águilas             | Fútbol Profesional Colombiano      | 1.191 | 0.891 | 0.748 | 1.181
- 298 | Once Caldas                  | Fútbol Profesional Colombiano      | 1.189 | 1.075 | 0.905 | 1.198
- 299 | Philadelphia Union           | Major League Soccer                | 1.188 | 1.154 | 0.972 | 1.096
- 300 | St Pauli                     | German 2. Bundesliga               | 1.188 | 1.193 | 1.004 | 1.038
- 301 | New England Revolution       | Major League Soccer                | 1.187 | 1.237 | 1.043 | 1.108
- 302 | Rampla Juniors               | Primera División de Uruguay        | 1.186 | 1.142 | 0.963 | 1.103
- 303 | Lens                         | French Ligue 2                     | 1.185 | 1.110 | 0.936 | 1.106
- 304 | FC Twente                    | Dutch Eredivisie                   | 1.185 | 1.202 | 1.014 | 1.093
- 305 | PSV Eindhoven                | Dutch Eredivisie                   | 1.184 | 1.220 | 1.031 | 1.108
- 306 | Brest                        | French Ligue 2                     | 1.175 | 1.050 | 0.894 | 1.104
- 307 | Shanghai Greenland Shenhua   | Chinese Super League               | 1.173 | 1.262 | 1.077 | 1.055
- 308 | Universidad Católica         | Primera División de Chile          | 1.171 | 1.166 | 0.995 | 1.166
- 309 | Tigres FC                    | Fútbol Profesional Colombiano      | 1.169 | 0.960 | 0.821 | 1.195
- 310 | Omiya Ardija                 | Japanese J League                  | 1.167 | 1.142 | 0.979 | 1.241
- 311 | Audax Italiano               | Primera División de Chile          | 1.164 | 1.192 | 1.024 | 1.103
- 312 | Santa Cruz FC                | Brasileirao B                      | 1.163 | 1.043 | 0.897 | 1.130
- 313 | KV Kortrijk                  | Belgian Jupiler League             | 1.161 | 1.085 | 0.935 | 1.044
- 314 | Goiás EC                     | Brasileirao B                      | 1.157 | 1.116 | 0.965 | 1.125
- 315 | Willem II Tilburg            | Dutch Eredivisie                   | 1.155 | 1.182 | 1.023 | 1.093
- 316 | Racing (U)                   | Primera División de Uruguay        | 1.152 | 1.084 | 0.941 | 1.100
- 317 | Roda JC Kerkrade             | Dutch Eredivisie                   | 1.151 | 1.235 | 1.073 | 1.094
- 318 | Envigado                     | Fútbol Profesional Colombiano      | 1.149 | 1.067 | 0.929 | 1.181
- 319 | Luverdense                   | Brasileirao B                      | 1.149 | 1.014 | 0.882 | 1.141
- 320 | Tours                        | French Ligue 2                     | 1.146 | 1.079 | 0.941 | 1.109
- 321 | Ajax Amsterdam               | Dutch Eredivisie                   | 1.141 | 1.206 | 1.057 | 1.101
- 322 | AJ Auxerre                   | French Ligue 2                     | 1.135 | 1.055 | 0.929 | 1.106
- 323 | Rosenborg                    | Norwegian Tippeligaen              | 1.130 | 1.109 | 0.981 | 0.895
- 324 | Sint-Truidense               | Belgian Jupiler League             | 1.128 | 1.117 | 0.990 | 1.046
- 325 | FC Union Berlin              | German 2. Bundesliga               | 1.127 | 1.154 | 1.024 | 1.029
- 326 | Chateauroux                  | French Ligue 2                     | 1.126 | 1.058 | 0.940 | 1.108
- 327 | ADO Den Haag                 | Dutch Eredivisie                   | 1.122 | 1.151 | 1.026 | 1.100
- 328 | Paris FC                     | French Ligue 2                     | 1.121 | 0.979 | 0.873 | 1.107
- 329 | Guayaquil City FC            | Primera A de Ecuador               | 1.120 | 1.006 | 0.898 | 1.128
- 330 | NAC Breda                    | Dutch Eredivisie                   | 1.115 | 1.197 | 1.073 | 1.094
- 331 | Racing Genk                  | Belgian Jupiler League             | 1.113 | 1.118 | 1.004 | 1.046
- 332 | TSV Eintracht Braunschweig   | German 2. Bundesliga               | 1.112 | 1.114 | 1.002 | 1.030
- 333 | Young Boys                   | Swiss Super League                 | 1.111 | 1.138 | 1.025 | 1.042
- 334 | Sparta Rotterdam             | Dutch Eredivisie                   | 1.111 | 1.158 | 1.043 | 1.095
- 335 | Lucerne                      | Swiss Super League                 | 1.108 | 1.136 | 1.025 | 1.028
- 336 | KV Mechelen                  | Belgian Jupiler League             | 1.105 | 1.084 | 0.981 | 1.046
- 337 | FC Salzburg                  | Austrian Bundesliga                | 1.102 | 1.079 | 0.979 | 0.959
- 338 | KV Oostende                  | Belgian Jupiler League             | 1.101 | 1.091 | 0.991 | 1.070
- 339 | Anderlecht                   | Belgian Jupiler League             | 1.101 | 1.067 | 0.969 | 1.046
- 340 | Dynamo Dresden               | German 2. Bundesliga               | 1.097 | 1.087 | 0.990 | 1.030
- 341 | Malmo FF                     | Swedish Allsvenskanliga            | 1.096 | 1.094 | 0.998 | 0.874
- 342 | Correcaminos                 | Ascenso MX                         | 1.095 | 1.031 | 0.942 | 1.074
- 343 | St Gallen                    | Swiss Super League                 | 1.095 | 1.083 | 0.989 | 1.029
- 344 | SV Sandhausen                | German 2. Bundesliga               | 1.093 | 1.084 | 0.992 | 1.030
- 345 | Standard Liege               | Belgian Jupiler League             | 1.092 | 1.070 | 0.980 | 1.061
- 346 | Changchun Yatai              | Chinese Super League               | 1.090 | 1.065 | 0.977 | 1.060
- 347 | Juventud                     | Primera División de Uruguay        | 1.081 | 1.075 | 0.994 | 1.103
- 348 | Celtic                       | Scottish Premiership               | 1.079 | 1.032 | 0.957 | 0.885
- 349 | SC Rheindorf Altach          | Austrian Bundesliga                | 1.079 | 1.090 | 1.010 | 0.998
- 350 | Hibernian                    | Scottish Premiership               | 1.078 | 1.133 | 1.052 | 0.859
- 351 | Brøndby                      | Danish SAS-Ligaen                  | 1.077 | 1.153 | 1.070 | 0.966
- 352 | Sonderjyske                  | Danish SAS-Ligaen                  | 1.075 | 1.079 | 1.004 | 0.966
- 353 | River Plate                  | Primera División de Uruguay        | 1.072 | 0.985 | 0.919 | 1.103
- 354 | San Jose Earthquakes         | Major League Soccer                | 1.068 | 1.068 | 1.000 | 1.089
- 355 | KAA Gent                     | Belgian Jupiler League             | 1.065 | 1.124 | 1.056 | 1.047
- 356 | FC Thun                      | Swiss Super League                 | 1.065 | 1.116 | 1.048 | 1.030
- 357 | Holstein Kiel                | German 2. Bundesliga               | 1.063 | 1.174 | 1.105 | 1.031
- 358 | Sportivo Luqueño             | Primera División de Paraguay       | 1.060 | 1.069 | 1.008 | 1.154
- 359 | SK Brann                     | Norwegian Tippeligaen              | 1.059 | 1.106 | 1.045 | 0.888
- 360 | SSV Jahn Regensburg          | German 2. Bundesliga               | 1.058 | 1.074 | 1.016 | 1.031
- 361 | Rubio Ñú                     | Primera División de Paraguay       | 1.058 | 1.056 | 0.998 | 1.148
- 362 | SK Sturm Graz                | Austrian Bundesliga                | 1.057 | 1.157 | 1.095 | 1.006
- 363 | Arminia Bielefeld            | German 2. Bundesliga               | 1.054 | 1.105 | 1.048 | 1.033
- 364 | VfL Bochum                   | German 2. Bundesliga               | 1.051 | 1.053 | 1.002 | 1.041
- 365 | AC Horsens                   | Danish SAS-Ligaen                  | 1.049 | 1.083 | 1.032 | 0.967
- 366 | FC Midtjylland               | Danish SAS-Ligaen                  | 1.049 | 1.242 | 1.184 | 0.936
- 367 | Liverpool                    | Primera División de Uruguay        | 1.047 | 1.010 | 0.965 | 1.122
- 368 | Plaza Colonia                | Primera División de Uruguay        | 1.046 | 1.006 | 0.962 | 1.108
- 369 | Palestino                    | Primera División de Chile          | 1.046 | 1.186 | 1.134 | 1.154
- 370 | Real Salt Lake               | Major League Soccer                | 1.046 | 1.166 | 1.115 | 1.097
- 371 | FC Nordsjaelland             | Danish SAS-Ligaen                  | 1.043 | 1.243 | 1.192 | 0.968
- 372 | Maccabi Tel-Aviv             | Israeli Premier League             | 1.043 | 0.911 | 0.873 | 1.010
- 373 | SV Darmstadt 98              | German 2. Bundesliga               | 1.035 | 1.048 | 1.013 | 1.031
- 374 | Náutico                      | Brasileirao B                      | 1.035 | 0.977 | 0.944 | 1.110
- 375 | AEK Athens                   | Greek Super League                 | 1.033 | 0.945 | 0.915 | 1.209
- 376 | Atlante                      | Ascenso MX                         | 1.031 | 1.000 | 0.970 | 1.082
- 377 | Wigan Athletic               | English League One                 | 1.029 | 1.065 | 1.035 | 0.945
- 378 | Colorado Rapids              | Major League Soccer                | 1.029 | 1.017 | 0.988 | 1.097
- 379 | FC Sion                      | Swiss Super League                 | 1.028 | 1.046 | 1.018 | 1.032
- 380 | Heidenheimer SB              | German 2. Bundesliga               | 1.027 | 1.051 | 1.023 | 1.032
- 381 | Panionios                    | Greek Super League                 | 1.024 | 0.936 | 0.914 | 1.018
- 382 | Tianjin Teda                 | Chinese Super League               | 1.016 | 0.971 | 0.956 | 1.066
- 383 | Figueirense FC               | Brasileirao B                      | 1.013 | 1.073 | 1.059 | 1.113
- 384 | O'Higgins                    | Primera División de Chile          | 1.013 | 1.056 | 1.042 | 1.095
- 385 | Orlando City SC              | Major League Soccer                | 1.003 | 1.037 | 1.034 | 1.116
- 386 | El Tanque Sisley             | Primera División de Uruguay        | 1.001 | 1.138 | 1.137 | 1.109
- 387 | Bnei Yehuda                  | Israeli Premier League             | 0.997 | 0.894 | 0.896 | 1.181
- 388 | MSV Duisburg                 | German 2. Bundesliga               | 0.996 | 1.012 | 1.016 | 1.035
- 389 | FC Ingolstadt 04             | German 2. Bundesliga               | 0.996 | 0.987 | 0.991 | 1.033
- 390 | SpVgg Greuther Furth         | German 2. Bundesliga               | 0.994 | 1.018 | 1.023 | 1.033
- 391 | KSC Lokeren                  | Belgian Jupiler League             | 0.981 | 1.033 | 1.054 | 1.051
- 392 | FC Copenhagen                | Danish SAS-Ligaen                  | 0.978 | 1.001 | 1.024 | 0.970
- 393 | Kaiserslautern               | German 2. Bundesliga               | 0.975 | 1.023 | 1.049 | 1.033
- 394 | ABC                          | Brasileirao B                      | 0.971 | 0.920 | 0.948 | 1.128
- 395 | FC Erzgebirge Aue            | German 2. Bundesliga               | 0.971 | 1.020 | 1.051 | 1.033
- 396 | Fuerza Amarilla              | Primera A de Ecuador               | 0.968 | 0.916 | 0.946 | 1.133
- 397 | LA Galaxy                    | Major League Soccer                | 0.967 | 1.159 | 1.198 | 1.099
- 398 | Henan Jianye                 | Chinese Super League               | 0.967 | 0.925 | 0.956 | 1.070
- 399 | Rangers                      | Scottish Premiership               | 0.967 | 1.103 | 1.141 | 0.917
- 400 | Alianza Lima                 | Primera Profesional de Perú        | 0.962 | 1.053 | 1.094 | 0.887
- 401 | Albirex Niigata              | Japanese J League                  | 0.961 | 0.998 | 1.039 | 1.247
- 402 | UTC                          | Primera Profesional de Perú        | 0.959 | 0.902 | 0.941 | 0.888
- 403 | Doncaster Rovers             | English League One                 | 0.958 | 1.038 | 1.084 | 0.936
- 404 | Sarpsborg FK                 | Norwegian Tippeligaen              | 0.958 | 1.032 | 1.077 | 0.891
- 405 | U. de G.                     | Ascenso MX                         | 0.955 | 0.951 | 0.996 | 1.035
- 406 | Oxford United                | English League One                 | 0.954 | 1.078 | 1.131 | 0.930
- 407 | SV Mattersburg               | Austrian Bundesliga                | 0.953 | 1.090 | 1.144 | 1.003
- 408 | Rapid Vienna                 | Austrian Bundesliga                | 0.952 | 1.073 | 1.127 | 1.003
- 409 | Rotherham United             | English League One                 | 0.950 | 1.046 | 1.101 | 0.938
- 410 | Tampico Madero               | Ascenso MX                         | 0.950 | 0.968 | 1.019 | 0.974
- 411 | Aberdeen                     | Scottish Premiership               | 0.940 | 0.980 | 1.042 | 0.923
- 412 | LASK Linz                    | Austrian Bundesliga                | 0.940 | 1.006 | 1.070 | 1.004
- 413 | Austria Vienna               | Austrian Bundesliga                | 0.930 | 1.068 | 1.148 | 1.005
- 414 | FC Lugano                    | Swiss Super League                 | 0.923 | 0.966 | 1.047 | 1.048
- 415 | Sporting Cristal             | Primera Profesional de Perú        | 0.918 | 1.047 | 1.141 | 0.917
- 416 | Molde                        | Norwegian Tippeligaen              | 0.917 | 1.040 | 1.134 | 0.892
- 417 | Sirius                       | Swedish Allsvenskanliga            | 0.914 | 1.054 | 1.152 | 0.879
- 418 | Shrewsbury Town              | English League One                 | 0.912 | 0.953 | 1.045 | 0.937
- 419 | Sud América                  | Primera División de Uruguay        | 0.910 | 1.097 | 1.205 | 1.109
- 420 | Trinidense                   | Primera División de Paraguay       | 0.909 | 1.007 | 1.108 | 1.155
- 421 | Grasshoppers                 | Swiss Super League                 | 0.908 | 1.084 | 1.194 | 1.039
- 422 | Brisbane Roar                | Australian A-League                | 0.907 | 1.015 | 1.119 | 0.985
- 423 | Peterborough United          | English League One                 | 0.902 | 1.048 | 1.161 | 0.930
- 424 | Fleetwood Town               | English League One                 | 0.901 | 0.962 | 1.068 | 0.929
- 425 | Djurgardens IF               | Swedish Allsvenskanliga            | 0.891 | 0.996 | 1.118 | 0.880
- 426 | Caracas F.C.                 | Primera División de Venezuela      | 0.889 | 0.945 | 1.062 | 0.900
- 427 | Adelaide United              | Australian A-League                | 0.885 | 1.045 | 1.181 | 0.985
- 428 | Bradford City                | English League One                 | 0.884 | 0.999 | 1.129 | 0.933
- 429 | Carabobo                     | Primera División de Venezuela      | 0.877 | 0.896 | 1.022 | 0.908
- 430 | Deportivo Táchira            | Primera División de Venezuela      | 0.873 | 0.889 | 1.018 | 0.876
- 431 | Sport Huancayo               | Primera Profesional de Perú        | 0.869 | 0.975 | 1.122 | 0.892
- 432 | Partick Thistle              | Scottish Premiership               | 0.867 | 0.938 | 1.083 | 0.885
- 433 | DC United                    | Major League Soccer                | 0.866 | 0.993 | 1.147 | 1.103
- 434 | Silkeborg IF                 | Danish SAS-Ligaen                  | 0.863 | 0.943 | 1.093 | 0.976
- 435 | Venados FC                   | Ascenso MX                         | 0.861 | 0.874 | 1.015 | 1.056
- 436 | Charlton Athletic            | English League One                 | 0.860 | 0.938 | 1.091 | 0.933
- 437 | Walsall                      | English League One                 | 0.858 | 0.979 | 1.141 | 0.938
- 438 | Blackpool                    | English League One                 | 0.857 | 0.953 | 1.112 | 0.937
- 439 | Milton Keynes Dons           | English League One                 | 0.856 | 0.866 | 1.011 | 0.948
- 440 | BK Hacken                    | Swedish Allsvenskanliga            | 0.856 | 0.872 | 1.019 | 0.881
- 441 | Portsmouth                   | English League One                 | 0.848 | 0.956 | 1.128 | 0.937
- 442 | Universitario de Deportes    | Primera Profesional de Perú        | 0.848 | 0.926 | 1.091 | 0.893
- 443 | Minnesota United FC          | Major League Soccer                | 0.847 | 1.104 | 1.304 | 1.111
- 444 | AaB                          | Danish SAS-Ligaen                  | 0.847 | 1.019 | 1.203 | 0.976
- 445 | Scunthorpe United            | English League One                 | 0.845 | 0.987 | 1.168 | 0.936
- 446 | Blackburn Rovers             | English League One                 | 0.845 | 1.000 | 1.184 | 0.943
- 447 | St Johnstone                 | Scottish Premiership               | 0.843 | 0.996 | 1.182 | 0.929
- 448 | IFK                          | Swedish Allsvenskanliga            | 0.841 | 0.985 | 1.171 | 0.881
- 449 | Ross County                  | Scottish Premiership               | 0.839 | 0.928 | 1.106 | 0.882
- 450 | Rochdale                     | English League One                 | 0.838 | 0.912 | 1.089 | 0.941
- 451 | Randers FC                   | Danish SAS-Ligaen                  | 0.835 | 0.892 | 1.068 | 0.977
- 452 | Monagas SC                   | Primera División de Venezuela      | 0.834 | 0.914 | 1.096 | 0.886
- 453 | Sydney FC                    | Australian A-League                | 0.833 | 0.949 | 1.140 | 1.023
- 454 | Haugesund                    | Norwegian Tippeligaen              | 0.831 | 0.926 | 1.115 | 0.853
- 455 | Elfsborg                     | Swedish Allsvenskanliga            | 0.828 | 1.086 | 1.312 | 0.882
- 456 | Bristol Rovers               | English League One                 | 0.822 | 0.985 | 1.198 | 0.933
- 457 | AIK                          | Swedish Allsvenskanliga            | 0.819 | 0.815 | 0.995 | 0.899
- 458 | Melgar                       | Primera Profesional de Perú        | 0.814 | 0.955 | 1.172 | 0.918
- 459 | AGF Aarhus                   | Danish SAS-Ligaen                  | 0.813 | 0.960 | 1.182 | 0.978
- 460 | Deportivo Municipal Lima     | Primera Profesional de Perú        | 0.813 | 0.856 | 1.052 | 0.910
- 461 | FCSB                         | Romanian First Division            | 0.812 | 0.839 | 1.033 | 0.930
- 462 | Gillingham                   | English League One                 | 0.811 | 0.868 | 1.070 | 0.936
- 463 | Northampton Town             | English League One                 | 0.810 | 0.872 | 1.078 | 0.937
- 464 | Eupen                        | Belgian Jupiler League             | 0.807 | 1.020 | 1.264 | 1.068
- 465 | Östersunds FK                | Swedish Allsvenskanliga            | 0.805 | 0.930 | 1.155 | 0.897
- 466 | Liaoning Whowin              | Chinese Super League               | 0.805 | 1.028 | 1.277 | 1.084
- 467 | Bury                         | English League One                 | 0.804 | 0.919 | 1.143 | 0.941
- 468 | Plymouth Argyle              | English League One                 | 0.803 | 0.953 | 1.187 | 0.936
- 469 | AFC Wimbledon                | English League One                 | 0.798 | 0.915 | 1.146 | 0.938
- 470 | Deportivo Anzoategui         | Primera División de Venezuela      | 0.792 | 0.763 | 0.964 | 0.886
- 471 | Dorados de Sinaloa           | Ascenso MX                         | 0.792 | 0.941 | 1.188 | 1.122
- 472 | Motherwell                   | Scottish Premiership               | 0.791 | 0.973 | 1.229 | 0.870
- 473 | CFR Cluj-Napoca              | Romanian First Division            | 0.788 | 0.830 | 1.053 | 0.889
- 474 | Aalesund                     | Norwegian Tippeligaen              | 0.781 | 0.934 | 1.196 | 0.896
- 475 | Oldham Athletic              | English League One                 | 0.776 | 0.941 | 1.213 | 0.935
- 476 | Clan Juvenil                 | Primera A de Ecuador               | 0.773 | 0.932 | 1.206 | 1.144
- 477 | Universitatea Craiova        | Romanian First Division            | 0.771 | 0.791 | 1.025 | 0.965
- 478 | FC Botosani                  | Romanian First Division            | 0.770 | 0.808 | 1.049 | 0.891
- 479 | Lyngby                       | Danish SAS-Ligaen                  | 0.760 | 0.998 | 1.313 | 0.949
- 480 | Hamilton Academical          | Scottish Premiership               | 0.759 | 0.909 | 1.197 | 0.892
- 481 | Stromsgodset                 | Norwegian Tippeligaen              | 0.757 | 0.925 | 1.222 | 0.897
- 482 | Lillestrom                   | Norwegian Tippeligaen              | 0.746 | 0.987 | 1.323 | 0.897
- 483 | Concordia Chiajna            | Romanian First Division            | 0.745 | 0.832 | 1.117 | 0.894
- 484 | Luton Town                   | English League Two                 | 0.744 | 0.928 | 1.248 | 0.850
- 485 | Barnet                       | English League Two                 | 0.743 | 0.901 | 1.214 | 0.846
- 486 | Western Sydney Wanderers     | Australian A-League                | 0.742 | 0.969 | 1.306 | 1.040
- 487 | Valerenga                    | Norwegian Tippeligaen              | 0.735 | 0.883 | 1.201 | 0.915
- 488 | Zulia                        | Primera División de Venezuela      | 0.734 | 0.959 | 1.307 | 0.936
- 489 | Sandefjord                   | Norwegian Tippeligaen              | 0.732 | 0.952 | 1.300 | 0.898
- 490 | Dundee                       | Scottish Premiership               | 0.729 | 0.885 | 1.215 | 0.889
- 491 | Newport County               | English League Two                 | 0.729 | 0.908 | 1.245 | 0.839
- 492 | IFK Norrkoping               | Swedish Allsvenskanliga            | 0.728 | 0.917 | 1.260 | 0.885
- 493 | Hammarby                     | Swedish Allsvenskanliga            | 0.725 | 0.898 | 1.240 | 0.885
- 494 | Coventry City                | English League Two                 | 0.722 | 0.890 | 1.232 | 0.839
- 495 | Dinamo Bucuresti             | Romanian First Division            | 0.719 | 0.773 | 1.075 | 0.976
- 496 | Southend United              | English League One                 | 0.717 | 0.902 | 1.258 | 0.934
- 497 | Accrington Stanley           | English League Two                 | 0.713 | 0.951 | 1.334 | 0.853
- 498 | Stabaek                      | Norwegian Tippeligaen              | 0.709 | 1.006 | 1.420 | 0.899
- 499 | Aragua                       | Primera División de Venezuela      | 0.709 | 0.797 | 1.125 | 0.889
- 500 | Heart of Midlothian          | Scottish Premiership               | 0.705 | 0.853 | 1.210 | 0.873
- 501 | Orebro SK                    | Swedish Allsvenskanliga            | 0.701 | 0.917 | 1.308 | 0.886
- 502 | Cheltenham Town              | English League Two                 | 0.700 | 0.897 | 1.281 | 0.845
- 503 | Carlisle United              | English League Two                 | 0.696 | 0.874 | 1.256 | 0.844
- 504 | Morecambe                    | English League Two                 | 0.694 | 0.905 | 1.304 | 0.841
- 505 | Zamora                       | Primera División de Venezuela      | 0.694 | 0.906 | 1.306 | 0.975
- 506 | Swindon Town                 | English League Two                 | 0.693 | 0.881 | 1.272 | 0.841
- 507 | Sogndal                      | Norwegian Tippeligaen              | 0.681 | 0.889 | 1.305 | 0.900
- 508 | Mansfield Town               | English League Two                 | 0.678 | 0.839 | 1.238 | 0.836
- 509 | San Martin                   | Primera Profesional de Perú        | 0.677 | 0.890 | 1.315 | 0.883
- 510 | Odds BK                      | Norwegian Tippeligaen              | 0.677 | 0.755 | 1.115 | 0.853
- 511 | Kristiansund BK              | Norwegian Tippeligaen              | 0.674 | 0.942 | 1.398 | 0.900
- 512 | Cork                         | League of Ireland Premier Division | 0.670 | 0.881 | 1.316 | 0.596
- 513 | Lincoln City                 | English League Two                 | 0.661 | 0.846 | 1.280 | 0.837
- 514 | Exeter City                  | English League Two                 | 0.659 | 0.813 | 1.234 | 0.837
- 515 | Notts County                 | English League Two                 | 0.657 | 0.870 | 1.324 | 0.837
- 516 | Wycombe Wanderers            | English League Two                 | 0.657 | 0.873 | 1.329 | 0.842
- 517 | Port Vale                    | English League Two                 | 0.652 | 0.904 | 1.385 | 0.841
- 518 | Stevenage                    | English League Two                 | 0.651 | 0.853 | 1.310 | 0.844
- 519 | Grimsby Town                 | English League Two                 | 0.650 | 0.820 | 1.262 | 0.844
- 520 | Estudiantes de Mérida        | Primera División de Venezuela      | 0.650 | 0.780 | 1.200 | 0.887
- 521 | Kilmarnock                   | Scottish Premiership               | 0.649 | 0.826 | 1.273 | 0.879
- 522 | Crewe Alexandra              | English League Two                 | 0.643 | 0.839 | 1.305 | 0.841
- 523 | Viking FK                    | Norwegian Tippeligaen              | 0.642 | 0.852 | 1.327 | 0.901
- 524 | Trujillanos                  | Primera División de Venezuela      | 0.638 | 0.738 | 1.156 | 0.888
- 525 | Halmstads BK                 | Swedish Allsvenskanliga            | 0.623 | 0.810 | 1.300 | 0.889
- 526 | Portuguesa                   | Primera División de Venezuela      | 0.618 | 0.699 | 1.131 | 0.889
- 527 | Colchester United            | English League Two                 | 0.617 | 0.817 | 1.326 | 0.842
- 528 | Forest Green Rovers          | English League Two                 | 0.608 | 0.795 | 1.308 | 0.839
- 529 | Tromso                       | Norwegian Tippeligaen              | 0.603 | 0.826 | 1.371 | 0.903
- 530 | Petapa                       | Liga Nacional de Guatemala         | 0.601 | 0.770 | 1.281 | 0.734
- 531 | Yeovil Town                  | English League Two                 | 0.592 | 0.882 | 1.488 | 0.844
- 532 | Cambridge United             | English League Two                 | 0.584 | 0.797 | 1.364 | 0.842
- 533 | Jonkopings Sodra             | Swedish Allsvenskanliga            | 0.584 | 0.826 | 1.415 | 0.893
- 534 | Alianza Atlético             | Primera Profesional de Perú        | 0.583 | 0.777 | 1.334 | 0.891
- 535 | GIF Sundsvall                | Swedish Allsvenskanliga            | 0.581 | 0.714 | 1.228 | 0.891
- 536 | Ayacucho FC                  | Primera Profesional de Perú        | 0.568 | 0.793 | 1.397 | 0.892
- 537 | Aldershot Town               | English National League            | 0.565 | 0.845 | 1.495 | 0.700
- 538 | Crawley Town                 | English League Two                 | 0.565 | 0.799 | 1.415 | 0.846
- 539 | Chesterfield                 | English League Two                 | 0.563 | 0.801 | 1.424 | 0.847
- 540 | Malacateco                   | Liga Nacional de Guatemala         | 0.544 | 0.711 | 1.308 | 0.732
- 541 | Dundalk                      | League of Ireland Premier Division | 0.532 | 0.766 | 1.438 | 0.621
- 542 | Juan Aurich                  | Primera Profesional de Perú        | 0.531 | 0.792 | 1.491 | 0.918
- 543 | Bromley                      | English National League            | 0.528 | 0.762 | 1.443 | 0.701
- 544 | Kalmar FF                    | Swedish Allsvenskanliga            | 0.519 | 0.743 | 1.432 | 0.894
- 545 | Comunicaciones               | Liga Nacional de Guatemala         | 0.512 | 0.692 | 1.351 | 0.763
- 546 | Coban Imperial               | Liga Nacional de Guatemala         | 0.510 | 0.691 | 1.356 | 0.744
- 547 | Antigua                      | Liga Nacional de Guatemala         | 0.509 | 0.701 | 1.379 | 0.742
- 548 | Suchitepequez                | Liga Nacional de Guatemala         | 0.506 | 0.728 | 1.439 | 0.746
- 549 | Municipal                    | Liga Nacional de Guatemala         | 0.503 | 0.684 | 1.360 | 0.744
- 550 | Alianza FC                   | Primera División de El Salvador    | 0.502 | 0.681 | 1.357 | 0.711
- 551 | Sutton United                | English National League            | 0.482 | 0.698 | 1.447 | 0.703
- 552 | Ebbsfleet United             | English National League            | 0.478 | 0.771 | 1.615 | 0.703
- 553 | Dagenham & Redbridge         | English National League            | 0.478 | 0.785 | 1.642 | 0.703
- 554 | Xelaju                       | Liga Nacional de Guatemala         | 0.476 | 0.671 | 1.409 | 0.749
- 555 | Dover                        | English National League            | 0.472 | 0.703 | 1.487 | 0.703
- 556 | Aguila                       | Primera División de El Salvador    | 0.470 | 0.625 | 1.331 | 0.692
- 557 | Barrow                       | English National League            | 0.467 | 0.697 | 1.493 | 0.703
- 558 | Livingston                   | Scottish Championship              | 0.466 | 0.712 | 1.529 | 0.661
- 559 | Gateshead                    | English National League            | 0.464 | 0.690 | 1.487 | 0.703
- 560 | Boreham Wood                 | English National League            | 0.461 | 0.752 | 1.633 | 0.703
- 561 | Dunfermline Athletic         | Scottish Championship              | 0.460 | 0.785 | 1.708 | 0.646
- 562 | Metapan                      | Primera División de El Salvador    | 0.455 | 0.657 | 1.443 | 0.701
- 563 | Eastleigh                    | English National League            | 0.449 | 0.678 | 1.509 | 0.704
- 564 | Macclesfield Town            | English National League            | 0.447 | 0.662 | 1.481 | 0.704
- 565 | Wrexham                      | English National League            | 0.446 | 0.661 | 1.481 | 0.704
- 566 | Falkirk                      | Scottish Championship              | 0.444 | 0.727 | 1.638 | 0.646
- 567 | Chester FC                   | English National League            | 0.443 | 0.668 | 1.508 | 0.704
- 568 | Dundee United                | Scottish Championship              | 0.442 | 0.676 | 1.529 | 0.648
- 569 | Marquense                    | Liga Nacional de Guatemala         | 0.441 | 0.692 | 1.567 | 0.764
- 570 | Queen of the South           | Scottish Championship              | 0.439 | 0.732 | 1.668 | 0.647
- 571 | Maidenhead Utd               | English National League            | 0.439 | 0.701 | 1.596 | 0.704
- 572 | Tranmere Rovers              | English National League            | 0.434 | 0.642 | 1.482 | 0.719
- 573 | CD FAS                       | Primera División de El Salvador    | 0.426 | 0.605 | 1.420 | 0.702
- 574 | Hartlepool United            | English National League            | 0.421 | 0.661 | 1.568 | 0.705
- 575 | Halifax                      | English National League            | 0.412 | 0.623 | 1.513 | 0.705
- 576 | Woking                       | English National League            | 0.412 | 0.703 | 1.704 | 0.705
- 577 | Luis Angel Firpo             | Primera División de El Salvador    | 0.406 | 0.623 | 1.535 | 0.706
- 578 | Valletta                     | Maltese Premier League             | 0.406 | 0.643 | 1.584 | 0.850
- 579 | Maidstone United             | English National League            | 0.400 | 0.636 | 1.590 | 0.705
- 580 | Derry City                   | League of Ireland Premier Division | 0.399 | 0.681 | 1.706 | 0.627
- 581 | Leyton Orient                | English National League            | 0.394 | 0.690 | 1.752 | 0.706
- 582 | St Mirren                    | Scottish Championship              | 0.392 | 0.728 | 1.859 | 0.659
- 583 | Municipal Limeño             | Primera División de El Salvador    | 0.390 | 0.663 | 1.701 | 0.707
- 584 | Torquay United               | English National League            | 0.383 | 0.680 | 1.774 | 0.706
- 585 | Greenock Morton              | Scottish Championship              | 0.377 | 0.645 | 1.709 | 0.649
- 586 | Guiseley                     | English National League            | 0.371 | 0.641 | 1.726 | 0.706
- 587 | Hibernians                   | Maltese Premier League             | 0.355 | 0.620 | 1.747 | 0.840
- 588 | Shamrock Rovers              | League of Ireland Premier Division | 0.340 | 0.612 | 1.804 | 0.612
- 589 | Inverness Caledonian Thistle | Scottish Championship              | 0.338 | 0.595 | 1.758 | 0.654
- 590 | Bray                         | League of Ireland Premier Division | 0.318 | 0.681 | 2.139 | 0.614
- 591 | Ayr United                   | Scottish League One                | 0.317 | 0.705 | 2.221 | 0.505
- 592 | Dumbarton                    | Scottish Championship              | 0.306 | 0.536 | 1.748 | 0.656
- 593 | Galway Utd                   | League of Ireland Premier Division | 0.300 | 0.553 | 1.845 | 0.615
- 594 | Limerick FC                  | League of Ireland Premier Division | 0.287 | 0.579 | 2.018 | 0.616
- 595 | St Patricks                  | League of Ireland Premier Division | 0.286 | 0.551 | 1.926 | 0.616
- 596 | Bohemians                    | League of Ireland Premier Division | 0.282 | 0.505 | 1.792 | 0.617
- 597 | Brechin City                 | Scottish Championship              | 0.277 | 0.565 | 2.042 | 0.661
- 598 | Sligo                        | League of Ireland Premier Division | 0.257 | 0.496 | 1.928 | 0.619
- 599 | Finn Harps                   | League of Ireland Premier Division | 0.254 | 0.558 | 2.199 | 0.619
- 600 | Arbroath                     | Scottish League One                | 0.227 | 0.504 | 2.222 | 0.519
- 601 | Raith Rovers                 | Scottish League One                | 0.225 | 0.506 | 2.251 | 0.509
- 602 | Albion Rovers                | Scottish League One                | 0.219 | 0.598 | 2.736 | 0.511
- 603 | Connah's Quay                | Welsh Premier League               | 0.215 | 0.526 | 2.446 | 0.478
- 604 | Bangor City                  | Welsh Premier League               | 0.205 | 0.507 | 2.477 | 0.532
- 605 | Bangkok United               | Thai Premier League                | 0.201 | 0.614 | 3.048 | 0.432
- 606 | Drogheda Utd                 | League of Ireland Premier Division | 0.197 | 0.443 | 2.255 | 0.626
- 607 | Queen's Park                 | Scottish League One                | 0.190 | 0.535 | 2.814 | 0.509
- 608 | Aberystwyth                  | Welsh Premier League               | 0.190 | 0.478 | 2.518 | 0.484
- 609 | Alloa Athletic               | Scottish League One                | 0.188 | 0.446 | 2.367 | 0.520
- 610 | Bangkok Glass                | Thai Premier League                | 0.187 | 0.531 | 2.841 | 0.435
- 611 | Barry Town                   | Welsh Premier League               | 0.185 | 0.472 | 2.548 | 0.485
- 612 | East Fife                    | Scottish League One                | 0.184 | 0.425 | 2.315 | 0.511
- 613 | Stranraer                    | Scottish League One                | 0.183 | 0.492 | 2.698 | 0.518
- 614 | Airdrieonians                | Scottish League One                | 0.180 | 0.474 | 2.628 | 0.525
- 615 | SuperSport United            | South African Premiership          | 0.177 | 0.397 | 2.245 | 0.463
- 616 | Maritzburg Utd               | South African Premiership          | 0.177 | 0.397 | 2.245 | 0.463
- 617 | Peterhead                    | Scottish League Two                | 0.176 | 0.464 | 2.643 | 0.421
- 618 | T.N.S.                       | Welsh Premier League               | 0.175 | 0.495 | 2.831 | 0.487
- 619 | Forfar Athletic              | Scottish League One                | 0.174 | 0.462 | 2.650 | 0.514
- 620 | Cape Town City FC            | South African Premiership          | 0.174 | 0.393 | 2.264 | 0.462
- 621 | Buriram United               | Thai Premier League                | 0.172 | 0.467 | 2.719 | 0.431
- 622 | Golden Arrows                | South African Premiership          | 0.172 | 0.411 | 2.381 | 0.463
- 623 | Bidvest Wits                 | South African Premiership          | 0.169 | 0.406 | 2.405 | 0.464
- 624 | Polokwane City FC            | South African Premiership          | 0.166 | 0.384 | 2.312 | 0.464
- 625 | Prestatyn Town               | Welsh Premier League               | 0.164 | 0.457 | 2.782 | 0.490
- 626 | Kaizer Chiefs                | South African Premiership          | 0.163 | 0.381 | 2.334 | 0.465
- 627 | Mamelodi Sundowns            | South African Premiership          | 0.163 | 0.381 | 2.334 | 0.465
- 628 | Stirling Albion              | Scottish League Two                | 0.161 | 0.460 | 2.861 | 0.422
- 629 | Crusaders                    | Northern Irish Premiership         | 0.138 | 0.424 | 3.087 | 0.399
- 630 | Suphanburi                   | Thai Premier League                | 0.134 | 0.396 | 2.963 | 0.441
- 631 | Coleraine                    | Northern Irish Premiership         | 0.133 | 0.400 | 3.014 | 0.435
- 632 | BEC-Tero Sasana              | Thai Premier League                | 0.132 | 0.410 | 3.107 | 0.442
- 633 | Stenhousemuir                | Scottish League Two                | 0.131 | 0.392 | 2.995 | 0.427
- 634 | Berwick Rangers              | Scottish League Two                | 0.130 | 0.393 | 3.010 | 0.425
- 635 | Montrose                     | Scottish League Two                | 0.130 | 0.414 | 3.195 | 0.434
- 636 | Clyde                        | Scottish League Two                | 0.129 | 0.435 | 3.363 | 0.427
- 637 | Glentoran                    | Northern Irish Premiership         | 0.129 | 0.391 | 3.029 | 0.401
- 638 | Chonburi                     | Thai Premier League                | 0.128 | 0.414 | 3.243 | 0.438
- 639 | Linfield                     | Northern Irish Premiership         | 0.125 | 0.377 | 3.005 | 0.442
- 640 | Navy Football Club           | Thai Premier League                | 0.123 | 0.336 | 2.734 | 0.441
- 641 | Cowdenbeath                  | Scottish League Two                | 0.122 | 0.363 | 2.970 | 0.434
- 642 | Cliftonville                 | Northern Irish Premiership         | 0.118 | 0.373 | 3.169 | 0.404
- 643 | Annan Athletic               | Scottish League Two                | 0.115 | 0.366 | 3.182 | 0.429
- 644 | Ballymena                    | Northern Irish Premiership         | 0.111 | 0.368 | 3.309 | 0.436
- 645 | Dungannon Swifts             | Northern Irish Premiership         | 0.110 | 0.367 | 3.334 | 0.406
- 646 | Edinburgh City               | Scottish League Two                | 0.109 | 0.363 | 3.338 | 0.429
- 647 | Elgin City                   | Scottish League Two                | 0.106 | 0.359 | 3.394 | 0.431
-(647 rows)
+   1 | Liverpool                    | English Premier League             | 3.529 | 2.079 | 0.589 | 1.437
+   2 | Manchester United            | English Premier League             | 3.453 | 2.025 | 0.586 | 1.461
+   3 | Corinthians                  | Futebol Brasileiro                 | 3.413 | 1.645 | 0.482 | 1.346
+   4 | Manchester City              | English Premier League             | 3.105 | 1.822 | 0.587 | 1.507
+   5 | Gremio                       | Futebol Brasileiro                 | 3.088 | 1.888 | 0.611 | 1.346
+   6 | Real Madrid                  | Spanish Primera División           | 2.975 | 1.927 | 0.648 | 1.528
+   7 | Barcelona                    | Spanish Primera División           | 2.964 | 1.844 | 0.622 | 1.504
+   8 | Atletico Madrid              | Spanish Primera División           | 2.847 | 1.722 | 0.605 | 1.503
+   9 | U.A.N.L                      | Mexican Liga MX                    | 2.784 | 1.725 | 0.620 | 1.303
+  10 | Huddersfield Town            | English Premier League             | 2.766 | 1.700 | 0.615 | 1.489
+  11 | Valencia                     | Spanish Primera División           | 2.753 | 1.695 | 0.616 | 1.514
+  12 | Espanyol                     | Spanish Primera División           | 2.742 | 1.662 | 0.606 | 1.518
+  13 | Eibar                        | Spanish Primera División           | 2.712 | 1.670 | 0.616 | 1.519
+  14 | Celta Vigo                   | Spanish Primera División           | 2.699 | 1.833 | 0.679 | 1.514
+  15 | Girona                       | Spanish Primera División           | 2.666 | 1.694 | 0.635 | 1.523
+  16 | Levante                      | Spanish Primera División           | 2.659 | 1.651 | 0.621 | 1.520
+  17 | Flamengo                     | Futebol Brasileiro                 | 2.647 | 1.719 | 0.649 | 1.344
+  18 | Real Sociedad                | Spanish Primera División           | 2.621 | 1.699 | 0.648 | 1.509
+  19 | Burnley                      | English Premier League             | 2.618 | 1.686 | 0.644 | 1.489
+  20 | Getafe                       | Spanish Primera División           | 2.605 | 1.548 | 0.594 | 1.522
+  21 | West Bromwich Albion         | English Premier League             | 2.600 | 1.571 | 0.604 | 1.475
+  22 | Everton                      | English Premier League             | 2.598 | 1.658 | 0.638 | 1.506
+  23 | Chelsea                      | English Premier League             | 2.590 | 1.782 | 0.688 | 1.501
+  24 | Watford                      | English Premier League             | 2.576 | 1.797 | 0.698 | 1.500
+  25 | Tottenham Hotspur            | English Premier League             | 2.570 | 1.778 | 0.692 | 1.501
+  26 | Las Palmas                   | Spanish Primera División           | 2.563 | 1.620 | 0.632 | 1.521
+  27 | Borussia Dortmund            | German Bundesliga                  | 2.544 | 1.703 | 0.669 | 1.351
+  28 | Real Betis                   | Spanish Primera División           | 2.542 | 1.610 | 0.633 | 1.519
+  29 | Athletic Bilbao              | Spanish Primera División           | 2.504 | 1.657 | 0.662 | 1.453
+  30 | Leicester City               | English Premier League             | 2.496 | 1.657 | 0.664 | 1.452
+  31 | Napoli                       | Italian Serie A                    | 2.482 | 1.634 | 0.658 | 1.355
+  32 | Stoke City                   | English Premier League             | 2.478 | 1.652 | 0.667 | 1.476
+  33 | AC Milan                     | Italian Serie A                    | 2.472 | 1.681 | 0.680 | 1.324
+  34 | Internazionale               | Italian Serie A                    | 2.471 | 1.580 | 0.639 | 1.360
+  35 | Palmeiras                    | Futebol Brasileiro                 | 2.468 | 1.623 | 0.658 | 1.381
+  36 | Sevilla FC                   | Spanish Primera División           | 2.444 | 1.655 | 0.677 | 1.492
+  37 | Southampton                  | English Premier League             | 2.443 | 1.591 | 0.651 | 1.501
+  38 | Santos FC                    | Futebol Brasileiro                 | 2.441 | 1.404 | 0.575 | 1.368
+  39 | Arsenal                      | English Premier League             | 2.441 | 1.745 | 0.715 | 1.465
+  40 | Villarreal                   | Spanish Primera División           | 2.434 | 1.617 | 0.664 | 1.522
+  41 | Atlético Nacional            | Fútbol Profesional Colombiano      | 2.428 | 1.570 | 0.647 | 1.198
+  42 | Swansea City                 | English Premier League             | 2.420 | 1.649 | 0.681 | 1.491
+  43 | AFC Bournemouth              | English Premier League             | 2.398 | 1.537 | 0.641 | 1.488
+  44 | Cruzeiro                     | Futebol Brasileiro                 | 2.395 | 1.437 | 0.600 | 1.371
+  45 | Monterrey                    | Mexican Liga MX                    | 2.377 | 1.718 | 0.723 | 1.276
+  46 | Deportivo La Coruña          | Spanish Primera División           | 2.362 | 1.599 | 0.677 | 1.524
+  47 | Crystal Palace               | English Premier League             | 2.354 | 1.531 | 0.650 | 1.506
+  48 | Paris Saint-Germain          | French Ligue 1                     | 2.302 | 1.740 | 0.756 | 1.324
+  49 | Fluminense FC                | Futebol Brasileiro                 | 2.295 | 1.700 | 0.741 | 1.336
+  50 | Hannover 96                  | German Bundesliga                  | 2.260 | 1.578 | 0.698 | 1.379
+  51 | Málaga                       | Spanish Primera División           | 2.257 | 1.525 | 0.676 | 1.514
+  52 | Hamburg SV                   | German Bundesliga                  | 2.216 | 1.563 | 0.705 | 1.381
+  53 | Cerezo Osaka                 | Japanese J League                  | 2.210 | 1.703 | 0.771 | 1.221
+  54 | Eintracht Frankfurt          | German Bundesliga                  | 2.198 | 1.531 | 0.697 | 1.381
+  55 | Lazio                        | Italian Serie A                    | 2.197 | 1.556 | 0.708 | 1.358
+  56 | Schalke 04                   | German Bundesliga                  | 2.196 | 1.567 | 0.714 | 1.386
+  57 | Newcastle United             | English Premier League             | 2.190 | 1.531 | 0.699 | 1.504
+  58 | Borussia Monchengladbach     | German Bundesliga                  | 2.189 | 1.558 | 0.712 | 1.375
+  59 | Botafogo                     | Futebol Brasileiro                 | 2.188 | 1.323 | 0.604 | 1.390
+  60 | Lyon                         | French Ligue 1                     | 2.186 | 1.558 | 0.713 | 1.322
+  61 | St Etienne                   | French Ligue 1                     | 2.185 | 1.423 | 0.651 | 1.318
+  62 | West Ham United              | English Premier League             | 2.166 | 1.593 | 0.736 | 1.493
+  63 | Kawasaki Frontale            | Japanese J League                  | 2.165 | 1.651 | 0.763 | 1.228
+  64 | SC Freiburg                  | German Bundesliga                  | 2.156 | 1.477 | 0.685 | 1.361
+  65 | Bahia                        | Futebol Brasileiro                 | 2.154 | 1.522 | 0.706 | 1.383
+  66 | Marseille                    | French Ligue 1                     | 2.145 | 1.443 | 0.672 | 1.302
+  67 | AS Monaco                    | French Ligue 1                     | 2.144 | 1.534 | 0.715 | 1.321
+  68 | Brighton & Hove Albion       | English Premier League             | 2.141 | 1.503 | 0.702 | 1.495
+  69 | Atlético MG                  | Futebol Brasileiro                 | 2.135 | 1.445 | 0.677 | 1.382
+  70 | FC Cologne                   | German Bundesliga                  | 2.134 | 1.529 | 0.716 | 1.382
+  71 | Zenit St Petersburg          | Russian Premier League             | 2.132 | 1.472 | 0.691 | 1.230
+  72 | TSG Hoffenheim               | German Bundesliga                  | 2.120 | 1.599 | 0.754 | 1.400
+  73 | Atlético Paranaense          | Futebol Brasileiro                 | 2.117 | 1.485 | 0.702 | 1.379
+  74 | São Paulo                    | Futebol Brasileiro                 | 2.105 | 1.608 | 0.764 | 1.397
+  75 | Hertha Berlin                | German Bundesliga                  | 2.104 | 1.546 | 0.735 | 1.392
+  76 | Kashima Antlers              | Japanese J League                  | 2.087 | 1.518 | 0.728 | 1.213
+  77 | AA Ponte Preta               | Futebol Brasileiro                 | 2.084 | 1.427 | 0.685 | 1.402
+  78 | Sport                        | Futebol Brasileiro                 | 2.081 | 1.534 | 0.737 | 1.360
+  79 | Bordeaux                     | French Ligue 1                     | 2.079 | 1.532 | 0.737 | 1.319
+  80 | Chievo Verona                | Italian Serie A                    | 2.070 | 1.493 | 0.721 | 1.359
+  81 | Werder Bremen                | German Bundesliga                  | 2.067 | 1.512 | 0.732 | 1.388
+  82 | VfB Stuttgart                | German Bundesliga                  | 2.067 | 1.527 | 0.739 | 1.369
+  83 | Angers                       | French Ligue 1                     | 2.063 | 1.441 | 0.698 | 1.319
+  84 | Juventus                     | Italian Serie A                    | 2.057 | 1.557 | 0.757 | 1.378
+  85 | Jubilo Iwata                 | Japanese J League                  | 2.046 | 1.443 | 0.705 | 1.224
+  86 | Atlético Junior              | Fútbol Profesional Colombiano      | 2.037 | 1.389 | 0.682 | 1.167
+  87 | Kashiwa Reysol               | Japanese J League                  | 2.035 | 1.464 | 0.719 | 1.224
+  88 | Sampdoria                    | Italian Serie A                    | 2.033 | 1.481 | 0.729 | 1.369
+  89 | Atlas                        | Mexican Liga MX                    | 2.021 | 1.472 | 0.728 | 1.293
+  90 | Toluca                       | Mexican Liga MX                    | 2.014 | 1.462 | 0.726 | 1.264
+  91 | SPAL                         | Italian Serie A                    | 2.007 | 1.399 | 0.697 | 1.362
+  92 | Torino                       | Italian Serie A                    | 2.004 | 1.445 | 0.721 | 1.362
+  93 | FC Augsburg                  | German Bundesliga                  | 2.001 | 1.395 | 0.697 | 1.369
+  94 | Genoa                        | Italian Serie A                    | 1.998 | 1.399 | 0.700 | 1.360
+  95 | Bayern Munich                | German Bundesliga                  | 1.997 | 1.625 | 0.814 | 1.393
+  96 | Cruz Azul                    | Mexican Liga MX                    | 1.996 | 1.392 | 0.697 | 1.307
+  97 | Atalanta                     | Italian Serie A                    | 1.996 | 1.382 | 0.693 | 1.365
+  98 | AS Roma                      | Italian Serie A                    | 1.991 | 1.488 | 0.747 | 1.370
+  99 | Urawa Red Diamonds           | Japanese J League                  | 1.980 | 1.859 | 0.939 | 1.218
+ 100 | FK Rubin Kazan               | Russian Premier League             | 1.976 | 1.490 | 0.754 | 1.264
+ 101 | VfL Wolfsburg                | German Bundesliga                  | 1.972 | 1.515 | 0.768 | 1.386
+ 102 | Lokomotiv Moscow             | Russian Premier League             | 1.968 | 1.472 | 0.748 | 1.264
+ 103 | Delfin                       | Primera A de Ecuador               | 1.967 | 1.326 | 0.674 | 1.102
+ 104 | Bologna                      | Italian Serie A                    | 1.961 | 1.429 | 0.729 | 1.362
+ 105 | Sassuolo                     | Italian Serie A                    | 1.957 | 1.384 | 0.707 | 1.363
+ 106 | Benevento                    | Italian Serie A                    | 1.947 | 1.445 | 0.742 | 1.363
+ 107 | Yokohama F. Marinos          | Japanese J League                  | 1.942 | 1.303 | 0.671 | 1.225
+ 108 | Millonarios                  | Fútbol Profesional Colombiano      | 1.941 | 1.285 | 0.662 | 1.207
+ 109 | Caen                         | French Ligue 1                     | 1.937 | 1.319 | 0.681 | 1.321
+ 110 | Gamba Osaka                  | Japanese J League                  | 1.936 | 1.508 | 0.779 | 1.208
+ 111 | Peñarol                      | Primera División de Uruguay        | 1.933 | 1.601 | 0.828 | 1.097
+ 112 | Coritiba FBC                 | Futebol Brasileiro                 | 1.929 | 1.358 | 0.704 | 1.398
+ 113 | Lobos BUAP                   | Mexican Liga MX                    | 1.910 | 1.587 | 0.831 | 1.302
+ 114 | Libertad                     | Primera División de Paraguay       | 1.906 | 1.344 | 0.705 | 1.135
+ 115 | Udinese                      | Italian Serie A                    | 1.904 | 1.429 | 0.751 | 1.363
+ 116 | Santos                       | Mexican Liga MX                    | 1.900 | 1.580 | 0.831 | 1.305
+ 117 | América                      | Mexican Liga MX                    | 1.897 | 1.376 | 0.726 | 1.303
+ 118 | Montpellier                  | French Ligue 1                     | 1.894 | 1.297 | 0.685 | 1.322
+ 119 | Strasbourg                   | French Ligue 1                     | 1.893 | 1.398 | 0.739 | 1.322
+ 120 | Troyes                       | French Ligue 1                     | 1.886 | 1.338 | 0.710 | 1.322
+ 121 | Bayer Leverkusen             | German Bundesliga                  | 1.880 | 1.507 | 0.802 | 1.369
+ 122 | Toronto FC                   | Major League Soccer                | 1.869 | 1.520 | 0.813 | 1.090
+ 123 | Guadalajara                  | Mexican Liga MX                    | 1.868 | 1.280 | 0.685 | 1.292
+ 124 | Pachuca                      | Mexican Liga MX                    | 1.864 | 1.311 | 0.703 | 1.297
+ 125 | Hellas Verona                | Italian Serie A                    | 1.860 | 1.435 | 0.772 | 1.364
+ 126 | Sporting CP                  | Portuguese Liga                    | 1.858 | 1.404 | 0.755 | 1.152
+ 127 | Tijuana                      | Mexican Liga MX                    | 1.856 | 1.414 | 0.762 | 1.278
+ 128 | CSKA Moscow                  | Russian Premier League             | 1.855 | 1.357 | 0.732 | 1.224
+ 129 | Stade Rennes                 | French Ligue 1                     | 1.846 | 1.376 | 0.746 | 1.323
+ 130 | Mainz                        | German Bundesliga                  | 1.845 | 1.388 | 0.752 | 1.358
+ 131 | Fiorentina                   | Italian Serie A                    | 1.844 | 1.407 | 0.763 | 1.370
+ 132 | León                         | Mexican Liga MX                    | 1.842 | 1.517 | 0.823 | 1.296
+ 133 | FC Porto                     | Portuguese Liga                    | 1.841 | 1.389 | 0.754 | 1.187
+ 134 | Cagliari                     | Italian Serie A                    | 1.828 | 1.396 | 0.764 | 1.365
+ 135 | Guaraní                      | Primera División de Paraguay       | 1.820 | 1.561 | 0.858 | 1.124
+ 136 | Independiente Medellín       | Fútbol Profesional Colombiano      | 1.815 | 1.443 | 0.795 | 1.192
+ 137 | Nacional                     | Primera División de Uruguay        | 1.810 | 1.361 | 0.752 | 1.094
+ 138 | Morelia                      | Mexican Liga MX                    | 1.807 | 1.263 | 0.699 | 1.302
+ 139 | Dinamo Moscow                | Russian Premier League             | 1.806 | 1.372 | 0.760 | 1.269
+ 140 | Crotone                      | Italian Serie A                    | 1.798 | 1.386 | 0.771 | 1.365
+ 141 | Krasnodar                    | Russian Premier League             | 1.797 | 1.348 | 0.750 | 1.228
+ 142 | Lille                        | French Ligue 1                     | 1.792 | 1.343 | 0.750 | 1.324
+ 143 | EC Vitória                   | Futebol Brasileiro                 | 1.783 | 1.350 | 0.757 | 1.383
+ 144 | Guingamp                     | French Ligue 1                     | 1.772 | 1.348 | 0.761 | 1.324
+ 145 | Nantes                       | French Ligue 1                     | 1.771 | 1.275 | 0.720 | 1.324
+ 146 | Rostov                       | Russian Premier League             | 1.769 | 1.181 | 0.667 | 1.270
+ 147 | Toulouse                     | French Ligue 1                     | 1.766 | 1.443 | 0.817 | 1.324
+ 148 | CR Vasco da Gama             | Futebol Brasileiro                 | 1.738 | 1.345 | 0.774 | 1.393
+ 149 | FC Tokyo                     | Japanese J League                  | 1.725 | 1.317 | 0.764 | 1.229
+ 150 | Independiente Santa Fe       | Fútbol Profesional Colombiano      | 1.721 | 1.144 | 0.665 | 1.191
+ 151 | Barcelona S.C.               | Primera A de Ecuador               | 1.709 | 1.259 | 0.737 | 1.156
+ 152 | Benfica                      | Portuguese Liga                    | 1.692 | 1.470 | 0.868 | 1.190
+ 153 | Sagan Tosu                   | Japanese J League                  | 1.690 | 1.254 | 0.742 | 1.230
+ 154 | Nice                         | French Ligue 1                     | 1.683 | 1.257 | 0.747 | 1.318
+ 155 | Shandong Luneng Taishan      | Chinese Super League               | 1.672 | 1.443 | 0.863 | 1.028
+ 156 | Terek Grozny                 | Russian Premier League             | 1.670 | 1.305 | 0.781 | 1.273
+ 157 | Sporting Kansas City         | Major League Soccer                | 1.670 | 1.162 | 0.696 | 1.075
+ 158 | Deportivo Pasto              | Fútbol Profesional Colombiano      | 1.660 | 1.338 | 0.806 | 1.184
+ 159 | Internacional                | Brasileirao B                      | 1.659 | 1.272 | 0.767 | 1.154
+ 160 | Chapecoense AF               | Futebol Brasileiro                 | 1.652 | 1.426 | 0.863 | 1.384
+ 161 | Deportivo Cali               | Fútbol Profesional Colombiano      | 1.651 | 1.422 | 0.861 | 1.203
+ 162 | Metz                         | French Ligue 1                     | 1.647 | 1.257 | 0.764 | 1.326
+ 163 | Dijon FCO                    | French Ligue 1                     | 1.646 | 1.357 | 0.824 | 1.326
+ 164 | Chicago Fire                 | Major League Soccer                | 1.645 | 1.479 | 0.899 | 1.102
+ 165 | Bristol City                 | English League Championship        | 1.640 | 1.405 | 0.857 | 1.156
+ 166 | Leeds United                 | English League Championship        | 1.639 | 1.358 | 0.828 | 1.139
+ 167 | Defensor Sporting            | Primera División de Uruguay        | 1.637 | 1.376 | 0.841 | 1.090
+ 168 | Rio Ave                      | Portuguese Liga                    | 1.635 | 1.256 | 0.768 | 1.182
+ 169 | Avaí                         | Futebol Brasileiro                 | 1.633 | 1.137 | 0.696 | 1.393
+ 170 | Wolverhampton Wanderers      | English League Championship        | 1.622 | 1.255 | 0.774 | 1.158
+ 171 | Le Havre AC                  | French Ligue 2                     | 1.617 | 1.368 | 0.846 | 1.093
+ 172 | Ipswich Town                 | English League Championship        | 1.617 | 1.353 | 0.837 | 1.155
+ 173 | Emelec                       | Primera A de Ecuador               | 1.617 | 1.272 | 0.787 | 1.110
+ 174 | Spartak Moscow               | Russian Premier League             | 1.606 | 1.435 | 0.893 | 1.275
+ 175 | SC Amiens                    | French Ligue 1                     | 1.600 | 1.236 | 0.773 | 1.327
+ 176 | Necaxa                       | Mexican Liga MX                    | 1.595 | 1.216 | 0.762 | 1.307
+ 177 | Cardiff City                 | English League Championship        | 1.573 | 1.283 | 0.815 | 1.150
+ 178 | America Cali                 | Fútbol Profesional Colombiano      | 1.561 | 1.123 | 0.719 | 1.194
+ 179 | Querétaro                    | Mexican Liga MX                    | 1.554 | 1.332 | 0.858 | 1.311
+ 180 | Goianiense                   | Futebol Brasileiro                 | 1.539 | 1.256 | 0.816 | 1.411
+ 181 | Olimpia                      | Primera División de Paraguay       | 1.535 | 1.209 | 0.788 | 1.125
+ 182 | Atlanta United FC            | Major League Soccer                | 1.530 | 1.432 | 0.936 | 1.088
+ 183 | Nottingham Forest            | English League Championship        | 1.520 | 1.381 | 0.908 | 1.157
+ 184 | Feirense                     | Portuguese Liga                    | 1.519 | 1.199 | 0.789 | 1.185
+ 185 | Vissel Kobe                  | Japanese J League                  | 1.493 | 1.215 | 0.814 | 1.233
+ 186 | Maritimo                     | Portuguese Liga                    | 1.492 | 1.146 | 0.768 | 1.185
+ 187 | Alianza Petrolera            | Fútbol Profesional Colombiano      | 1.488 | 1.317 | 0.885 | 1.189
+ 188 | Unión Española               | Primera División de Chile          | 1.487 | 1.233 | 0.829 | 1.100
+ 189 | Zulte-Waregem                | Belgian Jupiler League             | 1.487 | 1.348 | 0.907 | 1.032
+ 190 | Paraná Clube                 | Brasileirao B                      | 1.478 | 1.212 | 0.820 | 1.131
+ 191 | Middlesbrough                | English League Championship        | 1.476 | 1.201 | 0.813 | 1.151
+ 192 | Pumas UNAM                   | Mexican Liga MX                    | 1.462 | 1.316 | 0.900 | 1.318
+ 193 | Houston Dynamo               | Major League Soccer                | 1.460 | 1.375 | 0.942 | 1.082
+ 194 | Vila Nova-GO                 | Brasileirao B                      | 1.459 | 1.142 | 0.783 | 1.105
+ 195 | Lorient                      | French Ligue 2                     | 1.454 | 1.200 | 0.825 | 1.095
+ 196 | Patriotas F.C.               | Fútbol Profesional Colombiano      | 1.453 | 1.052 | 0.725 | 1.217
+ 197 | Deportes Iquique             | Primera División de Chile          | 1.452 | 1.308 | 0.901 | 1.131
+ 198 | Beijing Guoan                | Chinese Super League               | 1.450 | 1.290 | 0.889 | 1.039
+ 199 | Shimizu S-Pulse              | Japanese J League                  | 1.446 | 1.307 | 0.904 | 1.234
+ 200 | Veracruz                     | Mexican Liga MX                    | 1.443 | 1.152 | 0.798 | 1.313
+ 201 | Vitoria Setubal              | Portuguese Liga                    | 1.443 | 1.164 | 0.807 | 1.187
+ 202 | Braga                        | Portuguese Liga                    | 1.442 | 1.239 | 0.859 | 1.168
+ 203 | FK Amkar Perm                | Russian Premier League             | 1.440 | 1.103 | 0.766 | 1.281
+ 204 | Jaguares de Córdoba          | Fútbol Profesional Colombiano      | 1.439 | 1.037 | 0.720 | 1.202
+ 205 | Estoril                      | Portuguese Liga                    | 1.439 | 1.233 | 0.856 | 1.187
+ 206 | América Mineiro              | Brasileirao B                      | 1.436 | 1.105 | 0.770 | 1.134
+ 207 | Club Deportivo Cuenca        | Primera A de Ecuador               | 1.430 | 1.144 | 0.800 | 1.116
+ 208 | Macara                       | Primera A de Ecuador               | 1.429 | 1.270 | 0.889 | 1.116
+ 209 | Juventude                    | Brasileirao B                      | 1.428 | 1.170 | 0.819 | 1.118
+ 210 | Everton CD                   | Primera División de Chile          | 1.427 | 1.220 | 0.855 | 1.106
+ 211 | Paços de Ferreira            | Portuguese Liga                    | 1.421 | 1.177 | 0.828 | 1.187
+ 212 | Valenciennes                 | French Ligue 2                     | 1.418 | 1.131 | 0.797 | 1.097
+ 213 | Brentford                    | English League Championship        | 1.416 | 1.355 | 0.957 | 1.151
+ 214 | Karabükspor                  | Turkish Super Lig                  | 1.413 | 1.253 | 0.887 | 1.133
+ 215 | Sunderland                   | English League Championship        | 1.411 | 1.199 | 0.850 | 1.145
+ 216 | Portimonense                 | Portuguese Liga                    | 1.410 | 1.197 | 0.849 | 1.187
+ 217 | Besiktas                     | Turkish Super Lig                  | 1.409 | 1.217 | 0.864 | 1.133
+ 218 | La Equidad                   | Fútbol Profesional Colombiano      | 1.408 | 1.087 | 0.773 | 1.187
+ 219 | Feyenoord Rotterdam          | Dutch Eredivisie                   | 1.407 | 1.193 | 0.848 | 1.107
+ 220 | Rayo Vallecano               | Spanish Segunda Division           | 1.405 | 1.232 | 0.877 | 1.135
+ 221 | Oeste                        | Brasileirao B                      | 1.403 | 1.097 | 0.782 | 1.106
+ 222 | Puebla                       | Mexican Liga MX                    | 1.402 | 1.180 | 0.841 | 1.299
+ 223 | Barcelona B                  | Spanish Segunda Division           | 1.401 | 1.193 | 0.851 | 1.135
+ 224 | Cádiz                        | Spanish Segunda Division           | 1.401 | 1.193 | 0.851 | 1.135
+ 225 | Instituto de Córdoba         | Nacional B de Argentina            | 1.400 | 1.094 | 0.782 | 1.127
+ 226 | Almeria                      | Spanish Segunda Division           | 1.397 | 1.155 | 0.827 | 1.136
+ 227 | AZ Alkmaar                   | Dutch Eredivisie                   | 1.396 | 1.318 | 0.945 | 1.098
+ 228 | Birmingham City              | English League Championship        | 1.396 | 1.218 | 0.873 | 1.154
+ 229 | Independiente del Valle      | Primera A de Ecuador               | 1.395 | 1.219 | 0.874 | 1.120
+ 230 | Vitesse Arnhem               | Dutch Eredivisie                   | 1.391 | 1.344 | 0.966 | 1.085
+ 231 | Colo Colo                    | Primera División de Chile          | 1.390 | 1.291 | 0.929 | 1.128
+ 232 | New York City FC             | Major League Soccer                | 1.389 | 1.340 | 0.965 | 1.109
+ 233 | Istanbul Basaksehir          | Turkish Super Lig                  | 1.389 | 1.313 | 0.945 | 1.161
+ 234 | Trabzonspor                  | Turkish Super Lig                  | 1.383 | 1.249 | 0.903 | 1.134
+ 235 | Aston Villa                  | English League Championship        | 1.381 | 1.312 | 0.950 | 1.146
+ 236 | Sheffield Wednesday          | English League Championship        | 1.381 | 1.225 | 0.887 | 1.149
+ 237 | Wanderers                    | Primera División de Uruguay        | 1.377 | 1.297 | 0.942 | 1.092
+ 238 | Derby County                 | English League Championship        | 1.376 | 1.152 | 0.838 | 1.149
+ 239 | Moreirense                   | Portuguese Liga                    | 1.375 | 1.131 | 0.823 | 1.188
+ 240 | FC Utrecht                   | Dutch Eredivisie                   | 1.373 | 1.215 | 0.885 | 1.071
+ 241 | Reading                      | English League Championship        | 1.371 | 1.193 | 0.871 | 1.152
+ 242 | Deportes Tolima              | Fútbol Profesional Colombiano      | 1.370 | 1.187 | 0.866 | 1.183
+ 243 | Numancia                     | Spanish Segunda Division           | 1.369 | 1.142 | 0.834 | 1.147
+ 244 | Tenerife                     | Spanish Segunda Division           | 1.369 | 1.142 | 0.834 | 1.136
+ 245 | Sol de América               | Primera División de Paraguay       | 1.363 | 1.176 | 0.863 | 1.142
+ 246 | Boston River                 | Primera División de Uruguay        | 1.359 | 1.215 | 0.894 | 1.095
+ 247 | Sevilla Atletico             | Spanish Segunda Division           | 1.356 | 1.154 | 0.851 | 1.136
+ 248 | Clermont Foot                | French Ligue 2                     | 1.356 | 1.052 | 0.775 | 1.095
+ 249 | Fenerbahce                   | Turkish Super Lig                  | 1.356 | 1.242 | 0.916 | 1.125
+ 250 | Cerro Porteño                | Primera División de Paraguay       | 1.354 | 1.180 | 0.871 | 1.129
+ 251 | Albacete                     | Spanish Segunda Division           | 1.351 | 1.117 | 0.827 | 1.136
+ 252 | Sporting Gijón               | Spanish Segunda Division           | 1.351 | 1.117 | 0.827 | 1.136
+ 253 | Norwich City                 | English League Championship        | 1.349 | 1.338 | 0.992 | 1.147
+ 254 | Cerro                        | Primera División de Uruguay        | 1.346 | 1.236 | 0.919 | 1.097
+ 255 | Ferro Carril Oeste           | Nacional B de Argentina            | 1.343 | 1.122 | 0.835 | 1.313
+ 256 | Preston North End            | English League Championship        | 1.341 | 1.115 | 0.831 | 1.152
+ 257 | VVV Venlo                    | Dutch Eredivisie                   | 1.341 | 1.283 | 0.956 | 1.084
+ 258 | Club Brugge                  | Belgian Jupiler League             | 1.341 | 1.274 | 0.950 | 1.043
+ 259 | Bolton Wanderers             | English League Championship        | 1.334 | 1.236 | 0.927 | 1.151
+ 260 | Osasuna                      | Spanish Segunda Division           | 1.328 | 1.142 | 0.860 | 1.137
+ 261 | Hull City                    | English League Championship        | 1.327 | 1.256 | 0.946 | 1.156
+ 262 | Boavista                     | Portuguese Liga                    | 1.326 | 1.139 | 0.859 | 1.208
+ 263 | AD Alcorcon                  | Spanish Segunda Division           | 1.325 | 1.106 | 0.834 | 1.137
+ 264 | Granada                      | Spanish Segunda Division           | 1.325 | 1.106 | 0.834 | 1.137
+ 265 | Konyaspor                    | Turkish Super Lig                  | 1.314 | 1.190 | 0.906 | 1.137
+ 266 | Gimnastic de Tarragona       | Spanish Segunda Division           | 1.313 | 1.108 | 0.844 | 1.149
+ 267 | Real Zaragoza                | Spanish Segunda Division           | 1.312 | 1.117 | 0.851 | 1.137
+ 268 | Seattle Sounders FC          | Major League Soccer                | 1.312 | 1.228 | 0.936 | 1.086
+ 269 | Huesca                       | Spanish Segunda Division           | 1.312 | 1.117 | 0.851 | 1.137
+ 270 | Ceará                        | Brasileirao B                      | 1.309 | 1.121 | 0.857 | 1.104
+ 271 | AC Ajaccio                   | French Ligue 2                     | 1.307 | 1.104 | 0.845 | 1.098
+ 272 | Columbus Crew SC             | Major League Soccer                | 1.307 | 1.235 | 0.945 | 1.113
+ 273 | New York Red Bulls           | Major League Soccer                | 1.306 | 1.186 | 0.908 | 1.109
+ 274 | FC Dallas                    | Major League Soccer                | 1.306 | 1.231 | 0.943 | 1.094
+ 275 | Antalyaspor                  | Turkish Super Lig                  | 1.305 | 1.154 | 0.885 | 1.146
+ 276 | Bucaramanga                  | Fútbol Profesional Colombiano      | 1.304 | 1.025 | 0.786 | 1.198
+ 277 | Burton Albion                | English League Championship        | 1.303 | 1.216 | 0.933 | 1.166
+ 278 | Belenenses                   | Portuguese Liga                    | 1.303 | 1.129 | 0.867 | 1.190
+ 279 | Nurnberg                     | German 2. Bundesliga               | 1.300 | 1.205 | 0.926 | 1.036
+ 280 | Fulham                       | English League Championship        | 1.300 | 1.053 | 0.810 | 1.147
+ 281 | Galatasaray                  | Turkish Super Lig                  | 1.300 | 1.194 | 0.919 | 1.108
+ 282 | Vegalta Sendai               | Japanese J League                  | 1.298 | 1.239 | 0.955 | 1.238
+ 283 | PSV Eindhoven                | Dutch Eredivisie                   | 1.295 | 1.318 | 1.018 | 1.101
+ 284 | Goztepe                      | Turkish Super Lig                  | 1.294 | 1.170 | 0.904 | 1.138
+ 285 | Real Oviedo                  | Spanish Segunda Division           | 1.292 | 1.179 | 0.913 | 1.138
+ 286 | Boa MG                       | Brasileirao B                      | 1.292 | 1.099 | 0.851 | 1.103
+ 287 | Argentinos Juniors           | Nacional B de Argentina            | 1.291 | 1.049 | 0.813 | 1.157
+ 288 | Cordoba                      | Spanish Segunda Division           | 1.289 | 1.142 | 0.886 | 1.138
+ 289 | Real Valladolid              | Spanish Segunda Division           | 1.289 | 1.142 | 0.886 | 1.138
+ 290 | GFC Ajaccio                  | French Ligue 2                     | 1.287 | 1.022 | 0.794 | 1.100
+ 291 | Excelsior                    | Dutch Eredivisie                   | 1.283 | 1.242 | 0.968 | 1.084
+ 292 | Universidad de Concepción    | Primera División de Chile          | 1.282 | 1.163 | 0.907 | 1.100
+ 293 | Montreal Impact              | Major League Soccer                | 1.281 | 1.379 | 1.077 | 1.110
+ 294 | Ventforet Kofu               | Japanese J League                  | 1.276 | 0.951 | 0.745 | 1.238
+ 295 | Anzhi Makhachkala            | Russian Premier League             | 1.275 | 1.154 | 0.905 | 1.288
+ 296 | Millwall                     | English League Championship        | 1.275 | 1.160 | 0.910 | 1.152
+ 297 | Consadole Sapporo            | Japanese J League                  | 1.274 | 1.137 | 0.892 | 1.238
+ 298 | Antofagasta                  | Primera División de Chile          | 1.273 | 1.087 | 0.853 | 1.100
+ 299 | Atlético Huila               | Fútbol Profesional Colombiano      | 1.266 | 1.019 | 0.805 | 1.200
+ 300 | Portland Timbers             | Major League Soccer                | 1.265 | 1.362 | 1.077 | 1.079
+ 301 | Guarani FC                   | Brasileirao B                      | 1.262 | 1.102 | 0.873 | 1.105
+ 302 | Barnsley                     | English League Championship        | 1.259 | 1.229 | 0.976 | 1.152
+ 303 | PEC Zwolle                   | Dutch Eredivisie                   | 1.259 | 1.277 | 1.014 | 1.086
+ 304 | General Díaz                 | Primera División de Paraguay       | 1.258 | 1.209 | 0.961 | 1.132
+ 305 | Kayserispor                  | Turkish Super Lig                  | 1.257 | 1.172 | 0.932 | 1.139
+ 306 | Sanfrecce Hiroshima          | Japanese J League                  | 1.256 | 1.160 | 0.923 | 1.239
+ 307 | CRB                          | Brasileirao B                      | 1.256 | 1.093 | 0.870 | 1.096
+ 308 | Cortuluá                     | Fútbol Profesional Colombiano      | 1.255 | 1.083 | 0.863 | 1.198
+ 309 | Fortuna Düsseldorf           | German 2. Bundesliga               | 1.253 | 1.199 | 0.957 | 1.036
+ 310 | Queens Park Rangers          | English League Championship        | 1.251 | 1.116 | 0.892 | 1.160
+ 311 | Brest                        | French Ligue 2                     | 1.251 | 1.143 | 0.914 | 1.098
+ 312 | Nacional                     | Primera División de Paraguay       | 1.250 | 1.135 | 0.908 | 1.154
+ 313 | Royal Charleroi SC           | Belgian Jupiler League             | 1.249 | 1.116 | 0.894 | 1.039
+ 314 | Danubio F.C.                 | Primera División de Uruguay        | 1.249 | 1.089 | 0.872 | 1.108
+ 315 | El Nacional                  | Primera A de Ecuador               | 1.247 | 1.249 | 1.002 | 1.122
+ 316 | Criciúma                     | Brasileirao B                      | 1.247 | 1.121 | 0.899 | 1.122
+ 317 | Stade de Reims               | French Ligue 2                     | 1.244 | 1.068 | 0.859 | 1.103
+ 318 | Sochaux                      | French Ligue 2                     | 1.241 | 1.191 | 0.960 | 1.103
+ 319 | Sheffield United             | English League Championship        | 1.239 | 1.134 | 0.915 | 1.162
+ 320 | Santiago Wanderers           | Primera División de Chile          | 1.236 | 1.169 | 0.946 | 1.090
+ 321 | SV Sandhausen                | German 2. Bundesliga               | 1.236 | 1.180 | 0.954 | 1.027
+ 322 | Nimes                        | French Ligue 2                     | 1.232 | 1.110 | 0.901 | 1.105
+ 323 | Vancouver Whitecaps          | Major League Soccer                | 1.231 | 1.172 | 0.952 | 1.082
+ 324 | AS Nancy Lorraine            | French Ligue 2                     | 1.230 | 1.043 | 0.848 | 1.101
+ 325 | Deportes Temuco              | Primera División de Chile          | 1.229 | 1.148 | 0.934 | 1.102
+ 326 | SC Heracles Almelo           | Dutch Eredivisie                   | 1.227 | 1.203 | 0.981 | 1.086
+ 327 | US Quevilly                  | French Ligue 2                     | 1.226 | 1.059 | 0.864 | 1.102
+ 328 | U. Católica                  | Primera A de Ecuador               | 1.226 | 1.148 | 0.936 | 1.135
+ 329 | Niort                        | French Ligue 2                     | 1.224 | 1.068 | 0.873 | 1.100
+ 330 | San Luis                     | Primera División de Chile          | 1.218 | 1.163 | 0.955 | 1.102
+ 331 | Universidad de Chile         | Primera División de Chile          | 1.214 | 1.220 | 1.005 | 1.154
+ 332 | FC Zürich                    | Swiss Super League                 | 1.205 | 1.087 | 0.902 | 1.018
+ 333 | Huachipato                   | Primera División de Chile          | 1.201 | 1.162 | 0.967 | 1.099
+ 334 | Fénix                        | Primera División de Uruguay        | 1.197 | 1.177 | 0.984 | 1.098
+ 335 | Rionegro Águilas             | Fútbol Profesional Colombiano      | 1.197 | 0.902 | 0.754 | 1.176
+ 336 | Heerenveen                   | Dutch Eredivisie                   | 1.196 | 1.244 | 1.040 | 1.087
+ 337 | LDU Quito                    | Primera A de Ecuador               | 1.196 | 1.171 | 0.979 | 1.140
+ 338 | New England Revolution       | Major League Soccer                | 1.187 | 1.236 | 1.041 | 1.111
+ 339 | Audax Italiano               | Primera División de Chile          | 1.181 | 1.206 | 1.021 | 1.101
+ 340 | FC Basel                     | Swiss Super League                 | 1.180 | 1.213 | 1.028 | 1.019
+ 341 | Rampla Juniors               | Primera División de Uruguay        | 1.178 | 1.147 | 0.974 | 1.098
+ 342 | Universidad Católica         | Primera División de Chile          | 1.173 | 1.155 | 0.985 | 1.163
+ 343 | Shanghai Greenland Shenhua   | Chinese Super League               | 1.173 | 1.263 | 1.077 | 1.055
+ 344 | Guimaraes                    | Portuguese Liga                    | 1.172 | 1.126 | 0.961 | 1.194
+ 345 | Philadelphia Union           | Major League Soccer                | 1.171 | 1.158 | 0.989 | 1.100
+ 346 | Sint-Truidense               | Belgian Jupiler League             | 1.167 | 1.175 | 1.007 | 1.041
+ 347 | Once Caldas                  | Fútbol Profesional Colombiano      | 1.166 | 1.072 | 0.920 | 1.197
+ 348 | Luverdense                   | Brasileirao B                      | 1.156 | 1.035 | 0.896 | 1.138
+ 349 | Tigres FC                    | Fútbol Profesional Colombiano      | 1.152 | 0.962 | 0.835 | 1.193
+ 350 | Chateauroux                  | French Ligue 2                     | 1.151 | 1.049 | 0.912 | 1.104
+ 351 | Goiás EC                     | Brasileirao B                      | 1.151 | 1.109 | 0.964 | 1.124
+ 352 | FC Union Berlin              | German 2. Bundesliga               | 1.147 | 1.186 | 1.034 | 1.036
+ 353 | River Plate                  | Primera División de Uruguay        | 1.147 | 1.035 | 0.902 | 1.099
+ 354 | Beitar Jerusalem             | Israeli Premier League             | 1.144 | 1.012 | 0.885 | 1.013
+ 355 | PAOK Salonika                | Greek Super League                 | 1.143 | 1.051 | 0.919 | 0.878
+ 356 | Rosenborg                    | Norwegian Tippeligaen              | 1.139 | 1.084 | 0.951 | 0.900
+ 357 | FC Twente                    | Dutch Eredivisie                   | 1.136 | 1.180 | 1.039 | 1.089
+ 358 | Ajax Amsterdam               | Dutch Eredivisie                   | 1.136 | 1.194 | 1.051 | 1.096
+ 359 | SSV Jahn Regensburg          | German 2. Bundesliga               | 1.134 | 1.171 | 1.033 | 1.029
+ 360 | Correcaminos                 | Ascenso MX                         | 1.133 | 1.033 | 0.911 | 1.077
+ 361 | Celtic                       | Scottish Premiership               | 1.131 | 1.057 | 0.934 | 0.885
+ 362 | Guayaquil City FC            | Primera A de Ecuador               | 1.129 | 0.986 | 0.873 | 1.127
+ 363 | FC Groningen                 | Dutch Eredivisie                   | 1.126 | 1.242 | 1.103 | 1.089
+ 364 | Omiya Ardija                 | Japanese J League                  | 1.126 | 1.126 | 1.000 | 1.242
+ 365 | Santa Cruz FC                | Brasileirao B                      | 1.126 | 1.024 | 0.909 | 1.129
+ 366 | AJ Auxerre                   | French Ligue 2                     | 1.125 | 1.051 | 0.934 | 1.104
+ 367 | Racing (U)                   | Primera División de Uruguay        | 1.125 | 1.053 | 0.937 | 1.099
+ 368 | Envigado                     | Fútbol Profesional Colombiano      | 1.120 | 1.051 | 0.938 | 1.179
+ 369 | Tours                        | French Ligue 2                     | 1.119 | 1.041 | 0.931 | 1.107
+ 370 | KV Kortrijk                  | Belgian Jupiler League             | 1.119 | 1.073 | 0.959 | 1.043
+ 371 | SV Darmstadt 98              | German 2. Bundesliga               | 1.116 | 1.094 | 0.981 | 1.031
+ 372 | Holstein Kiel                | German 2. Bundesliga               | 1.112 | 1.223 | 1.100 | 1.037
+ 373 | Lucerne                      | Swiss Super League                 | 1.108 | 1.129 | 1.019 | 1.022
+ 374 | Lens                         | French Ligue 2                     | 1.107 | 1.163 | 1.051 | 1.107
+ 375 | Arminia Bielefeld            | German 2. Bundesliga               | 1.103 | 1.121 | 1.017 | 1.032
+ 376 | Bnei Yehuda                  | Israeli Premier League             | 1.098 | 0.949 | 0.864 | 1.056
+ 377 | Willem II Tilburg            | Dutch Eredivisie                   | 1.097 | 1.141 | 1.040 | 1.089
+ 378 | Sparta Rotterdam             | Dutch Eredivisie                   | 1.096 | 1.135 | 1.036 | 1.090
+ 379 | St Pauli                     | German 2. Bundesliga               | 1.095 | 1.150 | 1.050 | 1.041
+ 380 | KV Mechelen                  | Belgian Jupiler League             | 1.095 | 1.080 | 0.987 | 1.044
+ 381 | TSV Eintracht Braunschweig   | German 2. Bundesliga               | 1.095 | 1.097 | 1.001 | 1.031
+ 382 | Panathinaikos                | Greek Super League                 | 1.092 | 1.044 | 0.956 | 1.490
+ 383 | SK Brann                     | Norwegian Tippeligaen              | 1.092 | 1.155 | 1.057 | 0.891
+ 384 | Changchun Yatai              | Chinese Super League               | 1.090 | 1.065 | 0.977 | 1.060
+ 385 | FC Salzburg                  | Austrian Bundesliga                | 1.090 | 1.078 | 0.989 | 0.952
+ 386 | Real Salt Lake               | Major League Soccer                | 1.088 | 1.203 | 1.106 | 1.099
+ 387 | Young Boys                   | Swiss Super League                 | 1.087 | 1.078 | 0.992 | 1.038
+ 388 | Malmo FF                     | Swedish Allsvenskanliga            | 1.084 | 1.086 | 1.002 | 0.870
+ 389 | SK Sturm Graz                | Austrian Bundesliga                | 1.080 | 1.170 | 1.083 | 0.997
+ 390 | Rubio Ñú                     | Primera División de Paraguay       | 1.076 | 1.071 | 0.996 | 1.140
+ 391 | Roda JC Kerkrade             | Dutch Eredivisie                   | 1.073 | 1.210 | 1.127 | 1.090
+ 392 | ADO Den Haag                 | Dutch Eredivisie                   | 1.072 | 1.112 | 1.037 | 1.096
+ 393 | Maccabi Petach-Tikva         | Israeli Premier League             | 1.071 | 0.977 | 0.912 | 1.017
+ 394 | Bnei Sakhnin                 | Israeli Premier League             | 1.071 | 0.977 | 0.912 | 1.017
+ 395 | KV Oostende                  | Belgian Jupiler League             | 1.063 | 1.075 | 1.011 | 1.068
+ 396 | Racing Genk                  | Belgian Jupiler League             | 1.061 | 1.067 | 1.006 | 1.045
+ 397 | KAA Gent                     | Belgian Jupiler League             | 1.058 | 1.125 | 1.063 | 1.043
+ 398 | Anderlecht                   | Belgian Jupiler League             | 1.057 | 1.085 | 1.027 | 1.045
+ 399 | Sportivo Luqueño             | Primera División de Paraguay       | 1.056 | 1.063 | 1.006 | 1.147
+ 400 | FC Thun                      | Swiss Super League                 | 1.054 | 1.115 | 1.057 | 1.025
+ 401 | Sonderjyske                  | Danish SAS-Ligaen                  | 1.053 | 1.107 | 1.051 | 0.965
+ 402 | AEK Athens                   | Greek Super League                 | 1.052 | 0.922 | 0.876 | 1.219
+ 403 | Juventud                     | Primera División de Uruguay        | 1.044 | 1.056 | 1.012 | 1.102
+ 404 | FC Nordsjaelland             | Danish SAS-Ligaen                  | 1.037 | 1.244 | 1.199 | 0.966
+ 405 | FC Midtjylland               | Danish SAS-Ligaen                  | 1.036 | 1.234 | 1.191 | 0.932
+ 406 | SC Rheindorf Altach          | Austrian Bundesliga                | 1.034 | 1.015 | 0.981 | 0.993
+ 407 | Palestino                    | Primera División de Chile          | 1.033 | 1.185 | 1.147 | 1.153
+ 408 | St Gallen                    | Swiss Super League                 | 1.033 | 1.041 | 1.007 | 1.026
+ 409 | O'Higgins                    | Primera División de Chile          | 1.031 | 1.059 | 1.027 | 1.094
+ 410 | Náutico                      | Brasileirao B                      | 1.030 | 0.975 | 0.946 | 1.107
+ 411 | AC Horsens                   | Danish SAS-Ligaen                  | 1.029 | 1.033 | 1.004 | 0.966
+ 412 | Maccabi Tel-Aviv             | Israeli Premier League             | 1.028 | 0.909 | 0.885 | 1.018
+ 413 | MSV Duisburg                 | German 2. Bundesliga               | 1.028 | 1.038 | 1.010 | 1.034
+ 414 | Panionios                    | Greek Super League                 | 1.026 | 0.939 | 0.915 | 1.012
+ 415 | Brøndby                      | Danish SAS-Ligaen                  | 1.020 | 1.110 | 1.088 | 0.966
+ 416 | San Jose Earthquakes         | Major League Soccer                | 1.019 | 1.061 | 1.041 | 1.092
+ 417 | Tianjin Teda                 | Chinese Super League               | 1.017 | 0.964 | 0.948 | 1.066
+ 418 | Wigan Athletic               | English League One                 | 1.016 | 1.077 | 1.060 | 0.941
+ 419 | NAC Breda                    | Dutch Eredivisie                   | 1.012 | 1.171 | 1.158 | 1.092
+ 420 | Figueirense FC               | Brasileirao B                      | 1.009 | 1.070 | 1.061 | 1.111
+ 421 | Orlando City SC              | Major League Soccer                | 1.009 | 1.034 | 1.026 | 1.119
+ 422 | FC Sion                      | Swiss Super League                 | 1.009 | 1.029 | 1.020 | 1.027
+ 423 | Paris FC                     | French Ligue 2                     | 1.008 | 0.926 | 0.919 | 1.108
+ 424 | VfL Bochum                   | German 2. Bundesliga               | 1.004 | 1.020 | 1.016 | 1.044
+ 425 | Colorado Rapids              | Major League Soccer                | 1.004 | 0.991 | 0.986 | 1.100
+ 426 | Hibernian                    | Scottish Premiership               | 0.999 | 1.111 | 1.112 | 0.859
+ 427 | Plaza Colonia                | Primera División de Uruguay        | 0.999 | 0.984 | 0.985 | 1.105
+ 428 | Atlante                      | Ascenso MX                         | 0.997 | 0.968 | 0.971 | 1.086
+ 429 | Fuerza Amarilla              | Primera A de Ecuador               | 0.995 | 0.924 | 0.929 | 1.132
+ 430 | FC Copenhagen                | Danish SAS-Ligaen                  | 0.994 | 1.049 | 1.055 | 0.967
+ 431 | Doncaster Rovers             | English League One                 | 0.993 | 1.099 | 1.107 | 0.928
+ 432 | Hapoel Acre                  | Israeli Premier League             | 0.987 | 0.936 | 0.948 | 1.022
+ 433 | Moadon Sport Ashdod          | Israeli Premier League             | 0.987 | 0.936 | 0.948 | 1.022
+ 434 | Heidenheimer SB              | German 2. Bundesliga               | 0.986 | 1.040 | 1.055 | 1.034
+ 435 | FC Erzgebirge Aue            | German 2. Bundesliga               | 0.984 | 1.021 | 1.038 | 1.033
+ 436 | Standard Liege               | Belgian Jupiler League             | 0.981 | 1.029 | 1.050 | 1.063
+ 437 | Austria Vienna               | Austrian Bundesliga                | 0.980 | 1.118 | 1.141 | 0.992
+ 438 | KSC Lokeren                  | Belgian Jupiler League             | 0.975 | 1.034 | 1.060 | 1.048
+ 439 | Liverpool                    | Primera División de Uruguay        | 0.975 | 0.982 | 1.008 | 1.121
+ 440 | Maccabi Haifa                | Israeli Premier League             | 0.973 | 0.915 | 0.940 | 1.023
+ 441 | Henan Jianye                 | Chinese Super League               | 0.967 | 0.925 | 0.957 | 1.070
+ 442 | Dynamo Dresden               | German 2. Bundesliga               | 0.967 | 1.042 | 1.077 | 1.042
+ 443 | UTC                          | Primera Profesional de Perú        | 0.965 | 0.909 | 0.942 | 0.887
+ 444 | Alianza Lima                 | Primera Profesional de Perú        | 0.958 | 1.050 | 1.096 | 0.885
+ 445 | SpVgg Greuther Furth         | German 2. Bundesliga               | 0.958 | 1.018 | 1.062 | 1.032
+ 446 | LA Galaxy                    | Major League Soccer                | 0.956 | 1.140 | 1.192 | 1.101
+ 447 | U. de G.                     | Ascenso MX                         | 0.956 | 0.924 | 0.967 | 1.030
+ 448 | Sarpsborg FK                 | Norwegian Tippeligaen              | 0.955 | 1.005 | 1.053 | 0.894
+ 449 | Tampico Madero               | Ascenso MX                         | 0.951 | 0.969 | 1.018 | 0.973
+ 450 | Rotherham United             | English League One                 | 0.951 | 1.049 | 1.103 | 0.932
+ 451 | Aberdeen                     | Scottish Premiership               | 0.950 | 0.992 | 1.044 | 0.923
+ 452 | Albirex Niigata              | Japanese J League                  | 0.947 | 0.994 | 1.049 | 1.248
+ 453 | Grasshoppers                 | Swiss Super League                 | 0.945 | 1.100 | 1.164 | 1.031
+ 454 | El Tanque Sisley             | Primera División de Uruguay        | 0.944 | 1.107 | 1.173 | 1.107
+ 455 | FC Ingolstadt 04             | German 2. Bundesliga               | 0.942 | 1.009 | 1.071 | 1.033
+ 456 | Rangers                      | Scottish Premiership               | 0.942 | 1.049 | 1.113 | 0.917
+ 457 | Kaiserslautern               | German 2. Bundesliga               | 0.938 | 0.994 | 1.059 | 1.043
+ 458 | Sud América                  | Primera División de Uruguay        | 0.936 | 1.130 | 1.207 | 1.107
+ 459 | FC Lugano                    | Swiss Super League                 | 0.935 | 0.964 | 1.032 | 1.043
+ 460 | Fleetwood Town               | English League One                 | 0.933 | 0.973 | 1.043 | 0.924
+ 461 | LASK Linz                    | Austrian Bundesliga                | 0.923 | 0.961 | 1.041 | 0.997
+ 462 | Shrewsbury Town              | English League One                 | 0.921 | 0.991 | 1.077 | 0.932
+ 463 | ABC                          | Brasileirao B                      | 0.921 | 0.900 | 0.977 | 1.127
+ 464 | Oxford United                | English League One                 | 0.919 | 1.035 | 1.126 | 0.924
+ 465 | Peterborough United          | English League One                 | 0.919 | 1.064 | 1.158 | 0.924
+ 466 | Brisbane Roar                | Australian A-League                | 0.908 | 1.018 | 1.121 | 0.986
+ 467 | Molde                        | Norwegian Tippeligaen              | 0.908 | 1.053 | 1.159 | 0.896
+ 468 | Rapid Vienna                 | Austrian Bundesliga                | 0.908 | 1.048 | 1.155 | 0.998
+ 469 | Sporting Cristal             | Primera Profesional de Perú        | 0.903 | 1.041 | 1.153 | 0.915
+ 470 | DC United                    | Major League Soccer                | 0.902 | 0.989 | 1.097 | 1.104
+ 471 | Trinidense                   | Primera División de Paraguay       | 0.899 | 1.001 | 1.114 | 1.149
+ 472 | Bristol Rovers               | English League One                 | 0.896 | 1.040 | 1.161 | 0.926
+ 473 | Deportivo Táchira            | Primera División de Venezuela      | 0.894 | 0.886 | 0.991 | 0.874
+ 474 | Caracas F.C.                 | Primera División de Venezuela      | 0.894 | 0.946 | 1.058 | 0.900
+ 475 | Djurgardens IF               | Swedish Allsvenskanliga            | 0.882 | 0.993 | 1.126 | 0.875
+ 476 | Adelaide United              | Australian A-League                | 0.882 | 1.047 | 1.187 | 0.984
+ 477 | SV Mattersburg               | Austrian Bundesliga                | 0.881 | 1.064 | 1.208 | 1.000
+ 478 | Sirius                       | Swedish Allsvenskanliga            | 0.879 | 1.016 | 1.155 | 0.875
+ 479 | Charlton Athletic            | English League One                 | 0.876 | 1.012 | 1.155 | 0.927
+ 480 | Sport Huancayo               | Primera Profesional de Perú        | 0.874 | 0.980 | 1.121 | 0.890
+ 481 | Blackpool                    | English League One                 | 0.868 | 1.007 | 1.160 | 0.931
+ 482 | Silkeborg IF                 | Danish SAS-Ligaen                  | 0.867 | 0.944 | 1.089 | 0.973
+ 483 | Monagas SC                   | Primera División de Venezuela      | 0.865 | 0.953 | 1.102 | 0.884
+ 484 | Haugesund                    | Norwegian Tippeligaen              | 0.863 | 0.931 | 1.079 | 0.856
+ 485 | AIK                          | Swedish Allsvenskanliga            | 0.862 | 0.842 | 0.977 | 0.893
+ 486 | Minnesota United FC          | Major League Soccer                | 0.857 | 1.108 | 1.293 | 1.115
+ 487 | AaB                          | Danish SAS-Ligaen                  | 0.856 | 0.985 | 1.150 | 0.974
+ 488 | Walsall                      | English League One                 | 0.856 | 0.971 | 1.134 | 0.932
+ 489 | St Johnstone                 | Scottish Premiership               | 0.855 | 0.984 | 1.151 | 0.927
+ 490 | AGF Aarhus                   | Danish SAS-Ligaen                  | 0.854 | 0.977 | 1.144 | 0.974
+ 491 | Carabobo                     | Primera División de Venezuela      | 0.853 | 0.870 | 1.020 | 0.910
+ 492 | Venados FC                   | Ascenso MX                         | 0.851 | 0.845 | 0.993 | 1.052
+ 493 | BK Hacken                    | Swedish Allsvenskanliga            | 0.851 | 0.865 | 1.017 | 0.876
+ 494 | Partick Thistle              | Scottish Premiership               | 0.850 | 0.911 | 1.072 | 0.884
+ 495 | Blackburn Rovers             | English League One                 | 0.849 | 0.970 | 1.143 | 0.936
+ 496 | Universitario de Deportes    | Primera Profesional de Perú        | 0.844 | 0.923 | 1.093 | 0.891
+ 497 | Bradford City                | English League One                 | 0.843 | 0.951 | 1.128 | 0.929
+ 498 | Melgar                       | Primera Profesional de Perú        | 0.835 | 0.961 | 1.152 | 0.914
+ 499 | Sydney FC                    | Australian A-League                | 0.833 | 0.952 | 1.142 | 1.023
+ 500 | Eupen                        | Belgian Jupiler League             | 0.830 | 1.039 | 1.252 | 1.065
+ 501 | Portsmouth                   | English League One                 | 0.830 | 0.939 | 1.131 | 0.932
+ 502 | IFK                          | Swedish Allsvenskanliga            | 0.828 | 0.973 | 1.176 | 0.877
+ 503 | Milton Keynes Dons           | English League One                 | 0.824 | 0.861 | 1.045 | 0.944
+ 504 | Randers FC                   | Danish SAS-Ligaen                  | 0.823 | 0.880 | 1.069 | 0.975
+ 505 | Elfsborg                     | Swedish Allsvenskanliga            | 0.817 | 1.087 | 1.331 | 0.877
+ 506 | Motherwell                   | Scottish Premiership               | 0.812 | 0.977 | 1.203 | 0.866
+ 507 | Hamilton Academical          | Scottish Premiership               | 0.811 | 0.953 | 1.175 | 0.889
+ 508 | Scunthorpe United            | English League One                 | 0.811 | 0.946 | 1.167 | 0.932
+ 509 | Deportivo Municipal Lima     | Primera Profesional de Perú        | 0.809 | 0.853 | 1.054 | 0.908
+ 510 | Plymouth Argyle              | English League One                 | 0.804 | 0.945 | 1.174 | 0.931
+ 511 | Liaoning Whowin              | Chinese Super League               | 0.803 | 1.020 | 1.269 | 1.084
+ 512 | Ross County                  | Scottish Premiership               | 0.803 | 0.903 | 1.124 | 0.882
+ 513 | Dorados de Sinaloa           | Ascenso MX                         | 0.794 | 0.942 | 1.188 | 1.122
+ 514 | Deportivo Anzoategui         | Primera División de Venezuela      | 0.792 | 0.777 | 0.981 | 0.885
+ 515 | Luton Town                   | English League Two                 | 0.791 | 0.961 | 1.216 | 0.847
+ 516 | Gillingham                   | English League One                 | 0.791 | 0.843 | 1.066 | 0.930
+ 517 | Rochdale                     | English League One                 | 0.777 | 0.921 | 1.186 | 0.937
+ 518 | Aalesund                     | Norwegian Tippeligaen              | 0.774 | 0.948 | 1.223 | 0.900
+ 519 | Bury                         | English League One                 | 0.773 | 0.933 | 1.207 | 0.935
+ 520 | Stromsgodset                 | Norwegian Tippeligaen              | 0.769 | 0.910 | 1.183 | 0.900
+ 521 | AFC Wimbledon                | English League One                 | 0.761 | 0.887 | 1.165 | 0.934
+ 522 | Lillestrom                   | Norwegian Tippeligaen              | 0.758 | 0.997 | 1.315 | 0.900
+ 523 | Hammarby                     | Swedish Allsvenskanliga            | 0.758 | 0.920 | 1.214 | 0.879
+ 524 | Lyngby                       | Danish SAS-Ligaen                  | 0.754 | 0.997 | 1.322 | 0.948
+ 525 | Northampton Town             | English League One                 | 0.752 | 0.870 | 1.157 | 0.933
+ 526 | IFK Norrkoping               | Swedish Allsvenskanliga            | 0.742 | 0.910 | 1.226 | 0.880
+ 527 | Western Sydney Wanderers     | Australian A-League                | 0.740 | 0.971 | 1.311 | 1.039
+ 528 | Östersunds FK                | Swedish Allsvenskanliga            | 0.740 | 0.907 | 1.225 | 0.904
+ 529 | Barnet                       | English League Two                 | 0.737 | 0.854 | 1.158 | 0.843
+ 530 | Carlisle United              | English League Two                 | 0.736 | 0.913 | 1.240 | 0.840
+ 531 | Valerenga                    | Norwegian Tippeligaen              | 0.734 | 0.883 | 1.202 | 0.920
+ 532 | Zulia                        | Primera División de Venezuela      | 0.730 | 0.956 | 1.310 | 0.937
+ 533 | Clan Juvenil                 | Primera A de Ecuador               | 0.730 | 0.933 | 1.278 | 1.146
+ 534 | Oldham Athletic              | English League One                 | 0.729 | 0.905 | 1.241 | 0.931
+ 535 | CFR Cluj-Napoca              | Romanian First Division            | 0.728 | 0.802 | 1.103 | 0.854
+ 536 | Sandefjord                   | Norwegian Tippeligaen              | 0.728 | 0.937 | 1.287 | 0.901
+ 537 | Stabaek                      | Norwegian Tippeligaen              | 0.726 | 1.035 | 1.424 | 0.901
+ 538 | FC Botosani                  | Romanian First Division            | 0.725 | 0.798 | 1.101 | 0.854
+ 539 | Dundee                       | Scottish Premiership               | 0.723 | 0.888 | 1.229 | 0.889
+ 540 | Heart of Midlothian          | Scottish Premiership               | 0.718 | 0.831 | 1.158 | 0.872
+ 541 | Universitatea Craiova        | Romanian First Division            | 0.718 | 0.764 | 1.063 | 0.937
+ 542 | Swindon Town                 | English League Two                 | 0.718 | 0.876 | 1.220 | 0.837
+ 543 | Southend United              | English League One                 | 0.707 | 0.889 | 1.258 | 0.928
+ 544 | Accrington Stanley           | English League Two                 | 0.707 | 0.964 | 1.362 | 0.851
+ 545 | Newport County               | English League Two                 | 0.706 | 0.911 | 1.290 | 0.837
+ 546 | Sogndal                      | Norwegian Tippeligaen              | 0.702 | 0.896 | 1.276 | 0.902
+ 547 | Aragua                       | Primera División de Venezuela      | 0.702 | 0.807 | 1.149 | 0.888
+ 548 | Notts County                 | English League Two                 | 0.699 | 0.944 | 1.349 | 0.832
+ 549 | FCSB                         | Romanian First Division            | 0.696 | 0.816 | 1.172 | 0.920
+ 550 | Zamora                       | Primera División de Venezuela      | 0.690 | 0.916 | 1.327 | 0.973
+ 551 | Coventry City                | English League Two                 | 0.690 | 0.849 | 1.230 | 0.837
+ 552 | Odds BK                      | Norwegian Tippeligaen              | 0.682 | 0.742 | 1.089 | 0.853
+ 553 | Stevenage                    | English League Two                 | 0.675 | 0.888 | 1.316 | 0.840
+ 554 | Concordia Chiajna            | Romanian First Division            | 0.673 | 0.804 | 1.194 | 0.860
+ 555 | Dinamo Bucuresti             | Romanian First Division            | 0.668 | 0.748 | 1.120 | 0.943
+ 556 | Exeter City                  | English League Two                 | 0.668 | 0.803 | 1.202 | 0.834
+ 557 | Mansfield Town               | English League Two                 | 0.662 | 0.830 | 1.254 | 0.833
+ 558 | Kristiansund BK              | Norwegian Tippeligaen              | 0.660 | 0.926 | 1.402 | 0.904
+ 559 | Morecambe                    | English League Two                 | 0.660 | 0.864 | 1.310 | 0.839
+ 560 | Estudiantes de Mérida        | Primera División de Venezuela      | 0.656 | 0.797 | 1.216 | 0.886
+ 561 | Orebro SK                    | Swedish Allsvenskanliga            | 0.655 | 0.886 | 1.352 | 0.883
+ 562 | Crewe Alexandra              | English League Two                 | 0.653 | 0.828 | 1.268 | 0.837
+ 563 | Cork                         | League of Ireland Premier Division | 0.651 | 0.845 | 1.299 | 0.597
+ 564 | San Martin                   | Primera Profesional de Perú        | 0.649 | 0.865 | 1.332 | 0.882
+ 565 | Lincoln City                 | English League Two                 | 0.642 | 0.817 | 1.273 | 0.835
+ 566 | Fortuna Sittard              | Dutch Eeerste Divisie              | 0.639 | 0.938 | 1.468 | 0.783
+ 567 | Trujillanos                  | Primera División de Venezuela      | 0.637 | 0.736 | 1.156 | 0.887
+ 568 | Cheltenham Town              | English League Two                 | 0.632 | 0.844 | 1.336 | 0.843
+ 569 | Viking FK                    | Norwegian Tippeligaen              | 0.631 | 0.868 | 1.375 | 0.905
+ 570 | Kilmarnock                   | Scottish Premiership               | 0.624 | 0.807 | 1.292 | 0.881
+ 571 | Grimsby Town                 | English League Two                 | 0.621 | 0.818 | 1.319 | 0.842
+ 572 | Tromso                       | Norwegian Tippeligaen              | 0.619 | 0.855 | 1.383 | 0.906
+ 573 | Port Vale                    | English League Two                 | 0.618 | 0.866 | 1.401 | 0.840
+ 574 | Forest Green Rovers          | English League Two                 | 0.615 | 0.850 | 1.381 | 0.834
+ 575 | FC Emmen VV                  | Dutch Eeerste Divisie              | 0.615 | 0.867 | 1.409 | 0.784
+ 576 | Halmstads BK                 | Swedish Allsvenskanliga            | 0.613 | 0.805 | 1.313 | 0.885
+ 577 | Wycombe Wanderers            | English League Two                 | 0.610 | 0.883 | 1.446 | 0.840
+ 578 | Cambridge United             | English League Two                 | 0.605 | 0.794 | 1.313 | 0.838
+ 579 | Petapa                       | Liga Nacional de Guatemala         | 0.604 | 0.774 | 1.282 | 0.742
+ 580 | NEC Nijmegen                 | Dutch Eeerste Divisie              | 0.601 | 0.882 | 1.468 | 0.784
+ 581 | Yeovil Town                  | English League Two                 | 0.589 | 0.929 | 1.578 | 0.841
+ 582 | Chesterfield                 | English League Two                 | 0.589 | 0.810 | 1.376 | 0.843
+ 583 | Portuguesa                   | Primera División de Venezuela      | 0.587 | 0.702 | 1.196 | 0.890
+ 584 | MVV Maastricht               | Dutch Eeerste Divisie              | 0.584 | 0.910 | 1.557 | 0.785
+ 585 | De Graafschap                | Dutch Eeerste Divisie              | 0.581 | 0.867 | 1.493 | 0.785
+ 586 | SC Stormvogels Telstar       | Dutch Eeerste Divisie              | 0.581 | 0.867 | 1.493 | 0.785
+ 587 | Helmond Sport                | Dutch Eeerste Divisie              | 0.581 | 0.867 | 1.493 | 0.785
+ 588 | Jonkopings Sodra             | Swedish Allsvenskanliga            | 0.580 | 0.830 | 1.431 | 0.889
+ 589 | Alianza Atlético             | Primera Profesional de Perú        | 0.579 | 0.775 | 1.338 | 0.888
+ 590 | Colchester United            | English League Two                 | 0.579 | 0.791 | 1.366 | 0.841
+ 591 | Malacateco                   | Liga Nacional de Guatemala         | 0.573 | 0.727 | 1.271 | 0.743
+ 592 | Alianza FC                   | Primera División de El Salvador    | 0.568 | 0.756 | 1.330 | 0.725
+ 593 | FC Volendam                  | Dutch Eeerste Divisie              | 0.566 | 0.855 | 1.512 | 0.786
+ 594 | Go Ahead Eagles              | Dutch Eeerste Divisie              | 0.566 | 0.895 | 1.580 | 0.786
+ 595 | Jong PSV                     | Dutch Eeerste Divisie              | 0.566 | 0.855 | 1.512 | 0.786
+ 596 | FC Eindhoven                 | Dutch Eeerste Divisie              | 0.566 | 0.855 | 1.512 | 0.786
+ 597 | Ayacucho FC                  | Primera Profesional de Perú        | 0.565 | 0.791 | 1.401 | 0.890
+ 598 | Dundalk                      | League of Ireland Premier Division | 0.562 | 0.793 | 1.412 | 0.620
+ 599 | GIF Sundsvall                | Swedish Allsvenskanliga            | 0.551 | 0.704 | 1.279 | 0.888
+ 600 | Aldershot Town               | English National League            | 0.550 | 0.833 | 1.516 | 0.699
+ 601 | Almere City                  | Dutch Eeerste Divisie              | 0.546 | 0.839 | 1.536 | 0.787
+ 602 | Bromley                      | English National League            | 0.545 | 0.770 | 1.412 | 0.700
+ 603 | Kalmar FF                    | Swedish Allsvenskanliga            | 0.539 | 0.770 | 1.429 | 0.889
+ 604 | Crawley Town                 | English League Two                 | 0.537 | 0.763 | 1.421 | 0.844
+ 605 | RKC Waalwijk                 | Dutch Eeerste Divisie              | 0.531 | 0.803 | 1.512 | 0.787
+ 606 | Juan Aurich                  | Primera Profesional de Perú        | 0.525 | 0.790 | 1.506 | 0.916
+ 607 | Coban Imperial               | Liga Nacional de Guatemala         | 0.520 | 0.717 | 1.379 | 0.751
+ 608 | Dordrecht '90                | Dutch Eeerste Divisie              | 0.516 | 0.839 | 1.626 | 0.788
+ 609 | Antigua                      | Liga Nacional de Guatemala         | 0.512 | 0.704 | 1.377 | 0.742
+ 610 | Municipal                    | Liga Nacional de Guatemala         | 0.512 | 0.677 | 1.322 | 0.742
+ 611 | Suchitepequez                | Liga Nacional de Guatemala         | 0.506 | 0.746 | 1.474 | 0.740
+ 612 | Sutton United                | English National League            | 0.497 | 0.736 | 1.480 | 0.701
+ 613 | Gateshead                    | English National League            | 0.493 | 0.717 | 1.453 | 0.701
+ 614 | Aguila                       | Primera División de El Salvador    | 0.492 | 0.638 | 1.296 | 0.711
+ 615 | Comunicaciones               | Liga Nacional de Guatemala         | 0.491 | 0.676 | 1.376 | 0.761
+ 616 | Xelaju                       | Liga Nacional de Guatemala         | 0.480 | 0.675 | 1.405 | 0.752
+ 617 | Ebbsfleet United             | English National League            | 0.479 | 0.765 | 1.595 | 0.701
+ 618 | Dagenham & Redbridge         | English National League            | 0.477 | 0.786 | 1.647 | 0.701
+ 619 | Boreham Wood                 | English National League            | 0.470 | 0.761 | 1.620 | 0.702
+ 620 | Metapan                      | Primera División de El Salvador    | 0.470 | 0.708 | 1.505 | 0.724
+ 621 | Dunfermline Athletic         | Scottish Championship              | 0.469 | 0.801 | 1.706 | 0.644
+ 622 | Barrow                       | English National League            | 0.468 | 0.695 | 1.484 | 0.702
+ 623 | Eastleigh                    | English National League            | 0.467 | 0.689 | 1.476 | 0.702
+ 624 | Dover                        | English National League            | 0.465 | 0.694 | 1.492 | 0.702
+ 625 | CD FAS                       | Primera División de El Salvador    | 0.453 | 0.621 | 1.370 | 0.720
+ 626 | Queen of the South           | Scottish Championship              | 0.442 | 0.721 | 1.631 | 0.639
+ 627 | Dundee United                | Scottish Championship              | 0.442 | 0.663 | 1.501 | 0.642
+ 628 | Livingston                   | Scottish Championship              | 0.437 | 0.698 | 1.596 | 0.656
+ 629 | Marquense                    | Liga Nacional de Guatemala         | 0.437 | 0.675 | 1.546 | 0.765
+ 630 | Wrexham                      | English National League            | 0.435 | 0.659 | 1.516 | 0.703
+ 631 | Maidenhead Utd               | English National League            | 0.433 | 0.690 | 1.592 | 0.703
+ 632 | Luis Angel Firpo             | Primera División de El Salvador    | 0.429 | 0.637 | 1.486 | 0.726
+ 633 | Chester FC                   | English National League            | 0.426 | 0.681 | 1.600 | 0.703
+ 634 | Falkirk                      | Scottish Championship              | 0.426 | 0.721 | 1.692 | 0.643
+ 635 | Leyton Orient                | English National League            | 0.420 | 0.706 | 1.679 | 0.703
+ 636 | Macclesfield Town            | English National League            | 0.416 | 0.643 | 1.546 | 0.704
+ 637 | Tranmere Rovers              | English National League            | 0.414 | 0.622 | 1.503 | 0.718
+ 638 | St Mirren                    | Scottish Championship              | 0.414 | 0.759 | 1.831 | 0.656
+ 639 | Municipal Limeño             | Primera División de El Salvador    | 0.412 | 0.681 | 1.652 | 0.727
+ 640 | Halifax                      | English National League            | 0.409 | 0.622 | 1.520 | 0.704
+ 641 | Maidstone United             | English National League            | 0.408 | 0.649 | 1.593 | 0.704
+ 642 | Valletta                     | Maltese Premier League             | 0.407 | 0.642 | 1.576 | 0.755
+ 643 | Hartlepool United            | English National League            | 0.402 | 0.640 | 1.591 | 0.704
+ 644 | Floriana FC                  | Maltese Premier League             | 0.396 | 0.648 | 1.634 | 0.659
+ 645 | Birkirkara                   | Maltese Premier League             | 0.388 | 0.640 | 1.651 | 0.661
+ 646 | Woking                       | English National League            | 0.385 | 0.672 | 1.745 | 0.705
+ 647 | Derry City                   | League of Ireland Premier Division | 0.378 | 0.669 | 1.773 | 0.628
+ 648 | Torquay United               | English National League            | 0.377 | 0.695 | 1.844 | 0.705
+ 649 | Guiseley                     | English National League            | 0.377 | 0.667 | 1.768 | 0.705
+ 650 | Greenock Morton              | Scottish Championship              | 0.376 | 0.639 | 1.700 | 0.646
+ 651 | Hibernians                   | Maltese Premier League             | 0.355 | 0.617 | 1.739 | 0.747
+ 652 | Shamrock Rovers              | League of Ireland Premier Division | 0.345 | 0.620 | 1.795 | 0.612
+ 653 | Inverness Caledonian Thistle | Scottish Championship              | 0.335 | 0.589 | 1.757 | 0.652
+ 654 | Ayr United                   | Scottish League One                | 0.318 | 0.734 | 2.304 | 0.502
+ 655 | Bray                         | League of Ireland Premier Division | 0.318 | 0.680 | 2.141 | 0.605
+ 656 | Dumbarton                    | Scottish Championship              | 0.303 | 0.521 | 1.719 | 0.651
+ 657 | St Patricks                  | League of Ireland Premier Division | 0.302 | 0.573 | 1.899 | 0.615
+ 658 | Galway Utd                   | League of Ireland Premier Division | 0.294 | 0.550 | 1.872 | 0.616
+ 659 | Limerick FC                  | League of Ireland Premier Division | 0.289 | 0.575 | 1.987 | 0.616
+ 660 | Bohemians                    | League of Ireland Premier Division | 0.278 | 0.496 | 1.781 | 0.617
+ 661 | Brechin City                 | Scottish Championship              | 0.274 | 0.550 | 2.010 | 0.659
+ 662 | Sligo                        | League of Ireland Premier Division | 0.267 | 0.498 | 1.867 | 0.620
+ 663 | Finn Harps                   | League of Ireland Premier Division | 0.241 | 0.540 | 2.240 | 0.621
+ 664 | Raith Rovers                 | Scottish League One                | 0.231 | 0.521 | 2.256 | 0.508
+ 665 | Connah's Quay                | Welsh Premier League               | 0.224 | 0.546 | 2.439 | 0.485
+ 666 | Arbroath                     | Scottish League One                | 0.218 | 0.510 | 2.335 | 0.518
+ 667 | Albion Rovers                | Scottish League One                | 0.210 | 0.582 | 2.777 | 0.512
+ 668 | Bangor City                  | Welsh Premier League               | 0.204 | 0.507 | 2.481 | 0.515
+ 669 | Bangkok United               | Thai Premier League                | 0.201 | 0.614 | 3.049 | 0.432
+ 670 | Maritzburg Utd               | South African Premiership          | 0.198 | 0.420 | 2.118 | 0.461
+ 671 | Drogheda Utd                 | League of Ireland Premier Division | 0.197 | 0.444 | 2.255 | 0.626
+ 672 | East Fife                    | Scottish League One                | 0.191 | 0.447 | 2.342 | 0.509
+ 673 | Cefn Druids                  | Welsh Premier League               | 0.189 | 0.478 | 2.524 | 0.483
+ 674 | Cape Town City FC            | South African Premiership          | 0.189 | 0.415 | 2.195 | 0.461
+ 675 | Alloa Athletic               | Scottish League One                | 0.189 | 0.437 | 2.307 | 0.522
+ 676 | Aberystwyth                  | Welsh Premier League               | 0.189 | 0.478 | 2.529 | 0.483
+ 677 | Bangkok Glass                | Thai Premier League                | 0.187 | 0.531 | 2.842 | 0.435
+ 678 | Airdrieonians                | Scottish League One                | 0.187 | 0.480 | 2.573 | 0.523
+ 679 | Newtown                      | Welsh Premier League               | 0.185 | 0.472 | 2.554 | 0.484
+ 680 | Queen's Park                 | Scottish League One                | 0.185 | 0.516 | 2.784 | 0.509
+ 681 | Stranraer                    | Scottish League One                | 0.182 | 0.511 | 2.813 | 0.517
+ 682 | Barry Town                   | Welsh Premier League               | 0.180 | 0.453 | 2.512 | 0.485
+ 683 | Carmarthen                   | Welsh Premier League               | 0.180 | 0.479 | 2.660 | 0.485
+ 684 | T.N.S.                       | Welsh Premier League               | 0.174 | 0.495 | 2.837 | 0.496
+ 685 | Polokwane City FC            | South African Premiership          | 0.174 | 0.400 | 2.298 | 0.464
+ 686 | Amazulu                      | South African Premiership          | 0.173 | 0.394 | 2.270 | 0.463
+ 687 | Golden Arrows                | South African Premiership          | 0.172 | 0.407 | 2.375 | 0.463
+ 688 | Buriram United               | Thai Premier League                | 0.171 | 0.467 | 2.721 | 0.431
+ 689 | SuperSport United            | South African Premiership          | 0.171 | 0.395 | 2.313 | 0.465
+ 690 | Forfar Athletic              | Scottish League One                | 0.170 | 0.462 | 2.722 | 0.513
+ 691 | Bloem Celtic                 | South African Premiership          | 0.170 | 0.394 | 2.323 | 0.463
+ 692 | Mamelodi Sundowns            | South African Premiership          | 0.169 | 0.393 | 2.323 | 0.465
+ 693 | Peterhead                    | Scottish League Two                | 0.169 | 0.459 | 2.719 | 0.422
+ 694 | Prestatyn Town               | Welsh Premier League               | 0.168 | 0.449 | 2.680 | 0.486
+ 695 | Free State Stars             | South African Premiership          | 0.165 | 0.394 | 2.392 | 0.464
+ 696 | Bidvest Wits                 | South African Premiership          | 0.164 | 0.405 | 2.461 | 0.465
+ 697 | Stirling Albion              | Scottish League Two                | 0.163 | 0.457 | 2.804 | 0.421
+ 698 | Ajax Cape Town               | South African Premiership          | 0.161 | 0.383 | 2.386 | 0.464
+ 699 | Kaizer Chiefs                | South African Premiership          | 0.159 | 0.380 | 2.396 | 0.464
+ 700 | Platinum Stars               | South African Premiership          | 0.152 | 0.384 | 2.530 | 0.465
+ 701 | Glenavon                     | Northern Irish Premiership         | 0.147 | 0.454 | 3.090 | 0.400
+ 702 | Linfield                     | Northern Irish Premiership         | 0.143 | 0.413 | 2.886 | 0.436
+ 703 | Stenhousemuir                | Scottish League Two                | 0.138 | 0.410 | 2.971 | 0.426
+ 704 | Coleraine                    | Northern Irish Premiership         | 0.138 | 0.410 | 2.965 | 0.432
+ 705 | Suphanburi                   | Thai Premier League                | 0.133 | 0.396 | 2.964 | 0.441
+ 706 | Crusaders                    | Northern Irish Premiership         | 0.132 | 0.416 | 3.154 | 0.403
+ 707 | BEC-Tero Sasana              | Thai Premier League                | 0.132 | 0.410 | 3.108 | 0.442
+ 708 | Montrose                     | Scottish League Two                | 0.130 | 0.407 | 3.137 | 0.437
+ 709 | Glentoran                    | Northern Irish Premiership         | 0.129 | 0.392 | 3.035 | 0.403
+ 710 | Annan Athletic               | Scottish League Two                | 0.129 | 0.404 | 3.143 | 0.427
+ 711 | Chonburi                     | Thai Premier League                | 0.128 | 0.414 | 3.244 | 0.438
+ 712 | Clyde                        | Scottish League Two                | 0.127 | 0.438 | 3.440 | 0.428
+ 713 | Navy Football Club           | Thai Premier League                | 0.123 | 0.336 | 2.735 | 0.441
+ 714 | Cowdenbeath                  | Scottish League Two                | 0.120 | 0.351 | 2.934 | 0.434
+ 715 | Cliftonville                 | Northern Irish Premiership         | 0.119 | 0.376 | 3.166 | 0.406
+ 716 | Berwick Rangers              | Scottish League Two                | 0.118 | 0.386 | 3.284 | 0.432
+ 717 | Elgin City                   | Scottish League Two                | 0.108 | 0.372 | 3.435 | 0.435
+ 718 | Edinburgh City               | Scottish League Two                | 0.105 | 0.352 | 3.354 | 0.429
+ 719 | Dungannon Swifts             | Northern Irish Premiership         | 0.099 | 0.353 | 3.580 | 0.410
+ 720 | Ballymena                    | Northern Irish Premiership         | 0.098 | 0.364 | 3.705 | 0.437
+(720 rows)
 
-COPY 647
+COPY 720
 COMMIT
