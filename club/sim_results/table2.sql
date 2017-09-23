@@ -66,7 +66,7 @@ where
 --    not(g.date='LIVE')
     g.team_league_key = 'dummy_league_key'
 --and g.competition='Bund'
-and g.year=2016
+and g.year=2017
 and g.game_date <= current_date
 and g.team_score is not null
 and g.opponent_score is not null

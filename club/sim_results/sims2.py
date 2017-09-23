@@ -54,7 +54,7 @@ join club.intraleague_keys ik
   on (ik.league_key,ik.intraleague_key)=(g.team_league_key,g.competition)
 
 join club._factors y on
-  y.level='2016'
+  y.level='2017'
 
 join club._basic_factors i on
   i.factor='(Intercept)'
@@ -63,7 +63,7 @@ where
     g.team_league_key = 'dummy_league_key'
 --and g.competition='Bund'
 
-and ((g.game_date >= current_date) or (g.year=2016 and g.status='Postp'))
+and ((g.game_date >= current_date) or (g.year=2017 and g.status='Postp'))
 
 --and (g.game_date >= current_date)
 --and g.status is null
@@ -111,7 +111,7 @@ where
 
     g.team_league_key = 'dummy_league_key'
 --and g.competition='Bund'
-and g.year=2016
+and g.year=2017
 and g.game_date <= current_date
 and g.team_score is not null
 and g.opponent_score is not null
