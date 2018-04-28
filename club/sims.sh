@@ -2,7 +2,7 @@
 
 cd sim_results
 
-#./sim.sh english+premier+league
+./sim.sh english+premier+league
 ./sim.sh english+league+championship
 ./sim.sh english+league+one
 ./sim.sh english+league+two
