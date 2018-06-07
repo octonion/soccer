@@ -1,6 +1,130 @@
-[1] 16384     8
+[1] 16386     8
 [1] TRUE
-[1] 16384     6
+[1] 16386     6
+iteration: 1
+	f(x) = 833474.964634
+iteration: 2
+	f(x) = 835845.513795
+iteration: 3
+	f(x) = 833608.385471
+iteration: 4
+	f(x) = 833607.211631
+iteration: 5
+	f(x) = 861371.620922
+iteration: 6
+	f(x) = 834497.746321
+iteration: 7
+	f(x) = 834440.916036
+iteration: 8
+	f(x) = 834203.719775
+iteration: 9
+	f(x) = 833682.929940
+iteration: 10
+	f(x) = 833531.264582
+iteration: 11
+	f(x) = 833501.620448
+iteration: 12
+	f(x) = 833484.492140
+iteration: 13
+	f(x) = 833477.554182
+iteration: 14
+	f(x) = 833475.959243
+iteration: 15
+	f(x) = 833474.039077
+iteration: 16
+	f(x) = 833474.395517
+iteration: 17
+	f(x) = 833473.275259
+iteration: 18
+	f(x) = 833472.436457
+iteration: 19
+	f(x) = 833471.412748
+iteration: 20
+	f(x) = 833471.560656
+iteration: 21
+	f(x) = 833471.524004
+iteration: 22
+	f(x) = 833470.142953
+iteration: 23
+	f(x) = 833467.820332
+iteration: 24
+	f(x) = 833464.201058
+iteration: 25
+	f(x) = 833459.994530
+iteration: 26
+	f(x) = 833465.151842
+iteration: 27
+	f(x) = 833466.107738
+iteration: 28
+	f(x) = 833458.830292
+iteration: 29
+	f(x) = 833463.007868
+iteration: 30
+	f(x) = 833464.182140
+iteration: 31
+	f(x) = 833456.061724
+iteration: 32
+	f(x) = 833457.304290
+iteration: 33
+	f(x) = 833454.894064
+iteration: 34
+	f(x) = 833453.363008
+iteration: 35
+	f(x) = 833453.349116
+iteration: 36
+	f(x) = 833453.546410
+iteration: 37
+	f(x) = 833453.239872
+iteration: 38
+	f(x) = 833452.510205
+iteration: 39
+	f(x) = 833451.925698
+iteration: 40
+	f(x) = 833451.123338
+iteration: 41
+	f(x) = 833450.371895
+iteration: 42
+	f(x) = 833450.164999
+iteration: 43
+	f(x) = 833450.010954
+iteration: 44
+	f(x) = 833449.966359
+iteration: 45
+	f(x) = 833450.369878
+iteration: 46
+	f(x) = 833450.059851
+iteration: 47
+	f(x) = 833449.962750
+iteration: 48
+	f(x) = 833449.956228
+iteration: 49
+	f(x) = 833449.955933
+iteration: 50
+	f(x) = 833449.955699
+iteration: 51
+	f(x) = 833449.956121
+iteration: 52
+	f(x) = 833449.961779
+iteration: 53
+	f(x) = 833449.955601
+iteration: 54
+	f(x) = 833449.955647
+iteration: 55
+	f(x) = 833449.955617
+iteration: 56
+	f(x) = 833449.955589
+iteration: 57
+	f(x) = 833449.955584
+iteration: 58
+	f(x) = 833449.955584
+iteration: 59
+	f(x) = 833449.955629
+iteration: 60
+	f(x) = 833449.955591
+iteration: 61
+	f(x) = 833449.955582
+iteration: 62
+	f(x) = 833449.955582
 Generalized linear mixed model fit by maximum likelihood (Adaptive
   Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
  Family: poisson  ( log )
@@ -9,16 +133,16 @@ Formula: gs ~ field + game_length + (1 | offense) + (1 | defense) + (1 |
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
- 832667.6  832721.5 -416326.8  832653.6     16377 
+ 833464.0  833517.9 -416725.0  833450.0     16379 
 Random effects:
  Groups  Name        Std.Dev.
- game_id (Intercept) 0.9973  
- defense (Intercept) 0.8338  
- offense (Intercept) 0.8329  
-Number of obs: 16384, groups:  game_id, 8192; defense, 208; offense, 208
+ game_id (Intercept) 0.9972  
+ defense (Intercept) 0.8292  
+ offense (Intercept) 0.8292  
+Number of obs: 16386, groups:  game_id, 8193; defense, 208; offense, 208
 Fixed Effects:
       (Intercept)  fielddefense_home  fieldoffense_home    game_length1 OT  
-          -0.1784            -0.2169             0.2118             0.2916  
+          -0.1778            -0.2169             0.2121             0.2919  
 Generalized linear mixed model fit by maximum likelihood (Adaptive
   Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
  Family: poisson  ( log )
@@ -29,31 +153,31 @@ Weights: w
 Control: glmerControl(optimizer = "nloptwrap")
 
       AIC       BIC    logLik  deviance  df.resid 
- 832667.6  832721.5 -416326.8  832653.6     16377 
+ 833464.0  833517.9 -416725.0  833450.0     16379 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--15.570  -1.530  -0.250   1.313  34.183 
+-15.574  -1.531  -0.254   1.311  33.526 
 
 Random effects:
  Groups  Name        Variance Std.Dev.
- game_id (Intercept) 0.9946   0.9973  
- defense (Intercept) 0.6952   0.8338  
- offense (Intercept) 0.6937   0.8329  
-Number of obs: 16384, groups:  game_id, 8192; defense, 208; offense, 208
+ game_id (Intercept) 0.9945   0.9972  
+ defense (Intercept) 0.6876   0.8292  
+ offense (Intercept) 0.6876   0.8292  
+Number of obs: 16386, groups:  game_id, 8193; defense, 208; offense, 208
 
 Fixed effects:
                   Estimate Std. Error z value Pr(>|z|)    
-(Intercept)       -0.17839    0.08555  -2.085   0.0370 *  
-fielddefense_home -0.21693    0.02845  -7.625 2.43e-14 ***
-fieldoffense_home  0.21177    0.02839   7.460 8.66e-14 ***
-game_length1 OT    0.29159    0.13876   2.101   0.0356 *  
+(Intercept)       -0.17781    0.08516  -2.088   0.0368 *  
+fielddefense_home -0.21694    0.02844  -7.628 2.38e-14 ***
+fieldoffense_home  0.21212    0.02838   7.475 7.75e-14 ***
+game_length1 OT    0.29190    0.13875   2.104   0.0354 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
             (Intr) flddf_ fldff_
-filddfns_hm -0.238              
-fildffns_hm -0.239  0.989       
+filddfns_hm -0.239              
+fildffns_hm -0.240  0.989       
 gm_lngth1OT -0.027  0.075  0.076
 [1] TRUE
