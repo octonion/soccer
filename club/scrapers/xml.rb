@@ -21,7 +21,7 @@ retries = 2
   begin
     games = CSV.open("tsv/games_#{league_key}_#{year}.tsv",
                      "r",
-                     {:col_sep => "\t", :headers => TRUE})
+                     {:col_sep => "\t", :headers => true})
   rescue
     next
   end

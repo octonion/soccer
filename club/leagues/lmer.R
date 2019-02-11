@@ -24,7 +24,7 @@ end) as w
 from club.results r
 
 where
-    r.year between 2000 and 2017
+    r.year between 2000 and 2018
 
 and r.team_score is not null
 and r.opponent_score is not null

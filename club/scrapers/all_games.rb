@@ -13,7 +13,7 @@ last_year = ARGV[1]
 
 leagues = CSV.open("tsv/leagues.tsv",
                    "r",
-                   {:col_sep => "\t", :headers => TRUE})
+                   {:col_sep => "\t", :headers => true})
 
 leagues.each do |league|
 
@@ -23,7 +23,7 @@ leagues.each do |league|
 
     clubs = CSV.open("tsv/clubs_#{year}.tsv",
                      "r",
-                     {:col_sep => "\t", :headers => TRUE})
+                     {:col_sep => "\t", :headers => true})
 
     league_clubs = []
     clubs.each do |club|

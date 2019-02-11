@@ -9,7 +9,7 @@ year = ARGV[0]
 
 leagues = CSV.open("tsv/leagues.tsv",
                    "r",
-                   {:col_sep => "\t", :headers => TRUE})
+                   {:col_sep => "\t", :headers => true})
 
 clubs = CSV.open("tsv/clubs_#{year}.tsv",
                  "w",

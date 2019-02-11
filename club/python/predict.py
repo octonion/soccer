@@ -62,7 +62,7 @@ join club._factors tf on
 join club._factors of on
   of.level='defense_home'
 join club._factors y on
-  y.level='2017'
+  y.level='2018'
 
 join club._basic_factors i on
   i.factor='(Intercept)'
