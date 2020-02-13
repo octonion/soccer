@@ -36,7 +36,7 @@ join club._factors d
 join club.leagues l
   on (l.league_key)=(t.league_key)
 and (l.league_key like 'english%')
-where sf.year in (2018)
+where sf.year in (2019)
 order by str desc);
 
 select

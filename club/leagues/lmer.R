@@ -5,7 +5,7 @@ library("RPostgreSQL")
 
 drv <- dbDriver("PostgreSQL")
 
-con <- dbConnect(drv,host="localhost",port="5432",dbname="soccer")
+con <- dbConnect(drv, dbname="soccer")
 
 query <- dbSendQuery(con, "
 select
@@ -24,81 +24,73 @@ team_score as gs
 from club.results r
 
 where
-    r.year between 2000 and 2018
+    r.year between 2000 and 2019
 
 and r.team_score is not null
 and r.opponent_score is not null
+
+and r.team_league_key not like '%women%'
+and r.opponent_league_key not like '%women%'
+
+and (year,r.team_league_key) not in 
+(
+select year,team_league_key
+from club.results group by year,team_league_key
+having count(*) < 200
+)
+
+and (year,r.opponent_league_key) not in 
+(
+select year,team_league_key
+from club.results group by year,team_league_key
+having count(*) < 200
+)
+
+and r.team_league_key not in ('north+american+soccer+league')
+and r.opponent_league_key not in ('north+american+soccer+league')
 
 /*
 and r.team_league_key in
 (select distinct league_key
  from club.teams
- where year=2015)
+ where year=2018)
 and r.team_league_key in
 (select distinct league_key
  from club.teams
- where year=2008)
+ where year=2019)
 and r.opponent_league_key in
 (select distinct league_key
  from club.teams
- where year=2008)
+ where year=2018)
 and r.opponent_league_key in
 (select distinct league_key
  from club.teams
- where year=2015)
+ where year=2019)
 */
 
 -- Ignore leagues with no outside connectivity
+-- To do algorithmically
 
-and r.team_league_key not in
+-- Multiple years
+
+/*
+and r.team_league_key in
 (
---'primera+a+de+ecuador',
---'primera+división+de+argentina',
---'primera+división+de+uruguay',
---'fútbol+profesional+colombiano',
---'primera+división+de+paraguay',
---'liga+profesional+boliviana',
---'primera+división+de+chile',
---'turkish+super+lig',
---'welsh+premier+league',
---'northern+irish+premiership',
---'primera+profesional+de+perú',
---'greek+super+league',
---'scottish+premiership',
---'mexican+liga+mx',
---'australian+a-league'
-'indonesian+super+league',
-'jamaica+premier+league',
-'malaysian+super+league',
-'north+american+soccer+league',
-'singapore+s-league',
-'united+states+nwsl+women''s+league'
+select league_key from
+(select distinct year,league_key from club.games) l
+group by league_key
+having count(*)>4
 )
 
-and r.opponent_league_key not in
+and r.opponent_league_key in
+
 (
---'primera+a+de+ecuador',
---'primera+división+de+argentina',
---'primera+división+de+uruguay',
---'fútbol+profesional+colombiano',
---'primera+división+de+paraguay',
---'liga+profesional+boliviana',
---'primera+división+de+chile',
---'turkish+super+lig',
---'welsh+premier+league',
---'northern+irish+premiership',
---'primera+profesional+de+perú',
---'greek+super+league',
---'scottish+premiership',
---'mexican+liga+mx',
---'australian+a-league'
-'indonesian+super+league',
-'jamaica+premier+league',
-'malaysian+super+league',
-'north+american+soccer+league',
-'singapore+s-league',
-'united+states+nwsl+women''s+league'
+select league_key from
+(select distinct year,league_key from club.games) l
+group by league_key
+having count(*)>4
 )
+*/
 
 ;")
 

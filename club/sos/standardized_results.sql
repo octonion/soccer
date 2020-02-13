@@ -49,7 +49,7 @@ where
 and g.away_goals is not NULL
 and g.home_team_id is not NULL
 and g.away_team_id is not NULL
-and g.year=2016
+and g.year=2019
 and g.league_key = 'english+premier+league'
 and g.club_id=g.home_team_id
 and g.competition='Prem'
@@ -76,7 +76,7 @@ where
 and g.away_goals is not NULL
 and g.home_team_id is not NULL
 and g.away_team_id is not NULL
-and g.year=2016
+and g.year=2019
 and g.league_key = 'english+premier+league'
 and g.club_id=g.home_team_id
 and g.competition='Prem'

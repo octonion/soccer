@@ -6,6 +6,8 @@ require 'csv'
 require 'nokogiri'
 require 'mechanize'
 
+require 'fileutils'
+
 retries = 2
 
 agent = Mechanize.new{ |agent| agent.history.max_size=0 }
@@ -83,6 +85,11 @@ leagues.each do |league|
 
     xml = Nokogiri::XML(doc)
 
+
+    # Create directories if they don't exist
+    FileUtils.mkdir_p("xml/#{league_key}/#{year}/")
+    
+    game_file = "xml/#{league_key}/#{year}/gamecast_#{game_id}.xml"
     File.open(game_file,"w") do |file|
       file << xml
     end

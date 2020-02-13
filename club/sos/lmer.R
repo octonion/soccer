@@ -5,7 +5,7 @@ library("RPostgreSQL")
 
 drv <- dbDriver("PostgreSQL")
 
-con <- dbConnect(drv,host="localhost",port="5432",dbname="soccer")
+con <- dbConnect(drv, dbname="soccer")
 
 query <- dbSendQuery(con, "
 select
@@ -18,7 +18,7 @@ team_score as gs
 from club.results r
 
 where
-    r.year between 2016 and 2016
+    r.year between 2019 and 2019
 ;")
 
 games <- fetch(query,n=-1)
