@@ -1,9 +1,9 @@
 #!/bin/bash
 
-./scrapers/all_games.rb 2018 2018
-./scrapers/all_xml.rb 2018 2018
+./scrapers/all_games.rb $1 $2
+./scrapers/all_xml.rb $1 $2
 
-./scripts/all_parse_xml.sh 2018 2018
+./scripts/all_parse_xml.sh $1 $2
 
 ./load.sh
 ./load_gamecast.sh
