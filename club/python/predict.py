@@ -70,7 +70,6 @@ join club._basic_factors i on
 where not(ts.date='LIVE')
 and ts.date::date between current_date-1 and current_date+6
 and ts.club_id=ts.home_team_id
-and ts.league_key='major+league+soccer'
 order by ts.date::date asc,ts.club_name asc
 ;
 """
