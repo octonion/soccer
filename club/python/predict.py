@@ -40,7 +40,8 @@ join club.teams t
 join club.leagues tl
   on (tl.league_key)=(t.league_key)
 join club._schedule_factors sft
-  on (sft.team_id,sft.year)=(ts.home_team_id,ts.year)
+  on (sft.team_id,sft.year)=(ts.home_team_id,2019)
+--  on (sft.team_id,sft.year)=(ts.home_team_id,ts.year)
 join club._factors tol
   on (tol.parameter,tol.level)=('offense_league',t.league_key)
 join club._factors tdl
@@ -51,7 +52,8 @@ join club.teams o
 join club.leagues ol
   on (ol.league_key)=(o.league_key)
 join club._schedule_factors sfo
-  on (sfo.team_id,sfo.year)=(ts.away_team_id,ts.year)
+  on (sfo.team_id,sfo.year)=(ts.home_team_id,2019)
+--  on (sfo.team_id,sfo.year)=(ts.away_team_id,ts.year)
 join club._factors ool
   on (ool.parameter,ool.level)=('offense_league',o.league_key)
 join club._factors odl
