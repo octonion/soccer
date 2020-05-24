@@ -35,7 +35,7 @@ join club._factors d
   on (d.parameter,d.level)=('defense_league',t.league_key)
 join club.leagues l
   on (l.league_key)=(t.league_key)
-where sf.year in (2019)
+where sf.year in (2020)
 order by str desc);
 
 select

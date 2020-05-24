@@ -24,7 +24,7 @@ team_score as gs
 from club.results r
 
 where
-    r.year between 2000 and 2019
+    r.year between 2000 and 2020
 
 and r.team_score is not null
 and r.opponent_score is not null
@@ -57,7 +57,7 @@ and r.team_league_key in
 and r.team_league_key in
 (select distinct league_key
  from club.teams
- where year=2019)
+ where year=2020)
 and r.opponent_league_key in
 (select distinct league_key
  from club.teams
@@ -65,7 +65,7 @@ and r.opponent_league_key in
 and r.opponent_league_key in
 (select distinct league_key
  from club.teams
- where year=2019)
+ where year=2020)
 */
 
 -- Ignore leagues with no outside connectivity
