@@ -1,0 +1,67 @@
+[1] 1140    7
+[1] 1562    7
+[1] TRUE
+[1] 1562    5
+start par. =  1 1 1 fn =  7267.216 
+At return
+eval:  81 fn:      6941.6511 par: 0.379378 0.227216 0.280023
+(NM) 20: f = 6941.43 at 0.384667 0.229175  0.28467 0.180106 0.169079
+(NM) 40: f = 6941.37 at 0.380629 0.224789 0.276187 0.174711 0.167869
+(NM) 60: f = 6941.36 at   0.3804 0.228978 0.281373 0.180502 0.165222
+(NM) 80: f = 6941.35 at  0.38019 0.225789 0.279698 0.176948 0.163517
+(NM) 100: f = 6941.35 at 0.380379  0.22671 0.279254 0.179124 0.163694
+(NM) 120: f = 6941.35 at 0.379972 0.226648 0.278792 0.179958 0.163771
+(NM) 140: f = 6941.35 at 0.379875 0.226566 0.278696 0.180294 0.163694
+(NM) 160: f = 6941.35 at 0.379916 0.226595 0.278758 0.180279  0.16377
+(NM) 180: f = 6941.35 at 0.379873 0.226577 0.278748 0.180341  0.16378
+(NM) 200: f = 6941.35 at 0.379876 0.226605 0.278734 0.180319 0.163785
+(NM) 220: f = 6941.35 at 0.379872 0.226604 0.278742 0.180312  0.16379
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: poisson  ( log )
+Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
+   Data: g
+Weights: w
+      AIC       BIC    logLik  deviance  df.resid 
+ 6951.350  6978.119 -3470.675  6941.350      1557 
+Random effects:
+ Groups  Name        Std.Dev.
+ game_id (Intercept) 0.3799  
+ defense (Intercept) 0.2266  
+ offense (Intercept) 0.2787  
+Number of obs: 1562, groups:  game_id, 570; defense, 23; offense, 23
+Fixed Effects:
+      (Intercept)  fieldoffense_home  
+           0.1803             0.1638  
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: poisson  ( log )
+Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
+   Data: g
+Weights: w
+
+     AIC      BIC   logLik deviance df.resid 
+  6951.4   6978.1  -3470.7   6941.4     1557 
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-1.90242 -0.76907 -0.07031  0.52813  2.86189 
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ game_id (Intercept) 0.14430  0.3799  
+ defense (Intercept) 0.05135  0.2266  
+ offense (Intercept) 0.07770  0.2787  
+Number of obs: 1562, groups:  game_id, 570; defense, 23; offense, 23
+
+Fixed effects:
+                  Estimate Std. Error z value Pr(>|z|)    
+(Intercept)        0.18032    0.08293   2.174   0.0297 *  
+fieldoffense_home  0.16379    0.03352   4.886 1.03e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr)
+fildffns_hm -0.222
+[1] TRUE
