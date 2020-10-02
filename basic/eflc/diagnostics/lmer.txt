@@ -1,20 +1,19 @@
-[1] 1152    7
-[1] 1706    7
+[1] 1172    7
+[1] 1746    7
 [1] TRUE
-[1] 1706    5
-start par. =  1 1 1 fn =  7971.489 
+[1] 1746    5
+start par. =  1 1 1 fn =  8154.099 
 At return
-eval:  71 fn:      7720.9425 par: 0.506833 0.243482 0.161972
-(NM) 20: f = 7720.44 at  0.513898  0.261907  0.159084 0.0660293 0.0769957
-(NM) 40: f = 7720.2 at  0.509218  0.243536  0.162481    0.0572 0.0778062
-(NM) 60: f = 7720.18 at     0.507  0.240376  0.159471  0.054235 0.0763422
-(NM) 80: f = 7720.17 at  0.507899  0.239091  0.160945 0.0584077 0.0739519
-(NM) 100: f = 7720.17 at  0.507758   0.24066  0.161237 0.0599224 0.0740196
-(NM) 120: f = 7720.17 at  0.507747  0.239857  0.160939 0.0588025 0.0741527
-(NM) 140: f = 7720.17 at  0.507755  0.240084  0.160897 0.0589293 0.0741763
-(NM) 160: f = 7720.17 at  0.507722  0.240165  0.160886 0.0588624 0.0742029
-(NM) 180: f = 7720.17 at  0.507717   0.24021  0.160871 0.0588934 0.0741798
-(NM) 200: f = 7720.17 at  0.507716  0.240202  0.160873 0.0588949 0.0741896
+eval:  90 fn:      7906.6182 par: 0.507625 0.253023 0.175074
+(NM) 20: f = 7906.14 at  0.514691  0.271447  0.172186 0.0520329 0.0658542
+(NM) 40: f = 7905.92 at  0.510772  0.252556  0.176919 0.0480776 0.0653729
+(NM) 60: f = 7905.9 at 0.508754 0.248956  0.17223 0.042248 0.063658
+(NM) 80: f = 7905.9 at  0.508732  0.250039  0.173833 0.0461239 0.0622231
+(NM) 100: f = 7905.9 at   0.50829  0.250249  0.173795 0.0465476 0.0629848
+(NM) 120: f = 7905.9 at  0.508419  0.249847  0.173892 0.0466342 0.0629512
+(NM) 140: f = 7905.9 at  0.508419  0.249771  0.173879 0.0466036 0.0629757
+(NM) 160: f = 7905.9 at  0.508437  0.249746  0.173868 0.0465542 0.0630056
+(NM) 180: f = 7905.9 at  0.508434  0.249749  0.173866 0.0465862 0.0630057
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -22,16 +21,16 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
- 7730.173  7757.383 -3860.087  7720.173      1701 
+ 7915.897  7943.222 -3952.948  7905.897      1741 
 Random effects:
  Groups  Name        Std.Dev.
- game_id (Intercept) 0.5077  
- defense (Intercept) 0.2402  
- offense (Intercept) 0.1609  
-Number of obs: 1706, groups:  game_id, 576; defense, 30; offense, 30
+ game_id (Intercept) 0.5084  
+ defense (Intercept) 0.2498  
+ offense (Intercept) 0.1739  
+Number of obs: 1746, groups:  game_id, 586; defense, 30; offense, 30
 Fixed Effects:
       (Intercept)  fieldoffense_home  
-          0.05889            0.07419  
+          0.04658            0.06301  
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -40,27 +39,27 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
 Weights: w
 
      AIC      BIC   logLik deviance df.resid 
-  7730.2   7757.4  -3860.1   7720.2     1701 
+  7915.9   7943.2  -3952.9   7905.9     1741 
 
 Scaled residuals: 
      Min       1Q   Median       3Q      Max 
--2.00570 -0.88853 -0.03922  0.61696  2.84380 
+-1.97640 -0.88820 -0.03912  0.59841  2.86641 
 
 Random effects:
  Groups  Name        Variance Std.Dev.
- game_id (Intercept) 0.25777  0.5077  
- defense (Intercept) 0.05770  0.2402  
- offense (Intercept) 0.02588  0.1609  
-Number of obs: 1706, groups:  game_id, 576; defense, 30; offense, 30
+ game_id (Intercept) 0.25851  0.5084  
+ defense (Intercept) 0.06238  0.2498  
+ offense (Intercept) 0.03023  0.1739  
+Number of obs: 1746, groups:  game_id, 586; defense, 30; offense, 30
 
 Fixed effects:
                   Estimate Std. Error z value Pr(>|z|)  
-(Intercept)        0.05889    0.06704   0.878   0.3797  
-fieldoffense_home  0.07419    0.03339   2.222   0.0263 *
+(Intercept)        0.04658    0.06927   0.673    0.501  
+fieldoffense_home  0.06301    0.03311   1.903    0.057 .
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
             (Intr)
-fildffns_hm -0.255
+fildffns_hm -0.242
 [1] TRUE
