@@ -1,19 +1,20 @@
-[1] 1172    7
-[1] 1746    7
+[1] 1200    7
+[1] 1802    7
 [1] TRUE
-[1] 1746    5
-start par. =  1 1 1 fn =  8154.099 
+[1] 1802    5
+start par. =  1 1 1 fn =  8435.594 
 At return
-eval:  90 fn:      7906.6182 par: 0.507625 0.253023 0.175074
-(NM) 20: f = 7906.14 at  0.514691  0.271447  0.172186 0.0520329 0.0658542
-(NM) 40: f = 7905.92 at  0.510772  0.252556  0.176919 0.0480776 0.0653729
-(NM) 60: f = 7905.9 at 0.508754 0.248956  0.17223 0.042248 0.063658
-(NM) 80: f = 7905.9 at  0.508732  0.250039  0.173833 0.0461239 0.0622231
-(NM) 100: f = 7905.9 at   0.50829  0.250249  0.173795 0.0465476 0.0629848
-(NM) 120: f = 7905.9 at  0.508419  0.249847  0.173892 0.0466342 0.0629512
-(NM) 140: f = 7905.9 at  0.508419  0.249771  0.173879 0.0466036 0.0629757
-(NM) 160: f = 7905.9 at  0.508437  0.249746  0.173868 0.0465542 0.0630056
-(NM) 180: f = 7905.9 at  0.508434  0.249749  0.173866 0.0465862 0.0630057
+eval:  86 fn:      8186.4938 par: 0.510948 0.240123 0.199010
+(NM) 20: f = 8186.02 at  0.518013  0.258548  0.196123 0.0429582 0.0632388
+(NM) 40: f = 8185.83 at   0.51125  0.230265  0.199358 0.0328424 0.0666807
+(NM) 60: f = 8185.78 at  0.512774  0.236875  0.195578 0.0418189 0.0599798
+(NM) 80: f = 8185.77 at   0.51178  0.238576   0.19784 0.0376924 0.0604863
+(NM) 100: f = 8185.77 at  0.511856  0.237412  0.197033 0.0371046 0.0603744
+(NM) 120: f = 8185.77 at  0.511765  0.237764  0.196814 0.0378012 0.0604656
+(NM) 140: f = 8185.77 at  0.511709  0.237617  0.196832 0.0376605 0.0604365
+(NM) 160: f = 8185.77 at  0.511748  0.237597  0.196892 0.0376186 0.0604601
+(NM) 180: f = 8185.77 at  0.511737   0.23762  0.196923   0.03763 0.0604538
+(NM) 200: f = 8185.77 at  0.511735  0.237618  0.196932 0.0376414   0.06045
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -21,16 +22,16 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
- 7915.897  7943.222 -3952.948  7905.897      1741 
+ 8195.772  8223.255 -4092.886  8185.772      1797 
 Random effects:
  Groups  Name        Std.Dev.
- game_id (Intercept) 0.5084  
- defense (Intercept) 0.2498  
- offense (Intercept) 0.1739  
-Number of obs: 1746, groups:  game_id, 586; defense, 30; offense, 30
+ game_id (Intercept) 0.5117  
+ defense (Intercept) 0.2376  
+ offense (Intercept) 0.1969  
+Number of obs: 1802, groups:  game_id, 600; defense, 30; offense, 30
 Fixed Effects:
       (Intercept)  fieldoffense_home  
-          0.04658            0.06301  
+          0.03764            0.06045  
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -39,27 +40,27 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
 Weights: w
 
      AIC      BIC   logLik deviance df.resid 
-  7915.9   7943.2  -3952.9   7905.9     1741 
+  8195.8   8223.3  -4092.9   8185.8     1797 
 
 Scaled residuals: 
      Min       1Q   Median       3Q      Max 
--1.97640 -0.88820 -0.03912  0.59841  2.86641 
+-1.97451 -0.88889 -0.03319  0.58907  2.90647 
 
 Random effects:
  Groups  Name        Variance Std.Dev.
- game_id (Intercept) 0.25851  0.5084  
- defense (Intercept) 0.06238  0.2498  
- offense (Intercept) 0.03023  0.1739  
-Number of obs: 1746, groups:  game_id, 586; defense, 30; offense, 30
+ game_id (Intercept) 0.26187  0.5117  
+ defense (Intercept) 0.05646  0.2376  
+ offense (Intercept) 0.03878  0.1969  
+Number of obs: 1802, groups:  game_id, 600; defense, 30; offense, 30
 
 Fixed effects:
                   Estimate Std. Error z value Pr(>|z|)  
-(Intercept)        0.04658    0.06927   0.673    0.501  
-fieldoffense_home  0.06301    0.03311   1.903    0.057 .
+(Intercept)        0.03764    0.06975   0.540    0.589  
+fieldoffense_home  0.06045    0.03251   1.859    0.063 .
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
             (Intr)
-fildffns_hm -0.242
+fildffns_hm -0.236
 [1] TRUE
