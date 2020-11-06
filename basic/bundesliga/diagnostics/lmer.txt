@@ -1,21 +1,20 @@
-[1] 1008    7
-[1] 1404    7
+[1] 1010    7
+[1] 1408    7
 [1] TRUE
-[1] 1404    5
-start par. =  1 1 1 fn =  6949.733 
+[1] 1408    5
+start par. =  1 1 1 fn =  6969.271 
 At return
-eval:  66 fn:      6635.8842 par: 0.378086 0.218432 0.320736
-(NM) 20: f = 6635.71 at   0.38081   0.22166   0.33172   0.26277 0.0863401
-(NM) 40: f = 6635.65 at 0.377981 0.215135 0.321223 0.265645 0.085558
-(NM) 60: f = 6635.63 at  0.378301  0.217688  0.318697  0.261335 0.0848073
-(NM) 80: f = 6635.63 at 0.378423 0.217537 0.319034 0.262367 0.082199
-(NM) 100: f = 6635.63 at  0.378678  0.217796   0.31939  0.261458 0.0825152
-(NM) 120: f = 6635.63 at 0.378565 0.217894 0.319383 0.261622 0.082572
-(NM) 140: f = 6635.63 at  0.378502  0.217996  0.319442  0.261815 0.0824095
-(NM) 160: f = 6635.63 at   0.37849  0.218063  0.319471   0.26186 0.0824485
-(NM) 180: f = 6635.63 at   0.37848  0.218054  0.319466  0.261934 0.0824355
-(NM) 200: f = 6635.63 at 0.378494 0.218047 0.319486 0.261928 0.082437
-(NM) 220: f = 6635.63 at 0.378494 0.218047 0.319486 0.261928 0.082437
+eval:  61 fn:      6654.1291 par: 0.377634 0.217823 0.319928
+(NM) 20: f = 6653.95 at  0.380358  0.221051  0.330912  0.260884 0.0884288
+(NM) 40: f = 6653.89 at  0.377529  0.214526  0.320415  0.263752 0.0876479
+(NM) 60: f = 6653.88 at  0.377849  0.217079  0.317889  0.259453 0.0868983
+(NM) 80: f = 6653.87 at  0.377971  0.216928  0.318226  0.260481 0.0842938
+(NM) 100: f = 6653.87 at  0.378227  0.217187  0.318582  0.259576 0.0846096
+(NM) 120: f = 6653.87 at  0.378114  0.217285  0.318575  0.259739 0.0846663
+(NM) 140: f = 6653.87 at  0.37805 0.217387 0.318633 0.259931 0.084504
+(NM) 160: f = 6653.87 at  0.378029  0.217434  0.318727  0.260009 0.0845244
+(NM) 180: f = 6653.87 at  0.378034  0.217442  0.318666  0.260054 0.0845302
+(NM) 200: f = 6653.87 at  0.378038   0.21745  0.318675  0.260083 0.0845246
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -23,16 +22,16 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
- 6645.628  6671.863 -3317.814  6635.628      1399 
+ 6663.873  6690.123 -3326.936  6653.873      1403 
 Random effects:
  Groups  Name        Std.Dev.
- game_id (Intercept) 0.3785  
- defense (Intercept) 0.2180  
- offense (Intercept) 0.3195  
-Number of obs: 1404, groups:  game_id, 504; defense, 24; offense, 24
+ game_id (Intercept) 0.3780  
+ defense (Intercept) 0.2174  
+ offense (Intercept) 0.3187  
+Number of obs: 1408, groups:  game_id, 505; defense, 24; offense, 24
 Fixed Effects:
       (Intercept)  fieldoffense_home  
-          0.26194            0.08243  
+          0.26007            0.08453  
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -41,23 +40,23 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
 Weights: w
 
      AIC      BIC   logLik deviance df.resid 
-  6645.6   6671.9  -3317.8   6635.6     1399 
+  6663.9   6690.1  -3326.9   6653.9     1403 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--2.2589 -0.8472 -0.1329  0.6064  3.9653 
+-2.2599 -0.8474 -0.1309  0.6045  3.9412 
 
 Random effects:
  Groups  Name        Variance Std.Dev.
- game_id (Intercept) 0.14326  0.3785  
- defense (Intercept) 0.04755  0.2180  
- offense (Intercept) 0.10207  0.3195  
-Number of obs: 1404, groups:  game_id, 504; defense, 24; offense, 24
+ game_id (Intercept) 0.14291  0.3780  
+ defense (Intercept) 0.04728  0.2174  
+ offense (Intercept) 0.10156  0.3187  
+Number of obs: 1408, groups:  game_id, 505; defense, 24; offense, 24
 
 Fixed effects:
                   Estimate Std. Error z value Pr(>|z|)   
-(Intercept)        0.26194    0.08821   2.970  0.00298 **
-fieldoffense_home  0.08243    0.03461   2.382  0.01724 * 
+(Intercept)        0.26007    0.08798   2.956  0.00312 **
+fieldoffense_home  0.08453    0.03456   2.446  0.01446 * 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
