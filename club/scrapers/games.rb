@@ -16,7 +16,7 @@ last_year = ARGV[2]
 
   clubs = CSV.open("tsv/clubs_#{year}.tsv",
                    "r",
-                   {:col_sep => "\t", :headers => true})
+                   :col_sep => "\t", :headers => true)
 
   league_clubs = []
   clubs.each do |club|
@@ -41,7 +41,7 @@ last_year = ARGV[2]
 
   games = CSV.open("tsv/games_#{t_league_key}_#{year}.tsv",
                    "w",
-                   {:col_sep => "\t"})
+                   :col_sep => "\t")
 
   #http://www.espnfc.us/club/arsenal/359/fixtures?leagueId=0&season=2015
   #&seasonType=1
