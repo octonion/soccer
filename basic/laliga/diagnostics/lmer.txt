@@ -1,20 +1,21 @@
-[1] 1408    7
-[1] 2034    7
+[1] 1428    7
+[1] 2074    7
 [1] TRUE
-[1] 2034    5
-start par. =  1 1 1 fn =  9004.282 
+[1] 2074    5
+start par. =  1 1 1 fn =  9211.259 
 At return
-eval:  71 fn:      8690.2698 par: 0.467777 0.209170 0.235172
-(NM) 20: f = 8689.87 at   0.472488   0.221453   0.233247 -0.0809562   0.261111
-(NM) 40: f = 8689.64 at   0.466071   0.212737   0.233611 -0.0949322   0.260546
-(NM) 60: f = 8689.6 at  0.46978 0.208996 0.232727 -0.10784 0.257617
-(NM) 80: f = 8689.59 at  0.469075   0.20738  0.233232 -0.102273  0.257108
-(NM) 100: f = 8689.59 at  0.468363  0.207817  0.233275 -0.101607  0.257506
-(NM) 120: f = 8689.59 at  0.468533  0.207873  0.233295 -0.102058  0.257899
-(NM) 140: f = 8689.59 at  0.468527   0.20775  0.233405 -0.102125  0.257748
-(NM) 160: f = 8689.59 at  0.468548   0.20775  0.233399 -0.102152  0.257773
-(NM) 180: f = 8689.59 at 0.468548 0.207752 0.233385 -0.10215 0.257793
-(NM) 200: f = 8689.59 at   0.46855  0.207757  0.233389 -0.102158  0.257793
+eval:  72 fn:      8893.4854 par: 0.470213 0.206502 0.234208
+(NM) 20: f = 8893.08 at   0.474924   0.218785   0.232283 -0.0841647   0.270376
+(NM) 40: f = 8892.9 at  0.473871  0.203201  0.233538 -0.112286  0.276441
+(NM) 60: f = 8892.81 at  0.471537  0.203224   0.23055 -0.108343  0.269029
+(NM) 80: f = 8892.8 at  0.471025  0.204919  0.232884 -0.103505  0.267087
+(NM) 100: f = 8892.8 at  0.471014  0.205424  0.232527 -0.105752   0.26699
+(NM) 120: f = 8892.8 at  0.470899  0.205142  0.232437 -0.105437  0.267119
+(NM) 140: f = 8892.8 at  0.470989  0.205101  0.232402 -0.105772  0.267151
+(NM) 160: f = 8892.8 at  0.470979  0.205113  0.232417 -0.105655   0.26712
+(NM) 180: f = 8892.8 at  0.470981  0.205113  0.232379 -0.105675  0.267131
+(NM) 200: f = 8892.8 at  0.470976   0.20511   0.23238 -0.105658  0.267115
+(NM) 220: f = 8892.8 at 0.470976 0.205107 0.232379 -0.10566  0.26712
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -22,16 +23,16 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
- 8699.592  8727.681 -4344.796  8689.592      2029 
+ 8902.796  8930.982 -4446.398  8892.796      2069 
 Random effects:
  Groups  Name        Std.Dev.
- game_id (Intercept) 0.4686  
- defense (Intercept) 0.2078  
- offense (Intercept) 0.2334  
-Number of obs: 2034, groups:  game_id, 704; defense, 28; offense, 28
+ game_id (Intercept) 0.4710  
+ defense (Intercept) 0.2051  
+ offense (Intercept) 0.2324  
+Number of obs: 2074, groups:  game_id, 714; defense, 28; offense, 28
 Fixed Effects:
       (Intercept)  fieldoffense_home  
-          -0.1022             0.2578  
+          -0.1057             0.2671  
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -40,27 +41,27 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
 Weights: w
 
      AIC      BIC   logLik deviance df.resid 
-  8699.6   8727.7  -4344.8   8689.6     2029 
+  8902.8   8931.0  -4446.4   8892.8     2069 
 
 Scaled residuals: 
      Min       1Q   Median       3Q      Max 
--1.90697 -0.88440 -0.04559  0.57916  2.78822 
+-1.87155 -0.88375 -0.04293  0.56256  2.82550 
 
 Random effects:
  Groups  Name        Variance Std.Dev.
- game_id (Intercept) 0.21954  0.4686  
- defense (Intercept) 0.04316  0.2078  
- offense (Intercept) 0.05447  0.2334  
-Number of obs: 2034, groups:  game_id, 704; defense, 28; offense, 28
+ game_id (Intercept) 0.22182  0.4710  
+ defense (Intercept) 0.04207  0.2051  
+ offense (Intercept) 0.05400  0.2324  
+Number of obs: 2074, groups:  game_id, 714; defense, 28; offense, 28
 
 Fixed effects:
                   Estimate Std. Error z value Pr(>|z|)    
-(Intercept)       -0.10216    0.06998  -1.460    0.144    
-fieldoffense_home  0.25779    0.03207   8.039 9.08e-16 ***
+(Intercept)       -0.10566    0.06937  -1.523    0.128    
+fieldoffense_home  0.26712    0.03171   8.423   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
             (Intr)
-fildffns_hm -0.261
+fildffns_hm -0.260
 [1] TRUE
