@@ -20,7 +20,7 @@ r.team_score::float as gs,
 from eflc.results r
 
 where
-    r.year between 2020 and 2020
+    r.year between 2020 and 2021
 
 ;")
 
