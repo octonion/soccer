@@ -55,7 +55,7 @@ r.team_name,
 r.opponent_name,
 r.field
 from laliga.results r
-where r.year between 2012 and 2020
+where r.year between 2012 and 2021
 );
 
 update r

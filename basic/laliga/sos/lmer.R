@@ -16,11 +16,11 @@ r.field as field,
 r.team_name as team,
 r.opponent_name as opponent,
 r.team_score::float as gs,
-(year-2018) as w
+(year-2019) as w
 from laliga.results r
 
 where
-    r.year between 2019 and 2020
+    r.year between 2020 and 2021
 
 ;")
 
