@@ -1,20 +1,21 @@
-[1] 842   7
-[1] 986   7
+[1] 860   7
+[1] 1022    7
 [1] TRUE
-[1] 986   5
-start par. =  1 1 1 fn =  4026.59 
+[1] 1022    5
+start par. =  1 1 1 fn =  4207.583 
 At return
-eval:  74 fn:      3726.0141 par: 0.266540 0.259192 0.316008
-(NM) 20: f = 3725.91 at  0.27176 0.262919   0.3225 0.238171 0.145106
-(NM) 40: f = 3725.88 at 0.268863 0.265732 0.317208 0.244866 0.140154
-(NM) 60: f = 3725.86 at  0.26672 0.259643 0.317111  0.24506 0.138611
-(NM) 80: f = 3725.86 at 0.266497 0.259646 0.315512 0.246572 0.139713
-(NM) 100: f = 3725.86 at 0.267109 0.259288 0.314963  0.24712 0.139927
-(NM) 120: f = 3725.86 at 0.267269 0.258731 0.315181 0.247079  0.13965
-(NM) 140: f = 3725.86 at 0.267312 0.258724 0.315246   0.2471 0.139904
-(NM) 160: f = 3725.86 at 0.267252 0.258773 0.315274 0.247035  0.13994
-(NM) 180: f = 3725.86 at 0.267246 0.258755   0.3153 0.246984 0.139916
-(NM) 200: f = 3725.86 at 0.267248 0.258751 0.315292 0.247004 0.139918
+eval:  61 fn:      3909.8068 par: 0.282927 0.255713 0.316717
+(NM) 20: f = 3909.69 at 0.288147  0.25944 0.323208 0.209037 0.178232
+(NM) 40: f = 3909.65 at 0.283467 0.257739  0.31685 0.221753 0.176646
+(NM) 60: f = 3909.63 at 0.283068  0.25627 0.315066 0.211644 0.173789
+(NM) 80: f = 3909.63 at  0.28343 0.255802 0.315862 0.214383 0.173213
+(NM) 100: f = 3909.63 at 0.283505 0.255634 0.316006 0.215779 0.173285
+(NM) 120: f = 3909.63 at 0.283507  0.25522 0.315882 0.215785 0.173155
+(NM) 140: f = 3909.63 at 0.283624 0.255268 0.315943 0.215822 0.173297
+(NM) 160: f = 3909.63 at 0.283628 0.255238 0.315907 0.215736 0.173229
+(NM) 180: f = 3909.63 at 0.283634 0.255228 0.315921 0.215773 0.173238
+(NM) 200: f = 3909.63 at 0.283633 0.255236 0.315911 0.215777 0.173246
+(NM) 220: f = 3909.63 at 0.283635 0.255225 0.315903 0.215786  0.17325
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -22,16 +23,16 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
- 3735.856  3760.324 -1862.928  3725.856       981 
+ 3919.630  3944.278 -1954.815  3909.630      1017 
 Random effects:
  Groups  Name        Std.Dev.
- game_id (Intercept) 0.2672  
- defense (Intercept) 0.2588  
- offense (Intercept) 0.3153  
-Number of obs: 986, groups:  game_id, 421; defense, 23; offense, 23
+ game_id (Intercept) 0.2836  
+ defense (Intercept) 0.2552  
+ offense (Intercept) 0.3159  
+Number of obs: 1022, groups:  game_id, 430; defense, 23; offense, 23
 Fixed Effects:
       (Intercept)  fieldoffense_home  
-           0.2470             0.1399  
+           0.2158             0.1733  
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -40,23 +41,23 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
 Weights: w
 
      AIC      BIC   logLik deviance df.resid 
-  3735.9   3760.3  -1862.9   3725.9      981 
+  3919.6   3944.3  -1954.8   3909.6     1017 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--1.8308 -0.7707 -0.0630  0.5520  3.4070 
+-1.7946 -0.7680 -0.0492  0.5310  3.4464 
 
 Random effects:
  Groups  Name        Variance Std.Dev.
- game_id (Intercept) 0.07142  0.2672  
- defense (Intercept) 0.06695  0.2588  
- offense (Intercept) 0.09941  0.3153  
-Number of obs: 986, groups:  game_id, 421; defense, 23; offense, 23
+ game_id (Intercept) 0.08045  0.2836  
+ defense (Intercept) 0.06514  0.2552  
+ offense (Intercept) 0.09979  0.3159  
+Number of obs: 1022, groups:  game_id, 430; defense, 23; offense, 23
 
 Fixed effects:
-                  Estimate Std. Error z value Pr(>|z|)   
-(Intercept)        0.24700    0.09409   2.625  0.00866 **
-fieldoffense_home  0.13992    0.04628   3.024  0.00250 **
+                  Estimate Std. Error z value Pr(>|z|)    
+(Intercept)        0.21579    0.09373   2.302 0.021330 *  
+fieldoffense_home  0.17325    0.04539   3.817 0.000135 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
