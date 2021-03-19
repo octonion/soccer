@@ -1,23 +1,23 @@
-[1] 718   7
-[1] 896   7
+[1] 750   7
+[1] 960   7
 [1] TRUE
-[1] 896   5
-start par. =  1 1 1 fn =  3953.815 
+[1] 960   5
+start par. =  1 1 1 fn =  4281.146 
 At return
-eval:  75 fn:      3714.4210 par: 0.342636 0.182635 0.331699
-(NM) 20: f = 3714.24 at  0.34536 0.185862 0.342683 0.235505 0.113981
-(NM) 40: f = 3714.2 at 0.341193  0.18299 0.335947 0.228316 0.113541
-(NM) 60: f = 3714.19 at  0.34313 0.182283 0.331193 0.240779 0.112822
-(NM) 80: f = 3714.17 at 0.342009 0.182232 0.330698   0.2341 0.109677
-(NM) 100: f = 3714.17 at 0.342905 0.182473 0.330221 0.234905 0.108815
-(NM) 120: f = 3714.17 at  0.34313 0.182592 0.330128 0.236232 0.108975
-(NM) 140: f = 3714.17 at 0.343199 0.182454  0.33042 0.235964 0.108999
-(NM) 160: f = 3714.17 at 0.343331 0.182479  0.33012  0.23594 0.108842
-(NM) 180: f = 3714.17 at 0.343368 0.182476 0.330149 0.235811 0.108872
-(NM) 200: f = 3714.17 at 0.343407 0.182452 0.330113 0.235829 0.108898
-(NM) 220: f = 3714.17 at 0.343439 0.182378 0.330125 0.235824 0.108938
-(NM) 240: f = 3714.17 at  0.34344 0.182369 0.330132 0.235795 0.108947
-(NM) 260: f = 3714.17 at 0.343441 0.182366 0.330139  0.23579 0.108951
+eval:  55 fn:      4042.5183 par: 0.357800 0.180200 0.349612
+(NM) 20: f = 4042.34 at 0.360524 0.183427 0.360596 0.203059 0.135482
+(NM) 40: f = 4042.3 at 0.356358 0.180555  0.35386 0.195667 0.135058
+(NM) 60: f = 4042.29 at 0.358271 0.177497 0.354063 0.199038 0.132211
+(NM) 80: f = 4042.28 at 0.358831 0.178129 0.351528 0.199506  0.13199
+(NM) 100: f = 4042.27 at 0.360014  0.17956 0.347388 0.202309 0.130825
+(NM) 120: f = 4042.27 at 0.359313 0.179704 0.349218 0.203416  0.13148
+(NM) 140: f = 4042.27 at 0.359138 0.180273 0.348472 0.204217 0.130904
+(NM) 160: f = 4042.27 at 0.358641 0.180102 0.347824 0.202062 0.131126
+(NM) 180: f = 4042.27 at 0.358546   0.1801 0.348183 0.203179 0.130988
+(NM) 200: f = 4042.27 at  0.35851 0.179918 0.347917 0.203419 0.130657
+(NM) 220: f = 4042.27 at  0.35855 0.179961 0.347959 0.203249 0.130761
+(NM) 240: f = 4042.27 at  0.35852 0.179968 0.347947 0.203253 0.130743
+(NM) 260: f = 4042.27 at 0.358525 0.179963 0.347948 0.203276 0.130735
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -25,16 +25,16 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
- 3724.172  3748.162 -1857.086  3714.172       891 
+ 4052.271  4076.606 -2021.136  4042.271       955 
 Random effects:
  Groups  Name        Std.Dev.
- game_id (Intercept) 0.3434  
- defense (Intercept) 0.1824  
- offense (Intercept) 0.3301  
-Number of obs: 896, groups:  game_id, 359; defense, 21; offense, 21
+ game_id (Intercept) 0.3585  
+ defense (Intercept) 0.1800  
+ offense (Intercept) 0.3479  
+Number of obs: 960, groups:  game_id, 375; defense, 21; offense, 21
 Fixed Effects:
       (Intercept)  fieldoffense_home  
-           0.2358             0.1090  
+           0.2033             0.1307  
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -43,27 +43,27 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
 Weights: w
 
      AIC      BIC   logLik deviance df.resid 
-  3724.2   3748.2  -1857.1   3714.2      891 
+  4052.3   4076.6  -2021.1   4042.3      955 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--2.2250 -0.8096 -0.1070  0.5453  4.0464 
+-2.2625 -0.8342 -0.0980  0.5515  4.3269 
 
 Random effects:
  Groups  Name        Variance Std.Dev.
- game_id (Intercept) 0.11795  0.3434  
- defense (Intercept) 0.03326  0.1824  
- offense (Intercept) 0.10900  0.3301  
-Number of obs: 896, groups:  game_id, 359; defense, 21; offense, 21
+ game_id (Intercept) 0.12854  0.3585  
+ defense (Intercept) 0.03239  0.1800  
+ offense (Intercept) 0.12106  0.3479  
+Number of obs: 960, groups:  game_id, 375; defense, 21; offense, 21
 
 Fixed effects:
-                  Estimate Std. Error z value Pr(>|z|)  
-(Intercept)        0.23579    0.09314   2.531   0.0114 *
-fieldoffense_home  0.10895    0.04663   2.337   0.0195 *
+                  Estimate Std. Error z value Pr(>|z|)   
+(Intercept)        0.20326    0.09570   2.124  0.03368 * 
+fieldoffense_home  0.13074    0.04492   2.911  0.00361 **
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
             (Intr)
-fildffns_hm -0.262
+fildffns_hm -0.248
 [1] TRUE
