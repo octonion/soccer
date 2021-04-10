@@ -5,6 +5,7 @@ drop table if exists scottish.games;
 set datestyle to 'SQL, YMD';
 
 create table scottish.games (
+	round			text,
 	wk			text,
 	day			text,
 	date			date,
