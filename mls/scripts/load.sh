@@ -17,8 +17,8 @@ cp csv/mls*.csv /tmp/data
 #dos2unix /tmp/data/*
 tail -q -n+2 /tmp/data/*.csv >> /tmp/games.csv
 sed -e 's/$/,,/' -i /tmp/games.csv
-
-#rpl -q " FC," "," /tmp/games.csv
+ 
+rpl -q "CF Montréal" "Montreal" /tmp/games.csv
 
 psql soccer -f loaders/load_games.sql
 

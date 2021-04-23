@@ -2,7 +2,7 @@ begin;
 
 drop table if exists mls.games;
 
-set datestyle to 'SQL, DMY';
+set datestyle to 'SQL, YMD';
 
 create table mls.games (
 	round			text,
