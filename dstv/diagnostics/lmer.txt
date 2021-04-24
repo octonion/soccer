@@ -1,19 +1,19 @@
-[1] 346   7
-[1] 568   7
+[1] 360   7
+[1] 596   7
 [1] TRUE
-[1] 568   5
-start par. =  1 1 1 fn =  2620.552 
+[1] 596   5
+start par. =  1 1 1 fn =  2722.955 
 At return
-eval:  76 fn:      2514.5964 par: 0.474079 0.280806 0.127303
-(NM) 20: f = 2514.36 at   0.484844   0.281786   0.125595 -0.0339249  0.0274743
-(NM) 40: f = 2514.27 at   0.474839    0.28113   0.129687 -0.0350425  0.0181165
-(NM) 60: f = 2514.26 at   0.473468    0.27758   0.129658 -0.0407669  0.0150533
-(NM) 80: f = 2514.26 at   0.475465   0.277097   0.128302 -0.0383138  0.0150924
-(NM) 100: f = 2514.26 at   0.475208   0.278057   0.127124 -0.0364681  0.0147378
-(NM) 120: f = 2514.26 at   0.474998   0.277951    0.12742 -0.0369682  0.0148943
-(NM) 140: f = 2514.26 at   0.475061   0.277941   0.127434 -0.0370182  0.0149277
-(NM) 160: f = 2514.26 at   0.475102   0.277954   0.127411 -0.0370479  0.0148991
-(NM) 180: f = 2514.26 at   0.475088   0.277946   0.127409 -0.0370548  0.0149197
+eval:  66 fn:      2621.1873 par: 0.497752 0.282680 0.131705
+(NM) 20: f = 2620.98 at   0.495243   0.289803   0.147628 -0.0459943 0.00204588
+(NM) 40: f = 2620.85 at     0.501802     0.277641     0.141444    -0.061317 -0.000556051
+(NM) 60: f = 2620.83 at   0.497229   0.278514   0.131427 -0.0605558 -0.0032158
+(NM) 80: f = 2620.82 at    0.499524    0.279287    0.131821  -0.0581649 -0.00359621
+(NM) 100: f = 2620.82 at   0.499091   0.279592   0.131486 -0.0586304 -0.0030767
+(NM) 120: f = 2620.82 at    0.498884    0.279533    0.131707   -0.058846 -0.00319488
+(NM) 140: f = 2620.82 at   0.498766   0.279549   0.131693 -0.0586166 -0.0032532
+(NM) 160: f = 2620.82 at    0.498788    0.279623    0.131708  -0.0587532 -0.00324266
+(NM) 180: f = 2620.82 at    0.498781    0.279608    0.131696  -0.0587236 -0.00324171
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -21,16 +21,16 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
    Data: g
 Weights: w
       AIC       BIC    logLik  deviance  df.resid 
- 2524.257  2545.968 -1257.129  2514.257       563 
+ 2630.823  2652.774 -1310.412  2620.823       591 
 Random effects:
  Groups  Name        Std.Dev.
- game_id (Intercept) 0.4751  
- defense (Intercept) 0.2779  
- offense (Intercept) 0.1274  
-Number of obs: 568, groups:  game_id, 173; defense, 16; offense, 16
+ game_id (Intercept) 0.4988  
+ defense (Intercept) 0.2796  
+ offense (Intercept) 0.1317  
+Number of obs: 596, groups:  game_id, 180; defense, 16; offense, 16
 Fixed Effects:
       (Intercept)  fieldoffense_home  
-         -0.03705            0.01492  
+        -0.058726          -0.003238  
 Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
@@ -39,25 +39,25 @@ Formula: gs ~ field + (1 | offense) + (1 | defense) + (1 | game_id)
 Weights: w
 
      AIC      BIC   logLik deviance df.resid 
-  2524.3   2546.0  -1257.1   2514.3      563 
+  2630.8   2652.8  -1310.4   2620.8      591 
 
 Scaled residuals: 
-    Min      1Q  Median      3Q     Max 
--1.7247 -0.8317 -0.0072  0.5009  2.5687 
+     Min       1Q   Median       3Q      Max 
+-1.71116 -0.82928 -0.01972  0.46052  2.60762 
 
 Random effects:
  Groups  Name        Variance Std.Dev.
- game_id (Intercept) 0.22572  0.4751  
- defense (Intercept) 0.07725  0.2779  
- offense (Intercept) 0.01623  0.1274  
-Number of obs: 568, groups:  game_id, 173; defense, 16; offense, 16
+ game_id (Intercept) 0.24879  0.4988  
+ defense (Intercept) 0.07818  0.2796  
+ offense (Intercept) 0.01734  0.1317  
+Number of obs: 596, groups:  game_id, 180; defense, 16; offense, 16
 
 Fixed effects:
-                  Estimate Std. Error z value Pr(>|z|)
-(Intercept)       -0.03705    0.09728  -0.381    0.703
-fieldoffense_home  0.01492    0.05979   0.249    0.803
+                   Estimate Std. Error z value Pr(>|z|)
+(Intercept)       -0.058726   0.097983  -0.599    0.549
+fieldoffense_home -0.003238   0.058949  -0.055    0.956
 
 Correlation of Fixed Effects:
             (Intr)
-fildffns_hm -0.315
+fildffns_hm -0.305
 [1] TRUE
