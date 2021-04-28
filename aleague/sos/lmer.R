@@ -16,7 +16,7 @@ r.field as field,
 r.team_name as team,
 r.opponent_name as opponent,
 r.team_score::float as gs,
-(year-2019) as w
+power(year-2019,1.5) as w
 from aleague.results r
 
 where
