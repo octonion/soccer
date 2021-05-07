@@ -5,6 +5,7 @@ drop table if exists mls.games;
 set datestyle to 'SQL, YMD';
 
 create table mls.games (
+	season			integer,
 	round			text,
 	week			text,
 	day			text,

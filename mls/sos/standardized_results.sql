@@ -30,7 +30,7 @@ insert into mls.results
 (
 select
 game_id,
-extract(year from date),
+season as year,
 date,
 home_team,
 away_team,
@@ -43,7 +43,7 @@ away_xg
 from mls.games
 
 where
-    extract(year from date) between 2003 and 2021
+    season between 2003 and 2021
 
 and home_score is not null
 and away_score is not null
@@ -65,7 +65,7 @@ insert into mls.results
 (
 select
 game_id,
-extract(year from date),
+season as year,
 date,
 away_team,
 home_team,
@@ -78,7 +78,7 @@ home_xg
 from mls.games
 
 where
-    extract(year from date) between 2003 and 2021
+    season between 2003 and 2021
 
 and home_score is not null
 and away_score is not null
