@@ -5,6 +5,7 @@ drop table if exists seriea.games;
 set datestyle to 'SQL, YMD';
 
 create table seriea.games (
+	season			integer,
 	week			text,
 	day			text,
 	date			date,
