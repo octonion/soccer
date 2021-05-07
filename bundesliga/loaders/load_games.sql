@@ -5,6 +5,7 @@ drop table if exists bundesliga.games;
 set datestyle to 'SQL, YMD';
 
 create table bundesliga.games (
+	season			integer,
 	round			text,
 	week			text,
 	day			text,
