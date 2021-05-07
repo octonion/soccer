@@ -5,6 +5,7 @@ drop table if exists epl.games;
 set datestyle to 'SQL, YMD';
 
 create table epl.games (
+	season			integer,
 	week			text,
 	day			text,
 	date			date,
