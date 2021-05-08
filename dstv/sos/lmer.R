@@ -20,7 +20,7 @@ r.team_score::float as gs,
 from dstv.results r
 
 where
-    r.year between 2020 and 2021
+    r.year between 2020 and 2020
 
 ;")
 
