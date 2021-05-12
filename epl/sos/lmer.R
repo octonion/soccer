@@ -15,7 +15,7 @@ r.field as field,
 
 r.team_name as team,
 r.opponent_name as opponent,
-r.team_xscore::float as gs,
+r.team_score::float as gs,
 (year-2020) as w
 from epl.results r
 
