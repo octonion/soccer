@@ -44,9 +44,11 @@ for i in range(max(0,floor(mu1)-1),ceil(mu1)+1):
             e += 0.5*poisson.pmf(i, mu1, 0)*poisson.pmf(j+1, mu2, 0)
             if i>0:
                 e += 0.5*poisson.pmf(i-1, mu1, 0)*poisson.pmf(j-1, mu2, 0)
+                e += 0.5*poisson.pmf(i-1, mu1, 0)*poisson.pmf(j, mu2, 0)
             if j>i+1:
                 e += 0.5*poisson.pmf(i, mu1, 0)*poisson.pmf(j-1, mu2, 0)
-                
+                e += 0.5*poisson.pmf(i+1, mu1, 0)*poisson.pmf(j, mu2, 0)
+		
         elif (j<i):
 
             # Right result
@@ -60,9 +62,10 @@ for i in range(max(0,floor(mu1)-1),ceil(mu1)+1):
             e += 0.5*poisson.pmf(i+1, mu1, 0)*poisson.pmf(j, mu2, 0)
             if j>0:
                 e += 0.5*poisson.pmf(i-1, mu1, 0)*poisson.pmf(j-1, mu2, 0)
+                e += 0.5*poisson.pmf(i, mu1, 0)*poisson.pmf(j-1, mu2, 0)
             if i>j+1:
                 e += 0.5*poisson.pmf(i-1, mu1, 0)*poisson.pmf(j, mu2, 0)
-            
+                e += 0.5*poisson.pmf(i, mu1, 0)*poisson.pmf(j+1, mu2, 0)
         if e>e_score:
             outcome = [i,j]
             e_score = e
