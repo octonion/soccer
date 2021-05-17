@@ -12,14 +12,9 @@ fi
 psql soccer -f schema/create_schema.sql
 
 mkdir /tmp/data
-cp csv/dstv*.csv /tmp/data
+cp csv/*.csv /tmp/data
 
-#dos2unix /tmp/data/*
-tail -q -n+2 /tmp/data/*.csv >> /tmp/games.csv
-sed -e 's/$/,,/' -i /tmp/games.csv
- 
-#rpl -q "CF Montréal" "Montreal" /tmp/games.csv
-
+cat /tmp/data/*.csv >> /tmp/games.csv
 psql soccer -f loaders/load_games.sql
 
 rm /tmp/data/*.csv

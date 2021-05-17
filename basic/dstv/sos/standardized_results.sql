@@ -11,6 +11,7 @@ create table dstv.results (
 	field		      text,
 	team_score	      integer,
 	opponent_score	      integer
+
 );
 
 insert into dstv.results
@@ -52,8 +53,7 @@ insert into dstv.results
  opponent_name,
  field,
  team_score,
- opponent_score
-)
+ opponent_score)
 (
 select
 game_id,
