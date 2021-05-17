@@ -5,7 +5,8 @@ drop table if exists eflc.games;
 set datestyle to 'SQL, DMY';
 
 create table eflc.games (
-	round			text,
+	match_number		text,
+	round_number		text,
 	date			timestamp,
 	location		text,
 	home_team		text,
