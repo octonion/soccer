@@ -1,11 +1,9 @@
 BEGIN
-    date    |     home     |     away     | e_home | e_away | e_d | superbru 
-------------+--------------+--------------+--------+--------+-----+----------
- 2021-05-17 | Barnsley     | Swansea City |    1.2 |    1.1 | 0.1 | {1,0}
- 2021-05-17 | Bournemouth  | Brentford    |    1.4 |    1.3 | 0.1 | {2,1}
- 2021-05-22 | Brentford    | Bournemouth  |    1.6 |    1.2 | 0.4 | {2,1}
- 2021-05-22 | Swansea City | Barnsley     |    1.2 |    1.0 | 0.3 | {1,0}
-(4 rows)
+    date    |     home     |    away     | e_home | e_away | e_d | superbru 
+------------+--------------+-------------+--------+--------+-----+----------
+ 2021-05-22 | Brentford    | Bournemouth |    1.5 |    1.2 | 0.3 | {2,1}
+ 2021-05-22 | Swansea City | Barnsley    |    1.2 |    1.0 | 0.3 | {1,0}
+(2 rows)
 
-COPY 4
+COPY 2
 COMMIT
